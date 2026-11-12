@@ -128,22 +128,24 @@ func auditModels(base, derived []Model) (Audit, error) {
 }
 
 func independentZ(v []float64) bool {
-	sum := 0.0
-	for _, x := range v {
-		sum += x
+	if len(v) == 0 {
+		return false
 	}
-	mean := sum / float64(len(v))
-	norm := 0.0
-	for _, x := range v {
-		delta := x - mean
-		norm += delta * delta
+	// Independent shifted Welford calculation; production uses two-pass
+	// compensated moments. Both avoid cancellation near constant iterates.
+	origin := v[0]
+	mean, norm := 0.0, 0.0
+	for i, x := range v {
+		delta := (x - origin) - mean
+		mean += delta / float64(i+1)
+		norm += delta * ((x - origin) - mean)
 	}
 	scale := math.Sqrt(norm / float64(len(v)))
 	if scale == 0 || math.IsNaN(scale) {
 		return false
 	}
 	for i := range v {
-		v[i] = (v[i] - mean) / scale
+		v[i] = ((v[i] - origin) - mean) / scale
 	}
 	return true
 }

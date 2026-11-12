@@ -136,7 +136,7 @@ func ReflectionsFromPrepared(base Result, cfg ReflectionConfig) (Result, Reflect
 	diag.CountryRawSD, diag.CountrySignalULPs = reflectionSignal(e)
 	diag.DisciplineRawSD, diag.DisciplineSignalULPs = reflectionSignal(q)
 	// Do not turn floating-point noise near a constant into an artificial rank.
-	if diag.CountrySignalULPs < 32 || diag.DisciplineSignalULPs < 32 || !standardize(e) || !standardize(q) {
+	if diag.CountrySignalULPs < 32 || diag.DisciplineSignalULPs < 32 || !standardizeReflections(e) || !standardizeReflections(q) {
 		out.Status = "degenerate"
 		out.Diagnostic = "finite reflection iterate has zero variance or insufficient floating-point signal; no initial-degree fallback"
 		return out, diag, nil
@@ -182,25 +182,58 @@ func reflectionSignal(v []float64) (sd, ulps float64) {
 	if len(v) == 0 {
 		return 0, 0
 	}
-	mean, scale := 0.0, 0.0
+	scale := 0.0
 	for _, x := range v {
 		if math.IsNaN(x) || math.IsInf(x, 0) {
 			return 0, 0
 		}
-		mean += x
 		scale = math.Max(scale, math.Abs(x))
 	}
-	mean /= float64(len(v))
-	variance := 0.0
-	for _, x := range v {
-		variance += (x - mean) * (x - mean)
-	}
-	sd = math.Sqrt(variance / float64(len(v)))
+	_, _, sd = reflectionMoments(v)
 	resolution := math.Nextafter(scale, math.Inf(1)) - scale
 	if resolution <= 0 || math.IsInf(resolution, 0) {
 		return sd, 0
 	}
 	return sd, sd / resolution
+}
+
+// Finite reflection iterates approach a nonzero constant. Compute their
+// population moments after subtracting an observed origin, so rounding a large
+// mean cannot leave a nonzero mean in the standardized small residual signal.
+// This is the same population z-score, not a different reflection model.
+func reflectionMoments(v []float64) (origin, meanOffset, sd float64) {
+	if len(v) == 0 {
+		return 0, 0, 0
+	}
+	origin = v[0]
+	sum, correction := 0.0, 0.0
+	for _, x := range v {
+		if math.IsNaN(x) || math.IsInf(x, 0) {
+			return origin, 0, math.NaN()
+		}
+		y := (x - origin) - correction
+		t := sum + y
+		correction = (t - sum) - y
+		sum = t
+	}
+	meanOffset = sum / float64(len(v))
+	variance := 0.0
+	for _, x := range v {
+		delta := (x - origin) - meanOffset
+		variance += delta * delta
+	}
+	return origin, meanOffset, math.Sqrt(variance / float64(len(v)))
+}
+
+func standardizeReflections(v []float64) bool {
+	origin, meanOffset, sd := reflectionMoments(v)
+	if sd < 1e-14 || math.IsNaN(sd) || math.IsInf(sd, 0) {
+		return false
+	}
+	for i, x := range v {
+		v[i] = ((x - origin) - meanOffset) / sd
+	}
+	return true
 }
 
 func reflectionResidual(r Result, kc, kp []float64) float64 {
