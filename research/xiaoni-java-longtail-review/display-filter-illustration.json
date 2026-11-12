@@ -1,0 +1,155 @@
+{
+  "scope": "Illustration only; not historical production settings or a new model",
+  "input_uncompressed_sha256": "65b62819f78da7869e9dc3e39d280bd48cee46240bf793d862b41b4438a479e6",
+  "corpus": "Core",
+  "year": 2025,
+  "scheme": "concepts",
+  "level": "0",
+  "metric": "citations",
+  "method": "java-reflections-v1",
+  "example_parameters": {
+    "kc0_filter": 0,
+    "kc0_top100": 3,
+    "kc0_top100_2000": 3
+  },
+  "original_count": 229,
+  "remaining_count": 227,
+  "original_top12": [
+    {
+      "country": "AG",
+      "score": 1.1379445651288356,
+      "kc0": 2
+    },
+    {
+      "country": "EH",
+      "score": 1.0918470395320867,
+      "kc0": 2
+    },
+    {
+      "country": "SX",
+      "score": 1.0760228657893316,
+      "kc0": 3
+    },
+    {
+      "country": "MQ",
+      "score": 1.0494358117781941,
+      "kc0": 5
+    },
+    {
+      "country": "PR",
+      "score": 1.0429344152424573,
+      "kc0": 8
+    },
+    {
+      "country": "GW",
+      "score": 1.0387738462620113,
+      "kc0": 7
+    },
+    {
+      "country": "PY",
+      "score": 1.0342761769637459,
+      "kc0": 7
+    },
+    {
+      "country": "AS",
+      "score": 1.0119508181001744,
+      "kc0": 5
+    },
+    {
+      "country": "DM",
+      "score": 1.0119508181001744,
+      "kc0": 5
+    },
+    {
+      "country": "GD",
+      "score": 1.0119508181001744,
+      "kc0": 5
+    },
+    {
+      "country": "GI",
+      "score": 1.0071840286107836,
+      "kc0": 8
+    },
+    {
+      "country": "SV",
+      "score": 1.0032485678725038,
+      "kc0": 8
+    }
+  ],
+  "filtered_top12": [
+    {
+      "country": "SX",
+      "score": 1.0760228657893316,
+      "kc0": 3
+    },
+    {
+      "country": "MQ",
+      "score": 1.0494358117781941,
+      "kc0": 5
+    },
+    {
+      "country": "PR",
+      "score": 1.0429344152424573,
+      "kc0": 8
+    },
+    {
+      "country": "GW",
+      "score": 1.0387738462620113,
+      "kc0": 7
+    },
+    {
+      "country": "PY",
+      "score": 1.0342761769637459,
+      "kc0": 7
+    },
+    {
+      "country": "AS",
+      "score": 1.0119508181001744,
+      "kc0": 5
+    },
+    {
+      "country": "DM",
+      "score": 1.0119508181001744,
+      "kc0": 5
+    },
+    {
+      "country": "GD",
+      "score": 1.0119508181001744,
+      "kc0": 5
+    },
+    {
+      "country": "GI",
+      "score": 1.0071840286107836,
+      "kc0": 8
+    },
+    {
+      "country": "SV",
+      "score": 1.0032485678725038,
+      "kc0": 8
+    },
+    {
+      "country": "CW",
+      "score": 0.9770369042856192,
+      "kc0": 4
+    },
+    {
+      "country": "GT",
+      "score": 0.9515767593625803,
+      "kc0": 8
+    }
+  ],
+  "removed": [
+    {
+      "country": "AG",
+      "score": 1.1379445651288356,
+      "kc0": 2
+    },
+    {
+      "country": "EH",
+      "score": 1.0918470395320867,
+      "kc0": 2
+    }
+  ],
+  "recomputed_network_or_scores": false,
+  "interpretation": "AG/EH disappear, but SX/MQ/PR lead instead. This is output selection, not evidence that the remaining axis measures national capability. Tie order here is code order; Java input order is not established."
+}

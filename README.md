@@ -102,3 +102,5 @@ Core 输出年文献的国家信息覆盖率为 48.69%，Core+XPAC 为 36.85%；
 首次成功打开图表后显示六步使用导引；完成、跳过或关闭后满七天再次提示，页首可随时重看。规则与验证见 [使用导引](docs/onboarding.md)。
 
 2026-11-13 研究结果已归档：[小国家／地区复杂度高排名审查](docs/small-country-complexity-review.md)、[国家补全最终 review](docs/country-enrichment-v3-review.md)及[可复核数据与工具](results/research-review-20261113/README.md)。国家补全 r3 是独立候选版本，未替换上述正式数据；小倪方法论的界面重命名与默认选择已单独发布，见[发布验证](docs/xiaoni-default-release.md)。
+
+原 Windows Java 项目中的国家名单、低多样性排名筛选、规模门槛备选与入口调用核查，见[小倪 Java 长尾处理审查](docs/xiaoni-java-longtail-review.md)。这些旧代码机制未自动加入当前网站。

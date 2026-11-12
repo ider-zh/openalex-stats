@@ -1,0 +1,21 @@
+{
+  "read_only": true,
+  "unknown_java_executed": false,
+  "sources": [
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\EconomicsFzx\\EconomicsFzx.java",
+      "bytes": 219021,
+      "sha256": "c4237da0b5355861b578603c66567395de7c2b24ce311e94364a93bfd05e0dc9"
+    },
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\EconomicsFzx\\FzxByCtry.java",
+      "bytes": 542887,
+      "sha256": "4e24962dfdd8bb6f36ff1e26a9ec9f559669824e3947e696a7ec8a875f2fd495"
+    },
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\EconomicsFzx\\Economics_openAlex.java",
+      "bytes": 47045,
+      "sha256": "0ca165687545c5e1fb2acfe8e870ec260f0b77b821b4aa4955491541b4198ce3"
+    }
+  ]
+}
