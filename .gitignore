@@ -4,6 +4,9 @@
 /research/country-enrichment*/
 /docs/country-enrichment-review.md
 /node_modules/
+/.wrangler/
+/.dev.vars
+/.dev.vars.*
 /results/full/
 __pycache__/
 *.pyc

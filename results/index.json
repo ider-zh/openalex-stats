@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "prepared",
+  "status": "published",
   "snapshot_date": "2026-06-26",
   "release_tag": "snapshot-20260626-v1",
   "release_url": "https://github.com/ider-zh/openalex-stats/releases/tag/snapshot-20260626-v1",
@@ -54,7 +54,8 @@
       "group": "base",
       "bytes": 2679,
       "sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-completion.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-completion.json",
+      "github_asset_id": 738099566
     },
     {
       "name": "all-country_eci.parquet",
@@ -63,7 +64,8 @@
       "group": "base",
       "bytes": 411455,
       "sha256": "3c7349be696ad2ff51720603968519102cda35582a5c00d0bc6d5e0451543d12",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-country_eci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-country_eci.parquet",
+      "github_asset_id": 738094362
     },
     {
       "name": "all-coverage.json",
@@ -72,7 +74,8 @@
       "group": "base",
       "bytes": 13133,
       "sha256": "cd35201c68480a61f9e5a5ca890fe7dc645ce9d1cc9c751ccf2f42777a23da4c",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-coverage.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-coverage.json",
+      "github_asset_id": 738096242
     },
     {
       "name": "all-cube.parquet",
@@ -81,7 +84,8 @@
       "group": "base",
       "bytes": 179600562,
       "sha256": "db6b38691ea04be8f4299737ddd7a1442c8ed293a5bac12940c48b2f0d6bd8b9",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-cube.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-cube.parquet",
+      "github_asset_id": 738092970
     },
     {
       "name": "all-dictionary.json",
@@ -90,7 +94,8 @@
       "group": "base",
       "bytes": 108523,
       "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-dictionary.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-dictionary.json",
+      "github_asset_id": 738096320
     },
     {
       "name": "all-discipline_pci.parquet",
@@ -99,7 +104,8 @@
       "group": "base",
       "bytes": 283965,
       "sha256": "b08a9ba333cc47674be8357d79de9811d3a63c9f9cfdb259f831adb62cd1b137",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-discipline_pci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-discipline_pci.parquet",
+      "github_asset_id": 738094400
     },
     {
       "name": "all-eci.json",
@@ -108,7 +114,8 @@
       "group": "base",
       "bytes": 319266428,
       "sha256": "a7d6aa4a9209f54bf63200e85e61f45c935b411bc343ba2de09712cbcf10c586",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-eci.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-eci.json",
+      "github_asset_id": 738096397
     },
     {
       "name": "all-methodology.json",
@@ -117,7 +124,8 @@
       "group": "base",
       "bytes": 2666,
       "sha256": "3c955ac6ac11c73fa71deb9c5a67ad06cf04dadbc671a9f69c63c072f4458657",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methodology.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methodology.json",
+      "github_asset_id": 738099529
     },
     {
       "name": "all-methods-audit.json",
@@ -126,7 +134,8 @@
       "group": "methods",
       "bytes": 261,
       "sha256": "ecc7a46c4f0ef6b9c2a9b30c512fed3e63582dd8efe54f59f2f84186b6faec64",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-audit.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-audit.json",
+      "github_asset_id": 738100674
     },
     {
       "name": "all-methods-completion.json",
@@ -135,7 +144,8 @@
       "group": "methods",
       "bytes": 1322,
       "sha256": "a371bbcd4465ce24707dd78367ab122bac9c671bbcc55aebfcb15fdf9570bc1f",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-completion.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-completion.json",
+      "github_asset_id": 738101011
     },
     {
       "name": "all-methods-country_eci.parquet",
@@ -144,7 +154,8 @@
       "group": "methods",
       "bytes": 410174,
       "sha256": "0c147b36ebbddc25258fe19c3311f4dd8442a3c0f26a5a757fe33884c4feb14f",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-country_eci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-country_eci.parquet",
+      "github_asset_id": 738100867
     },
     {
       "name": "all-methods-discipline_pci.parquet",
@@ -153,7 +164,8 @@
       "group": "methods",
       "bytes": 283965,
       "sha256": "c0db5b59730539353644333c0ddb94185cde9dd1db9b8be394041a163b0e59c6",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-discipline_pci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-discipline_pci.parquet",
+      "github_asset_id": 738100943
     },
     {
       "name": "all-methods-java-reflections-v1.json",
@@ -162,7 +174,8 @@
       "group": "methods",
       "bytes": 142511569,
       "sha256": "bb3431a004615e6536cd4e7d898aa3b4f884f4a8390ceddbc6378f4903826e76",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-java-reflections-v1.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-java-reflections-v1.json",
+      "github_asset_id": 738099625
     },
     {
       "name": "all-methods-manifest.json",
@@ -171,7 +184,8 @@
       "group": "methods",
       "bytes": 1851,
       "sha256": "b776fd2b927b75c97903add5a00779426410b7e2751fe6a04b870be23b230e4b",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-manifest.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-manifest.json",
+      "github_asset_id": 738100978
     },
     {
       "name": "all-methods-model_diagnostics.json",
@@ -180,7 +194,8 @@
       "group": "methods",
       "bytes": 1437895,
       "sha256": "40baf1c8014f89ade54c4922c1a5ac9c7e8de29a721755d63fc520a601ba0ac1",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-model_diagnostics.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-model_diagnostics.json",
+      "github_asset_id": 738100767
     },
     {
       "name": "all-methods-sensitivity.json",
@@ -189,7 +204,8 @@
       "group": "methods",
       "bytes": 155590,
       "sha256": "555e08290ec3733d32cb0b148e6ce3893e20e07b3f51704616039507404593b8",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-sensitivity.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-methods-sensitivity.json",
+      "github_asset_id": 738100719
     },
     {
       "name": "all-model_diagnostics.json",
@@ -198,7 +214,8 @@
       "group": "base",
       "bytes": 2698096,
       "sha256": "2d4d16a8fd794d06185489698ce5c03c79571f0d9ece1f171b8faeaacf21d0e4",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-model_diagnostics.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-model_diagnostics.json",
+      "github_asset_id": 738099450
     },
     {
       "name": "all-rca.parquet",
@@ -207,7 +224,8 @@
       "group": "base",
       "bytes": 241539846,
       "sha256": "5bdd36b41413f0cb04828c591e8f9b4229d7662b1ed79613289c9328da1b4711",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-rca.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-rca.parquet",
+      "github_asset_id": 738094444
     },
     {
       "name": "all-run.json",
@@ -216,7 +234,8 @@
       "group": "base",
       "bytes": 2122252,
       "sha256": "c53a10b5f54075e0e601da78abfd01ffeb1fb4e86d0a06409992fa1b4d386289",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-run.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-run.json",
+      "github_asset_id": 738088426
     },
     {
       "name": "all-scenarios.json",
@@ -225,7 +244,8 @@
       "group": "base",
       "bytes": 939,
       "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-scenarios.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-scenarios.json",
+      "github_asset_id": 738096283
     },
     {
       "name": "all-statistics.parquet",
@@ -234,7 +254,8 @@
       "group": "base",
       "bytes": 491814477,
       "sha256": "7e934a8d3fca14662b1abfb4379af846855cde7a18458979f028e776e170606d",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-statistics.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/all-statistics.parquet",
+      "github_asset_id": 738088606
     },
     {
       "name": "core-completion.json",
@@ -243,7 +264,8 @@
       "group": "base",
       "bytes": 2690,
       "sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-completion.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-completion.json",
+      "github_asset_id": 738086653
     },
     {
       "name": "core-country_eci.parquet",
@@ -252,7 +274,8 @@
       "group": "base",
       "bytes": 411394,
       "sha256": "25183996705c43540973a8977f877fb6a4c64983662198eb82f23b25b4be683a",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-country_eci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-country_eci.parquet",
+      "github_asset_id": 738081420
     },
     {
       "name": "core-coverage.json",
@@ -261,7 +284,8 @@
       "group": "base",
       "bytes": 13113,
       "sha256": "193912b19a51852df0505851e256ee33fe39232504e57be4eba2a1397a9295d3",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-coverage.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-coverage.json",
+      "github_asset_id": 738083435
     },
     {
       "name": "core-cube.parquet",
@@ -270,7 +294,8 @@
       "group": "base",
       "bytes": 179049337,
       "sha256": "075d51d9450507703adf9b73d55cb04b7e1781b4a059062feaf4b2145751ac01",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-cube.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-cube.parquet",
+      "github_asset_id": 738079568
     },
     {
       "name": "core-dictionary.json",
@@ -279,7 +304,8 @@
       "group": "base",
       "bytes": 108523,
       "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-dictionary.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-dictionary.json",
+      "github_asset_id": 738083514
     },
     {
       "name": "core-discipline_pci.parquet",
@@ -288,7 +314,8 @@
       "group": "base",
       "bytes": 283965,
       "sha256": "8cb34144b6a20b02ab3bb5be9400ff65559218cc2b6e2524f9dbdd77b2e3c0db",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-discipline_pci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-discipline_pci.parquet",
+      "github_asset_id": 738081461
     },
     {
       "name": "core-eci.json",
@@ -297,7 +324,8 @@
       "group": "base",
       "bytes": 318936033,
       "sha256": "98eb34cd7809ec7b83433f36446c9fc943fd1dbbd393fff1c4ecf58d3db457e3",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-eci.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-eci.json",
+      "github_asset_id": 738083615
     },
     {
       "name": "core-methodology.json",
@@ -306,7 +334,8 @@
       "group": "base",
       "bytes": 2667,
       "sha256": "02f687cf913ceff3a4e89cc3c527951a1156d3e2d693abfc2cb858bcd618c337",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methodology.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methodology.json",
+      "github_asset_id": 738086623
     },
     {
       "name": "core-methods-audit.json",
@@ -315,7 +344,8 @@
       "group": "methods",
       "bytes": 261,
       "sha256": "06a31c883790acc5db548800441aaa50688eb6c48271db6b88b1b58177bdab45",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-audit.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-audit.json",
+      "github_asset_id": 738088131
     },
     {
       "name": "core-methods-completion.json",
@@ -324,7 +354,8 @@
       "group": "methods",
       "bytes": 1322,
       "sha256": "3267f7a508d2f23dc1a45cda3f4286251423561938f644609c52f4d59d2f2a6a",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-completion.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-completion.json",
+      "github_asset_id": 738088398
     },
     {
       "name": "core-methods-country_eci.parquet",
@@ -333,7 +364,8 @@
       "group": "methods",
       "bytes": 410249,
       "sha256": "2531f209780aaaf5cf5700d6dd02991df6e0354c0153b11f2a106f154c8959af",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-country_eci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-country_eci.parquet",
+      "github_asset_id": 738088281
     },
     {
       "name": "core-methods-discipline_pci.parquet",
@@ -342,7 +374,8 @@
       "group": "methods",
       "bytes": 283965,
       "sha256": "8c7dd0e09de6227ce915771099d609450c022a1c1baeeb170c1ad40b9ec4a394",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-discipline_pci.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-discipline_pci.parquet",
+      "github_asset_id": 738088330
     },
     {
       "name": "core-methods-java-reflections-v1.json",
@@ -351,7 +384,8 @@
       "group": "methods",
       "bytes": 142180947,
       "sha256": "3011d9de5587011272c7147e32069c4f693e9b7ca0cbeed0b6a0228e68924fb5",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-java-reflections-v1.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-java-reflections-v1.json",
+      "github_asset_id": 738086727
     },
     {
       "name": "core-methods-manifest.json",
@@ -360,7 +394,8 @@
       "group": "methods",
       "bytes": 1851,
       "sha256": "9c1afa8bf092c703c4ebd1736cf3e87d3543a4524544a75b876aa4575a282546",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-manifest.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-manifest.json",
+      "github_asset_id": 738088370
     },
     {
       "name": "core-methods-model_diagnostics.json",
@@ -369,7 +404,8 @@
       "group": "methods",
       "bytes": 1437935,
       "sha256": "e778470f558593c64b2ac5e67f8a6ae6cccd8ee4ed7fc610a3401e584cc0b667",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-model_diagnostics.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-model_diagnostics.json",
+      "github_asset_id": 738088226
     },
     {
       "name": "core-methods-sensitivity.json",
@@ -378,7 +414,8 @@
       "group": "methods",
       "bytes": 155328,
       "sha256": "ca64371479bbd5066d8603b05f0b9c5a709f57bb2bc41d78f2aef8e1b1883453",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-sensitivity.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-methods-sensitivity.json",
+      "github_asset_id": 738088165
     },
     {
       "name": "core-model_diagnostics.json",
@@ -387,7 +424,8 @@
       "group": "base",
       "bytes": 2698129,
       "sha256": "5c8d07d6791f93ed6ff08adb67e90636f433485fe6480d427ee407c36c1d5ac9",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-model_diagnostics.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-model_diagnostics.json",
+      "github_asset_id": 738086550
     },
     {
       "name": "core-rca.parquet",
@@ -396,7 +434,8 @@
       "group": "base",
       "bytes": 240557122,
       "sha256": "7d860d85e72ff804090581e6a386072a8417e136cf97da6a83395e73ce37f0c4",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-rca.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-rca.parquet",
+      "github_asset_id": 738081527
     },
     {
       "name": "core-run.json",
@@ -405,7 +444,8 @@
       "group": "base",
       "bytes": 923204,
       "sha256": "d574e30787a9877708cd87b36e1f2cb959dbbdb9098280ef6c966983e59568e7",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-run.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-run.json",
+      "github_asset_id": 738074468
     },
     {
       "name": "core-scenarios.json",
@@ -414,7 +454,8 @@
       "group": "base",
       "bytes": 939,
       "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-scenarios.json"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-scenarios.json",
+      "github_asset_id": 738083478
     },
     {
       "name": "core-statistics.parquet",
@@ -423,7 +464,8 @@
       "group": "base",
       "bytes": 489340382,
       "sha256": "c24223b3a4bb3295ffdebb99811777b6b35f47359bc6eea28bd37147f721f7f7",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-statistics.parquet"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/core-statistics.parquet",
+      "github_asset_id": 738074580
     },
     {
       "name": "source-methods-v1.tar.gz",
@@ -432,7 +474,8 @@
       "group": "provenance",
       "bytes": 1074904,
       "sha256": "78b24cc680a1144146f637dab3b1972a89b3f652dcd7eefc4d40952c4a83b1c0",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/source-methods-v1.tar.gz"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/source-methods-v1.tar.gz",
+      "github_asset_id": 738101155
     },
     {
       "name": "source-v9-compute.tar.gz",
@@ -441,7 +484,9 @@
       "group": "provenance",
       "bytes": 597008,
       "sha256": "33b93a34feba8a0c2d45a29a6c3254975468745c20a42b51ab49058b886a9d2b",
-      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/source-v9-compute.tar.gz"
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-v1/source-v9-compute.tar.gz",
+      "github_asset_id": 738101051
     }
-  ]
+  ],
+  "verified_at_utc": "2026-11-12T04:45:54.790261+00:00"
 }

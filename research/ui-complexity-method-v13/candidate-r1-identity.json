@@ -1,0 +1,19 @@
+{
+  "pid": 1249585,
+  "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r1",
+  "argv": [
+    "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r1",
+    "serve",
+    "--data-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+    "--data-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+    "--methods-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+    "--methods-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+    "--listen",
+    "0.0.0.0:8901"
+  ],
+  "start_clock_ticks": 5122227186
+}

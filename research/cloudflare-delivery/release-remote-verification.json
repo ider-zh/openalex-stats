@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-12T04:46:31.157584+00:00",
+  "release_id": 442500886,
+  "release_url": "https://github.com/ider-zh/openalex-stats/releases/tag/snapshot-20260626-v1",
+  "assets": 44,
+  "bytes": 2761138916,
+  "github_server_digest_matches": 44,
+  "download_cli_smoke": [
+    "core/base/run.json SHA passed",
+    "all/methods/sensitivity.json SHA passed"
+  ]
+}

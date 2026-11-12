@@ -1,0 +1,166 @@
+{
+  "status": "ready",
+  "old": {
+    "pid": 1224966,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v12-multidiscipline-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v12-multidiscipline-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5122089525
+  },
+  "candidate": {
+    "pid": 1277003,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--methods-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+      "--methods-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+      "--listen",
+      "0.0.0.0:8902"
+    ],
+    "start_clock_ticks": 5122283725
+  },
+  "new_binary_sha256": "3406495a08ad76e8727ac080b196c0d9f13ab41a2c29d12eaf1df3ee2be28442",
+  "old_binary_sha256": "b08ecc8eeb1c058fe5974e1d3f37fb2312817017e5dc27f8b2f97624eeb05091",
+  "gates": {
+    "core": {
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/ui-complexity-method-v13/candidate-r2-core-browser-qa.json",
+      "sha256": "a2f109c2297b2f5c564fcd9bef26c0c828234fd54423f2a98e19f4d0d238e1b2",
+      "checks": 34
+    },
+    "all": {
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/ui-complexity-method-v13/candidate-r2-all-browser-qa.json",
+      "sha256": "1351e0c81975539f980b83721005ff2fcc69476e776ef1e3ecf60a05ff4bcdee",
+      "checks": 34
+    },
+    "feature-candidate-r2-qa.json": {
+      "sha256": "13445252b3446d9ff0b441edc7f82ed4153eae0cef832d4f8394fc00e1011e1e",
+      "checks": 17
+    },
+    "method-candidate-r2-qa.json": {
+      "sha256": "815119be77ca6db16a3a0fc3e5fefd80c5a317aab1d0593c7de4b8b37968e496",
+      "checks": 12
+    }
+  },
+  "candidate_health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "datasets": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  },
+  "old_health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "datasets": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  },
+  "updated_at_utc": "2026-11-12T04:34:02.088156+00:00",
+  "new": {
+    "pid": 1283477,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--methods-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+      "--methods-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5122332324
+  },
+  "health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "datasets": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  }
+}

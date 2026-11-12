@@ -1,0 +1,17 @@
+{
+  "edge": "http://127.0.0.1:8788",
+  "native": "http://192.168.1.229:8899",
+  "comparison_policy": {
+    "metadata": "Country and discipline metadata arrays compared as ID-keyed semantic sets: duplicate display names can have different Go map iteration order.",
+    "series": "Requested series order, point values, statuses, global ranks, definitions and query fields compared strictly.",
+    "csv": "Text cells and row order strict; numeric cells compared as Float64 values."
+  },
+  "started_at_utc": "2026-11-12T04:35:02.093Z",
+  "cases": 962,
+  "point_values": 120636,
+  "csv_cases": 24,
+  "download_cases": 12,
+  "invalid_cases": 12,
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T04:35:05.016Z"
+}

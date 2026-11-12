@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T04:35:41.631269+00:00",
+  "url": "http://192.168.1.229:8899",
+  "production": {
+    "pid": 1283477,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--methods-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+      "--methods-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5122332324
+  },
+  "binary_sha256": "3406495a08ad76e8727ac080b196c0d9f13ab41a2c29d12eaf1df3ee2be28442",
+  "source_archive": "source-v13-complexity-method-r2.tar.gz",
+  "source_sha256": "c8125e71e4e182c30f5f96b781219a088a6c87495b3a9ff63f6dc61268067873",
+  "datasets": {
+    "core": {
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "selected_works": 269194661,
+      "methods": [
+        {
+          "id": "spectral-v1",
+          "display_name": "\u8c31 ECI \u00b7 \u5f53\u524d\u65b9\u6cd5",
+          "country_iterations": 0,
+          "discipline_iterations": 0,
+          "normalization": "population-z",
+          "residual_kind": "spectral-eigen-equation",
+          "source_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+          "source_completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e"
+        },
+        {
+          "id": "java-reflections-v1",
+          "display_name": "Java \u53cd\u5c04\u6cd5\u00b7\u4fee\u6b63\u7248",
+          "country_iterations": 16,
+          "discipline_iterations": 17,
+          "normalization": "population-z",
+          "residual_kind": "relative centered(T*z)-lambda2*z; finite-iteration diagnostic, not a convergence requirement",
+          "source_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+          "source_completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e"
+        }
+      ]
+    },
+    "all": {
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "selected_works": 404079112,
+      "methods": [
+        {
+          "id": "spectral-v1",
+          "display_name": "\u8c31 ECI \u00b7 \u5f53\u524d\u65b9\u6cd5",
+          "country_iterations": 0,
+          "discipline_iterations": 0,
+          "normalization": "population-z",
+          "residual_kind": "spectral-eigen-equation",
+          "source_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+          "source_completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43"
+        },
+        {
+          "id": "java-reflections-v1",
+          "display_name": "Java \u53cd\u5c04\u6cd5\u00b7\u4fee\u6b63\u7248",
+          "country_iterations": 16,
+          "discipline_iterations": 17,
+          "normalization": "population-z",
+          "residual_kind": "relative centered(T*z)-lambda2*z; finite-iteration diagnostic, not a convergence requirement",
+          "source_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+          "source_completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43"
+        }
+      ]
+    }
+  },
+  "production_qa": {
+    "core": {
+      "checks": 34,
+      "sha256": "fc2f51db08db52063c285d668258fda48e3f797fd7d971270e2da10af6979b7d"
+    },
+    "all": {
+      "checks": 34,
+      "sha256": "4d480f78883e79561e7713f25798598604a349a1f6386f361b5e7e426ba3587f"
+    },
+    "feature-production-qa.json": {
+      "checks": 17,
+      "sha256": "3074e9a16b9df091dc884672e78258cb09de83598437923188cb5f2ccf7f181e"
+    },
+    "method-production-qa.json": {
+      "checks": 12,
+      "sha256": "19264604e8895ec6239bbec09315d387a98c1e9c3d080c1c3ba9ae9fcad187cc"
+    }
+  },
+  "assets_sha256": {
+    "bump.js": "b73c4815692f8945ce95dbfdaace22eaa5ebf1816a2f832cd9e7d70c851f883b",
+    "app.css": "df5d339cb3488613078dcacfaf8d786422504b60dcbf8e7e1c6486710329879d",
+    "index.html": "d51eab9f4822d674e7d2587190c054dc95451c6a2b84ac710263331fa4057aeb",
+    "app.js": "77f6863bb581955f5ad233673e22ebd625e91ec231d04dc8c3f43121469f48e0"
+  },
+  "candidate_stopped": [
+    {
+      "pid": 1277003,
+      "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+      "argv": [
+        "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r2",
+        "serve",
+        "--data-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+        "--data-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+        "--methods-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+        "--methods-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+        "--listen",
+        "0.0.0.0:8902"
+      ],
+      "start_clock_ticks": 5122283725
+    },
+    {
+      "pid": 1249585,
+      "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r1",
+      "argv": [
+        "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v13-complexity-method-r1",
+        "serve",
+        "--data-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+        "--data-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+        "--methods-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+        "--methods-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+        "--listen",
+        "0.0.0.0:8901"
+      ],
+      "start_clock_ticks": 5122227186
+    }
+  ],
+  "old_core_reference_preserved": 963184,
+  "rollback_used": false,
+  "behavior": {
+    "max_curves": 48,
+    "tested_cartesian_curves": 27,
+    "eci_country_only": true,
+    "pci_global_subject_only": true,
+    "default_method": "spectral-v1",
+    "java_country_iterations": 16,
+    "java_discipline_iterations": 17,
+    "separate_method_orientation": true,
+    "count_metrics_method_invariant": true,
+    "local_svg_flags": 248
+  }
+}

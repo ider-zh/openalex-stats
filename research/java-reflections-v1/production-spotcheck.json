@@ -1,0 +1,20 @@
+[
+  {
+    "method": "spectral-v1",
+    "metric": "publications",
+    "country": "CN",
+    "discipline": "Biology",
+    "year": 2025,
+    "value": 146958,
+    "method_applies": false
+  },
+  {
+    "method": "java-reflections-v1",
+    "metric": "publications",
+    "country": "CN",
+    "discipline": "Biology",
+    "year": 2025,
+    "value": 146958,
+    "method_applies": false
+  }
+]

@@ -25,6 +25,14 @@ npm run preview
 
 预览地址为 `http://127.0.0.1:8788`。这是以 Node 标准 Fetch API 模拟 `ASSETS` binding 的兼容预览；正式部署仍由 Cloudflare 的 Workers runtime 执行 `_worker.js`。HTTP 参数、两语料隔离、CSV、完整分母与两种复杂度方法会与 Go 服务做真实数据 parity 核对；部署不需要把研究服务器暴露到公网。
 
+也可使用官方本地 Workers runtime，无需登录或创建 Cloudflare 资源：
+
+```sh
+npx wrangler@4.160.1 pages dev dist --port 8789
+```
+
+本次交付已在该固定 Wrangler 版本的本地 `workerd` 中再次通过 962 项 API parity，并执行真实浏览器验收；记录见 `research/cloudflare-delivery/workerd-parity.json`。[官方本地开发说明](https://developers.cloudflare.com/pages/functions/local-development/)
+
 Cloudflare 的 API 请求数和 CPU 配额取决于用户账户方案；静态文件服务与 Function 请求按平台规则计量。本适配器采用定长 Float64 矩阵直接寻址，避免边缘加载全量模型或解析全学科统计；一次最大 48 曲线 RCA 冷查询最多需要 50 个本地资产子请求。
 
 ## 更新查询数据

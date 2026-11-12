@@ -1,0 +1,282 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-11-12T04:45:55.269Z",
+  "authentication": false,
+  "checks": [
+    {
+      "name": "all-completion.json",
+      "bytes": 2679,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-country_eci.parquet",
+      "bytes": 411455,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-coverage.json",
+      "bytes": 13133,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-cube.parquet",
+      "bytes": 179600562,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "all-dictionary.json",
+      "bytes": 108523,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-discipline_pci.parquet",
+      "bytes": 283965,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-eci.json",
+      "bytes": 319266428,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "all-methodology.json",
+      "bytes": 2666,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-methods-audit.json",
+      "bytes": 261,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-methods-completion.json",
+      "bytes": 1322,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-methods-country_eci.parquet",
+      "bytes": 410174,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-methods-discipline_pci.parquet",
+      "bytes": 283965,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-methods-java-reflections-v1.json",
+      "bytes": 142511569,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "all-methods-manifest.json",
+      "bytes": 1851,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-methods-model_diagnostics.json",
+      "bytes": 1437895,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-methods-sensitivity.json",
+      "bytes": 155590,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-model_diagnostics.json",
+      "bytes": 2698096,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-rca.parquet",
+      "bytes": 241539846,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "all-run.json",
+      "bytes": 2122252,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-scenarios.json",
+      "bytes": 939,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "all-statistics.parquet",
+      "bytes": 491814477,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "all-statistics.parquet",
+      "status": 206,
+      "check": "public-range-parquet-magic"
+    },
+    {
+      "name": "core-completion.json",
+      "bytes": 2690,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-country_eci.parquet",
+      "bytes": 411394,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-coverage.json",
+      "bytes": 13113,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-cube.parquet",
+      "bytes": 179049337,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "core-dictionary.json",
+      "bytes": 108523,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-discipline_pci.parquet",
+      "bytes": 283965,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-eci.json",
+      "bytes": 318936033,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "core-methodology.json",
+      "bytes": 2667,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-methods-audit.json",
+      "bytes": 261,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-methods-completion.json",
+      "bytes": 1322,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-methods-country_eci.parquet",
+      "bytes": 410249,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-methods-discipline_pci.parquet",
+      "bytes": 283965,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-methods-java-reflections-v1.json",
+      "bytes": 142180947,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "core-methods-manifest.json",
+      "bytes": 1851,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-methods-model_diagnostics.json",
+      "bytes": 1437935,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-methods-sensitivity.json",
+      "bytes": 155328,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-model_diagnostics.json",
+      "bytes": 2698129,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-rca.parquet",
+      "bytes": 240557122,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "core-run.json",
+      "bytes": 923204,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-scenarios.json",
+      "bytes": 939,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "core-statistics.parquet",
+      "bytes": 489340382,
+      "status": 200,
+      "check": "public-head-size; full SHA verified by GitHub upload response"
+    },
+    {
+      "name": "core-statistics.parquet",
+      "status": 206,
+      "check": "public-range-parquet-magic"
+    },
+    {
+      "name": "source-methods-v1.tar.gz",
+      "bytes": 1074904,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    },
+    {
+      "name": "source-v9-compute.tar.gz",
+      "bytes": 597008,
+      "status": 200,
+      "check": "public-full-download-size-and-sha256"
+    }
+  ],
+  "completed_at_utc": "2026-11-12T04:46:16.607Z"
+}

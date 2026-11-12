@@ -1,0 +1,17 @@
+{
+  "screenshots": [
+    "feature-production/mobile-27-long-subfield-tooltip.png",
+    "method-production/core-desktop-java-eci-rank.png",
+    "method-production/mobile-java-method-pci.png"
+  ],
+  "reviewed_at_utc": "2026-11-12T04:35:31.0235947Z",
+  "observations": [
+    "Real 8899 service no asset overlay",
+    "27 country-discipline curves tooltip sorted and scrollable with local SVG flags",
+    "390px long discipline labels wrap without document overflow",
+    "Java ECI bump and PCI multi-discipline semantics and sensitivity link visible",
+    "Large typography and mobile groups preserved"
+  ],
+  "revision": "v13-r2-production",
+  "status": "passed"
+}

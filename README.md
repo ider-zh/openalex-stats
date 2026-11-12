@@ -53,7 +53,7 @@ npm run preview
 
 [GitHub Release：snapshot-20260626-v1](https://github.com/ider-zh/openalex-stats/releases/tag/snapshot-20260626-v1) 保存两版本完整 Parquet、模型 JSON、清单、诊断和独立方法 sidecar。文件 SHA-256、大小及下载地址见 [results/index.json](results/index.json)。
 
-完整原始产物约数 GB，采用 Release 资产而不是 Git LFS；不把 724 GB 原始 Works 快照和中间引用图放入 Git。网站的全部可查询数据另以紧凑、可验证的分片保存在 `cloudflare/data`，覆盖两个语料、四层学科、六场景、全部国家及输出年份。
+已发布 44 个原始结果资产，共 2,761,138,916 字节，逐文件通过 GitHub 服务端 SHA-256 和公开下载验证。采用 Release 资产而不是 Git LFS；不把 724 GB 原始 Works 快照和中间引用图放入 Git。网站的全部可查询数据另以约 193 MB 的分片保存在 `cloudflare/data`，覆盖两个语料、四层学科、六场景、全部国家及输出年份。
 
 ```sh
 node scripts/download-results.mjs --corpus core
@@ -94,3 +94,5 @@ Core 输出年文献的国家信息覆盖率为 48.69%，Core+XPAC 为 36.85%；
 `scripts/country-enrichment` 和相关工具是单独的旁路评估：机构字段、机构 ID 与署名文本补全须经过全量评估和 review 后决定是否采用。当前正式网站和 Release 结果不含未经 review 的补全候选，也不发布原始署名文本旁路文件。
 
 第三方浏览器资产的版本、许可和来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+本次 [交付验收记录](research/cloudflare-delivery/acceptance.json) 包含全量数据核验、与正式 Go 服务的 API 对照、官方 Cloudflare 本地运行时及桌面／手机浏览器验证。Cloudflare 公网项目由仓库所有者连接并部署。

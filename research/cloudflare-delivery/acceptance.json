@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checked_at_utc": "2026-11-12T04:33:15.666802+00:00",
+  "checked_at_utc": "2026-11-12T04:46:55.960597+00:00",
   "deployment": "Prepared Cloudflare Pages output; no Cloudflare account resource created",
   "build": {
     "files": 7397,
@@ -22,7 +22,32 @@
     "native_api_parity": "pages-parity.json",
     "browser_features": "features/feature-qa.json",
     "browser_typography": "typography/typography-qa.json",
-    "browser_methods": "methods/method-qa.json"
+    "browser_methods": "methods/method-qa.json",
+    "github_actions": {
+      "status": "success",
+      "run_urls": [
+        "https://github.com/ider-zh/openalex-stats/actions/runs/43155779713",
+        "https://github.com/ider-zh/openalex-stats/actions/runs/43155730533"
+      ],
+      "commit": "d7e44b24d35fc622d34971121d315d8369e89a33"
+    },
+    "native_production_api_parity": "pages-production-parity.json",
+    "native_v13_production_acceptance": "../ui-complexity-method-v13/final-acceptance.json",
+    "cloudflare_runtime": {
+      "wrangler": "4.160.1",
+      "runtime": "local workerd",
+      "api_parity": "workerd-parity.json",
+      "browser_features": "workerd-features/feature-qa.json",
+      "browser_methods": "workerd-methods/method-qa.json"
+    },
+    "release_assets": {
+      "status": "published",
+      "assets": 44,
+      "bytes": 2761138916,
+      "remote_server_sha256_verification": "release-remote-verification.json",
+      "public_download_verification": "public-download-verification.json",
+      "public_download_checks": 46
+    }
   },
   "static_asset_sha256": {
     "app.js": "77f6863bb581955f5ad233673e22ebd625e91ec231d04dc8c3f43121469f48e0",
