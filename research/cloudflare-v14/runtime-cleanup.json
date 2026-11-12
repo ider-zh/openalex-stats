@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T05:32:04.8899339Z",
+  "scope": "Only four identity-verified processes from this agent local Wrangler/workerd preview",
+  "verified_before_termination": [
+    {
+      "pid": 67044,
+      "creation_date": "2026-11-12T13:24:07.4009930+08:00",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "pid_creation_exe_command_verified": true
+    },
+    {
+      "pid": 71628,
+      "creation_date": "2026-11-12T13:24:07.5505750+08:00",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "pid_creation_exe_command_verified": true
+    },
+    {
+      "pid": 76520,
+      "creation_date": "2026-11-12T13:24:10.8178640+08:00",
+      "exe": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe",
+      "pid_creation_exe_command_verified": true
+    },
+    {
+      "pid": 79808,
+      "creation_date": "2026-11-12T13:24:11.1616480+08:00",
+      "exe": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe",
+      "pid_creation_exe_command_verified": true
+    }
+  ],
+  "remaining_processes": [],
+  "port_8788_listeners": [],
+  "acceptance_sha256_before": "ea4197fa6f6e98db80c8304fca346aad1565da913a166d1d8f3ebb7c7d342cfb",
+  "acceptance_sha256_after": "ea4197fa6f6e98db80c8304fca346aad1565da913a166d1d8f3ebb7c7d342cfb",
+  "acceptance_unchanged": true
+}

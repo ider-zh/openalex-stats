@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "url": "http://192.168.1.229:8902",
+  "asset_override": false,
+  "checks": [
+    {
+      "name": "core_method_switch_and_all_eci_points_match_artifacts",
+      "pass": true,
+      "detail": {
+        "methods": 2,
+        "curves": 9,
+        "points": 234,
+        "java_model_sha256": "3011d9de5587011272c7147e32069c4f693e9b7ca0cbeed0b6a0228e68924fb5"
+      }
+    },
+    {
+      "name": "core_global_rank_csv_sensitivity_and_method_specific_downloads",
+      "pass": true,
+      "detail": {
+        "sensitivity_entries": 648,
+        "country_iterations": 16,
+        "discipline_iterations": 17
+      }
+    },
+    {
+      "name": "core_url_restore_and_count_metrics_method_invariance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "core_multi_subject_pci_matches_selected_method",
+      "pass": true,
+      "detail": {
+        "curves": 3,
+        "points": 78
+      }
+    },
+    {
+      "name": "core_corpus_switch_preserves_method_and_subjects",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_method_switch_and_all_eci_points_match_artifacts",
+      "pass": true,
+      "detail": {
+        "methods": 2,
+        "curves": 9,
+        "points": 234,
+        "java_model_sha256": "bb3431a004615e6536cd4e7d898aa3b4f884f4a8390ceddbc6378f4903826e76"
+      }
+    },
+    {
+      "name": "all_global_rank_csv_sensitivity_and_method_specific_downloads",
+      "pass": true,
+      "detail": {
+        "sensitivity_entries": 648,
+        "country_iterations": 16,
+        "discipline_iterations": 17
+      }
+    },
+    {
+      "name": "all_url_restore_and_count_metrics_method_invariance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_multi_subject_pci_matches_selected_method",
+      "pass": true,
+      "detail": {
+        "curves": 3,
+        "points": 78
+      }
+    },
+    {
+      "name": "all_corpus_switch_preserves_method_and_subjects",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile_method_controls_no_overflow_or_font_regression",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": "16px",
+        "method": "14px",
+        "broken": 0
+      }
+    },
+    {
+      "name": "no_page_errors_or_external_requests",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "started_at": "2026-11-12T05:27:57.673Z",
+  "completed_at": "2026-11-12T05:29:32.928Z"
+}

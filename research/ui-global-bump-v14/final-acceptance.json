@@ -1,0 +1,419 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T05:38:12.745781+00:00",
+  "url": "http://192.168.1.229:8899",
+  "production": {
+    "pid": 1355221,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-r1",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-r1",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--methods-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+      "--methods-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5122698774
+  },
+  "binary_sha256": "2dd770380629a702e98669ec78d91689e40f2676efd6526404b284562db06474",
+  "source_archive": "source-v14-global-bump-r1.tar.gz",
+  "source_sha256": "83a875e3f94c7d213db9e93218dd565ba5742ecf2f4c8af4eb71549c9c04b517",
+  "datasets": {
+    "core": {
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "selected_works": 269194661,
+      "methods": [
+        {
+          "id": "spectral-v1",
+          "display_name": "\u8c31 ECI \u00b7 \u5f53\u524d\u65b9\u6cd5",
+          "country_iterations": 0,
+          "discipline_iterations": 0,
+          "normalization": "population-z",
+          "residual_kind": "spectral-eigen-equation",
+          "source_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+          "source_completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e"
+        },
+        {
+          "id": "java-reflections-v1",
+          "display_name": "Java \u53cd\u5c04\u6cd5\u00b7\u4fee\u6b63\u7248",
+          "country_iterations": 16,
+          "discipline_iterations": 17,
+          "normalization": "population-z",
+          "residual_kind": "relative centered(T*z)-lambda2*z; finite-iteration diagnostic, not a convergence requirement",
+          "source_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+          "source_completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e"
+        }
+      ]
+    },
+    "all": {
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "selected_works": 404079112,
+      "methods": [
+        {
+          "id": "spectral-v1",
+          "display_name": "\u8c31 ECI \u00b7 \u5f53\u524d\u65b9\u6cd5",
+          "country_iterations": 0,
+          "discipline_iterations": 0,
+          "normalization": "population-z",
+          "residual_kind": "spectral-eigen-equation",
+          "source_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+          "source_completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43"
+        },
+        {
+          "id": "java-reflections-v1",
+          "display_name": "Java \u53cd\u5c04\u6cd5\u00b7\u4fee\u6b63\u7248",
+          "country_iterations": 16,
+          "discipline_iterations": 17,
+          "normalization": "population-z",
+          "residual_kind": "relative centered(T*z)-lambda2*z; finite-iteration diagnostic, not a convergence requirement",
+          "source_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+          "source_completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43"
+        }
+      ]
+    }
+  },
+  "production_qa": {
+    "core": {
+      "checks": 34,
+      "sha256": "de028d6adbe0c5191292779a2decb67987e18cdb63ca516a47701bf16ece9c4b"
+    },
+    "all": {
+      "checks": 34,
+      "sha256": "d229a3b7195d18ccd7b672be798fd282319f9609f87a89a53ca39c625b060f8e"
+    },
+    "feature-production-qa.json": {
+      "checks": 17,
+      "sha256": "fe1e18abac4db388568831a4b460275c6bf115260aa904f13f573b8b7bb66a06"
+    },
+    "method-production-qa.json": {
+      "checks": 12,
+      "sha256": "020a41d63b304f10ebfdca93c621083d35b4414b2d16d8ef6e244204f9d446f7"
+    },
+    "all-countries-production-qa.json": {
+      "checks": 15,
+      "sha256": "763f08aa674e807fcef9792f6d691a3258f6129939350bfe842dc5fe60140695"
+    },
+    "onboarding": {
+      "checks": 32,
+      "sha256": "cdb9a6dfb6c73d7481d4d4fc24e5e17aed3fe12bcc5c07bef173f4830c522004"
+    }
+  },
+  "assets_sha256": {
+    "app.css": "c3051b671c50df77a10c5cf9d104593ddec13a87ec8203e637b5d7cc37852837",
+    "app.js": "a7060fb39d2bb141fc9b42f6415e3da2bfe07203a7d8fc759d81e788d32e4efa",
+    "bump.js": "6beb1b2a3f7ccd2b53e5a03f3412bbed468dc07289222f5992e8f98f0cf9a523",
+    "index.html": "0d2aa6a012e107615678bf254aeccca7219d7ae769c88e05aed6e7314b3b7a4f",
+    "onboarding.css": "0b93109a0b81ca5e46884429c0a3722254ca5ef6f7bcb81930cc8881e97c482f",
+    "onboarding.js": "752b0fba032209cbd47c5a2f349b778bcca7078a34f03584a6d8ec2dbfea61bd"
+  },
+  "candidate_stopped": [
+    {
+      "pid": 1353777,
+      "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-r1",
+      "argv": [
+        "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-r1",
+        "serve",
+        "--data-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+        "--data-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+        "--methods-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+        "--methods-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+        "--listen",
+        "0.0.0.0:8902"
+      ],
+      "start_clock_ticks": 5122654821
+    },
+    {
+      "pid": 1321516,
+      "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-preview",
+      "argv": [
+        "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-preview",
+        "serve",
+        "--data-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+        "--data-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+        "--methods-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+        "--methods-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+        "--listen",
+        "0.0.0.0:8901"
+      ],
+      "start_clock_ticks": 5122560303
+    }
+  ],
+  "old_core_reference_preserved": 963184,
+  "rollback_used": false,
+  "behavior": {
+    "max_curves": 48,
+    "tested_cartesian_curves": 27,
+    "eci_country_only": true,
+    "pci_global_subject_only": true,
+    "default_method": "spectral-v1",
+    "java_country_iterations": 16,
+    "java_discipline_iterations": 17,
+    "separate_method_orientation": true,
+    "count_metrics_method_invariant": true,
+    "local_svg_flags": 248,
+    "eci_all_known_countries": true,
+    "default_eci_all_countries": 248,
+    "rank_renderer": "svg",
+    "rank_minimum_pixels": 26,
+    "independent_country_selections": true,
+    "onboarding_cooldown_days": 7
+  },
+  "final_delivery_source": {
+    "archive": "source-v14-global-bump-r1-verified.tar.gz",
+    "sha256": "b46c0adcde45f61a1c2c5b31d5afbfa63511732e33b5b8b2e7cd6e0fc4ef48f4",
+    "binary": "oa-stats-v14-global-bump-r1",
+    "binary_sha256": "2dd770380629a702e98669ec78d91689e40f2676efd6526404b284562db06474",
+    "runtime_assets_unchanged": true,
+    "source_only_updates": "QA reflects all-country default and naturally visible guide heading; README help entry"
+  },
+  "all_country_acceptance": [
+    {
+      "name": "core_spectral-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "core_java-reflections-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "core_desktop_complete_svg_layout",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "height": 6114,
+        "axisMax": 229,
+        "active_end_labels": 228,
+        "overlaps": 0
+      }
+    },
+    {
+      "name": "core_long_chart_hover_viewport_and_scroll",
+      "pass": true,
+      "detail": [
+        {
+          "rank": 1,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 115,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 228,
+          "top": 205.921875,
+          "bottom": 645.921875,
+          "rows": 248
+        }
+      ]
+    },
+    {
+      "name": "core_country_controls_and_view_memory",
+      "pass": true,
+      "detail": {
+        "default_all": true,
+        "explicit_subset_restored": true,
+        "ordinary_countries_restored": 9,
+        "score_accepts_all": true
+      }
+    },
+    {
+      "name": "core_concepts_citations_dense_endpoint_layout",
+      "pass": true,
+      "detail": {
+        "labels": 229,
+        "height": 6114,
+        "axisMax": 229,
+        "distinct_final_ranks": 208
+      }
+    },
+    {
+      "name": "all_spectral-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "all_java-reflections-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "all_desktop_complete_svg_layout",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "height": 6114,
+        "axisMax": 229,
+        "active_end_labels": 228,
+        "overlaps": 0
+      }
+    },
+    {
+      "name": "all_long_chart_hover_viewport_and_scroll",
+      "pass": true,
+      "detail": [
+        {
+          "rank": 1,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 115,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 228,
+          "top": 205.921875,
+          "bottom": 645.921875,
+          "rows": 248
+        }
+      ]
+    },
+    {
+      "name": "all_country_controls_and_view_memory",
+      "pass": true,
+      "detail": {
+        "default_all": true,
+        "explicit_subset_restored": true,
+        "ordinary_countries_restored": 9,
+        "score_accepts_all": true
+      }
+    },
+    {
+      "name": "all_concepts_citations_dense_endpoint_layout",
+      "pass": true,
+      "detail": {
+        "labels": 229,
+        "height": 6114,
+        "axisMax": 229,
+        "distinct_final_ranks": 212
+      }
+    },
+    {
+      "name": "mobile_long_chart_hover_viewport_and_scroll",
+      "pass": true,
+      "detail": [
+        {
+          "rank": 1,
+          "top": 392.5,
+          "bottom": 832.5,
+          "rows": 248
+        },
+        {
+          "rank": 115,
+          "top": 392.5,
+          "bottom": 832.5,
+          "rows": 248
+        },
+        {
+          "rank": 228,
+          "top": 78.5,
+          "bottom": 518.5,
+          "rows": 248
+        }
+      ]
+    },
+    {
+      "name": "mobile_dpr3_svg_all_ranks",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "height": 6217,
+        "axisMax": 229,
+        "end_labels": 228,
+        "overflow": false
+      }
+    },
+    {
+      "name": "mobile_dpr3_concepts_citations_dense_endpoints",
+      "pass": true,
+      "detail": {
+        "labels": 229,
+        "height": 6242,
+        "axisMax": 229
+      }
+    }
+  ]
+}

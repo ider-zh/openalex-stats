@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "revision": "v14-r1-production",
+  "at_utc": "2026-11-12T05:37:56.794687+00:00",
+  "observations": [
+    "Actual 8899 no overlay; runtime assets match frozen SHA",
+    "All 248 curves, complete full rank axis and all active endpoint labels displayed",
+    "Mobile DPR3 bottom ranks and full country names/flags readable with no endpoint overlap or document overflow",
+    "Dense Concepts0 citations ties remain honest server ranks",
+    "Long chart tooltips at top/middle/bottom remain inside viewport, sorted and scrollable",
+    "Mobile guide final step stays on heading and CSV target, does not land in middle of SVG"
+  ]
+}

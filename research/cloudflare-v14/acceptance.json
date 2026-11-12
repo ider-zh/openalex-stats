@@ -1,0 +1,334 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T05:29:39.112Z",
+  "scope": "v14 global all-country ECI Bump and first-use/7-day onboarding; official local Cloudflare Pages runtime; no Cloudflare account resources or public deployment created",
+  "runtime": {
+    "node": "v24.3.0",
+    "wrangler": "4.160.1",
+    "workerd": "1.20261110.1",
+    "url": "http://127.0.0.1:8788",
+    "processes": [
+      {
+        "ProcessId": 67044,
+        "ParentProcessId": 18744,
+        "CreationDate": "2026-11-12T13:24:07.400993+08:00",
+        "ExecutablePath": "C:\\Program Files\\nodejs\\node.exe",
+        "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" bin/cloudflare-runtime/node_modules/wrangler/bin/wrangler.js pages dev dist --port 8788 --ip 127.0.0.1 --inspector-port 9237 --persist-to .wrangler/v14 --show-interactive-dev-session=false --log-level warn"
+      },
+      {
+        "ProcessId": 71628,
+        "ParentProcessId": 67044,
+        "CreationDate": "2026-11-12T13:24:07.550575+08:00",
+        "ExecutablePath": "C:\\Program Files\\nodejs\\node.exe",
+        "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" --no-warnings C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\wrangler\\wrangler-dist\\cli.js pages dev dist --port 8788 --ip 127.0.0.1 --inspector-port 9237 --persist-to .wrangler/v14 --show-interactive-dev-session=false --log-level warn"
+      },
+      {
+        "ProcessId": 76520,
+        "ParentProcessId": 71628,
+        "CreationDate": "2026-11-12T13:24:10.817864+08:00",
+        "ExecutablePath": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe",
+        "CommandLine": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe serve --binary --experimental --socket-addr=entry=127.0.0.1:8788 --external-addr=loopback=127.0.0.1:6380 --control-fd=3 -"
+      },
+      {
+        "ProcessId": 79808,
+        "ParentProcessId": 71628,
+        "CreationDate": "2026-11-12T13:24:11.161648+08:00",
+        "ExecutablePath": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe",
+        "CommandLine": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe serve --binary --experimental --socket-addr=entry=127.0.0.1:0 --external-addr=loopback=127.0.0.1:6383 --control-fd=3 - --inspector-addr=127.0.0.1:0 --debug-port=127.0.0.1:0"
+      }
+    ]
+  },
+  "native_reference": {
+    "url": "http://192.168.1.229:8902",
+    "source_sha256": "83a875e3f94c7d213db9e93218dd565ba5742ecf2f4c8af4eb71549c9c04b517",
+    "binary_sha256": "2dd770380629a702e98669ec78d91689e40f2676efd6526404b284562db06474",
+    "pid": 1353777,
+    "start_ticks": 5122654821
+  },
+  "build": {
+    "command": "npm run build",
+    "files": 7399,
+    "bytes": 196060171,
+    "max_file_bytes": 2698129,
+    "worker_sha256": "88a2d22d1043a4dfad5c4362d94b1d01ac167a5dbe92664f060d2ca2707f21d2",
+    "all_scientific_export_files_sha256_verified_by_build": true,
+    "data_export_files": 7133,
+    "data_export_bytes": 193230749,
+    "data_export_manifest_sha256": "06bb2a2d887e59603e5506fd3bc9de22a8398065b3401ebe865ac4149de5bc40",
+    "data_unchanged_from_git_head": true,
+    "corpora": [
+      {
+        "corpus": "core",
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455"
+      },
+      {
+        "corpus": "all",
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e"
+      }
+    ]
+  },
+  "assets": {
+    "app.css": {
+      "source_sha256": "c3051b671c50df77a10c5cf9d104593ddec13a87ec8203e637b5d7cc37852837",
+      "built_sha256": "c3051b671c50df77a10c5cf9d104593ddec13a87ec8203e637b5d7cc37852837",
+      "served_sha256": "c3051b671c50df77a10c5cf9d104593ddec13a87ec8203e637b5d7cc37852837"
+    },
+    "app.js": {
+      "source_sha256": "a7060fb39d2bb141fc9b42f6415e3da2bfe07203a7d8fc759d81e788d32e4efa",
+      "built_sha256": "a7060fb39d2bb141fc9b42f6415e3da2bfe07203a7d8fc759d81e788d32e4efa",
+      "served_sha256": "a7060fb39d2bb141fc9b42f6415e3da2bfe07203a7d8fc759d81e788d32e4efa"
+    },
+    "bump.js": {
+      "source_sha256": "6beb1b2a3f7ccd2b53e5a03f3412bbed468dc07289222f5992e8f98f0cf9a523",
+      "built_sha256": "6beb1b2a3f7ccd2b53e5a03f3412bbed468dc07289222f5992e8f98f0cf9a523",
+      "served_sha256": "6beb1b2a3f7ccd2b53e5a03f3412bbed468dc07289222f5992e8f98f0cf9a523"
+    },
+    "index.html": {
+      "source_sha256": "0d2aa6a012e107615678bf254aeccca7219d7ae769c88e05aed6e7314b3b7a4f",
+      "built_sha256": "0d2aa6a012e107615678bf254aeccca7219d7ae769c88e05aed6e7314b3b7a4f",
+      "served_sha256": "0d2aa6a012e107615678bf254aeccca7219d7ae769c88e05aed6e7314b3b7a4f"
+    },
+    "onboarding.css": {
+      "source_sha256": "0b93109a0b81ca5e46884429c0a3722254ca5ef6f7bcb81930cc8881e97c482f",
+      "built_sha256": "0b93109a0b81ca5e46884429c0a3722254ca5ef6f7bcb81930cc8881e97c482f",
+      "served_sha256": "0b93109a0b81ca5e46884429c0a3722254ca5ef6f7bcb81930cc8881e97c482f"
+    },
+    "onboarding.js": {
+      "source_sha256": "752b0fba032209cbd47c5a2f349b778bcca7078a34f03584a6d8ec2dbfea61bd",
+      "built_sha256": "752b0fba032209cbd47c5a2f349b778bcca7078a34f03584a6d8ec2dbfea61bd",
+      "served_sha256": "752b0fba032209cbd47c5a2f349b778bcca7078a34f03584a6d8ec2dbfea61bd"
+    }
+  },
+  "api_parity": {
+    "status": "passed",
+    "cases": 994,
+    "point_values": 334908,
+    "csv_cases": 28,
+    "download_cases": 12,
+    "invalid_cases": 12,
+    "path": "research/cloudflare-v14/pages-parity.json"
+  },
+  "browser": {
+    "all_country_checks": 15,
+    "onboarding_checks": 32,
+    "method_regression_checks": 12,
+    "asset_overrides": false,
+    "page_errors": [],
+    "outside_requests": [],
+    "manual_visual_review": [
+      "onboarding/1440-eci-step6.png",
+      "onboarding/390-eci-step6.png",
+      "all-countries/mobile-dpr3-middle.png",
+      "all-countries/mobile-dpr3-concepts-citations-middle.png",
+      "methods/mobile-java-method-pci.png"
+    ],
+    "notes": "Full-country country/rank curves, mobile DPR3 endpoint collisions and clipping, dense Java Concepts0 citations ties, scrollable ranked tooltips and viewport placement, first visit/cooldown/manual replay/storage denial/error-load gating, and original method/model values passed."
+  },
+  "evidence": [
+    {
+      "path": "research/cloudflare-v14/all-countries/all-concepts-citations-layout.json",
+      "bytes": 743362,
+      "sha256": "3b16747afde8f6712b332e9a34f659c0c3b80f926328d2d6cdae6231054581a3"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/all-countries-qa.json",
+      "bytes": 5015,
+      "sha256": "6a1b782fff4d31d9a006c48492424fcb647472ba27c0993bc79aaf52c6407005"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/all-desktop-all-ranks.png",
+      "bytes": 6055373,
+      "sha256": "10e56f114c4f71d8343f80aa8bb4200339ff1f2a7e61b67604cc2a2773807c1d"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/all-layout.json",
+      "bytes": 739770,
+      "sha256": "1905529bfab425540c91124e6c99d7b41ec60c8198a529dd2cc22f106b1c0d1a"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/core-concepts-citations-layout.json",
+      "bytes": 743399,
+      "sha256": "7e8299892d5805798ef7ac847a2663616d31ee736e21be9848364f165d58b19c"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/core-desktop-all-ranks.png",
+      "bytes": 6094321,
+      "sha256": "5183e6925d05d5bdd0778432178cf9ac3e2ec64ec6c056486a9dad5a7b31acc6"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/core-layout.json",
+      "bytes": 739771,
+      "sha256": "dd4af55a2f47019475c9d0c68f98440d415e5a448682035251a0e66ebd8a28d8"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/mobile-concepts-citations-layout.json",
+      "bytes": 728801,
+      "sha256": "66deb7652e3ca9be81db39eca624f4edaea302b560a85516d5d80970677d93dd"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/mobile-dpr3-bottom.png",
+      "bytes": 450588,
+      "sha256": "96867ed637400897c3384b9370bc640e605847683c145fe9c450fb8c180fd4c3"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/mobile-dpr3-concepts-citations-middle.png",
+      "bytes": 607797,
+      "sha256": "71dd6c88e0fb06f2eccbb471b17b08af50ef537be09e8ff83dfa8d44b5411939"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/mobile-dpr3-middle.png",
+      "bytes": 530122,
+      "sha256": "aca5bf07f82caab0aeaf7e6f37d57362656d9c8310f19483a4923d94e376ebf3"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/mobile-dpr3-top.png",
+      "bytes": 327579,
+      "sha256": "125854d628a980b8dc7fd9397f064ab21056487317f17b23ebfe24b456a19e15"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/mobile-layout-debug.json",
+      "bytes": 727790,
+      "sha256": "168e1436f5207d38c5bb01d815e0fbbee2c8e0a05b19d9e50da6e95f13f68f8d"
+    },
+    {
+      "path": "research/cloudflare-v14/all-countries/mobile-layout.json",
+      "bytes": 727790,
+      "sha256": "168e1436f5207d38c5bb01d815e0fbbee2c8e0a05b19d9e50da6e95f13f68f8d"
+    },
+    {
+      "path": "research/cloudflare-v14/methods/all-desktop-java-eci-rank.png",
+      "bytes": 794693,
+      "sha256": "ff534a016b8867924b98a64d659b640e56e6b8c67d50ebb37c12210a5eeb6d6c"
+    },
+    {
+      "path": "research/cloudflare-v14/methods/all-desktop-java-eci-score.png",
+      "bytes": 304327,
+      "sha256": "62193004ce84df6741b016158131fd62f9fdd90df1e0015f46dcf37bc4eca4e0"
+    },
+    {
+      "path": "research/cloudflare-v14/methods/core-desktop-java-eci-rank.png",
+      "bytes": 788057,
+      "sha256": "55430c1e34a65e45bbd85b1808b19b5ace5dd9c27500b686600f6af1bb77a52b"
+    },
+    {
+      "path": "research/cloudflare-v14/methods/core-desktop-java-eci-score.png",
+      "bytes": 301827,
+      "sha256": "ed6b082d4e65379556a8854a2dce6fe3bb17710074854299d17989826cb5d2b5"
+    },
+    {
+      "path": "research/cloudflare-v14/methods/method-qa.json",
+      "bytes": 2605,
+      "sha256": "bed148f4746b7660ca423c3a1ad7d88dcad877d1a4fe459548638cfae2b3e6f5"
+    },
+    {
+      "path": "research/cloudflare-v14/methods/mobile-java-method-pci.png",
+      "bytes": 233027,
+      "sha256": "963b59289e15a7c3597795e1c8a779b6ff3e63daffab046e6336ed08aa2030a4"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-eci-first.png",
+      "bytes": 181116,
+      "sha256": "929c7adfa32fb00ebcb968b4f37ffc3135372c300a7dbed888ee761308d679fb"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-eci-step2.png",
+      "bytes": 822000,
+      "sha256": "6f17acf37e529d146867ed20b8e65dceac4b4bca6f9c5f67ae1e6ceb046cfc69"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-eci-step4.png",
+      "bytes": 530317,
+      "sha256": "dd0e9da14d3c9c4c468138d9161b2ac0c9e9029fa1aaa163de90d4990699e541"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-eci-step6.png",
+      "bytes": 482331,
+      "sha256": "f0060487a62a63e1f72b40af03bce464a4831fd0d9fdeb637ec02d0c5a2686a8"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-publications-first.png",
+      "bytes": 139435,
+      "sha256": "547414d756e10ccb231d4e34badfce4a234b5da15aac265f1fc5ba35caae080a"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-publications-help-entry.png",
+      "bytes": 127410,
+      "sha256": "0bf9a54025650264cf0b150599633805456bf6735a71af5e9d27eab5173ff263"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-publications-step2.png",
+      "bytes": 162710,
+      "sha256": "90e8b77cef5dab1c179f4f995f771dc6118e885f12c912a9c7a88efdc39aa433"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-publications-step4.png",
+      "bytes": 168293,
+      "sha256": "8d6b0d89bc3265fab736fe3ec40360ab83668e32b6d3486183e5d92df04b611d"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/1440-publications-step6.png",
+      "bytes": 179794,
+      "sha256": "2c935eeaaaf8776cf6234019dbac524f55c21456a9602b83b2f4c88b9046483e"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-eci-first.png",
+      "bytes": 53855,
+      "sha256": "b67be005ba1b84168f279d8f10afada455c7f1e12da5325bf4f4f4df155978bb"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-eci-step2.png",
+      "bytes": 47646,
+      "sha256": "d0ba97eca6abd28635c258280f229c41dbc381ca23833938cb7574539bd241ac"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-eci-step4.png",
+      "bytes": 54820,
+      "sha256": "e8cea03f95d0e3eaffb23df18090d0e54c2813205ade77aa7901db2b876e4cc3"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-eci-step6.png",
+      "bytes": 99003,
+      "sha256": "f2aca63c20d9929d3ffc2730df497e5942c6837813c90b147acedb5707cabf7c"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-publications-first.png",
+      "bytes": 68656,
+      "sha256": "cb5cddc77aaad81acb6b729859804bc5cdabc1a2c7fc78422d92451a168f5879"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-publications-help-entry.png",
+      "bytes": 41257,
+      "sha256": "21eaf68d8972d15da04da125214c879043f0139a1e4270ade319485c012c716d"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-publications-step2.png",
+      "bytes": 46387,
+      "sha256": "03bf1c51e368e1ae33aa2ffdb1212be26d4527ccc71fc7401d79b5837821dff5"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-publications-step4.png",
+      "bytes": 56260,
+      "sha256": "e8ad28e2682e0d724e581cf3d2cb718b9661233d0a18a166126a76c48fbfa3ab"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/390-publications-step6.png",
+      "bytes": 65547,
+      "sha256": "8021818a55e13c6950d03c2b929d6657c433910a9af20fea4cdeecebba11af51"
+    },
+    {
+      "path": "research/cloudflare-v14/onboarding/report.json",
+      "bytes": 14903,
+      "sha256": "fa3d0abe781aca73afee6f85640b3cf02fc58799e6c2639808e81c551ebff879"
+    },
+    {
+      "path": "research/cloudflare-v14/pages-parity.json",
+      "bytes": 713,
+      "sha256": "61ab567794ecda74b42e0cb0777fafedf0b98342cb85b14725e02ad2f8c815a4"
+    },
+    {
+      "path": "research/cloudflare-v14/runtime-processes.json",
+      "bytes": 2197,
+      "sha256": "b9de10eebbb12d310168f8115d1dd8f6b4722cf0d8affa6ef4fd71188a40e377"
+    }
+  ]
+}

@@ -13,8 +13,28 @@ function fixture(){
   for(let i=0;i<48;i++)store.set(`/data/core-run/counts/0/0/${i}.bin.gz`,matrix(i===0?[[0,0,2,4],[1,0,6,12]]:i===1?[[0,0,2,0],[1,0,0,4]]:[],i===0?[[8,16],[0,0]]:i===1?[[2,4],[0,0]]:[[0,0],[0,0]]));
   store.set('/data/core-run/counts/0/0/margins.bin.gz',matrix([[0,0,4,4],[1,0,6,16]]));store.set('/data/site.json',Buffer.from(JSON.stringify({version:'openalex-static-query-v1',catalog:{default_corpus:'core',datasets:[{id:'core'}]},datasets:{core:control}})));store.set('/data/core-run/artifacts/run.json',Buffer.from('{"run_id":"core-run"}\n'));
   const env={ASSETS:{async fetch(input){const request=input instanceof Request?input:new Request(input),path=new URL(request.url).pathname;requests.push(path);const b=store.get(path);return b?new Response(request.method==='HEAD'?null:b,{headers:{'Content-Type':'application/octet-stream'}}):new Response('not found',{status:404});}}};
-  return {origin,meta,control,env,requests,async query(values={}){const p=new URLSearchParams({scheme:'topics',level:'field',disciplines:'f1,f2',countries:'CN,US',start:'2000',end:'2001',...values});const r=await handle(new Request(`${origin}/api/series?${p}`),env);return {status:r.status,body:await r.json()};}};
+  return {origin,meta,control,env,requests,store,async query(values={}){const p=new URLSearchParams({scheme:'topics',level:'field',disciplines:'f1,f2',countries:'CN,US',start:'2000',end:'2001',...values});const r=await handle(new Request(`${origin}/api/series?${p}`),env);return {status:r.status,body:await r.json()};}};
 }
+
+test('ECI accepts the complete known-country universe beyond 12/48, without truncation or reranking',async()=>{
+  const f=fixture();
+  // Synthetic fixture codes exercise the API cardinality boundary, not real countries.
+  for(let i=0;i<60;i++){const id=String.fromCharCode(65+Math.floor(i/26))+String.fromCharCode(65+i%26);f.meta.countries.push({id,display_name:`Fixture ${id}`});}
+  const ids=f.meta.countries.map(c=>c.id),universe=ids.length;
+  f.store.set('/data/site.json',Buffer.from(JSON.stringify({version:'openalex-static-query-v1',catalog:{default_corpus:'core',datasets:[{id:'core'}]},datasets:{core:f.control}})));
+  for(const method of f.meta.methods){const data={countries:ids.map((_,i)=>[[universe-i,'ok',i+1,universe],[null,'inactive',null,0]]),disciplines:[]};f.store.set(`/data/core-run/models/${method.id}.json.gz`,gzipSync(JSON.stringify(data)));}
+  for(const method of f.meta.methods){
+    const all=await f.query({metric:'eci',disciplines:'f1',countries:ids.join(','),method:method.id});
+    assert.equal(all.status,200);assert.equal(all.body.series.length,universe);
+    assert.deepEqual(all.body.series.map(s=>s.id),ids);assert.equal(all.body.series.at(-1).points[0].rank,universe);
+    const single=await f.query({metric:'eci',disciplines:'f1',countries:ids.at(-1),method:method.id});
+    assert.equal(single.body.series[0].points[0].rank,universe);
+    assert.equal((await f.query({metric:'eci',disciplines:'f1',countries:ids.concat(ids).join(','),method:method.id})).body.series.length,universe);
+  }
+  assert.equal((await f.query({metric:'publications',disciplines:'f1',countries:ids.join(',')})).status,400);
+  assert.equal((await f.query({metric:'eci',disciplines:'f1',countries:'ZZ'})).status,400);
+  const meta=await handle(new Request(`${f.origin}/api/meta`),f.env);assert.equal((await meta.json()).max_eci_countries,universe);
+});
 test('country × discipline counts, exact shares/RCA and legacy single selection',async()=>{const f=fixture(),r=await f.query();assert.equal(r.status,200);assert.deepEqual(r.body.series.map(s=>s.id),['CN::f1','CN::f2','US::f1','US::f2']);assert.deepEqual(r.body.series.map(s=>s.points[0].value),[2,2,6,0]);assert.equal((await f.query({metric:'share'})).body.series[0].points[0].value,.25);assert.equal((await f.query({metric:'rca'})).body.series[0].points[0].value,.625);const q=parseQuery(new URLSearchParams({scheme:'topics',level:'field',discipline:'f1',countries:'CN'}),f.meta);assert.equal(q.discipline,'f1');assert.deepEqual(q.disciplines,['f1']);});
 test('ECI per-country, PCI per-global-discipline; methods change only models',async()=>{const f=fixture();let r=await f.query({metric:'eci'});assert.equal(r.body.series.length,2);assert.deepEqual(r.body.series.map(s=>s.discipline),['','']);assert.equal(r.body.series[0].points[0].rank,1);r=await f.query({metric:'pci'});assert.equal(r.body.series.length,2);assert.ok(r.body.series.every(s=>s.country==='GLOBAL'));assert.equal(r.body.query.countries,null);assert.equal((await f.query({metric:'eci',method:'java-reflections-v1'})).body.series[0].points[0].value,.8);assert.deepEqual((await f.query({method:'java-reflections-v1'})).body.series.map(s=>s.points),(await f.query()).body.series.map(s=>s.points));});
 test('invalid and excessive selectors reject rather than truncate',async()=>{const f=fixture();for(const query of [{countries:'ZZ'},{disciplines:'bad'},{disciplines:'f1',discipline:'f1'},{level:'wrong'},{basis:'bad'},{method:'bad'},{start:'2000.5'},{end:'1999'}])assert.equal((await f.query(query)).status,400);assert.equal((await f.query({disciplines:f.meta.layers[0].labels.map(d=>d.id).join(',')})).status,400);const url=`${f.origin}/api/series?scheme=topics&level=field&discipline=f1&countries=CN&metric=publications&metric=eci`;assert.equal((await handle(new Request(url),f.env)).status,400);});

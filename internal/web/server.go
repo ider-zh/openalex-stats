@@ -87,6 +87,10 @@ func (s *server) serveSelected(w http.ResponseWriter, r *http.Request) {
 		s.asset(w, r, "app.js", "text/javascript; charset=utf-8")
 	case "/static/bump.js":
 		s.asset(w, r, "bump.js", "text/javascript; charset=utf-8")
+	case "/static/onboarding.js":
+		s.asset(w, r, "onboarding.js", "text/javascript; charset=utf-8")
+	case "/static/onboarding.css":
+		s.asset(w, r, "onboarding.css", "text/css; charset=utf-8")
 	case "/static/app.css":
 		s.asset(w, r, "app.css", "text/css; charset=utf-8")
 	case "/static/vendor/echarts.min.js":
@@ -155,7 +159,7 @@ func (s *server) metadata(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	writeJSON(w, map[string]any{
-		"ready": true, "status": d.run.Status, "snapshot_date": d.snapshotDate, "corpus": s.corpus, "flag_codes": flagCodes(), "max_series": MaxSeries,
+		"ready": true, "status": d.run.Status, "snapshot_date": d.snapshotDate, "corpus": s.corpus, "flag_codes": flagCodes(), "max_series": MaxSeries, "max_eci_countries": len(d.countries),
 		"methods": d.methodInfo, "eci_default_method": DefaultMethod,
 		"year_start": d.start, "year_end": d.end, "default_year_end": min(2025, d.end), "partial_years": partial,
 		"countries": d.countries, "layers": d.layers, "scenarios": d.scenarios, "eci_scenario_id": d.eciScenario,

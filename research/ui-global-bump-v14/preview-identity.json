@@ -1,0 +1,20 @@
+{
+  "pid": 1321516,
+  "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-preview",
+  "argv": [
+    "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v14-global-bump-preview",
+    "serve",
+    "--data-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+    "--data-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+    "--methods-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+    "--methods-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+    "--listen",
+    "0.0.0.0:8901"
+  ],
+  "start_clock_ticks": 5122560303,
+  "binary_sha256": "7347cfc2cae2dcdb481bab48b68195e4dc49716554e4da623a9ad1c6fbbceb2c"
+}

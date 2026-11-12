@@ -170,8 +170,12 @@ func (d *dataset) parseQuery(params url.Values) (Query, error) {
 				seen[c] = true
 			}
 		}
-		if len(q.Countries) == 0 || len(q.Countries) > 12 {
-			return q, fmt.Errorf("请选择1到12个国家／地区")
+		limit := 12
+		if q.Metric == "eci" {
+			limit = len(d.countries)
+		}
+		if len(q.Countries) == 0 || len(q.Countries) > limit {
+			return q, fmt.Errorf("请选择1到%d个国家／地区", limit)
 		}
 	}
 	curves := len(q.Countries) * len(q.Disciplines)
@@ -181,7 +185,7 @@ func (d *dataset) parseQuery(params url.Values) (Query, error) {
 	if q.Metric == "pci" {
 		curves = len(q.Disciplines)
 	}
-	if curves > MaxSeries {
+	if q.Metric != "eci" && curves > MaxSeries {
 		return q, fmt.Errorf("当前选择产生%d条曲线，最多%d条；请减少国家或学科", curves, MaxSeries)
 	}
 	for key, target := range map[string]*int{"start": &q.Start, "end": &q.End} {

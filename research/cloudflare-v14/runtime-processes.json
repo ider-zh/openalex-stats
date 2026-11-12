@@ -1,0 +1,30 @@
+[
+  {
+    "ProcessId": 67044,
+    "ParentProcessId": 18744,
+    "CreationDate": "2026-11-12T13:24:07.400993+08:00",
+    "ExecutablePath": "C:\\Program Files\\nodejs\\node.exe",
+    "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" bin/cloudflare-runtime/node_modules/wrangler/bin/wrangler.js pages dev dist --port 8788 --ip 127.0.0.1 --inspector-port 9237 --persist-to .wrangler/v14 --show-interactive-dev-session=false --log-level warn"
+  },
+  {
+    "ProcessId": 71628,
+    "ParentProcessId": 67044,
+    "CreationDate": "2026-11-12T13:24:07.550575+08:00",
+    "ExecutablePath": "C:\\Program Files\\nodejs\\node.exe",
+    "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" --no-warnings C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\wrangler\\wrangler-dist\\cli.js pages dev dist --port 8788 --ip 127.0.0.1 --inspector-port 9237 --persist-to .wrangler/v14 --show-interactive-dev-session=false --log-level warn"
+  },
+  {
+    "ProcessId": 76520,
+    "ParentProcessId": 71628,
+    "CreationDate": "2026-11-12T13:24:10.817864+08:00",
+    "ExecutablePath": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe",
+    "CommandLine": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe serve --binary --experimental --socket-addr=entry=127.0.0.1:8788 --external-addr=loopback=127.0.0.1:6380 --control-fd=3 -"
+  },
+  {
+    "ProcessId": 79808,
+    "ParentProcessId": 71628,
+    "CreationDate": "2026-11-12T13:24:11.161648+08:00",
+    "ExecutablePath": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe",
+    "CommandLine": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\bin\\cloudflare-runtime\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe serve --binary --experimental --socket-addr=entry=127.0.0.1:0 --external-addr=loopback=127.0.0.1:6383 --control-fd=3 - --inspector-addr=127.0.0.1:0 --debug-port=127.0.0.1:0"
+  }
+]

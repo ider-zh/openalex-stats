@@ -88,5 +88,9 @@ td:first-child .country-icon{margin-right:6px}.comparison-panel{min-width:0}td:f
 .method-selector{border-bottom:1px solid var(--line);padding:17px 0 18px}
 .method-selector-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:#536770}
 .method-selector-heading .switch{min-width:260px}.method-selector-heading .switch button{font-size:14px;padding:8px 12px}
+.bump-scope-note{border-left:2px solid var(--accent);padding:8px 12px;background:#edf1e9;margin:16px 0 0}
+.global-bump{min-height:700px}.global-bump svg{overflow:visible}
+#allCountries{font-weight:700;color:#244d38;border:1px solid #b8cabc;padding:4px 7px;background:#e5ede2}
+#expandCountries{background:#e5ede2;color:#244d38}
 .method-selector .hint{margin:11px 0 0;max-width:850px}.method-report{display:inline-block;margin-top:8px;color:#315f7b;font-size:13px;text-underline-offset:3px}
 @media(max-width:560px){.method-selector-heading{align-items:flex-start;flex-direction:column}.method-selector-heading .switch{min-width:0;width:100%}}

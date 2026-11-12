@@ -45,7 +45,7 @@ test('rank is an inverse integer axis with visible dots and nonanimated gap line
   assert.equal(option.yAxis.inverse, true);
   assert.equal(option.yAxis.min, 1);
   assert.equal(option.yAxis.minInterval, 1);
-  assert.ok(option.yAxis.max >= 9 && option.yAxis.max < 180);
+  assert.equal(option.yAxis.max,180,'ECI retains the complete rank universe even for a selected subset');
   assert.equal(option.animation, false);
   for (const series of option.series) {
     assert.equal(series.animation, false);
@@ -58,6 +58,14 @@ test('rank is an inverse integer axis with visible dots and nonanimated gap line
     assert.equal(series.itemStyle.color, colors[series.id]);
     assert.ok(series.data.every(v => typeof v === 'number' || v === null));
   }
+});
+
+test('all-country layout allocates readable vertical space and does not hide tied endpoints',()=>{
+  const response={query:{metric:'eci',start:2025,end:2025},series:Array.from({length:248},(_,i)=>({id:`C${i}`,name:`国家${i}`,points:[point(2025,248-i,i===247?247:i+1,{rank_universe:248})]}))};
+  assert.ok(bump.layout(response).height>=248*24);
+  const o=bump.buildOption(response,{mobile:true});assert.equal(o.series.length,248);assert.equal(o.yAxis.max,248);assert.equal(o.yAxis.interval,1);
+  assert.ok(o.series.every(s=>s.labelLayout.hideOverlap===false&&s.endLabel.show));
+  assert.equal(o.series[247].data[0],247,'tie must remain a tie rather than acquire a display rank');
 });
 
 test('tooltip sorts current-year ranks, keeps original scores, and marks partial years', () => {

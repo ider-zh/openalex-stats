@@ -96,3 +96,7 @@ Core 输出年文献的国家信息覆盖率为 48.69%，Core+XPAC 为 36.85%；
 第三方浏览器资产的版本、许可和来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 本次 [交付验收记录](research/cloudflare-delivery/acceptance.json) 包含全量数据核验、与正式 Go 服务的 API 对照、官方 Cloudflare 本地运行时及桌面／手机浏览器验证。Cloudflare 公网项目由仓库所有者连接并部署。
+
+全球 ECI Bump 默认展示全部 248 个国家／地区，使用 SVG 和至少 26px／名次的自适应长图，按终点标签所需空间继续加高。普通数量指标仍限制 12 国／48 条组合曲线，其国家选择与 ECI 独立保存。详见 [交互说明](docs/explorer-controls.md)。
+
+首次成功打开图表后显示六步使用导引；完成、跳过或关闭后满七天再次提示，页首可随时重看。规则与验证见 [使用导引](docs/onboarding.md)。

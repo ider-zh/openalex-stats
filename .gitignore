@@ -2,6 +2,10 @@
 /out/
 /dist/
 /research/country-enrichment*/
+/research/ui-global-bump-v14/overlay-dev*/
+/research/ui-global-bump-v14/preview/
+/research/ui-global-bump-v14/mobile-debug.png
+/research/onboarding-qa-v14-preview/
 /docs/country-enrichment-review.md
 /node_modules/
 /.wrangler/

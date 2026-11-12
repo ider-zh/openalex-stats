@@ -66,10 +66,11 @@ export function parseQuery(params,meta){
   q.discipline=q.disciplines?.[0]||'';
   if(q.metric!=='pci'){
     const selected=[];for(const id of (params.get('countries')||'').split(',')){if(!id)continue;if(!countries.has(id))fail(`未知国家／地区代码：${id}`);if(!selected.includes(id))selected.push(id);}
-    if(!selected.length||selected.length>12)fail('请选择1到12个国家／地区');q.countries=selected;
+    const maxCountries=q.metric==='eci'?countries.size:12;
+    if(!selected.length||selected.length>maxCountries)fail(`请选择1到${maxCountries}个国家／地区`);q.countries=selected;
   }
   const curves=q.metric==='eci'?q.countries.length:q.metric==='pci'?q.disciplines.length:q.countries.length*q.disciplines.length;
-  if(curves>max)fail(`当前选择产生${curves}条曲线，最多${max}条；请减少国家或学科`);
+  if(q.metric!=='eci'&&curves>max)fail(`当前选择产生${curves}条曲线，最多${max}条；请减少国家或学科`);
   for(const key of ['start','end']){const raw=params.get(key);if(raw){if(!/^[+-]?\d+$/.test(raw)||!Number.isSafeInteger(Number(raw)))fail(`无效年份：${key}`);q[key]=Number(raw);}}
   if(q.start<Math.max(2000,meta.year_start)||q.end>meta.year_end||q.end<q.start||q.end-q.start>200)fail(`年份必须位于${Math.max(2000,meta.year_start)}—${meta.year_end}`);
   return q;
@@ -161,7 +162,7 @@ export async function handle(request,env){
     const control=site.datasets[corpus];if(!control)fail('未知或未提供的语料版本。');
     const params=new URLSearchParams(url.searchParams);params.delete('corpus');
     if(url.pathname==='/api/meta'){
-      if([...params].length)fail('metadata接口不接受参数。');return secure(json(control.meta),corpus,head);
+      if([...params].length)fail('metadata接口不接受参数。');return secure(json({...control.meta,max_eci_countries:control.meta.countries.length}),corpus,head);
     }
     if(url.pathname==='/download'){
       for(const key of new Set(params.keys()))if(!['file','method'].includes(key)||params.getAll(key).length!==1)fail('只能下载已列出的统计产物。');

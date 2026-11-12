@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "revision": "r1",
+  "at_utc": "2026-11-12T05:31:35.041634+00:00",
+  "observations": [
+    "Real 8902 no overlay",
+    "248 curves retained, complete rank universe and all final valid endpoint labels visible",
+    "Desktop and mobile DPR3 labels no overlap or clipping, Concepts0 citations dense ties included",
+    "Long-chart tooltip remains in current viewport and all rows scroll",
+    "Tour mobile ECI final step anchors heading and CSV without entering middle of SVG"
+  ]
+}

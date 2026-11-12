@@ -58,6 +58,17 @@
     return `每年按${universe}的复杂度分数降序排名；并列同名次，后续名次跳号。只展示所选曲线，选择不改变全局排名。名次反映相对结构，不能解释为知识总量；原始分数见悬浮提示。`;
   }
 
+  function endpointText(name,rank,mobile) {
+    const tokens=[...Array.from(name),` #${rank}`],lines=[];let line='',width=0;
+    for(const token of tokens){const units=Array.from(token).reduce((n,c)=>n+(/[\x00-\xff]/.test(c)?.55:1),0),limit=lines.length?(mobile?10:14):(mobile?8:12);if(line&&width+units>limit){lines.push(line);line='';width=0;}line+=token;width+=units;}
+    if(line)lines.push(line);return lines.join('\n');
+  }
+  function layout(response,options={}) {
+    const points=seriesOf(response).flatMap(pointsOf),universes=points.map(p=>p.rank_universe).filter(positiveInteger),ranks=points.map(validRank).filter(positiveInteger);
+    const universe=Math.max(2,...universes,...ranks),labels=seriesOf(response).filter(s=>validRank(pointsOf(s).at(-1))!==null),labelHeight=labels.reduce((n,s)=>n+endpointText(nameOf(s,options),validRank(pointsOf(s).at(-1)),options.mobile).split('\n').length*17+8,0);
+    return {universe,height:Math.max(700,universe*26+160,labelHeight+160)};
+  }
+
   function buildOption(response, options = {}) {
     const axisYears = years(response), data = seriesOf(response), maps = pointMaps(response);
     const format = options.format || options.formatScore || formatDefault;
@@ -68,7 +79,8 @@
     const largest = visibleRanks.length ? Math.max(...visibleRanks) : 1;
     const universes = data.flatMap(s => pointsOf(s).map(p => p.rank_universe)).filter(positiveInteger);
     const maxUniverse = universes.length ? Math.max(...universes) : Infinity;
-    const axisMax = Math.max(2, Math.min(maxUniverse, Math.max(5, largest + Math.max(1, Math.ceil(largest * .08)))));
+    const expanded=response?.query?.metric==='eci';
+    const axisMax = expanded?layout(response).universe:Math.max(2, Math.min(maxUniverse, Math.max(5, largest + Math.max(1, Math.ceil(largest * .08)))));
     const axisLabels = axisYears.map(year => `${year}${partialYears.has(year) ? '*' : ''}`);
 
     function tooltip(items) {
@@ -93,22 +105,27 @@
       color: data.map(s => colorOf(options, s.id)),
       textStyle: {fontFamily: 'Trebuchet MS, Microsoft YaHei, sans-serif', fontSize: 13, color: muted},
       aria: {enabled: true, label: {description: definition(response)}},
-      grid: {left: 14, right: mobile ? 58 : 90, top: 70, bottom: 24, containLabel: true},
+      grid: {left: 14, right: expanded?(mobile?146:205):(mobile ? 58 : 90), top: 70, bottom: 45, containLabel: true},
       legend: options.legend || {type: 'scroll', top: 1, left: 0, right: 0, itemWidth: 14, itemHeight: 3, icon: 'roundRect', textStyle: {fontSize: 13, color: '#536770'}},
-      tooltip: {trigger: 'axis', confine: true, enterable:true, backgroundColor: paper, borderColor: '#d7dcd8', textStyle: {fontSize: 14, color: ink}, axisPointer: {type: 'line', lineStyle: {color: '#aab5ae', type: 'dashed'}}, formatter: tooltip},
+      tooltip: {trigger: 'axis', confine: true, enterable:true, position:options.tooltipPosition,backgroundColor: paper, borderColor: '#d7dcd8', textStyle: {fontSize: 14, color: ink}, axisPointer: {type: 'line', lineStyle: {color: '#aab5ae', type: 'dashed'}}, formatter: tooltip},
       xAxis: {type: 'category', boundaryGap: false, data: axisLabels, axisLine: {lineStyle: {color: '#cbd2d0'}}, axisTick: {show: false}, axisLabel: {color: '#61757c', fontSize: 12, hideOverlap: true, margin: 13}},
-      yAxis: {type: 'value', inverse: true, min: 1, max: axisMax, minInterval: 1, splitNumber: Math.min(6, axisMax - 1), name: '全局排名 ↑', nameLocation: 'start', nameGap: 26, nameTextStyle: {fontSize: 13, color: muted, align: 'left'}, axisLabel: {color: '#61757c', fontSize: 12, formatter: value => Number.isInteger(value) ? `#${value}` : ''}, splitLine: {lineStyle: {color: '#e7eae4', type: 'dashed'}}, axisLine: {show: false}, axisTick: {show: false}},
+      yAxis: {type: 'value', inverse: true, min: 1, max: axisMax, minInterval: 1, interval:expanded?1:undefined,splitNumber: Math.min(6, axisMax - 1), name: '全局排名 ↑', nameLocation: 'start', nameGap: 26, nameTextStyle: {fontSize: 13, color: muted, align: 'left'}, axisLabel: {color: '#61757c', fontSize: 12, formatter: value => Number.isInteger(value) ? `#${value}` : ''}, splitLine: {lineStyle: {color: '#e7eae4', type: 'dashed'}}, axisLine: {show: false}, axisTick: {show: false}},
       series: data.map((series, index) => {
         const color = colorOf(options, series.id), values = ranks[index];
         const finalRank = values.at(-1);
+        const flag=options.flagURL?.(series.id),safeFlag=/^\/static\/flags\/[a-z]{2}\.svg$/.test(flag||'');
+        const endName=expanded?nameOf(series,options):options.endLabel?.(series)||series.id;
+        // ECharts 5.6 rich images with fixed token width and overflow:'break'
+        // enter an invalid text-parser branch. Wrap the plain label explicitly.
+        const text=expanded?endpointText(endName,finalRank,mobile):`${endName}  #${finalRank}`;
         return {
           id: String(series.id), name: nameOf(series, options), type: 'line', data: values,
           connectNulls: false, smooth: false, animation: false,
           showSymbol: true, showAllSymbol: true, symbol: options.style?.(series.id)?.symbol || 'circle', symbolSize: 4,
           lineStyle: {width: 2.4, color,type:options.style?.(series.id)?.dash||'solid'}, itemStyle: {color, borderColor: paper, borderWidth: .5},
           emphasis: {focus: 'series', scale: true, lineStyle: {width: 3.5}}, blur: {lineStyle: {opacity: .14}, itemStyle: {opacity: .2}},
-          endLabel: {show: finalRank !== null && finalRank !== undefined, formatter: () => `${options.endLabel?.(series)||series.id}  #${finalRank}`, color, fontSize: mobile ? 12 : 13, distance: 7, backgroundColor: paper, padding: [2, 3], borderRadius: 2},
-          labelLayout: {moveOverlap: 'shiftY', hideOverlap: true},
+          endLabel: {show: finalRank !== null && finalRank !== undefined, formatter: () => expanded&&safeFlag?`{flag|} ${text}`:text,rich:safeFlag?{flag:{width:18,height:13,backgroundColor:{image:flag}}}:undefined,color, fontSize:13,lineHeight:17,width:expanded?(mobile?133:190):undefined,distance:7, backgroundColor: paper, padding: [2, 3], borderRadius: 2},
+          labelLayout: {moveOverlap: 'shiftY', hideOverlap: !expanded},
           z: 2
         };
       }),
@@ -116,5 +133,5 @@
     };
   }
 
-  root.OpenAlexBump = Object.freeze({buildOption, tooltipRows, definition, years});
+  root.OpenAlexBump = Object.freeze({buildOption, tooltipRows, definition, years,layout});
 })(typeof window === 'object' ? window : globalThis);

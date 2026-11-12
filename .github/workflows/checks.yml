@@ -22,6 +22,7 @@ jobs:
       - run: go vet ./...
       - run: node --test cloudflare/worker.test.mjs
       - run: node scripts/bump-chart-test.mjs
+      - run: node --test scripts/onboarding-test.mjs
       - run: npm run build
       - name: Build computation and export CLI
         run: CGO_ENABLED=0 go build -trimpath -o /tmp/oa-stats ./cmd/oa-stats

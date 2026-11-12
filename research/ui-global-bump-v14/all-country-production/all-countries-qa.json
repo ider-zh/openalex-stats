@@ -1,0 +1,244 @@
+{
+  "status": "passed",
+  "url": "http://192.168.1.229:8899",
+  "asset_override": false,
+  "checks": [
+    {
+      "name": "core_spectral-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "core_java-reflections-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "core_desktop_complete_svg_layout",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "height": 6114,
+        "axisMax": 229,
+        "active_end_labels": 228,
+        "overlaps": 0
+      }
+    },
+    {
+      "name": "core_long_chart_hover_viewport_and_scroll",
+      "pass": true,
+      "detail": [
+        {
+          "rank": 1,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 115,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 228,
+          "top": 205.921875,
+          "bottom": 645.921875,
+          "rows": 248
+        }
+      ]
+    },
+    {
+      "name": "core_country_controls_and_view_memory",
+      "pass": true,
+      "detail": {
+        "default_all": true,
+        "explicit_subset_restored": true,
+        "ordinary_countries_restored": 9,
+        "score_accepts_all": true
+      }
+    },
+    {
+      "name": "core_concepts_citations_dense_endpoint_layout",
+      "pass": true,
+      "detail": {
+        "labels": 229,
+        "height": 6114,
+        "axisMax": 229,
+        "distinct_final_ranks": 208
+      }
+    },
+    {
+      "name": "all_spectral-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "all_java-reflections-v1_complete_country_api",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "points": 6448,
+        "inactive_points": 583,
+        "annual_universes": [
+          219,
+          222,
+          223,
+          226,
+          224,
+          225,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "name": "all_desktop_complete_svg_layout",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "height": 6114,
+        "axisMax": 229,
+        "active_end_labels": 228,
+        "overlaps": 0
+      }
+    },
+    {
+      "name": "all_long_chart_hover_viewport_and_scroll",
+      "pass": true,
+      "detail": [
+        {
+          "rank": 1,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 115,
+          "top": 565.921875,
+          "bottom": 1005.921875,
+          "rows": 248
+        },
+        {
+          "rank": 228,
+          "top": 205.921875,
+          "bottom": 645.921875,
+          "rows": 248
+        }
+      ]
+    },
+    {
+      "name": "all_country_controls_and_view_memory",
+      "pass": true,
+      "detail": {
+        "default_all": true,
+        "explicit_subset_restored": true,
+        "ordinary_countries_restored": 9,
+        "score_accepts_all": true
+      }
+    },
+    {
+      "name": "all_concepts_citations_dense_endpoint_layout",
+      "pass": true,
+      "detail": {
+        "labels": 229,
+        "height": 6114,
+        "axisMax": 229,
+        "distinct_final_ranks": 212
+      }
+    },
+    {
+      "name": "mobile_long_chart_hover_viewport_and_scroll",
+      "pass": true,
+      "detail": [
+        {
+          "rank": 1,
+          "top": 392.5,
+          "bottom": 832.5,
+          "rows": 248
+        },
+        {
+          "rank": 115,
+          "top": 392.5,
+          "bottom": 832.5,
+          "rows": 248
+        },
+        {
+          "rank": 228,
+          "top": 78.5,
+          "bottom": 518.5,
+          "rows": 248
+        }
+      ]
+    },
+    {
+      "name": "mobile_dpr3_svg_all_ranks",
+      "pass": true,
+      "detail": {
+        "countries": 248,
+        "height": 6217,
+        "axisMax": 229,
+        "end_labels": 228,
+        "overflow": false
+      }
+    },
+    {
+      "name": "mobile_dpr3_concepts_citations_dense_endpoints",
+      "pass": true,
+      "detail": {
+        "labels": 229,
+        "height": 6242,
+        "axisMax": 229
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "finished_at": "2026-11-12T05:37:14.820Z"
+}

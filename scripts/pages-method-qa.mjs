@@ -14,7 +14,9 @@ const record=(name,detail)=>report.checks.push({name,pass:true,detail});
 const ids=['CN','US','GB','DE','FR','JP','IN','CA','KR'],spectral='spectral-v1',java='java-reflections-v1',hash=b=>createHash('sha256').update(b).digest('hex');
 const expectedJavaSHA={core:'3011d9de5587011272c7147e32069c4f693e9b7ca0cbeed0b6a0228e68924fb5',all:'bb3431a004615e6536cd4e7d898aa3b4f884f4a8390ceddbc6378f4903826e76'};
 try{
-  const context=await browser.newContext({viewport:{width:1440,height:1100},deviceScaleFactor:1}),page=await context.newPage(),errors=[],external=[];
+  const context=await browser.newContext({viewport:{width:1440,height:1100},deviceScaleFactor:1});
+  await context.addInitScript(()=>localStorage.setItem('openalex-atlas:onboarding:v1',JSON.stringify({version:1,dismissedAt:Date.now()})));
+  const page=await context.newPage(),errors=[],external=[];
   page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())&&new URL(r.url()).origin!==new URL(base).origin)external.push(r.url());});
   const get=async suffix=>{const r=await context.request.get(base+suffix);assert.ok(r.ok(),`${r.status()} ${suffix}`);return r.json();};
   const body=()=>page.evaluate(async()=>{const r=await fetch('/api/series'+location.search),b=await r.json();if(!r.ok)throw new Error(b.error);return b;});

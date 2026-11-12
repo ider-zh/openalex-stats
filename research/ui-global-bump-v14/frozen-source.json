@@ -1,0 +1,8 @@
+{
+  "archive": "source-v14-global-bump-r1-verified.tar.gz",
+  "sha256": "b46c0adcde45f61a1c2c5b31d5afbfa63511732e33b5b8b2e7cd6e0fc4ef48f4",
+  "binary": "oa-stats-v14-global-bump-r1",
+  "binary_sha256": "2dd770380629a702e98669ec78d91689e40f2676efd6526404b284562db06474",
+  "runtime_assets_unchanged": true,
+  "source_only_updates": "QA reflects all-country default and naturally visible guide heading; README help entry"
+}

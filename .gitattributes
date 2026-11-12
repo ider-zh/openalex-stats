@@ -9,4 +9,9 @@
 *.tgz -text
 *.png -text
 *.jpg -text
+# Acceptance manifests checksum the original evidence bytes.
+research/cloudflare-v14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+research/ui-global-bump-v14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+research/onboarding-qa-v14-candidate-r1/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+research/onboarding-qa-v14-production/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 

@@ -21,6 +21,7 @@ const browser = await chromium.launch({ channel: 'chrome', headless: true });
 try {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1100 }, deviceScaleFactor: 1 });
   const page = await context.newPage();
+  await context.addInitScript(()=>localStorage.setItem('openalex-atlas:onboarding:v1',JSON.stringify({version:1,dismissedAt:Date.now()})));
   // Optional developer-only overlay verifies an embedded asset change against
   // the live real-data API without restarting its service. Final deployed QA
   // must be repeated without this flag; the report always records the overlay.
@@ -115,7 +116,7 @@ try {
   const entry=new URL(base);if(requestedCorpus)entry.searchParams.set('corpus',requestedCorpus);
   await page.goto(entry.toString(), { waitUntil: 'networkidle' });
   await page.locator('#workspace').waitFor({ state: 'visible' });
-  await page.waitForFunction(() => document.querySelector('#chart canvas') && document.getElementById('chartDefinition').textContent.length > 0);
+  await page.waitForFunction(() => document.querySelector('#chart svg, #chart canvas') && document.getElementById('chartDefinition').textContent.length > 0);
   const meta = await page.evaluate(async () => {const corpus=new URLSearchParams(location.search).get('corpus');return (await fetch(`/api/meta${corpus?`?corpus=${corpus}`:''}`)).json();});
   const corpus=meta.corpus||meta.scope?.corpus||'core';
   if(requestedCorpus)assert.equal(corpus,requestedCorpus);

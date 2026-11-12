@@ -1,0 +1,605 @@
+{
+  "url": "http://192.168.1.229:8902",
+  "started_at": "2026-11-12T05:27:35.172Z",
+  "checks": [
+    {
+      "name": "1440-publications-first",
+      "measured": {
+        "panel": {
+          "x": 338,
+          "y": 388.515625,
+          "right": 748,
+          "bottom": 701.25
+        },
+        "target": {
+          "x": 51,
+          "y": 383.515625,
+          "right": 325,
+          "bottom": 439.265625
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-publications-step2",
+      "measured": {
+        "panel": {
+          "x": 338,
+          "y": 69.9375,
+          "right": 748,
+          "bottom": 382.671875
+        },
+        "target": {
+          "x": 51,
+          "y": 64.9375,
+          "right": 325,
+          "bottom": 121.6875
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-publications-step3",
+      "measured": {
+        "panel": {
+          "x": 338,
+          "y": 372.046875,
+          "right": 748,
+          "bottom": 712.78125
+        },
+        "target": {
+          "x": 51,
+          "y": 367.046875,
+          "right": 325,
+          "bottom": 420.796875
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-publications-step4",
+      "measured": {
+        "panel": {
+          "x": 391,
+          "y": 159.90625,
+          "right": 801,
+          "bottom": 472.640625
+        },
+        "target": {
+          "x": 386,
+          "y": 64.8125,
+          "right": 1385,
+          "bottom": 148.90625
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-publications-step5",
+      "measured": {
+        "panel": {
+          "x": 669,
+          "y": 98.8125,
+          "right": 1079,
+          "bottom": 439.546875
+        },
+        "target": {
+          "x": 594,
+          "y": 93.8125,
+          "right": 656,
+          "bottom": 148.90625
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-publications-step6",
+      "measured": {
+        "panel": {
+          "x": 391,
+          "y": 294.84375,
+          "right": 801,
+          "bottom": 635.578125
+        },
+        "target": {
+          "x": 386,
+          "y": 147.90625,
+          "right": 1385,
+          "bottom": 283.84375
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-publications-focus-escape-skip-finish-manual-replay-7day",
+      "pass": true
+    },
+    {
+      "name": "390-publications-first",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 131.375,
+          "right": 378,
+          "bottom": 430.953125
+        },
+        "target": {
+          "x": 27,
+          "y": 64.625,
+          "right": 363,
+          "bottom": 120.375
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-publications-step2",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 132.796875,
+          "right": 378,
+          "bottom": 459.375
+        },
+        "target": {
+          "x": 27,
+          "y": 65.046875,
+          "right": 363,
+          "bottom": 121.796875
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-publications-step3",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 129.375,
+          "right": 378,
+          "bottom": 455.953125
+        },
+        "target": {
+          "x": 27,
+          "y": 64.625,
+          "right": 363,
+          "bottom": 118.375
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-publications-step4",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 224.21875,
+          "right": 378,
+          "bottom": 523.796875
+        },
+        "target": {
+          "x": 26,
+          "y": 65.03125,
+          "right": 364,
+          "bottom": 213.21875
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-publications-step5",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 128.125,
+          "right": 378,
+          "bottom": 454.703125
+        },
+        "target": {
+          "x": 228,
+          "y": 65.03125,
+          "right": 290,
+          "bottom": 117.125
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-publications-step6",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 300.65625,
+          "right": 378,
+          "bottom": 627.234375
+        },
+        "target": {
+          "x": 26,
+          "y": 65.21875,
+          "right": 364,
+          "bottom": 289.65625
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-publications-focus-escape-skip-finish-manual-replay-7day",
+      "pass": true
+    },
+    {
+      "name": "1440-eci-first",
+      "measured": {
+        "panel": {
+          "x": 338,
+          "y": 388.515625,
+          "right": 748,
+          "bottom": 701.25
+        },
+        "target": {
+          "x": 51,
+          "y": 383.515625,
+          "right": 325,
+          "bottom": 439.265625
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-eci-step2",
+      "measured": {
+        "panel": {
+          "x": 338,
+          "y": 69.9375,
+          "right": 748,
+          "bottom": 382.671875
+        },
+        "target": {
+          "x": 51,
+          "y": 64.9375,
+          "right": 325,
+          "bottom": 121.6875
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-eci-step3",
+      "measured": {
+        "panel": {
+          "x": 338,
+          "y": 70.046875,
+          "right": 748,
+          "bottom": 410.78125
+        },
+        "target": {
+          "x": 51,
+          "y": 65.046875,
+          "right": 325,
+          "bottom": 118.796875
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-eci-step4",
+      "measured": {
+        "panel": {
+          "x": 391,
+          "y": 160.203125,
+          "right": 801,
+          "bottom": 472.9375
+        },
+        "target": {
+          "x": 386,
+          "y": 65.109375,
+          "right": 1165,
+          "bottom": 149.203125
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-eci-step5",
+      "measured": {
+        "panel": {
+          "x": 391,
+          "y": 282.546875,
+          "right": 801,
+          "bottom": 623.28125
+        },
+        "target": {
+          "x": 386,
+          "y": 148.203125,
+          "right": 1385,
+          "bottom": 271.546875
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-eci-step6",
+      "measured": {
+        "panel": {
+          "x": 391,
+          "y": 408.484375,
+          "right": 801,
+          "bottom": 749.21875
+        },
+        "target": {
+          "x": 386,
+          "y": 261.546875,
+          "right": 1385,
+          "bottom": 397.484375
+        },
+        "width": 1440,
+        "height": 1000,
+        "scrollWidth": 1440,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "1440-eci-tall-bump",
+      "chart_height": 6114,
+      "heading_y": 266.546875,
+      "heading_bottom": 392.484375,
+      "chart_top": 466.53125
+    },
+    {
+      "name": "1440-eci-focus-escape-skip-finish-manual-replay-7day",
+      "pass": true
+    },
+    {
+      "name": "390-eci-first",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 131.375,
+          "right": 378,
+          "bottom": 430.953125
+        },
+        "target": {
+          "x": 27,
+          "y": 64.625,
+          "right": 363,
+          "bottom": 120.375
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-eci-step2",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 132.796875,
+          "right": 378,
+          "bottom": 459.375
+        },
+        "target": {
+          "x": 27,
+          "y": 65.046875,
+          "right": 363,
+          "bottom": 121.796875
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-eci-step3",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 129.375,
+          "right": 378,
+          "bottom": 455.953125
+        },
+        "target": {
+          "x": 27,
+          "y": 64.625,
+          "right": 363,
+          "bottom": 118.375
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-eci-step4",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 224.609375,
+          "right": 378,
+          "bottom": 524.1875
+        },
+        "target": {
+          "x": 26,
+          "y": 65.421875,
+          "right": 364,
+          "bottom": 213.609375
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-eci-step5",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 282.4375,
+          "right": 378,
+          "bottom": 609.015625
+        },
+        "target": {
+          "x": 26,
+          "y": 64.90625,
+          "right": 364,
+          "bottom": 271.4375
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-eci-step6",
+      "measured": {
+        "panel": {
+          "x": 12,
+          "y": 323.96875,
+          "right": 378,
+          "bottom": 650.546875
+        },
+        "target": {
+          "x": 26,
+          "y": 65.4375,
+          "right": 364,
+          "bottom": 312.96875
+        },
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "count": 1,
+        "active": "oa-guide-next"
+      }
+    },
+    {
+      "name": "390-eci-tall-bump",
+      "chart_height": 6217,
+      "heading_y": 70.4375,
+      "heading_bottom": 307.96875,
+      "chart_top": 430.109375
+    },
+    {
+      "name": "390-eci-focus-escape-skip-finish-manual-replay-7day",
+      "pass": true
+    },
+    {
+      "name": "storage-denied-still-usable-no-repeat",
+      "pass": true
+    },
+    {
+      "name": "failed-initial-load-does-not-start-guide",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "outside_requests": [],
+  "screenshots": [
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-publications-first.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-publications-step2.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-publications-step4.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-publications-step6.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-publications-help-entry.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-publications-first.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-publications-step2.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-publications-step4.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-publications-step6.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-publications-help-entry.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-eci-first.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-eci-step2.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-eci-step4.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\1440-eci-step6.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-eci-first.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-eci-step2.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-eci-step4.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\onboarding-qa-v14-candidate-r1\\390-eci-step6.png"
+  ],
+  "assets": {
+    "onboarding.js": {
+      "source_sha256": "752b0fba032209cbd47c5a2f349b778bcca7078a34f03584a6d8ec2dbfea61bd",
+      "served_sha256": "752b0fba032209cbd47c5a2f349b778bcca7078a34f03584a6d8ec2dbfea61bd"
+    },
+    "onboarding.css": {
+      "source_sha256": "0b93109a0b81ca5e46884429c0a3722254ca5ef6f7bcb81930cc8881e97c482f",
+      "served_sha256": "0b93109a0b81ca5e46884429c0a3722254ca5ef6f7bcb81930cc8881e97c482f"
+    }
+  },
+  "ok": true
+}

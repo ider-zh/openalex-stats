@@ -15,6 +15,7 @@ function csv(text){let rows=[],row=[],value='',quoted=false;for(let i=0;i<text.l
 try{
   const context=await browser.newContext({viewport:{width:1440,height:1100},deviceScaleFactor:1});
   const page=await context.newPage(),errors=[],external=[],failed=[];
+  await context.addInitScript(()=>localStorage.setItem('openalex-atlas:onboarding:v1',JSON.stringify({version:1,dismissedAt:Date.now()})));
   page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())&&new URL(r.url()).origin!==new URL(base).origin)external.push(r.url());});page.on('requestfailed',r=>{if(!r.failure()?.errorText?.includes('ERR_ABORTED'))failed.push({url:r.url(),error:r.failure()?.errorText});});
   const api=async suffix=>(await context.request.get(base+suffix)).json();
   const meta=await api('/api/meta?corpus=core'),labels=meta.layers.find(l=>l.scheme==='topics'&&l.level==='field').labels.slice(0,3),ids=labels.map(l=>l.id);
@@ -48,9 +49,9 @@ try{
     await page.locator(`[data-remove-discipline="${ids[1]}"]`).click();let reduced=await body();await settle(reduced);assert.equal(reduced.series.length,18);await page.reload();await page.waitForLoadState('networkidle');reduced=await body();await settle(reduced);assert.equal(reduced.series.length,18);
     await page.locator('#disciplineSummary').click();await page.locator('#disciplineSearch').fill(ids[1]);await page.locator(`[data-discipline-id="${ids[1]}"]:not(:disabled)`).first().click();await page.locator('#disciplineSummary').click();b=await body();await settle(b);assert.equal(b.series.length,27);
     check(corpus+'_multi_tree_chips_and_shareable_url',null);
-    await page.locator('[data-metric="eci"]').click();const eci=await body();await settle(eci);assert.equal(eci.series.length,9);assert.ok(eci.series.every(s=>s.discipline===''&&s.id===s.country));assert.equal(await page.locator('#selectedDisciplines button:disabled').count(),3);
+    await page.locator('[data-metric="eci"]').click();const eci=await body();await settle(eci);assert.equal(eci.series.length,meta.countries.length);assert.ok(eci.series.every(s=>s.discipline===''&&s.id===s.country));assert.equal(await page.locator('#selectedDisciplines button:disabled').count(),3);
     const rank=eci.series.find(s=>s.country==='CN').points.at(-1).rank,onlyCN=new URLSearchParams(new URL(page.url()).search);onlyCN.set('countries','CN');const one=await api('/api/series?'+onlyCN);assert.equal(one.series[0].points.at(-1).rank,rank);
-    check(corpus+'_eci_country_only_and_global_rank',{curves:9,cn_rank:rank});
+    check(corpus+'_eci_country_only_and_global_rank',{curves:eci.series.length,cn_rank:rank});
     await page.locator('[data-metric="pci"]').click();const pci=await body();await settle(pci);assert.equal(pci.series.length,3);assert.ok(pci.series.every(s=>s.country==='GLOBAL'));assert.equal(await page.locator('#comparisonBody img.country-flag').count(),0);
     await page.evaluate(()=>window.echarts.getInstanceByDom(document.querySelector('#chart')).dispatchAction({type:'showTip',seriesIndex:0,dataIndex:25}));await page.waitForFunction(()=>document.querySelectorAll('[data-tooltip-series]').length===3);assert.equal(await page.locator('[data-tooltip-series] img.country-flag').count(),0);
     await page.screenshot({path:path.join(out,`${corpus}-desktop-pci-rank.png`),fullPage:true,animations:'disabled'});

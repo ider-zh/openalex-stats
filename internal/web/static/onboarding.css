@@ -1,0 +1,20 @@
+/* A quiet paper annotation: no page lock, dimming layer, or changed filters. */
+.oa-guide-help{flex-shrink:0;min-height:40px;padding:7px 11px;border:1px solid var(--line,#d7dcd8);border-radius:2px;color:var(--ink,#162d39);background:var(--white,#fffefa);font-size:14px;white-space:nowrap}
+.oa-guide-help:hover{border-color:var(--accent,#c6613c);color:var(--accent,#c6613c)}
+.oa-guide-target{position:fixed;z-index:90;pointer-events:none;border:2px solid var(--accent,#c6613c);border-radius:4px;box-shadow:0 0 0 4px #fffefa90}
+.oa-guide{position:fixed;z-index:100;width:410px;max-width:calc(100vw - 24px);overflow:auto;padding:19px 22px 18px;background:var(--white,#fffefa);color:var(--ink,#162d39);border:1px solid #bcc7bd;border-top:3px solid var(--accent,#c6613c);border-radius:3px;box-shadow:0 12px 48px #162d3930;font:16px/1.75 var(--sans,"Microsoft YaHei",sans-serif);text-align:left;overscroll-behavior:contain}
+.oa-guide-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.oa-guide-progress{font-size:13px;letter-spacing:.6px;color:var(--accent,#c6613c);font-weight:700}
+.oa-guide button{font:inherit;cursor:pointer;touch-action:manipulation}
+.oa-guide .oa-guide-close{flex-shrink:0;width:40px;height:40px;margin:-10px -12px -8px 0;border:0;background:transparent;color:#61757c;font-size:26px;line-height:1}
+.oa-guide h2{margin:0 0 10px;font:400 24px/1.4 var(--serif,Georgia,serif);overflow-wrap:anywhere}
+.oa-guide p{margin:0;overflow-wrap:anywhere}
+.oa-guide .oa-guide-note{margin-top:16px;font-size:12px;line-height:1.7;color:#61757c}
+.oa-guide-actions{display:flex;align-items:center;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line,#d7dcd8)}
+.oa-guide-actions button{min-height:44px;padding:8px 11px;border-radius:2px;font-size:15px;line-height:1.5}
+.oa-guide .oa-guide-skip{margin-right:auto;padding-left:0;border:0;background:transparent;color:#61757c}
+.oa-guide .oa-guide-back{border:1px solid var(--line,#d7dcd8);background:transparent;color:var(--ink,#162d39)}
+.oa-guide .oa-guide-next{border:1px solid var(--ink,#162d39);background:var(--ink,#162d39);color:var(--white,#fffefa)}
+.oa-guide button:focus-visible,.oa-guide-help:focus-visible{outline:2px solid var(--accent,#c6613c);outline-offset:3px}
+.oa-guide button:disabled{opacity:.4;cursor:default}
+@media(max-width:560px){.header-meta:has(.oa-guide-help){flex-wrap:wrap;max-width:128px;justify-content:flex-end}.oa-guide-help{font-size:13px;min-height:40px;padding:5px 9px}.oa-guide{padding:16px 18px;font-size:15px;line-height:1.8}.oa-guide h2{font-size:22px}.oa-guide-actions{gap:7px}.oa-guide-actions button{padding:8px 10px}.oa-guide .oa-guide-note{font-size:12px;margin-top:13px}}
