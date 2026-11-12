@@ -84,18 +84,27 @@ func TestMethodIsolationRanksCSVAndDownloads(t *testing.T) {
 	}
 	p := params("eci")
 	defaultResult := series(t, h, p)
-	if defaultResult.Query.Method != DefaultMethod || defaultResult.Method.ID != DefaultMethod {
-		t.Fatal("old URL lost spectral default", defaultResult)
+	if defaultResult.Query.Method != eci.ReflectionsMethodID || defaultResult.Method.ID != eci.ReflectionsMethodID || defaultResult.Method.DisplayName != "小倪方法论" {
+		t.Fatal("new URL did not use the presented Xiao Ni default", defaultResult)
 	}
+	p.Set("method", methods.SpectralID)
+	spectralResult := series(t, h, p)
 	p.Set("method", eci.ReflectionsMethodID)
 	reflection := series(t, h, p)
 	if !reflection.MethodApplies || reflection.Method.CountryIterations != 16 || reflection.Method.DisciplineIterations != 17 || reflection.Method.SourceRunID != "test-core-methods" {
 		t.Fatal("missing method provenance", reflection.Method)
 	}
 	closeValue(t, reflection.Series[0].Points[0].Value, -1)
-	closeValue(t, defaultResult.Series[0].Points[0].Value, 1.2)
-	if *reflection.Series[0].Points[0].Rank != 2 || *defaultResult.Series[0].Points[0].Rank != 1 {
+	closeValue(t, spectralResult.Series[0].Points[0].Value, 1.2)
+	if !reflect.DeepEqual(defaultResult.Series, reflection.Series) || *reflection.Series[0].Points[0].Rank != 2 || *spectralResult.Series[0].Points[0].Rank != 1 {
 		t.Fatal("method switched score without rank")
+	}
+	meta := request(t, h, "/api/meta")
+	var metadata struct {
+		Default string `json:"eci_default_method"`
+	}
+	if err := json.Unmarshal(meta.Body.Bytes(), &metadata); err != nil || metadata.Default != eci.ReflectionsMethodID {
+		t.Fatal("metadata did not advertise Xiao Ni default", meta.Body.String(), err)
 	}
 	for _, metric := range []string{"publications", "citations", "share", "rca"} {
 		p.Set("metric", metric)
@@ -132,6 +141,16 @@ func TestMethodIsolationRanksCSVAndDownloads(t *testing.T) {
 	}
 	if w = request(t, h, "/download?file=method-sensitivity.json&method="+eci.ReflectionsMethodID); w.Code != 200 {
 		t.Fatal("no safe sensitivity download", w.Code)
+	}
+	if w = request(t, h, "/download?file=eci.json"); w.Code != 200 || w.Header().Get("X-OpenAlex-Method") != eci.ReflectionsMethodID {
+		t.Fatal("default model download did not match default chart", w.Code)
+	}
+	baseOnly, err := New(base)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if fallback := series(t, baseOnly, params("eci")); fallback.Query.Method != methods.SpectralID {
+		t.Fatal("base-only dataset lost available spectral fallback", fallback.Query)
 	}
 	p.Set("method", "unknown")
 	if w = request(t, h, "/api/series?"+p.Encode()); w.Code != 400 {

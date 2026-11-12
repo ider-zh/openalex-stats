@@ -97,7 +97,7 @@ func (d *dataset) parseQuery(params url.Values) (Query, error) {
 	q := Query{Scenario: params.Get("scenario"), Scheme: params.Get("scheme"), Level: params.Get("level"), Discipline: params.Get("discipline"), Metric: params.Get("metric"), Basis: params.Get("basis"), Start: max(2000, d.start), End: min(2025, d.end)}
 	q.Method = params.Get("method")
 	if q.Method == "" {
-		q.Method = DefaultMethod
+		q.Method = d.defaultMethod()
 	}
 	if _, ok := d.method(q.Method); !ok {
 		return q, fmt.Errorf("未知或未提供的知识复杂度方法")
@@ -205,7 +205,7 @@ func (d *dataset) parseQuery(params url.Values) (Query, error) {
 
 func (d *dataset) query(q Query) Response {
 	if q.Method == "" {
-		q.Method = DefaultMethod
+		q.Method = d.defaultMethod()
 	}
 	r := Response{Query: q, Attribution: "country_and_discipline_of_published_work", Series: []Series{}}
 	r.Method, _ = d.method(q.Method)

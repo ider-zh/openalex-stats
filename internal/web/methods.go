@@ -29,6 +29,15 @@ type MethodInfo struct {
 
 const DefaultMethod = methods.SpectralID
 
+// Keep the immutable base-artifact identity separate from the UI preference.
+// A dataset without the optional sidecar must remain usable with its base model.
+func (d *dataset) defaultMethod() string {
+	if _, ok := d.method(eci.ReflectionsMethodID); ok {
+		return eci.ReflectionsMethodID
+	}
+	return DefaultMethod
+}
+
 func bytesSHA(b []byte) string { sum := sha256.Sum256(b); return hex.EncodeToString(sum[:]) }
 
 func initDatasetMethods(d *dataset) {
@@ -191,7 +200,7 @@ func loadDatasetMethods(d *dataset, dir string) error {
 			return fmt.Errorf("web: method does not cover every base model")
 		}
 		d.methodModels[def.ID] = loaded
-		d.methodInfo = append(d.methodInfo, MethodInfo{ID: def.ID, DisplayName: def.DisplayName, CountryIterations: def.CountryIterations, DisciplineIterations: def.DisciplineIterations, Normalization: def.Normalization, ResidualKind: def.ResidualKind, SourceRunID: manifest.BaseRunID, SourceCompletionSHA256: manifest.SourceCompletionSHA256})
+		d.methodInfo = append(d.methodInfo, MethodInfo{ID: def.ID, DisplayName: "小倪方法论", CountryIterations: def.CountryIterations, DisciplineIterations: def.DisciplineIterations, Normalization: def.Normalization, ResidualKind: def.ResidualKind, SourceRunID: manifest.BaseRunID, SourceCompletionSHA256: manifest.SourceCompletionSHA256})
 		d.methodRoots[def.ID] = root
 		files := map[string]string{"eci.json": def.Models, "method-manifest.json": "manifest.json", "method-completion.json": "completion.json"}
 		for alias, file := range map[string]string{"country_eci.parquet": "country_eci.parquet", "discipline_pci.parquet": "discipline_pci.parquet", "model_diagnostics.json": "model_diagnostics.json", "method-audit.json": "audit.json", "method-sensitivity.json": "sensitivity.json"} {

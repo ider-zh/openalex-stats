@@ -160,7 +160,7 @@ func (s *server) metadata(w http.ResponseWriter, r *http.Request) {
 	}
 	writeJSON(w, map[string]any{
 		"ready": true, "status": d.run.Status, "snapshot_date": d.snapshotDate, "corpus": s.corpus, "flag_codes": flagCodes(), "max_series": MaxSeries, "max_eci_countries": len(d.countries),
-		"methods": d.methodInfo, "eci_default_method": DefaultMethod,
+		"methods": d.methodInfo, "eci_default_method": d.defaultMethod(),
 		"year_start": d.start, "year_end": d.end, "default_year_end": min(2025, d.end), "partial_years": partial,
 		"countries": d.countries, "layers": d.layers, "scenarios": d.scenarios, "eci_scenario_id": d.eciScenario,
 		"dictionary_loaded": d.dictionaryLoaded, "name_fallbacks": d.nameFallbacks, "selected_works": d.run.SelectedWorks,
@@ -193,7 +193,7 @@ func (s *server) download(w http.ResponseWriter, r *http.Request) {
 	name := q.Get("file")
 	methodID := q.Get("method")
 	if methodID == "" {
-		methodID = DefaultMethod
+		methodID = s.data.defaultMethod()
 	}
 	if _, ok := s.data.method(methodID); !ok {
 		apiError(w, http.StatusBadRequest, "invalid_parameter", "未知或未提供的知识复杂度方法。")

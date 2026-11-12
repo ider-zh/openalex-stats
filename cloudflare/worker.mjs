@@ -5,6 +5,15 @@ const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inl
 const allowed = new Set(['scenario','scheme','level','discipline','disciplines','countries','metric','basis','start','end','method']);
 const cache = new Map();
 const MAX_CACHE = 32;
+const xiaoNiMethod = 'java-reflections-v1';
+
+function defaultMethod(meta) {
+  return (meta.methods||[]).some(m=>(typeof m==='string'?m:m.id)===xiaoNiMethod)?xiaoNiMethod:(meta.eci_default_method||'spectral-v1');
+}
+function presentMethod(method) { return method?.id===xiaoNiMethod?{...method,display_name:'小倪方法论'}:method; }
+function presentMetadata(meta) {
+  return {...meta,methods:meta.methods?.map(presentMethod),eci_default_method:defaultMethod(meta)};
+}
 
 class InputError extends Error {}
 function fail(message) { throw new InputError(message); }
@@ -44,7 +53,7 @@ function dictionary(meta){
 
 export function parseQuery(params,meta){
   for(const key of new Set(params.keys()))if(!allowed.has(key)||params.getAll(key).length!==1)fail(`未知或重复参数：${key}`);
-  const q={corpus:meta.corpus,scenario:params.get('scenario')||meta.eci_scenario_id,scheme:params.get('scheme')||'',level:params.get('level')||'',discipline:params.get('discipline')||'',disciplines:null,countries:null,metric:params.get('metric')||'publications',basis:params.get('basis')||'publications',start:Math.max(2000,meta.year_start),end:Math.min(2025,meta.year_end),method:params.get('method')||meta.eci_default_method||'spectral-v1'};
+  const q={corpus:meta.corpus,scenario:params.get('scenario')||meta.eci_scenario_id,scheme:params.get('scheme')||'',level:params.get('level')||'',discipline:params.get('discipline')||'',disciplines:null,countries:null,metric:params.get('metric')||'publications',basis:params.get('basis')||'publications',start:Math.max(2000,meta.year_start),end:Math.min(2025,meta.year_end),method:params.get('method')||defaultMethod(meta)};
   const methods=meta.methods||[{id:'spectral-v1'}];
   if(!methods.some(m=>(typeof m==='string'?m:m.id)===q.method))fail('未知或未提供的知识复杂度方法');
   const {countries,layers}=dictionary(meta);
@@ -85,7 +94,7 @@ export async function seriesResponse(q,control,env,origin){
   const meta=control.meta,{countries,layers}=dictionary(meta),layer=layers.get(`${q.scheme}/${q.level}`);
   const template=control.templates[templateKey(q)]||control.templates[[q.scenario,q.scheme,q.level,q.metric,q.basis].join('/')];
   if(!template)throw new Error('missing response contract');
-  const response={...template,query:q,series:[]};
+  const response={...template,method:presentMethod(template.method),definition:template.definition?.replace(/Java\s*反射法(?:[·・]修正版)?/g,'小倪方法论'),query:q,series:[]};
   const disciplines=q.metric==='eci'?['']:q.disciplines;
   const countryIDs=q.metric==='pci'?['GLOBAL']:q.countries;
   const partial=new Set(meta.partial_years);
@@ -159,7 +168,9 @@ export async function handle(request,env){
     }
     corpus=site.catalog.default_corpus;
     if(url.searchParams.has('corpus')){const values=url.searchParams.getAll('corpus');if(values.length!==1||!values[0])fail('corpus必须唯一且为core或all。');corpus=values[0];}
-    const control=site.datasets[corpus];if(!control)fail('未知或未提供的语料版本。');
+    const storedControl=site.datasets[corpus];if(!storedControl)fail('未知或未提供的语料版本。');
+    // Presentation defaults do not mutate the immutable exported manifest/models.
+    const control={...storedControl,meta:presentMetadata(storedControl.meta)};
     const params=new URLSearchParams(url.searchParams);params.delete('corpus');
     if(url.pathname==='/api/meta'){
       if([...params].length)fail('metadata接口不接受参数。');return secure(json({...control.meta,max_eci_countries:control.meta.countries.length}),corpus,head);
@@ -167,7 +178,7 @@ export async function handle(request,env){
     if(url.pathname==='/download'){
       for(const key of new Set(params.keys()))if(!['file','method'].includes(key)||params.getAll(key).length!==1)fail('只能下载已列出的统计产物。');
       if(params.getAll('file').length!==1)fail('必须提供唯一file参数。');
-      const method=params.get('method')||control.meta.eci_default_method||'spectral-v1';
+      const method=params.get('method')||defaultMethod(control.meta);
       if(!(control.meta.methods||[{id:'spectral-v1'}]).some(m=>(typeof m==='string'?m:m.id)===method))fail('未知或未提供的知识复杂度方法。');
       const name=params.get('file'),methodArtifact=control.method_downloads?.[method]?.[name];
       if(!methodArtifact&&!(control.meta.downloads||[]).includes(name))fail('只能下载已列出的统计产物。');

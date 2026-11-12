@@ -10,7 +10,7 @@
     eci: {name:'国家知识复杂度 ECI', english:'COUNTRY KNOWLEDGE COMPLEXITY', description:'使用当前层级全部学科建模；切换单一学科不会改变国家 ECI。'},
     pci: {name:'学科知识复杂度 PCI', english:'GLOBAL DISCIPLINE COMPLEXITY', description:'每个所选学科各有一条全球年度复杂度曲线。'}
   };
-  const state = {meta:null, method:'spectral-v1', corpus:'core', catalogSupported:false, modelView:'rank', scheme:'topics', level:'field', discipline:'', disciplines:[], flagCodes:new Set(), maxSeries:48, scenario:'', countries:[], metric:'publications', basis:'publications', start:2000, end:2025};
+  const state = {meta:null, method:'java-reflections-v1', corpus:'core', catalogSupported:false, modelView:'rank', scheme:'topics', level:'field', discipline:'', disciplines:[], flagCodes:new Set(), maxSeries:48, scenario:'', countries:[], metric:'publications', basis:'publications', start:2000, end:2025};
   const palette = ['#bd5938','#315f7b','#4c806d','#ad8a37','#806b91','#738d9b','#a9586c','#5c7354','#9d795d','#49666d','#74637a','#6b819f'];
   const preferredCountries=['CN','US','GB','DE','FR','JP','IN','CA','KR'];
   let chineseRegions,englishRegions;try{chineseRegions=new Intl.DisplayNames(['zh-CN'],{type:'region'});englishRegions=new Intl.DisplayNames(['en'],{type:'region'});}catch{}
@@ -81,7 +81,7 @@
       $('corpus').replaceChildren();for(const d of catalog.datasets)option($('corpus'),d.id,d.display_name);$('corpus').value=state.corpus;$('corpus').disabled=catalog.datasets.length<2;
       $('corpusButtons').replaceChildren();for(const d of catalog.datasets)choice($('corpusButtons'),'corpus',d.id,d.id==='all'?'含 XPAC 全数据':'Core 主数据',d.id===state.corpus,()=>switchCorpus(d.id));
       const response=await fetch(`/api/meta${catalogResponse.ok?`?corpus=${state.corpus}`:''}`);if(!response.ok)throw new Error('统计元数据读取失败');
-      const meta=await response.json();state.meta=meta;state.flagCodes=new Set(meta.flag_codes||[]);state.maxSeries=meta.max_series||48;meta.methods=meta.methods?.length?meta.methods:[{id:'spectral-v1',display_name:'谱 ECI · 当前方法',country_iterations:0,discipline_iterations:0}];state.method=params.get('method')||meta.eci_default_method||'spectral-v1';if(!meta.methods.some(m=>m.id===state.method))throw new Error('所选知识复杂度方法未提供。');
+      const meta=await response.json();state.meta=meta;state.flagCodes=new Set(meta.flag_codes||[]);state.maxSeries=meta.max_series||48;meta.methods=(meta.methods?.length?meta.methods:[{id:'spectral-v1',display_name:'谱 ECI · 当前方法',country_iterations:0,discipline_iterations:0}]).map(m=>m.id==='java-reflections-v1'?{...m,display_name:'小倪方法论'}:m);state.method=params.get('method')||(meta.methods.some(m=>m.id==='java-reflections-v1')?'java-reflections-v1':meta.eci_default_method||'spectral-v1');if(!meta.methods.some(m=>m.id===state.method))throw new Error('所选知识复杂度方法未提供。');
       $('corpusHint').textContent=(state.corpus==='all'?'当前为全数据：Core + XPAC。':'当前为主数据：Core。')+'两版各自重算论文、集合内引用及 ECI / PCI，不相加。';
       $('workspace').hidden=!meta.ready;$('notReady').hidden=!!meta.ready;
       if(!meta.ready){$('snapshotLabel').textContent='等待真实统计结果';$('notReadyReason').textContent=meta.reason;return;}
@@ -164,7 +164,7 @@
     let coverageText=`输出区间内缺少国家信息的文献：${number.format(q.missing_country_publications||0)}；相应被引事件：${number.format(q.missing_country_citations||0)}。`;
     if(coverage){const pub=coverage.publication_coverage_valid?`${number.format(coverage.publication_classification_coverage*100)}%`:'未定义',cit=coverage.citation_coverage_valid?`${number.format(coverage.citation_classification_coverage*100)}%`:'未定义';coverageText+=` 当前层级学科覆盖率：文献 ${pub}，被引 ${cit}；未归类文献 ${number.format(coverage.unclassified_publications)}，未归类被引 ${number.format(coverage.unclassified_citations)}。`;}
     else coverageText+=' 本结果未提供分场景分类覆盖率文件。';$('coverageDescription').textContent=coverageText;
-    $('fileDownloads').replaceChildren();const modelFiles=new Set(['eci.json','country_eci.parquet','discipline_pci.parquet','model_diagnostics.json']),extra=state.method==='spectral-v1'?[]:['method-manifest.json','method-completion.json','method-audit.json','method-sensitivity.json'];for(const file of [...meta.downloads,...extra]){const a=document.createElement('a'),methodQuery=state.method!=='spectral-v1'&&(modelFiles.has(file)||extra.includes(file))?`&method=${encodeURIComponent(state.method)}`:'';a.href=`/download?file=${encodeURIComponent(file)}${methodQuery}${state.catalogSupported?`&corpus=${state.corpus}`:''}`;a.textContent=`↓ ${file}`;$('fileDownloads').append(a);}
+    $('fileDownloads').replaceChildren();const modelFiles=new Set(['eci.json','country_eci.parquet','discipline_pci.parquet','model_diagnostics.json']),extra=state.method==='spectral-v1'?[]:['method-manifest.json','method-completion.json','method-audit.json','method-sensitivity.json'];for(const file of [...meta.downloads,...extra]){const a=document.createElement('a'),methodQuery=(modelFiles.has(file)||extra.includes(file))?`&method=${encodeURIComponent(state.method)}`:'';a.href=`/download?file=${encodeURIComponent(file)}${methodQuery}${state.catalogSupported?`&corpus=${state.corpus}`:''}`;a.textContent=`↓ ${file}`;$('fileDownloads').append(a);}
   }
   function syncButtons() {
     document.querySelectorAll('[data-scheme]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.scheme===state.scheme)));
@@ -183,8 +183,8 @@
   }
   function renderMethodControls(){
     const active=['eci','pci'].includes(state.metric),method=state.meta.methods.find(m=>m.id===state.method);$('methodWrap').hidden=!active;$('methodButtons').replaceChildren();
-    for(const item of state.meta.methods){const button=choice($('methodButtons'),'method',item.id,item.id==='spectral-v1'?'谱方法':'Java 反射法',item.id===state.method,()=>{state.method=item.id;renderMethodControls();update();});button.title=item.display_name;button.disabled=state.meta.methods.length<2;}
-    $('methodHint').textContent=method?.id==='java-reflections-v1'?`有限反射：国家 ${method.country_iterations} 轮、学科 ${method.discipline_iterations} 轮，总体 z 标准化。两方法分别定向，排名可能显著不同，请结合轮数敏感性解读。`:'谱方法取第二特征向量，并作总体 z 标准化。方法选择只影响 ECI / PCI，论文量、被引、份额和 RCA 的口径保持一致。';
+    for(const item of state.meta.methods){const button=choice($('methodButtons'),'method',item.id,item.id==='spectral-v1'?'谱方法':'小倪方法论',item.id===state.method,()=>{state.method=item.id;renderMethodControls();update();});button.title=item.display_name;button.disabled=state.meta.methods.length<2;}
+    $('methodHint').textContent=method?.id==='java-reflections-v1'?`小倪方法论采用有限反射：国家 ${method.country_iterations} 轮、学科 ${method.discipline_iterations} 轮，总体 z 标准化。两方法分别定向，排名可能显著不同，请结合轮数敏感性解读。`:'谱方法取第二特征向量，并作总体 z 标准化。方法选择只影响 ECI / PCI，论文量、被引、份额和 RCA 的口径保持一致。';
     $('methodSensitivity').hidden=method?.id!=='java-reflections-v1';$('methodSensitivity').href=`/download?file=method-sensitivity.json&method=${encodeURIComponent(state.method)}${state.catalogSupported?`&corpus=${state.corpus}`:''}`;
   }
   function queryParams() {const p=new URLSearchParams({method:state.method,scenario:state.scenario,scheme:state.scheme,level:state.level,countries:state.countries.join(','),metric:state.metric,basis:state.basis,start:state.start,end:state.end});if(state.disciplines.length===1)p.set('discipline',state.disciplines[0]);else p.set('disciplines',state.disciplines.join(','));if(state.catalogSupported)p.set('corpus',state.corpus);return p;}
