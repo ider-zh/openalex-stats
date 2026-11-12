@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-11-11T19:34:04.8956343Z",
+  "url": "http://192.168.1.229:8899",
+  "pid": 877825,
+  "binary": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v8",
+  "binary_sha256": "744b93484e7b56fb0099bd04515c145a55ef9527aecbea93fc5a39dac6db682e",
+  "data_dir": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2",
+  "run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+  "status": "full_snapshot_complete",
+  "selected_works": 269194661,
+  "asset_override": false,
+  "run_id_note": "run_id read from actual served /download?file=run.json; /api/meta captured separately",
+  "binary_identity_note": "PID /proc exe and cmdline verified over SSH; SHA256 computed on live binary; ss confirms listener belongs to PID 877825",
+  "startup_note": "Initial navigation preceded listening; preserved as startup-attempt.json, final browser-qa.json is post-listen acceptance"
+}

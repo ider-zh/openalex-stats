@@ -1,0 +1,109 @@
+{
+  "version": "raw-cache-projection-audit-v1",
+  "status": "passed",
+  "passed": true,
+  "started_at": "2026-11-11T18:50:10.195647169Z",
+  "completed_at": "2026-11-11T18:50:24.150891029Z",
+  "source_manifest_sha256": "10c1785b4a6f9757823fc6dd005a052716e2c510ea751659cab4bcfba4c35e2a",
+  "duckdb_version": "v1.4.1 (Andium) b390a7c376",
+  "threads": 2,
+  "memory_limit": "2GB",
+  "parts": [
+    {
+      "input_path": "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2016-06-24/part_0000.parquet",
+      "input_size": 3628657,
+      "input_mod_time_ns": 1782529201000000000,
+      "path": "/mnt/nvme0/public/openalex-stats/cache-20260626/part-000000-7ffc4f9448ec4a7ca73f3a8d.parquet",
+      "bytes": 178173,
+      "rows": 2439,
+      "sha256": "aee03ca491fa0b99606865344037f51dd2e3a30a438eb8d101c3f91d64c2720f",
+      "source_fingerprint": "7ffc4f9448ec4a7ca73f3a8d9fc26e2823c1258411628229392006563e9234f9"
+    },
+    {
+      "input_path": "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2026-06-26/part_0006.parquet",
+      "input_size": 526568301,
+      "input_mod_time_ns": 1782529145000000000,
+      "path": "/mnt/nvme0/public/openalex-stats/cache-20260626/part-002292-2625f0ab09d52f895760f5b4.parquet",
+      "bytes": 23262636,
+      "rows": 400000,
+      "sha256": "8fe40f19dfbdaa27fbaa12d6ab37442f8dd063feab1078dae0bf226725488ec9",
+      "source_fingerprint": "2625f0ab09d52f895760f5b41fffa3fee0db4dcb821492d003be8f162c88dcab"
+    }
+  ],
+  "raw_rows": 402439,
+  "compared_rows": 402439,
+  "mismatch_counts": {
+    "concept0_length_diff": 0,
+    "concept0_max_diff": 0,
+    "concept0_pairs_diff": 0,
+    "concept1_length_diff": 0,
+    "concept1_max_diff": 0,
+    "concept1_pairs_diff": 0,
+    "countries_diff": 0,
+    "field_diff": 0,
+    "invalid_concept_quality_diff": 0,
+    "invalid_reference_quality_diff": 0,
+    "missing_cache": 0,
+    "missing_raw": 0,
+    "missing_year_quality_diff": 0,
+    "null_xpac_quality_diff": 0,
+    "paratext_diff": 0,
+    "reference_sequence_diff": 0,
+    "reference_set_diff": 0,
+    "retracted_diff": 0,
+    "subfield_diff": 0,
+    "trimmed_countries_diff": 0,
+    "type_diff": 0,
+    "xpac_diff": 0,
+    "year_diff": 0
+  },
+  "evidence": [
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/cache-20260626/part-000000-7ffc4f9448ec4a7ca73f3a8d.parquet",
+      "bytes": 178173,
+      "sha256": "aee03ca491fa0b99606865344037f51dd2e3a30a438eb8d101c3f91d64c2720f"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/cache-20260626/part-002292-2625f0ab09d52f895760f5b4.parquet",
+      "bytes": 23262636,
+      "sha256": "8fe40f19dfbdaa27fbaa12d6ab37442f8dd063feab1078dae0bf226725488ec9"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/audits/projection-raw-cache-v1/query.sql",
+      "bytes": 9796,
+      "sha256": "426255cdd5b186db4d2b4acc24450ac919157319cbafda60030980f1a5b8a878"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/audits/projection-raw-cache-v1/inventory.json",
+      "bytes": 363,
+      "sha256": "8b1f4ade489657d4aacaece67d3e6f429d4f9dc7e0a93f9ae4bd49821c652d3e"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/audits/projection-raw-cache-v1/comparison.json",
+      "bytes": 1101,
+      "sha256": "6f32ea35873da671e9a7a01b8630f44a6ce01305d3c03a305d4ff54635149aeb"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/audits/projection-raw-cache-v1/mismatch-examples.json",
+      "bytes": 6,
+      "sha256": "b45c681534d92e14f44e6f5577b0701bd30dc73726b1f68a68cb4bbeca87093c"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/audits/projection-raw-cache-v1/duckdb.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/audits/projection-raw-cache-v1/duckdb.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "seconds": 13.95524386,
+  "notes": [
+    "Bounded two-file, all-row comparison: earliest shard plus latest part_0006, not a full source projection audit.",
+    "Uses only DuckDB raw schema operations and normalized file contents, not Go scanner/projection helpers.",
+    "Checks exact canonical ID/year/type/flags, raw and trimmed country sets, primary IDs, concept pair multisets and per-ID max scores, reference sequence and set, and every persisted row-quality counter.",
+    "Raw files are bound by recorded size/mtime/source fingerprint; normalized shards and audit evidence are SHA256 checked. Whole raw files are not separately SHA256 hashed."
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "version": "independent-final-delivery-audit-v1",
+  "reviewed_at_utc": "2026-11-11T19:39:28.818677+00:00",
+  "reviewer": "go_metrics subagent; metrics implementer, reviewing evidence not serving as independent raw numerical oracle",
+  "status": "accepted_with_explicit_limits",
+  "blocking_findings": [],
+  "checks": {
+    "reviewed_source_bundle_matches": true,
+    "v8_binary_matches": true,
+    "v7_binary_matches": true,
+    "v7_source_matches": true,
+    "completion_file_sha_matches": true,
+    "all_11_artifact_records_match_completion": true,
+    "actual_downloaded_run_matches_completion": true,
+    "run_identity_matches": true,
+    "full_snapshot_counts_match": true,
+    "browser_24_passed": true,
+    "browser_service_identity_matches": true,
+    "nine_browser_files_rehashed": true,
+    "full_cache_four_modes_verified": true,
+    "fullcell_equivalence_passed": true,
+    "integer_committed_digest_equivalence_passed": true,
+    "exact_v7_replay_passed": true,
+    "all_216_models_and_exports_passed": true,
+    "window_average_non_gc_over_90": true,
+    "runtime_change_only_three_validation_files": true,
+    "dependency_files_identical": true,
+    "changed_runtime_current_hashes_match": true,
+    "race_v8_all_packages_passed": true,
+    "all_manifest_verification_paths_exist": true,
+    "batch_four_sizes_three_runs_content_and_resources_verified": true,
+    "numa_default_interleave_two_rounds_policy_applied_verified": true
+  },
+  "local_rehashed_artifacts": [
+    {
+      "path": "bin/openalex-stats-v8-source-and-evidence.tar.gz",
+      "bytes": 4942253,
+      "sha256": "ab31ff5606856dfefce1ba5fb41163462e8683d83e63065378a32ba0e2f45384",
+      "name": "reviewed_source_bundle"
+    },
+    {
+      "path": "bin/oa-stats-v8",
+      "bytes": 28705750,
+      "sha256": "744b93484e7b56fb0099bd04515c145a55ef9527aecbea93fc5a39dac6db682e",
+      "name": "v8_binary"
+    },
+    {
+      "path": "bin/oa-stats-v7",
+      "bytes": 28686408,
+      "sha256": "c8ad89711ce24997186bc06b7ffd4e812f1e3dfc4249c3622eacc23c5c30095f",
+      "name": "v7_binary"
+    },
+    {
+      "path": "bin/source-v7.tar.gz",
+      "bytes": 539083,
+      "sha256": "7edcd2e26e0e9b76b7b9e4da2e948fc4a80bef175ade2a9816443cd59461e333",
+      "name": "v7_source"
+    }
+  ],
+  "runtime_files_compared_to_frozen_v7": 49,
+  "runtime_changed_files": [
+    "cmd/oa-stats/compute.go",
+    "internal/production/cache_validation.go",
+    "internal/production/run.go"
+  ],
+  "cache_validation_speedup_recomputed": 18.576205912649066,
+  "model_count": 216,
+  "browser_checks": 24,
+  "run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+  "service_pid": 877825,
+  "local_test_vet_boundary": "Parent-run go test ./... and go vet ./... reported passed and recorded in release manifest; not rerun by this reviewer. Full remote v8 race log inspected.",
+  "large_artifact_boundary": "No large statistical Parquet/counter/edge binary reread. Release artifact records compared exactly to immutable completion; committed integer digests and fullcell/model numerical audits supply previously executed validation.",
+  "cpu_judgement": "Representative 60-second weighted average passes; strict every-sampled-interval >=90% for 60 seconds fails and is disclosed. Whole-run CPU29.47%; low stages not claimed90%.",
+  "packaging_boundary": "Reviewed source bundle currently matches release manifest. Root will regenerate archive after this signoff to include it, then independently refresh/verify source_bundle bytes/SHA and manifest status. This expected packaging-only refresh does not change audited runtime or data. Final archive SHA is deliberately not recursively embedded in this file.",
+  "limits": [
+    "Country publication coverage48.69%; UNKNOWN retained",
+    "2026partial; full calendar windows2000-2025 do not guarantee historical source completeness",
+    "Warm single-pass cache benchmarks; no cold/variance/NUMA global optimum claim",
+    "V7 reused verified dimensions; whole-run elapsed not a controlled pure speedup",
+    "402439-row direct-raw audit bounded to two full source files",
+    "Integer equivalence compares committed writer digests, not newly rehashed large bytes",
+    "Batch tuning benchmark is full-field ordered scan+canonical SHA on four warm files, not production per-file refs-only throughput or optimal default proof",
+    "NUMA default/interleave measured twice per policy; observed tradeoffs and variation do not establish whole-pipeline/global optimality"
+  ],
+  "evidence_files": [
+    {
+      "path": "research/formal-run-v7.json",
+      "bytes": 1038616,
+      "sha256": "21ee1107450ca93296b8c8575815263a00e5fd5b25784ed4773804d5d40cdf62"
+    },
+    {
+      "path": "research/formal-completion-v7.json",
+      "bytes": 2594,
+      "sha256": "77569da27845ff1822c9cd7b4096652444b6613742460f8bbf8eb9ab01819584"
+    },
+    {
+      "path": "research/release-v8-code-diff.json",
+      "bytes": 1098,
+      "sha256": "9d4d0341ff338a43c095a901df965c0d0631ba3640d706cd2a8239682ebbd779"
+    },
+    {
+      "path": "research/equivalence-v7/summary.json",
+      "bytes": 2476,
+      "sha256": "0e8bd55796b5bdff85f108c9c36f5a2c10f908a2c3271bfb7b405343dd857cde"
+    },
+    {
+      "path": "research/model-audit-v7-v2.json",
+      "bytes": 3049089,
+      "sha256": "6da9fc3ff58a18a26819d99f374636f4d52c290814faaf55435733b9e638d430"
+    },
+    {
+      "path": "research/integer-artifact-equivalence-v7.json",
+      "bytes": 19274,
+      "sha256": "e56a4fc10cd11882024d4e35fe15d6998bf169e7844f5a152ab8718c540eb66a"
+    },
+    {
+      "path": "research/replay-v7-validation.json",
+      "bytes": 804,
+      "sha256": "84da703e20edd1f32b124a34b699c06dfd57befc7f5f4adfabc37f65578b98c3"
+    },
+    {
+      "path": "research/performance-window-v7-independent.json",
+      "bytes": 10041,
+      "sha256": "88b0cc7c1f2e3976df3c703c6d9b5484d746eeea31e55666840844fd372ed143"
+    },
+    {
+      "path": "research/cache-validation-benchmark-20261112/summary.json",
+      "bytes": 3805,
+      "sha256": "7f6b43da346b31878e7f709ce0d2f79d1ca776f7717764024b2d233fea74514b"
+    },
+    {
+      "path": "research/browser-formal-v8/browser-qa.json",
+      "bytes": 10756,
+      "sha256": "033ec333d6cb8561d721ec63fc2a2ca73ee94ff4532ce09ddbb5a833ceb6eaa5"
+    },
+    {
+      "path": "research/browser-formal-v8/service-identity.json",
+      "bytes": 931,
+      "sha256": "3297804b23c9e17e684ba0896a96e384bb881beb3f2f1c9be59b977753464607"
+    },
+    {
+      "path": "research/race-v8.log",
+      "bytes": 715,
+      "sha256": "fdc2bfaea81e14831d9885d863ad7347eaab4617ba25dc92c719f4d9fa30d23e"
+    },
+    {
+      "path": "research/batch-benchmark-20261112/summary.json",
+      "bytes": 18884,
+      "sha256": "b19b5ca0b206dc8199b18aa6c6da010c891cf44407d6a90268fe74d0db7e9e30"
+    },
+    {
+      "path": "research/batch-benchmark-20261112/README.md",
+      "bytes": 4601,
+      "sha256": "a6462644596dc09b137b895ccf6941423faaf524929ea6e2d0d9b0b36f8f1027"
+    },
+    {
+      "path": "research/batch-benchmark-20261112/main.go.txt",
+      "bytes": 4493,
+      "sha256": "3b0e713abddba1c1c2d17247c4eb305efd1dba5f6c2d32242b35c7d514a8be83"
+    },
+    {
+      "path": "research/batch-benchmark-20261112/input-manifest.json",
+      "bytes": 3662,
+      "sha256": "c3ad1284117e9c81225455e339941c955181ac400c6382ad38cc32f51ee3193b"
+    },
+    {
+      "path": "research/batch-benchmark-20261112/input-sha256.txt",
+      "bytes": 628,
+      "sha256": "6a59aa0a232908ba62c7cb42fd219ca77f67cfa3f3291f057cc451361d5fece5"
+    },
+    {
+      "path": "research/numa-benchmark-20261112/summary.json",
+      "bytes": 2101,
+      "sha256": "9b83e222b48ea039a37720972555e99b3acef766f50c7cf19067b23b51474aed"
+    },
+    {
+      "path": "research/numa-benchmark-20261112/README.md",
+      "bytes": 4879,
+      "sha256": "f23e044b58d977f32f395a428cea2b63b1bfe1266fcc238d24147c839c50393c"
+    },
+    {
+      "path": "research/numa-benchmark-20261112/numa-policy-summary.json",
+      "bytes": 2522,
+      "sha256": "b36ef6123938b511c66458b9b4b37b35e3f18ea606eaa12a7d511aa378482543"
+    },
+    {
+      "path": "research/numa-benchmark-20261112/source-files.sha256",
+      "bytes": 403,
+      "sha256": "131e045de0a872883392d61f2979b3112b00e2a8d4b9ae18434b2ed93d6c284c"
+    },
+    {
+      "path": "research/numa-benchmark-20261112/numa_wrapper_linux.go.txt",
+      "bytes": 1306,
+      "sha256": "ebb2ed7c14f6f83a47f7a0b6c2b33f240d6e6825dbee047c7f6c004f92288ef6"
+    },
+    {
+      "path": "research/numa-benchmark-20261112/run.sh",
+      "bytes": 2009,
+      "sha256": "5d677c63eb1750ce6a4cb24aa0cc60d4d6245c9d8f4063e46b2c57d7b0552120"
+    },
+    {
+      "path": "research/numa-benchmark-20261112/exec-case.sh",
+      "bytes": 557,
+      "sha256": "2113047c21209b5e03982954fb2310b60c494f316c2b73495bf5d9c44ecd9a21"
+    }
+  ],
+  "supplemental_batch_audit": {
+    "reviewed_at_utc": "2026-11-11T19:51:24.422525+00:00",
+    "inputs": 4,
+    "rows": 1434610,
+    "references": 10853745,
+    "compressed_bytes": 90342117,
+    "ordered_content_sha256": "2e04815e8704a98874dffe8b56d979aa5d544d2d400a7eba3266f316553ba7b2",
+    "cases": [
+      {
+        "batch": 32,
+        "runs": 3,
+        "median_seconds_recomputed": 14.043972447,
+        "peak_rss_mib": 48.96875,
+        "source_sha_matches_candidate": true,
+        "patch_sha_matches": true,
+        "summary_metrics_recomputed": true
+      },
+      {
+        "batch": 128,
+        "runs": 3,
+        "median_seconds_recomputed": 18.930307352,
+        "peak_rss_mib": 51.59375,
+        "source_sha_matches_candidate": true,
+        "patch_sha_matches": true,
+        "summary_metrics_recomputed": true
+      },
+      {
+        "batch": 512,
+        "runs": 3,
+        "median_seconds_recomputed": 15.013936138,
+        "peak_rss_mib": 62.84375,
+        "source_sha_matches_candidate": true,
+        "patch_sha_matches": true,
+        "summary_metrics_recomputed": true
+      },
+      {
+        "batch": 2048,
+        "runs": 3,
+        "median_seconds_recomputed": 13.380947629,
+        "peak_rss_mib": 96.96875,
+        "source_sha_matches_candidate": true,
+        "patch_sha_matches": true,
+        "summary_metrics_recomputed": true
+      }
+    ],
+    "helper_source_sha_verified": true,
+    "input_hash_records_match_manifest": true,
+    "production_default_128_unchanged": true,
+    "scope": "four-reader ordered cache.Scan with complete dimensions/references and full canonical-content SHA callback; distinct from per-file parallel production references-only scans",
+    "limitation": "Warm four-file sample, three rotated runs per size; fastest observed2048 is not a changed production default or proof of global optimality; do not extrapolate41.47% scanner-throughput improvement into full production speedup",
+    "timing_recomputed": {
+      "elapsed_reduction_2048_vs128_percent": 29.314683696425604,
+      "throughput_gain_2048_vs128_percent": 41.47209806705388
+    },
+    "raw_run_files_rehashed": [
+      {
+        "path": "research/batch-benchmark-20261112/batch-32-run-1.json",
+        "bytes": 1061,
+        "sha256": "29b720c3df354d26be9bab7da83ed7539ff4762e1cb0b0ca252a3d504ecf27a1"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-32-run-2.json",
+        "bytes": 1069,
+        "sha256": "3493033a39dfd7929de0033e3cd90340791e06011133df3afa7e570887553256"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-32-run-3.json",
+        "bytes": 1060,
+        "sha256": "1ef314be3a94a1a71d0ad2278335779bda1d0b4ab711703fe0e08bd2e36bc38f"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-128-run-1.json",
+        "bytes": 1071,
+        "sha256": "518d49effd1a50af5b46fe2ca679383a07e6b9778c0b034c5f5d648263c76f99"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-128-run-2.json",
+        "bytes": 1071,
+        "sha256": "65aee98e317bd8b8f44e85105d789cf96ad67a876c2802c383ef5e6d9802e6ce"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-128-run-3.json",
+        "bytes": 1060,
+        "sha256": "353d04c08d19a357089484b1058874ccd669ea8202df0270ec4b99642877d646"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-512-run-1.json",
+        "bytes": 1058,
+        "sha256": "5c391c7a54205643f7b42338aa548d6e0e9a091b4b3b147f90e8295eed13e9f4"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-512-run-2.json",
+        "bytes": 1061,
+        "sha256": "6bebdca0b6fc158a5cea6912fe8ca99cf7595e6bd0ecd12b6222f4697caf86a5"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-512-run-3.json",
+        "bytes": 1060,
+        "sha256": "70f662e92e46d77c09ce4a98322d50c0f0f9839ba2b1af8559d653aab294577e"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-2048-run-1.json",
+        "bytes": 1072,
+        "sha256": "aa9b1be65f353343eb345d499dc5259c3a586a59fcfb5ef0af85ca14ef626890"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-2048-run-2.json",
+        "bytes": 1063,
+        "sha256": "aa52a80dda1beabe0236a1d19d46a354752c6b9611ebfb46838f79f9dbf73417"
+      },
+      {
+        "path": "research/batch-benchmark-20261112/batch-2048-run-3.json",
+        "bytes": 1063,
+        "sha256": "09f9fe34019e3c075a4ff665debc77013d6df1c6f64e063a595301b1cfb5559f"
+      }
+    ],
+    "previous_23_checks_unchanged": true
+  },
+  "supplemental_numa_audit": {
+    "reviewed_at_utc": "2026-11-11T20:04:08.187114+00:00",
+    "same_recorded_graph_test_sha256": "aa4ad725f09dbd7d75fdacf7b4d74861fe3f5112f6db9770c70b5ea68cdea9ab",
+    "local_wrapper_and_launcher_source_hashes_verified": true,
+    "production_runtime_source_hashes_unchanged": true,
+    "sample_size": 50000000,
+    "workers": 32,
+    "shards": 256,
+    "gomaxprocs": 46,
+    "subprocesses_checked": [
+      {
+        "case": "default-build-run-1",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 0,
+          "node_mask": 0,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 1,
+        "largest_snapshot": {
+          "file": "sample-5.txt",
+          "resident_pages": 635388,
+          "nodes": {
+            "1": 224286,
+            "0": 411102
+          },
+          "policies": {
+            "default": 635388
+          }
+        }
+      },
+      {
+        "case": "default-lookup-run-1",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 0,
+          "node_mask": 0,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 4,
+        "largest_snapshot": {
+          "file": "sample-5.txt",
+          "resident_pages": 557479,
+          "nodes": {
+            "1": 387760,
+            "0": 169719
+          },
+          "policies": {
+            "default": 557479
+          }
+        }
+      },
+      {
+        "case": "default-build-run-2",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 0,
+          "node_mask": 0,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 1,
+        "largest_snapshot": {
+          "file": "sample-5.txt",
+          "resident_pages": 514102,
+          "nodes": {
+            "1": 161964,
+            "0": 352138
+          },
+          "policies": {
+            "default": 514102
+          }
+        }
+      },
+      {
+        "case": "default-lookup-run-2",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 0,
+          "node_mask": 0,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 4,
+        "largest_snapshot": {
+          "file": "sample-20.txt",
+          "resident_pages": 543436,
+          "nodes": {
+            "1": 349866,
+            "0": 193570
+          },
+          "policies": {
+            "default": 543436
+          }
+        }
+      },
+      {
+        "case": "interleave-build-run-1",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 3,
+          "node_mask": 3,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 1,
+        "largest_snapshot": {
+          "file": "sample-5.txt",
+          "resident_pages": 441056,
+          "nodes": {
+            "1": 220831,
+            "0": 220225
+          },
+          "policies": {
+            "interleave:0-1": 441056
+          }
+        }
+      },
+      {
+        "case": "interleave-lookup-run-1",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 3,
+          "node_mask": 3,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 4,
+        "largest_snapshot": {
+          "file": "sample-20.txt",
+          "resident_pages": 543451,
+          "nodes": {
+            "1": 272024,
+            "0": 271427
+          },
+          "policies": {
+            "interleave:0-1": 543451
+          }
+        }
+      },
+      {
+        "case": "interleave-build-run-2",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 3,
+          "node_mask": 3,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 1,
+        "largest_snapshot": {
+          "file": "sample-5.txt",
+          "resident_pages": 184743,
+          "nodes": {
+            "1": 92691,
+            "0": 92052
+          },
+          "policies": {
+            "interleave:0-1": 184743
+          }
+        }
+      },
+      {
+        "case": "interleave-lookup-run-2",
+        "passed": true,
+        "get_policy": {
+          "errno": 0,
+          "mode": 3,
+          "node_mask": 3,
+          "operation": "get_mempolicy"
+        },
+        "actual_graph_snapshots": 4,
+        "largest_snapshot": {
+          "file": "sample-20.txt",
+          "resident_pages": 543686,
+          "nodes": {
+            "1": 272127,
+            "0": 271559
+          },
+          "policies": {
+            "interleave:0-1": 543686
+          }
+        }
+      }
+    ],
+    "timings": [
+      {
+        "policy": "default",
+        "run": 1,
+        "build_ns": 544700967.0,
+        "lookup_serial_ns": 361.3,
+        "lookup_concurrent_ns": 10.04,
+        "build_cpu_percent": 965.0,
+        "lookup_cpu_percent": 1922.0,
+        "build_peak_rss_mib": 2685.20703125,
+        "lookup_peak_rss_mib": 2685.95703125,
+        "build_maps": 1,
+        "lookup_maps": 4
+      },
+      {
+        "policy": "default",
+        "run": 2,
+        "build_ns": 545111732.0,
+        "lookup_serial_ns": 294.1,
+        "lookup_concurrent_ns": 9.519,
+        "build_cpu_percent": 954.0,
+        "lookup_cpu_percent": 2257.0,
+        "build_peak_rss_mib": 2685.20703125,
+        "lookup_peak_rss_mib": 2686.33203125,
+        "build_maps": 1,
+        "lookup_maps": 4
+      },
+      {
+        "policy": "interleave",
+        "run": 1,
+        "build_ns": 569925302.0,
+        "lookup_serial_ns": 282.0,
+        "lookup_concurrent_ns": 9.288,
+        "build_cpu_percent": 948.0,
+        "lookup_cpu_percent": 2215.0,
+        "build_peak_rss_mib": 2685.140625,
+        "lookup_peak_rss_mib": 2685.95703125,
+        "build_maps": 1,
+        "lookup_maps": 4
+      },
+      {
+        "policy": "interleave",
+        "run": 2,
+        "build_ns": 750926916.0,
+        "lookup_serial_ns": 283.5,
+        "lookup_concurrent_ns": 9.33,
+        "build_cpu_percent": 865.0,
+        "lookup_cpu_percent": 2223.0,
+        "build_peak_rss_mib": 2685.13671875,
+        "lookup_peak_rss_mib": 2685.91796875,
+        "build_maps": 1,
+        "lookup_maps": 4
+      }
+    ],
+    "scope": "Two rounds default versus interleave0-1 using the same recorded graph.test binary and source ID vector; actual Go-process numa_maps and GET_MEMPOLICY confirm application. Build one timed build, lookup calibrated1s; GNU time CPU/RSS includes setup.",
+    "limitations": "Interleave build slower in both rounds and lookup modestly faster; variation plus two rounds does not establish a whole-pipeline improvement or global optimum. Production default/code unchanged; historical numactl absence was not a kernel policy limitation.",
+    "previous_24_checks_unchanged": true
+  }
+}

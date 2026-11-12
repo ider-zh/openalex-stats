@@ -1,0 +1,15 @@
+{
+  "remote_directory": "/mnt/nvme0/public/openalex-stats/index-benchmark-20261112-5561618b61",
+  "source_ids": "/mnt/nvme1/backup/openalex-stats/core-goal-v1/all-ids.bin",
+  "source_rows": 510372821,
+  "sample_size": 5000000,
+  "gomaxprocs": 46,
+  "variants": [
+    "serial",
+    "parallel_w16_s64",
+    "parallel_w48_s512"
+  ],
+  "source_go_version": "go version go1.26.2 windows/amd64",
+  "status": "completed_contended_preliminary",
+  "evidence_directory": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\index-benchmark-20261112"
+}

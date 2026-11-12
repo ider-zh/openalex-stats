@@ -1,0 +1,237 @@
+{
+  "version": "document-scope-proposal-v3",
+  "status": "applied_full_snapshot_goal_defaults",
+  "snapshot_date": "2026-06-26",
+  "snapshot_type_inventory": {
+    "dictionary_categories": 19,
+    "observed_work_type_categories": 24,
+    "additional_observed_values": [
+      "book-section",
+      "database",
+      "grant",
+      "report-component",
+      "software"
+    ],
+    "evidence": "snapshot-type-audit.json 的全量 type_xpac 查询；不能将字典数量当作实际值域"
+  },
+  "purpose": "国家、年份、学科论文量与当年被引次数及 ECI 的文献范围审阅",
+  "temporal_scope": {
+    "output_year_start": 2000,
+    "latest_complete_calendar_year": 2025,
+    "partial_year": 2026,
+    "corpus_publication_year_lower_bound": null,
+    "corpus_publication_year_lower_bound_status": "goal_authorized_default_preserve_pre2000",
+    "explanation": "输出从2000起；Q保留符合条件的2000年前被引对象，依据docs/goal-prompt.txt默认值"
+  },
+  "type_selection": {
+    "strategy": "blacklist",
+    "default_for_unlisted_types": "retain_and_flag_unknown_values",
+    "blacklist_status": "accepted_recommendation",
+    "excluded_types": [
+      "editorial",
+      "erratum",
+      "retraction",
+      "paratext",
+      "peer-review",
+      "reference-entry",
+      "libguides",
+      "supplementary-materials",
+      "dataset",
+      "database",
+      "software",
+      "grant",
+      "standard",
+      "book",
+      "dissertation"
+    ],
+    "strict_type_matching": true,
+    "blacklist_dimension": "work.type",
+    "raw_type_title_source_heuristics": "flags_only_no_implicit_exclusion",
+    "missing_metadata": "retain_and_flag",
+    "is_paratext_true": "exclude_as_publication_paratext",
+    "retained_types_in_observed_snapshot": [
+      "article",
+      "review",
+      "book-chapter",
+      "letter",
+      "preprint",
+      "report",
+      "other",
+      "book-section",
+      "report-component"
+    ]
+  },
+  "snapshot_type_screening": [
+    {
+      "type": "article",
+      "decision": "retain_with_flags",
+      "research_note": "结合 raw_type、来源及发表版本，排查默认归类、会议摘要与通知等误标"
+    },
+    {
+      "type": "review",
+      "decision": "retain_with_flags",
+      "research_note": "保留综述和元分析；明确书评与审稿报告排除；无证据时保留为未核实候选"
+    },
+    {
+      "type": "book-chapter",
+      "decision": "retain_with_flags",
+      "research_note": "明确会议全文可转入主样本；普通研究书章单列；工具书及前后附属内容排除"
+    },
+    {
+      "type": "letter",
+      "decision": "retain_with_flags",
+      "research_note": "区分原创短篇研究与读者来信，有研究证据的前者可进入主样本"
+    },
+    {
+      "type": "editorial",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "明确原创研究误标可进入复核；不凭高引用转为研究论文"
+    },
+    {
+      "type": "book",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "区分研究专著、教材、编辑书；不与全部章节作为同一论文单位重复相加"
+    },
+    {
+      "type": "preprint",
+      "decision": "retain_with_flags",
+      "research_note": "不进入正式论文主样本；若同一 Work 有正式发表位置需联合复核版本证据"
+    },
+    {
+      "type": "dissertation",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "学位论文单列；不自动与后续期刊论文按标题合并"
+    },
+    {
+      "type": "report",
+      "decision": "retain_with_flags",
+      "research_note": "研究报告和 working paper 单列；正式研究误标需明确证据"
+    },
+    {
+      "type": "erratum",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "更正通知排除，不连带排除原论文"
+    },
+    {
+      "type": "retraction",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "撤稿通知排除；已撤稿原论文由独立 is_retracted 规则处理"
+    },
+    {
+      "type": "paratext",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "封面、目录、编委名单等出版附属内容排除"
+    },
+    {
+      "type": "dataset",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "数据对象排除，描述数据的研究论文可按论文证据纳入"
+    },
+    {
+      "type": "peer-review",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "审稿意见与决定信排除，不能与 review 综述混淆"
+    },
+    {
+      "type": "reference-entry",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "百科、词典及工具书条目不作为独立科研论文"
+    },
+    {
+      "type": "standard",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "技术标准不作为论文主样本"
+    },
+    {
+      "type": "libguides",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "图书馆导航或教学资源不作为论文主样本"
+    },
+    {
+      "type": "supplementary-materials",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "补充材料不作为独立论文；保留其所属正文资格"
+    },
+    {
+      "type": "other",
+      "decision": "retain_with_flags",
+      "research_note": "明确为正式研究论文的误标可救回，否则不自动进入主样本"
+    },
+    {
+      "type": "book-section",
+      "decision": "retain_with_flags",
+      "research_note": "历史遗留类型，不自动等同研究书章；正文进入扩展集合，附属内容排除，明确会议全文可转主集合"
+    },
+    {
+      "type": "report-component",
+      "decision": "retain_with_flags",
+      "research_note": "报告组成部分单列，避免与整份报告重复累计；不默认作为正式论文"
+    },
+    {
+      "type": "database",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "数据库对象不作为论文；描述数据库的正式研究文章按正文证据处理"
+    },
+    {
+      "type": "grant",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "资助项目记录不作为论文"
+    },
+    {
+      "type": "software",
+      "decision": "exclude_by_type_blacklist",
+      "research_note": "软件对象不作为论文；描述软件的正式研究文章按正文证据处理"
+    }
+  ],
+  "citation_scope": {
+    "strategy": "rebuild_induced_citation_graph",
+    "corpus_symbol": "Q",
+    "inclusion_rule": "source_work_id IN Q AND target_work_id IN Q",
+    "Q_definition": "core is_xpac=false、15类黑名单及is_paratext过滤、保留预2000被引目标；展示选择不改变Q",
+    "citation_year": "施引文献 publication_year",
+    "country_and_discipline_attribution": "被引文献的国家权重及学科归属",
+    "deduplication": "每对(source_work_id,target_work_id)只计一次；多处参考文献记录不重复计数",
+    "data_source": "works.referenced_works 与文献维度表连接",
+    "counts_by_year": "仅作对照，不作为限定语料内引用数的正式输入",
+    "citing_country_or_discipline": "允许来自Q中任意国家与学科，不能因用户选择展示国家/学科而提前限制施引集合",
+    "self_citations": "同Work自环排除并报告；作者自引保留",
+    "unresolved_reference": "不在快照或无法连接的被引ID单独计覆盖率，不能当作已确认属于Q",
+    "completeness": "反映本快照可解析引用图，早期年份引用缺失需报告覆盖率，不能声称重建为完整历史引用总量"
+  },
+  "retracted_original_work": {
+    "distinguish_from": "work.type=retraction 的通知已在黑名单",
+    "rule": "is_retracted=true 的原论文默认保留并标记，状态与文献类型独立；如需排除需另加明确规则",
+    "status": "goal_authorized_default_retain_and_flag"
+  },
+  "eci_scope": {
+    "independent_levels": [
+      "topics.field",
+      "topics.subfield",
+      "concepts.level0",
+      "concepts.level1"
+    ],
+    "inputs": [
+      "annual_publications",
+      "annual_received_citations_with_both_endpoints_in_Q"
+    ],
+    "model_count": 8,
+    "citation_rule": "被引版ECI使用限定引用图的年度被引矩阵；与产出版使用统一Q"
+  },
+  "principles": [
+    "未命中明确黑名单的类型保留；类型过于笼统或信息冲突时只标记",
+    "保留原始类型、原始证据、规则编号和排除原因，不覆盖源快照",
+    "不以缺少DOI、英文、摘要、开放获取、全文或正引用数作为隐含排除条件",
+    "黑名单过滤与XPAC、国家归属、Concepts阈值分别配置",
+    "实际文献计数按唯一Work ID；跨Work版本疑似重复只标记"
+  ],
+  "unresolved": [],
+  "execution_defaults": {
+    "authority": "docs/goal-prompt.txt",
+    "corpus": "core",
+    "countries": "fractional_and_whole_original_codes",
+    "concepts": "per_level_fractional_threshold_0.3_sensitivity_0_and_0.5",
+    "topics": "primary_topic",
+    "eci": "fractional_country_concept_0.3",
+    "historical_screening_notes": "snapshot_type_screening research_note records earlier research only; no hidden exclusions beyond type_selection"
+  }
+}

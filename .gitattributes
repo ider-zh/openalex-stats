@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.go text eol=lf
+*.json text eol=lf
+*.mjs text eol=lf
+*.py text eol=lf
+*.svg text eol=lf
+*.parquet -text
+*.gz -text
+*.tgz -text
+*.png -text
+*.jpg -text
+

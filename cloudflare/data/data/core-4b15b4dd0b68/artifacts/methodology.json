@@ -1,0 +1,89 @@
+{
+  "author_self_citations": "retained",
+  "both_endpoints_in_Q": true,
+  "build_id": "8be7a2e15906ac7f3c80b1b752395d8b9499ddd871077e63e550d87fefea01a6",
+  "citation_attribution": "cited work countries and discipline",
+  "citation_year": "citing publication year",
+  "concept_hit_rule": "deduplicate same-level labels; whole mode counts every qualifying hit once; scores filter tags, not proportional weights",
+  "concepts_counting": "whole",
+  "corpus": {
+    "corpus": "core",
+    "corpus_year_start": 0,
+    "blacklist": [
+      "editorial",
+      "erratum",
+      "retraction",
+      "paratext",
+      "peer-review",
+      "reference-entry",
+      "libguides",
+      "supplementary-materials",
+      "dataset",
+      "database",
+      "software",
+      "grant",
+      "standard",
+      "book",
+      "dissertation"
+    ]
+  },
+  "exclude_same_work_loops": true,
+  "go_version": "go1.26.2",
+  "graph_key": "3b00c22308c75534666aabafee45907b274c12304fec7e5d605696549f0fc94c",
+  "main_scenario": "fractional-concept-whole-0.3",
+  "national_total_rule": "distinct Works per country/year; do not sum overlapping subject whole counts",
+  "normalized_cache_key": "c3d758737add069ae5c58bc7bb7781505de022e3c5740bc0c53f1c9886a85371",
+  "output_year_end": 2026,
+  "output_year_start": 2000,
+  "partial_years": [
+    2026
+  ],
+  "rca_world_denominator": "known-country x known-discipline matrix sum",
+  "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+  "scenarios": [
+    {
+      "id": "fractional-concept-whole-0.0",
+      "country_mode": "fractional",
+      "concept_mode": "whole",
+      "concept_threshold": 0,
+      "main": false
+    },
+    {
+      "id": "fractional-concept-whole-0.3",
+      "country_mode": "fractional",
+      "concept_mode": "whole",
+      "concept_threshold": 0.3,
+      "main": true
+    },
+    {
+      "id": "fractional-concept-whole-0.5",
+      "country_mode": "fractional",
+      "concept_mode": "whole",
+      "concept_threshold": 0.5,
+      "main": false
+    },
+    {
+      "id": "whole-concept-whole-0.0",
+      "country_mode": "whole",
+      "concept_mode": "whole",
+      "concept_threshold": 0,
+      "main": false
+    },
+    {
+      "id": "whole-concept-whole-0.3",
+      "country_mode": "whole",
+      "concept_mode": "whole",
+      "concept_threshold": 0.3,
+      "main": true
+    },
+    {
+      "id": "whole-concept-whole-0.5",
+      "country_mode": "whole",
+      "concept_mode": "whole",
+      "concept_threshold": 0.5,
+      "main": false
+    }
+  ],
+  "source_manifest_sha256": "10c1785b4a6f9757823fc6dd005a052716e2c510ea751659cab4bcfba4c35e2a",
+  "statistical_specification": "docs/counting-policy.md"
+}

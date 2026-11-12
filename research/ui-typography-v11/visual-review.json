@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "revision": "r2",
+  "reviewed_at_utc": "2026-11-12T03:09:23.9106121Z",
+  "reviewer": "ui_typography agent",
+  "screenshots": [
+    "visual-candidate-r2/desktop-page.png",
+    "visual-candidate-r2/mobile-page.png",
+    "visual-candidate-r2/mobile-tree.png",
+    "visual-candidate-r2/mobile-tooltip.png",
+    "visual-candidate-r2/desktop-publications.png"
+  ],
+  "notes": [
+    "Desktop and 390px mobile text, chart axes, legend, tooltip and tables are readable at normal zoom.",
+    "Nine default countries display Chinese short labels; original country IDs and API/CSV data are preserved.",
+    "Longest second-level subject wraps inside the 15px tree popup; page has no horizontal overflow.",
+    "Mobile tooltip displays all nine ranked rows at 14px within chart bounds.",
+    "Long chart titles naturally wrap; no text is lost.",
+    "Initial r1 candidate was rejected by the expanded longest-subject mobile check; r2 corrects the grid minimum content width."
+  ]
+}

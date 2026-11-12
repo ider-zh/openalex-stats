@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "key": "9f0606b03b3a50a0c432e2ac394fadf060fbaae5b9db312d455ee688e994c48b",
+  "inputs_key": "6cdb950bf7762e4d5a823cfaaf9ea060b2c35bf41f8a29d2db4501dda5fe7a00",
+  "shape": {
+    "rows": 269194661,
+    "country_entries": 148878103,
+    "concept_entries": 1335287816
+  },
+  "columns": {
+    "path": "/mnt/nvme1/backup/openalex-stats/core-goal-v1/dimensions.bin",
+    "bytes": 24407757335,
+    "sha256": "fb9b5990e7b019e032a9f85830433c243d0073e99ff3959cb63fa6497acfc48b"
+  },
+  "all_ids": {
+    "path": "/mnt/nvme1/backup/openalex-stats/core-goal-v1/all-ids.bin",
+    "bytes": 4082982576,
+    "sha256": "06b4f3d33c22645e3cb0851ebfcca739ebcb43a7ef65ec380b386d13f4749e75"
+  },
+  "inventory": {
+    "rows": 510372821,
+    "Core": {
+      "works": 317820190,
+      "missing_year": 2712006,
+      "missing_country": 183524870,
+      "missing_field": 38023233,
+      "missing_subfield": 38023233,
+      "missing_concept_0": 43835928,
+      "missing_concept_1": 106727768
+    },
+    "XPAC": {
+      "works": 192552631,
+      "missing_year": 25635894,
+      "missing_country": 154056830,
+      "missing_field": 77260113,
+      "missing_subfield": 77260113,
+      "missing_concept_0": 70386866,
+      "missing_concept_1": 106793245
+    },
+    "NullXPAC": {
+      "works": 0,
+      "missing_year": 0,
+      "missing_country": 0,
+      "missing_field": 0,
+      "missing_subfield": 0,
+      "missing_concept_0": 0,
+      "missing_concept_1": 0
+    },
+    "type_counts_core_xpac_unknown": {
+      "article": [
+        218098661,
+        49350124,
+        0
+      ],
+      "book": [
+        6195812,
+        1829586,
+        0
+      ],
+      "book-chapter": [
+        24948691,
+        1109592,
+        0
+      ],
+      "book-section": [
+        1648,
+        183,
+        0
+      ],
+      "database": [
+        3315,
+        82,
+        0
+      ],
+      "dataset": [
+        24485942,
+        50274355,
+        0
+      ],
+      "dissertation": [
+        8610052,
+        5498375,
+        0
+      ],
+      "editorial": [
+        787197,
+        2690,
+        0
+      ],
+      "erratum": [
+        419415,
+        93,
+        0
+      ],
+      "grant": [
+        173,
+        0,
+        0
+      ],
+      "letter": [
+        1722244,
+        1136,
+        0
+      ],
+      "libguides": [
+        1776335,
+        0,
+        0
+      ],
+      "other": [
+        11352628,
+        82216027,
+        0
+      ],
+      "paratext": [
+        3950246,
+        9313,
+        0
+      ],
+      "peer-review": [
+        966862,
+        38499,
+        0
+      ],
+      "preprint": [
+        7511571,
+        1296384,
+        0
+      ],
+      "reference-entry": [
+        909043,
+        1004,
+        0
+      ],
+      "report": [
+        1404307,
+        849405,
+        0
+      ],
+      "report-component": [
+        738,
+        60,
+        0
+      ],
+      "retraction": [
+        23142,
+        0,
+        0
+      ],
+      "review": [
+        4154173,
+        61540,
+        0
+      ],
+      "software": [
+        13409,
+        2941,
+        0
+      ],
+      "standard": [
+        418217,
+        11242,
+        0
+      ],
+      "supplementary-materials": [
+        66369,
+        0,
+        0
+      ]
+    },
+    "excluded_reasons": {
+      "type:book": 8025398,
+      "type:database": 3397,
+      "type:dataset": 74760297,
+      "type:dissertation": 14108427,
+      "type:editorial": 789887,
+      "type:erratum": 419508,
+      "type:grant": 173,
+      "type:libguides": 1776335,
+      "type:paratext": 3959559,
+      "type:peer-review": 1005361,
+      "type:reference-entry": 910047,
+      "type:retraction": 23142,
+      "type:software": 16350,
+      "type:standard": 429459,
+      "type:supplementary-materials": 66369,
+      "xpac": 134884451
+    },
+    "selected": 269194661,
+    "selected_retracted": 96020
+  },
+  "scan": {
+    "files_opened": 2446,
+    "rows_read": 510372821,
+    "rows": 510372821,
+    "invalid_reference_ids": 0,
+    "invalid_concepts": 0,
+    "missing_years": 28347900,
+    "null_xpac_flags": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-11-12T01:00:30.6587199Z",
+  "browser_checks": 34,
+  "page_errors": 0,
+  "external_requests": 0,
+  "images": [
+    "topics-field.png",
+    "mobile.png"
+  ],
+  "visual_review": "Manually inspected production desktop and mobile screenshots. Yearly markers, default9, controls, chart/table values and responsive layout match the independently accepted candidate. Full formal suite revalidated rank/score and all8 model input paths against actual production API.",
+  "asset_override": false
+}

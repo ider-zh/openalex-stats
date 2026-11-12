@@ -1,0 +1,1 @@
+/mnt/nvme0/public/openalex-stats/index-benchmark-20261112-5561618b61/run-scale.sh: 行 16: numactl: 未找到命令

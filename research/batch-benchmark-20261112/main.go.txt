@@ -1,0 +1,104 @@
+// Standalone Linux benchmark helper; copied as cmd/batchbench/main.go only in
+// the independent remote benchmark directory. Production sources are unchanged.
+package main
+
+import (
+ "context"
+ "crypto/sha256"
+ "encoding/binary"
+ "encoding/hex"
+ "encoding/json"
+ "fmt"
+ "math"
+ "os"
+ "runtime"
+ "strconv"
+ "syscall"
+ "time"
+
+ "openalexstats/internal/cache"
+ "openalexstats/internal/model"
+ "openalexstats/internal/scan"
+)
+
+type totals struct {
+ Rows int64 `json:"rows"`
+ References int64 `json:"references"`
+ Countries int64 `json:"countries"`
+ Concepts0 int64 `json:"concepts_0"`
+ Concepts1 int64 `json:"concepts_1"`
+ Fields int64 `json:"fields"`
+ Subfields int64 `json:"subfields"`
+ SHA256 string `json:"sha256"`
+}
+
+func check(err error) { if err != nil { panic(err) } }
+func ioCounters() string { b,_ := os.ReadFile("/proc/self/io"); return string(b) }
+func cpu(r syscall.Rusage) float64 { return float64(r.Utime.Sec+r.Stime.Sec)+float64(r.Utime.Usec+r.Stime.Usec)/1e6 }
+
+func main() {
+ if len(os.Args)!=5 { panic("manifest output batch run") }
+ b,err := os.ReadFile(os.Args[1]); check(err)
+ var m cache.Manifest; check(json.Unmarshal(b,&m))
+ if !m.Complete || len(m.Parts)!=4 || m.Rows!=1434610 { panic("expected complete four-file bench cache") }
+ for _,p := range m.Parts { s,e:=os.Stat(p.Path); check(e); if s.Size()!=p.Bytes { panic("cache size changed") } }
+ batch,err:=strconv.Atoi(os.Args[3]); check(err)
+ rep,err:=strconv.Atoi(os.Args[4]); check(err)
+ h:=sha256.New()
+ buf:=make([]byte,0,4096)
+ u:=func(n uint64){buf=binary.LittleEndian.AppendUint64(buf,n)}
+ s:=func(v string){u(uint64(len(v)));buf=append(buf,v...)}
+ boolbit:=func(v bool)uint64{if v{return 1};return 0}
+ var t totals
+ var q scan.RowQuality
+ var before,after syscall.Rusage
+ var memBefore,memAfter runtime.MemStats
+ runtime.ReadMemStats(&memBefore)
+ check(syscall.Getrusage(syscall.RUSAGE_SELF,&before))
+ ioBefore:=ioCounters()
+ start:=time.Now()
+ stats,err:=cache.Scan(context.Background(),m.Paths(),scan.Options{
+  ReaderWorkers:4,ReadReferences:true,ReadDimensions:true,
+  OnQuality:func(v scan.RowQuality){q=v},
+ },func(w model.Work)error{
+  buf=buf[:0]
+  u(w.ID);u(uint64(w.Year));s(w.Type)
+  u(boolbit(w.IsXPAC));u(boolbit(w.IsParatext));u(boolbit(w.IsRetracted))
+  u(uint64(len(w.Countries)));for _,v:=range w.Countries{s(v)}
+  s(w.FieldID);s(w.SubfieldID)
+  u(uint64(len(w.Concepts)));for _,v:=range w.Concepts{s(v.ID);u(uint64(v.Level));u(math.Float64bits(v.Score));if v.Level==0{t.Concepts0++}else if v.Level==1{t.Concepts1++}}
+  u(uint64(len(w.References)));for _,v:=range w.References{u(v)}
+  u(uint64(q.InvalidReferenceIDs));u(uint64(q.InvalidConcepts));u(boolbit(q.MissingYear));u(boolbit(q.NullXPAC))
+  _,e:=h.Write(buf);if e!=nil{return e}
+  t.Rows++;t.References+=int64(len(w.References));t.Countries+=int64(len(w.Countries))
+  if w.FieldID!=""{t.Fields++};if w.SubfieldID!=""{t.Subfields++}
+  return nil
+ })
+ elapsed:=time.Since(start).Seconds()
+ ioAfter:=ioCounters()
+ check(syscall.Getrusage(syscall.RUSAGE_SELF,&after))
+ runtime.ReadMemStats(&memAfter)
+ check(err)
+ if stats.Rows!=m.Rows||stats.RowsRead!=m.Rows||stats.FilesOpened!=4||t.Rows!=m.Rows{panic("row/file conservation")}
+ t.SHA256=hex.EncodeToString(h.Sum(nil))
+ report:=struct{
+  Batch int `json:"batch"`
+  Run int `json:"run"`
+  GOMAXPROCS int `json:"gomaxprocs"`
+  Readers int `json:"readers"`
+  Elapsed float64 `json:"elapsed_seconds"`
+  RowsPerSecond float64 `json:"rows_per_second"`
+  ProcessCPUSeconds float64 `json:"process_cpu_seconds"`
+  ProcessCPUPercent float64 `json:"process_cpu_percent"`
+  PeakRSSKiB int64 `json:"peak_rss_kib"`
+  AllocBytes uint64 `json:"allocated_bytes"`
+  GC uint32 `json:"gc_collections"`
+  GCPauseSeconds float64 `json:"gc_pause_seconds"`
+  Total totals `json:"totals"`
+  Stats scan.Stats `json:"stats"`
+  IOBefore string `json:"io_before"`
+  IOAfter string `json:"io_after"`
+ }{batch,rep,runtime.GOMAXPROCS(0),4,elapsed,float64(t.Rows)/elapsed,cpu(after)-cpu(before),100*(cpu(after)-cpu(before))/elapsed,after.Maxrss,memAfter.TotalAlloc-memBefore.TotalAlloc,memAfter.NumGC-memBefore.NumGC,float64(memAfter.PauseTotalNs-memBefore.PauseTotalNs)/1e9,t,stats,ioBefore,ioAfter}
+ out,err:=os.Create(os.Args[2]);check(err);enc:=json.NewEncoder(out);enc.SetIndent("","  ");check(enc.Encode(report));check(out.Close())
+ fmt.Printf("batch=%d run=%d rows=%d refs=%d countries=%d concepts=%d sha256=%s elapsed=%.6fs\n",batch,rep,t.Rows,t.References,t.Countries,t.Concepts0+t.Concepts1,t.SHA256,elapsed)
+}

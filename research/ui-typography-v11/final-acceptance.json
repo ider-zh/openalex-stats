@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T03:15:14.319001+00:00",
+  "url": "http://192.168.1.229:8899",
+  "production": {
+    "pid": 1172407,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v11-typography-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v11-typography-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121844348,
+    "kernel_stat": "1172407 (oa-stats-v11-ty) S 1 1172407 1172407 0 -1 4194304 9195189 0 0 0 20969 1390 0 0 20 0 9 0 5121844348 13470597120 2890468 18446744073709551615 4194304 13305233 140723357550192 0 0 0 1002060288 1 2143420158 0 0 0 17 17 0 0 0 0 0 23789568 24637120 214106112 140723357554897 140723357555145 140723357555145 140723357556654 0\n"
+  },
+  "binary_sha256": "9c0d2bd5b9a559a679a1b1a5ca3b6f8f64e48773c0eb5f4a8d7a4e612a26b00c",
+  "source_archive": {
+    "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/source-v11-typography-r2-release.tar.gz",
+    "sha256": "aaac074fe1cc9c6a7d1abe390cbf03bb17091dda551ac3fb257e76ae8d9aa27f",
+    "isolated_from_country_enrichment": true,
+    "independent_rebuild_matches_binary": true
+  },
+  "data": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "runs": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  },
+  "served_assets": {
+    "app.css": {
+      "sha256": "b0039d85a8d12cf904cb624542642d7d5efcbd94bf3e841e494efcc3b0fc9081",
+      "bytes": 22408,
+      "cache_control": "no-cache"
+    },
+    "app.js": {
+      "sha256": "148913ef84d3099d639760124a448ab8192c200bf945173d942080d57e953524",
+      "bytes": 32588,
+      "cache_control": "no-cache"
+    },
+    "bump.js": {
+      "sha256": "8d40943410c6996ee0eb9f2c3efa278b7ff8c1bf13342474065fe702a1566192",
+      "bytes": 8624,
+      "cache_control": "no-cache"
+    }
+  },
+  "formal_browser_qa": [
+    {
+      "corpus": "core",
+      "checks": 34,
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/ui-typography-v11/production-core-browser-qa.json",
+      "sha256": "2814f6af4d01a5ad275e36e5945d9d8d1f08a1a2a22ae9af1d9739e8e75fed71"
+    },
+    {
+      "corpus": "all",
+      "checks": 34,
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/ui-typography-v11/production-all-browser-qa.json",
+      "sha256": "ce4363427855cd8bab3b1ceed1b1be9a8010fe5046a01c6a7879950ced29eaaf"
+    }
+  ],
+  "typography_qa": {
+    "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/ui-typography-v11/typography-production-qa.json",
+    "sha256": "87c666e6d9b68b87089d8884ae8a2f3cd097ef741ead2414a3481a6e760e9a6c",
+    "viewports": [
+      {
+        "viewport": "desktop",
+        "fonts": {
+          "body": "16px",
+          ".control-block legend": "15px",
+          ".control-block label": "14px",
+          ".switch button": "15px",
+          "#yearStart": "15px",
+          "#countrySearch": "15px",
+          ".country-option": "15px",
+          ".selected-countries button": "13px",
+          ".tree-picker>summary": "15px",
+          ".hint": "13px",
+          ".metric-tabs button": "14px",
+          ".metric-description": "14px",
+          ".chart-footer p": "13px",
+          "table": "15px",
+          "th": "13px",
+          "td": "15px",
+          ".method-panel>p": "15px"
+        },
+        "chart": {
+          "width": 989,
+          "height": 460,
+          "legend": 13,
+          "x_axis": 12,
+          "y_axis": 12,
+          "tooltip": 14,
+          "names": [
+            "\u4e2d\u56fd",
+            "\u7f8e\u56fd",
+            "\u82f1\u56fd",
+            "\u5fb7\u56fd",
+            "\u6cd5\u56fd",
+            "\u65e5\u672c",
+            "\u5370\u5ea6",
+            "\u52a0\u62ff\u5927",
+            "\u97e9\u56fd"
+          ]
+        },
+        "width": 1440,
+        "content_width": 1440,
+        "tooltip_font": "14px",
+        "long_subject": {
+          "font": "15px",
+          "client": 270,
+          "scroll": 270,
+          "text": "Organizational Behavior and Human Resource Management"
+        }
+      },
+      {
+        "viewport": "mobile",
+        "fonts": {
+          "body": "16px",
+          ".control-block legend": "15px",
+          ".control-block label": "14px",
+          ".switch button": "15px",
+          "#yearStart": "15px",
+          "#countrySearch": "15px",
+          ".country-option": "15px",
+          ".selected-countries button": "13px",
+          ".tree-picker>summary": "15px",
+          ".hint": "13px",
+          ".metric-tabs button": "14px",
+          ".metric-description": "14px",
+          ".chart-footer p": "13px",
+          "table": "14px",
+          "th": "13px",
+          "td": "14px",
+          ".method-panel>p": "15px"
+        },
+        "chart": {
+          "width": 328,
+          "height": 440,
+          "legend": 13,
+          "x_axis": 12,
+          "y_axis": 12,
+          "tooltip": 14,
+          "names": [
+            "\u4e2d\u56fd",
+            "\u7f8e\u56fd",
+            "\u82f1\u56fd",
+            "\u5fb7\u56fd",
+            "\u6cd5\u56fd",
+            "\u65e5\u672c",
+            "\u5370\u5ea6",
+            "\u52a0\u62ff\u5927",
+            "\u97e9\u56fd"
+          ]
+        },
+        "width": 390,
+        "content_width": 390,
+        "tooltip_font": "14px",
+        "long_subject": {
+          "font": "15px",
+          "client": 276,
+          "scroll": 276,
+          "text": "Organizational Behavior and Human Resource Management"
+        }
+      }
+    ]
+  },
+  "manual_visual_review": {
+    "status": "passed",
+    "images": [
+      "visual-production/mobile-tooltip.png",
+      "visual-production/desktop-score.png",
+      "visual-candidate-r2/mobile-page.png",
+      "visual-candidate-r2/mobile-tree.png",
+      "visual-candidate-r2/desktop-page.png"
+    ]
+  },
+  "temporary_8901_stopped": true,
+  "reference_8900_preserved": true,
+  "rollback_needed": false,
+  "scope": "typography, spacing, localized display labels; existing statistical data and Go engine unchanged"
+}

@@ -1,0 +1,82 @@
+{
+  "status": "completed_no_competing_heavy_job",
+  "count": 1,
+  "sample_ids": 50000000,
+  "gomaxprocs": 46,
+  "sampling": "32 uniformly spaced nonoverlapping windows over510372821 source IDs",
+  "started": "2026-11-12T02:56:21+08:00",
+  "completed": "2026-11-12T02:57:37+08:00",
+  "correctness": "All50m IDs and original ordinal verified for serial/w16s64/w48s512 using46 parallel read-only verifiers; PASS18.10s",
+  "numa": {
+    "placement": "default",
+    "tool": "numactl",
+    "available": false,
+    "probe_exit_code": 127,
+    "actual_error": "/mnt/nvme0/public/openalex-stats/index-benchmark-20261112-5561618b61/run-scale.sh: 行 16: numactl: 未找到命令",
+    "action": "No install, global change or permission workaround attempted"
+  },
+  "results": [
+    {
+      "variant": "serial",
+      "sample_ids": 50000000,
+      "build_ns": 14370339124.0,
+      "build_seconds": 14.370339124,
+      "allocated_bytes": 1610593624,
+      "allocations": 131083,
+      "build_cpu_percent": 100.0,
+      "build_peak_rss_kib": 1972692,
+      "single_lookup_ns": 268.6,
+      "concurrent_lookup_ns": 9.929,
+      "build_speedup": 1.0,
+      "concurrent_lookup_slowdown": 1.0
+    },
+    {
+      "variant": "parallel_w16_s64",
+      "sample_ids": 50000000,
+      "build_ns": 1148535414.0,
+      "build_seconds": 1.148535414,
+      "allocated_bytes": 2410740048,
+      "allocations": 131404,
+      "build_cpu_percent": 648.0,
+      "build_peak_rss_kib": 2751068,
+      "single_lookup_ns": 349.6,
+      "concurrent_lookup_ns": 9.245,
+      "build_speedup": 12.511881609250928,
+      "concurrent_lookup_slowdown": 0.9311108872998287
+    },
+    {
+      "variant": "parallel_w32_s256",
+      "sample_ids": 50000000,
+      "build_ns": 484188708.0,
+      "build_seconds": 0.484188708,
+      "allocated_bytes": 2410909968,
+      "allocations": 132046,
+      "build_cpu_percent": 970.0,
+      "build_peak_rss_kib": 2750676,
+      "single_lookup_ns": 355.9,
+      "concurrent_lookup_ns": 10.23,
+      "build_speedup": 29.679211610197235,
+      "concurrent_lookup_slowdown": 1.0303152381911573
+    },
+    {
+      "variant": "parallel_w48_s512",
+      "sample_ids": 50000000,
+      "build_ns": 618854440.0,
+      "build_seconds": 0.61885444,
+      "allocated_bytes": 2411151904,
+      "allocations": 132795,
+      "build_cpu_percent": 964.0,
+      "build_peak_rss_kib": 2749952,
+      "single_lookup_ns": 287.3,
+      "concurrent_lookup_ns": 10.03,
+      "build_speedup": 23.220871008051585,
+      "concurrent_lookup_slowdown": 1.0101722227817502
+    }
+  ],
+  "limitations": [
+    "Scale build/lookup count1; 5m repeated3 times separately",
+    "NUMA interleave could not be tested because numactl is absent",
+    "GNU time CPU is whole subprocess average and RSS includes input sample/setup",
+    "No production/default switching performed by benchmark agent"
+  ]
+}

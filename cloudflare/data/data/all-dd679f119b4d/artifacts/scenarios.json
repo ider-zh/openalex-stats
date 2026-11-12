@@ -1,0 +1,44 @@
+[
+  {
+    "id": "fractional-concept-whole-0.0",
+    "country_mode": "fractional",
+    "concept_mode": "whole",
+    "concept_threshold": 0,
+    "main": false
+  },
+  {
+    "id": "fractional-concept-whole-0.3",
+    "country_mode": "fractional",
+    "concept_mode": "whole",
+    "concept_threshold": 0.3,
+    "main": true
+  },
+  {
+    "id": "fractional-concept-whole-0.5",
+    "country_mode": "fractional",
+    "concept_mode": "whole",
+    "concept_threshold": 0.5,
+    "main": false
+  },
+  {
+    "id": "whole-concept-whole-0.0",
+    "country_mode": "whole",
+    "concept_mode": "whole",
+    "concept_threshold": 0,
+    "main": false
+  },
+  {
+    "id": "whole-concept-whole-0.3",
+    "country_mode": "whole",
+    "concept_mode": "whole",
+    "concept_threshold": 0.3,
+    "main": true
+  },
+  {
+    "id": "whole-concept-whole-0.5",
+    "country_mode": "whole",
+    "concept_mode": "whole",
+    "concept_threshold": 0.5,
+    "main": false
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+  "checks": 2797,
+  "failed_checks": 0,
+  "model_checks": 216,
+  "model_failed": 0,
+  "exports": [
+    {
+      "file": "country_eci.parquet",
+      "passed": true,
+      "expected_rows": 53568,
+      "rows": 53568,
+      "missing_rows": 0,
+      "unexpected_rows": 0,
+      "duplicate_rows": 0,
+      "semantic_mismatches": 0,
+      "max_score_error": 0
+    },
+    {
+      "file": "discipline_pci.parquet",
+      "passed": true,
+      "expected_rows": 31374,
+      "rows": 31374,
+      "missing_rows": 0,
+      "unexpected_rows": 0,
+      "duplicate_rows": 0,
+      "semantic_mismatches": 0,
+      "max_score_error": 0
+    }
+  ],
+  "orientation": {
+    "first_valid_diversity_or_label_tie": 8,
+    "common_country_temporal_covariance": 208
+  },
+  "sql_seconds": 711.303319832,
+  "started_at": "2026-11-12T00:56:23.082463215Z",
+  "completed_at": "2026-11-12T01:08:45.482099067Z",
+  "raw_rows": 510372821,
+  "selected_by_corpus": {
+    "core": 269194661,
+    "xpac": 134884451
+  },
+  "publications": 285365821,
+  "retained_edges": 2385146215,
+  "self_loops": 978418,
+  "future_target_edges": 13871993,
+  "audit_report": "/mnt/nvme1/backup/openalex-stats/all-concept-hits-audit-v1/audit.json",
+  "model_report": "/mnt/nvme1/backup/openalex-stats/all-concept-hits-audit-v1/model-audit.json",
+  "exit_evidence": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-audit-v1/exit-code.txt",
+  "audit_sha256": "4cfb66b3fb4b4efc6dcb8f709e2d7f91a540ec4b364041fc75223579a44931c1",
+  "model_sha256": "3995e6ee4f3684bbd30c883eea8e75f56ed349c2eb202a6fe80eede8650cd847",
+  "integer_and_dictionary_checks": [
+    {
+      "invalid_whole_integers": 0,
+      "invalid_counts": 0,
+      "invalid_dimensions": 0,
+      "invalid_scenario_metadata": 0,
+      "invalid_dictionary_labels": 0
+    }
+  ]
+}

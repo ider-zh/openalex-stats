@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "handed_off_at_utc": "2026-11-12T01:00:30.5988480Z",
+  "url": "http://192.168.1.229:8899",
+  "corpus": "core",
+  "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+  "selected_works": 269194661,
+  "new": {
+    "pid": 1004466,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121043037,
+    "kernel_stat": "1004466 (oa-stats-v10) S 1004465 1004466 1004466 0 -1 4194304 4723 0 0 0 4 2 0 0 20 0 17 0 5121043037 1379778560 6528 18446744073709551615 4194304 13305233 140727081784080 0 0 0 0 3 2143420156 0 0 0 17 26 0 0 0 0 0 23785472 24633024 1071009792 140727081789762 140727081789924 140727081789924 140727081791420 0",
+    "clock_ticks_per_second": 100,
+    "linux_boot_unix_seconds": 1743234530
+  },
+  "new_binary_sha256": "ac0efd9804294ed05c9f96d28a20b477d46d963e881edd836aff969e56b10fba",
+  "command": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10 serve --data-core /mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1 --listen 0.0.0.0:8899",
+  "log": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-v1/service-production.log",
+  "shared_lock": "/home/ider/tmpdata/openalex-stats-dev-20261112/production-service-8899.lock",
+  "production_promotion_remote": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-v1/production-promotion.json",
+  "audit": "/mnt/nvme1/backup/openalex-stats/core-concept-hits-audit-v1/audit.json",
+  "audit_exit_file": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-audit-v1/exit-code.txt",
+  "audit_sha256": "7991cec4d944a3d18820ca00f87051fd8362f678f1253078539a96ad25837df9",
+  "audit_checks": 2800,
+  "model_checks": 216,
+  "browser_checks": 34,
+  "browser_report": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\browser-core-concept-hits-production\\browser-qa.json",
+  "candidate_preserved": {
+    "port": 8900,
+    "pid": 963184
+  },
+  "old_pid_stopped": 877825,
+  "rollback_needed": false,
+  "ownership_note": "Core promotion and production QA completed; go_full_corpus may now take 8899 ownership under shared fcntl lock after its all-data audit/candidate QA gates."
+}

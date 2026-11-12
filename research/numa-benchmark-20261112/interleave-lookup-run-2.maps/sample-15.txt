@@ -1,0 +1,43 @@
+00400000 interleave:0-1 file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test mapped=321 active=0 N1=321 kernelpagesize_kB=4
+00551000 interleave:0-1 file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test mapped=390 active=0 N0=23 N1=367 kernelpagesize_kB=4
+006d7000 interleave:0-1 file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test anon=7 dirty=7 mapped=35 active=0 N0=9 N1=26 kernelpagesize_kB=4
+006fa000 interleave:0-1 anon=23 dirty=23 active=0 N0=12 N1=11 kernelpagesize_kB=4
+182684000000 interleave:0-1
+182687800000 interleave:0-1 anon=540838 dirty=540838 active=107 N0=270449 N1=270389 kernelpagesize_kB=4
+18272f800000 interleave:0-1
+7fc914db4000 interleave:0-1 anon=4 dirty=4 active=1 N0=4 kernelpagesize_kB=4
+7fc914dbc000 interleave:0-1 anon=10 dirty=10 active=0 N0=6 N1=4 kernelpagesize_kB=4
+7fc914dfc000 interleave:0-1 anon=37 dirty=37 active=0 N0=19 N1=18 kernelpagesize_kB=4
+7fc914e32000 interleave:0-1 anon=106 dirty=106 active=1 N0=53 N1=53 kernelpagesize_kB=4
+7fc914e9e000 interleave:0-1 anon=80 dirty=80 active=0 N0=40 N1=40 kernelpagesize_kB=4
+7fc914eee000 interleave:0-1 anon=2 dirty=2 active=1 N0=2 kernelpagesize_kB=4
+7fc914ef2000 interleave:0-1 anon=17 dirty=17 active=12 N0=9 N1=8 kernelpagesize_kB=4
+7fc914f12000 interleave:0-1 anon=92 dirty=92 active=1 N0=46 N1=46 kernelpagesize_kB=4
+7fc914fda000 interleave:0-1 anon=3 dirty=3 active=1 N0=3 kernelpagesize_kB=4
+7fc914fe0000 interleave:0-1 anon=1467 dirty=1467 active=5 N0=745 N1=722 kernelpagesize_kB=4
+7fc915ca0000 interleave:0-1 anon=17 dirty=17 active=0 N0=11 N1=6 kernelpagesize_kB=4
+7fc915e00000 interleave:0-1 anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7fc917e00000 interleave:0-1
+7fc92ae4d000 interleave:0-1 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7fc92ae4f000 interleave:0-1
+7fc937e00000 interleave:0-1
+7fc94ae4d000 interleave:0-1 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7fc94ae4f000 interleave:0-1
+7fc95a409000 interleave:0-1 anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7fc95a40a000 interleave:0-1
+7fc95c2c1000 interleave:0-1 anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7fc95c2c2000 interleave:0-1
+7fc95c601000 interleave:0-1 anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7fc95c603000 interleave:0-1 anon=48 dirty=48 active=0 N0=24 N1=24 kernelpagesize_kB=4
+7fc95c633000 interleave:0-1 anon=83 dirty=83 active=0 N0=48 N1=35 kernelpagesize_kB=4
+7fc95c6b3000 interleave:0-1 anon=32 dirty=32 active=0 N0=16 N1=16 kernelpagesize_kB=4
+7fc95c6d3000 interleave:0-1 anon=22 dirty=22 active=0 N0=11 N1=11 kernelpagesize_kB=4
+7fc95c7d3000 interleave:0-1 anon=4 dirty=4 active=0 N0=2 N1=2 kernelpagesize_kB=4
+7fc95c7e5000 interleave:0-1
+7fc95c87d000 interleave:0-1 anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7fc95c87e000 interleave:0-1
+7fc95c8e5000 interleave:0-1 anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7fc95c905000 interleave:0-1 anon=40 dirty=40 active=0 N0=20 N1=20 kernelpagesize_kB=4
+7ffcd8ec3000 interleave:0-1 stack anon=4 dirty=4 active=0 N0=2 N1=2 kernelpagesize_kB=4
+7ffcd8eef000 interleave:0-1
+7ffcd8ef3000 interleave:0-1

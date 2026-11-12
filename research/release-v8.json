@@ -1,0 +1,142 @@
+{
+  "release": "openalex-stats-v8",
+  "status": "accepted_with_explicit_limits",
+  "workspace": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats",
+  "source_bundle": {
+    "path": "bin/openalex-stats-v8-source-and-evidence.tar.gz",
+    "bytes": 4993464,
+    "sha256": "94b7e748f37538b3d59f77569a46bf869c9d4418689ba1c74fda7d3946db093c",
+    "excludes": "bin/out/git/node_modules and self-referencing release manifest/remote verification; frozen v7 and current v8 executables indexed separately"
+  },
+  "current_binary": {
+    "local_path": "bin/oa-stats-v8",
+    "remote_path": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v8",
+    "sha256": "744b93484e7b56fb0099bd04515c145a55ef9527aecbea93fc5a39dac6db682e",
+    "go_version": "go1.26.2",
+    "goos": "linux",
+    "goarch": "amd64",
+    "goamd64": "v1",
+    "cgo_enabled": false
+  },
+  "statistics_executable": {
+    "local_path": "bin/oa-stats-v7",
+    "remote_path": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v7",
+    "sha256": "c8ad89711ce24997186bc06b7ffd4e812f1e3dfc4249c3622eacc23c5c30095f",
+    "source_archive_local": "bin/source-v7.tar.gz",
+    "source_archive_remote": "/home/ider/tmpdata/openalex-stats-dev-20261112/source-v7.tar.gz",
+    "source_sha256": "7edcd2e26e0e9b76b7b9e4da2e948fc4a80bef175ade2a9816443cd59461e333",
+    "evidence": "research/execution-v7.json"
+  },
+  "statistics": {
+    "server": "ider@192.168.1.229",
+    "snapshot_date": "2026-06-26",
+    "source_manifest": "/mnt/hg02/openalex-snapshot/data/parquet/manifest.json",
+    "source_manifest_sha256": "10c1785b4a6f9757823fc6dd005a052716e2c510ea751659cab4bcfba4c35e2a",
+    "source_files": 2446,
+    "source_rows": 510372821,
+    "selected_works": 269194661,
+    "retained_edges": 2363318327,
+    "result_directory": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2",
+    "run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+    "completion_sha256": "77569da27845ff1822c9cd7b4096652444b6613742460f8bbf8eb9ab01819584",
+    "artifacts": [
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/statistics.parquet",
+        "bytes": 516864604,
+        "sha256": "cac3d8b6ce7bca2584c37103ba25181c25c47791d577dcd7e478d7f0fdb5cad7"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/cube.parquet",
+        "bytes": 179049337,
+        "sha256": "ed5bf062dfbe6317c6958c45140e681d224a656b868cfd3807f048c2c8188a12"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/country_eci.parquet",
+        "bytes": 411334,
+        "sha256": "545f9e4a61fad79b006e9d7853e5dbdc6de92f7ceeb6430f33efb1193e0f8dbe"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/discipline_pci.parquet",
+        "bytes": 283819,
+        "sha256": "0c2c6f535f49dcc15db04509b2ffd8a63eb80aafac0ee56e10ba6140b21008f7"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/rca.parquet",
+        "bytes": 240388279,
+        "sha256": "3b0ca6422681d961de4b166523930fc6ed100ad3515a88d664ddc83ef8fa9afa"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/coverage.json",
+        "bytes": 12969,
+        "sha256": "15699ebae31ad187f30a74740557952d71e99730cbad10b0efac97b1d39fd895"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/scenarios.json",
+        "bytes": 933,
+        "sha256": "c17da1bb01bd62c047fdda0838a8c7d512be5545cf305bf93db23e751775859d"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/dictionary.json",
+        "bytes": 87355,
+        "sha256": "3c790c06f9e0cbe698d26b17892dd4c1718fd8226bcd2d9a03e9cd19b2add030"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/eci.json",
+        "bytes": 319011756,
+        "sha256": "d49ac0f5059f21bc74e3ece241d36fba1ce70d6c5612d21d77b6edd2a90c7bf8"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/model_diagnostics.json",
+        "bytes": 2696497,
+        "sha256": "15fbc047d3e5807952924178ac68587e9ddfa332f9fae5cb6c7892083ec4d92d"
+      },
+      {
+        "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/methodology.json",
+        "bytes": 2369,
+        "sha256": "382ed7a00edeeeda578a3ba3b075040fa79b42b1e6d5676c5dadba87c0f43350"
+      }
+    ],
+    "run_artifact": {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/run.json",
+      "bytes": 1038616,
+      "sha256": "21ee1107450ca93296b8c8575815263a00e5fd5b25784ed4773804d5d40cdf62"
+    }
+  },
+  "service": {
+    "url": "http://192.168.1.229:8899",
+    "pid": 877825,
+    "binary": "oa-stats-v8",
+    "data_run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+    "log": "/home/ider/tmpdata/openalex-stats-dev-20261112/web-formal-v8.log",
+    "identity": "research/browser-formal-v8/service-identity.json",
+    "browser_checks": 24,
+    "source_bundle_remote": "/home/ider/tmpdata/openalex-stats-dev-20261112/openalex-stats-v8-source-and-evidence.tar.gz"
+  },
+  "verification": {
+    "local_test": "go test ./... passed",
+    "local_vet": "go vet ./... passed",
+    "linux_race": "research/race-v8.log",
+    "source_diff": "research/release-v8-code-diff.json",
+    "full_source_oracle": "research/full-audit-v5/audit.json",
+    "final_cell_equivalence": "research/equivalence-v7/summary.json",
+    "final_model_audit": "research/model-audit-v7-v2.json",
+    "integer_summary_equivalence": "research/integer-artifact-equivalence-v7.json",
+    "raw_projection_audit": "research/projection-audit/audit.json",
+    "formal_replay": "research/replay-v7-validation.json",
+    "browser": "research/browser-formal-v8/browser-qa.json",
+    "performance": "docs/performance-report.md",
+    "delivery": "docs/delivery.md",
+    "independent_review": "docs/independent-completion-audit.md",
+    "final_acceptance": "research/independent-final-acceptance.json",
+    "batch_experiment": "research/batch-benchmark-20261112/summary.json",
+    "numa_experiment": "research/numa-benchmark-20261112/summary.json",
+    "independent_checks": 25
+  },
+  "limits": [
+    "2000-2025 complete calendar windows;2026 partial through snapshot date",
+    "51.31% output-year publications missing country, preserved UNKNOWN",
+    "CPU target is representative60-second weighted window average, not every second or whole-run90%",
+    "Warm-cache benchmarks and bounded raw projection audit are explicitly scoped",
+    "Current v8 changes only input verification/reader default after preserved v7 statistics; no statistical recomputation claimed for v8"
+  ]
+}

@@ -1,0 +1,10 @@
+import http from 'node:http';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {Readable} from 'node:stream';
+import {handle} from '../cloudflare/worker.mjs';
+const root=path.resolve(process.env.PAGES_OUTPUT||'dist'),port=Number(process.env.PORT||8788);
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.json':'application/json; charset=utf-8','.gz':'application/gzip','.parquet':'application/octet-stream'};
+const env={ASSETS:{async fetch(input){const request=input instanceof Request?input:new Request(input),url=new URL(request.url);const relative=decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname),target=path.resolve(root,'.'+relative);if(!target.startsWith(root+path.sep))return new Response('Not found',{status:404});let bytes;try{bytes=await fs.readFile(target);}catch{return new Response('Not found',{status:404});}const headers={'Content-Type':mime[path.extname(target)]||'application/octet-stream','Content-Length':String(bytes.length)};const range=request.headers.get('Range');if(range){const m=/^bytes=(\d+)-(\d*)$/.exec(range);if(m){const start=Number(m[1]),end=m[2]?Math.min(Number(m[2]),bytes.length-1):bytes.length-1;if(start>=bytes.length)return new Response(null,{status:416});headers['Content-Range']=`bytes ${start}-${end}/${bytes.length}`;headers['Content-Length']=String(end-start+1);return new Response(request.method==='HEAD'?null:bytes.subarray(start,end+1),{status:206,headers});}}return new Response(request.method==='HEAD'?null:bytes,{headers});}}};
+const server=http.createServer(async(req,res)=>{try{const request=new Request(`http://127.0.0.1:${port}${req.url}`,{method:req.method,headers:req.headers});const response=await handle(request,env);res.writeHead(response.status,Object.fromEntries(response.headers));if(response.body)Readable.fromWeb(response.body).pipe(res);else res.end();}catch(error){console.error(error.message);res.writeHead(500);res.end('Preview failed');}});
+server.listen(port,'127.0.0.1',()=>console.log(`Pages compatibility preview http://127.0.0.1:${port}`));

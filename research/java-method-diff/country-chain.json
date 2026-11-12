@@ -1,0 +1,45 @@
+{
+  "scope": "Static source review only; no old Java, geocode service or database execution",
+  "files": [
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\openAlex\\jsData.java",
+      "sha256": "248814d7b91d0ec2b010afa471b09e856bede5531ca482803e91eb37242ac2cc",
+      "methods": {
+        "getArtByCtry": 1795
+      }
+    },
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\thread\\getSchArtOpenAlexThread.java",
+      "sha256": "02ab243ddd185fe4a01020aa546fe2d2c88fb8aa32c535d6ea21c440222d9e77",
+      "methods": {
+        "getOneCtry": 221
+      }
+    },
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\EconomicsFzx\\EconomicsFzx.java",
+      "sha256": "c4237da0b5355861b578603c66567395de7c2b24ce311e94364a93bfd05e0dc9",
+      "methods": {
+        "getCountryByNoOrgId": 2490,
+        "emptyCountryCondition": 2625
+      }
+    },
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\wiki\\parseXml.java",
+      "sha256": "0b0da14bd8f7b881c18a1d5aef05d00d50379a90258e6b439be8f0876a7acbba",
+      "methods": {
+        "lookup": 5237,
+        "getMag_country": 5121,
+        "uniqueCandidateGate": 5164
+      }
+    },
+    {
+      "path": "G:\\ni\\workspace\\selenium_shuzhi_IDEA\\src\\main\\java\\com\\shuzhi\\mag\\getCountryByMag.java",
+      "sha256": "5a97ead6a6dea464bb430c5da7c70897749739a4b9de6366185a438ee99b7acc",
+      "methods": {
+        "getCountryAndCityByXY": 172,
+        "getCountryCode": 368,
+        "getCountryByXY": 270
+      }
+    }
+  ]
+}

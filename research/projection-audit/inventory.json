@@ -1,0 +1,6 @@
+[
+	{"audit_part":"part-0","source":"raw","rows":2439,"unique_ids":2439,"invalid_ids":0},
+	{"audit_part":"part-1","source":"raw","rows":400000,"unique_ids":400000,"invalid_ids":0},
+	{"audit_part":"part-0","source":"cache","rows":2439,"unique_ids":2439,"invalid_ids":0},
+	{"audit_part":"part-1","source":"cache","rows":400000,"unique_ids":400000,"invalid_ids":0}
+]

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "fixture": true,
+  "source": "TestLocalCatalogBrowserControls; real Chrome against localhost httptest.NewServer with two hand-sized directories",
+  "checks": [
+    "core/all routing and preserved filters",
+    "nine defaults with distinct stable colors",
+    "Chinese English ISO search plus bulk clear/reset",
+    "real snapshot-parent tree selection",
+    "one-click country and threshold choices; Topics normalizes irrelevant threshold",
+    "global Bump rank and score views",
+    "tooltip null-last ordering",
+    "corpus-specific CSV/download values",
+    "390px no horizontal overflow"
+  ],
+  "observed_values": {
+    "core_publications_cn": 2,
+    "all_publications_cn": 6,
+    "core_selected_works": 20,
+    "all_selected_works": 60
+  },
+  "screenshots": [
+    "fixture-core-bump.png",
+    "fixture-all-mobile.png"
+  ],
+  "visual_review": "Both screenshots inspected with view_image; controls, markers, rank/score table and mobile layout are legible."
+}

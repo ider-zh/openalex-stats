@@ -1,0 +1,35 @@
+{
+  "batch": 2048,
+  "run": 1,
+  "gomaxprocs": 46,
+  "readers": 4,
+  "elapsed_seconds": 13.423349313,
+  "rows_per_second": 106874.22092268993,
+  "process_cpu_seconds": 16.956500000000002,
+  "process_cpu_percent": 126.32093231439846,
+  "peak_rss_kib": 96992,
+  "allocated_bytes": 1281526752,
+  "gc_collections": 55,
+  "gc_pause_seconds": 0.013844212,
+  "totals": {
+    "rows": 1434610,
+    "references": 10853745,
+    "countries": 1436748,
+    "concepts_0": 3414682,
+    "concepts_1": 3394727,
+    "fields": 863977,
+    "subfields": 863977,
+    "sha256": "2e04815e8704a98874dffe8b56d979aa5d544d2d400a7eba3266f316553ba7b2"
+  },
+  "stats": {
+    "files_opened": 4,
+    "rows_read": 1434610,
+    "rows": 1434610,
+    "invalid_reference_ids": 0,
+    "invalid_concepts": 0,
+    "missing_years": 3788,
+    "null_xpac_flags": 0
+  },
+  "io_before": "rchar: 8808\nwchar: 0\nsyscr: 16\nsyscw: 0\nread_bytes: 0\nwrite_bytes: 0\ncancelled_write_bytes: 0\n",
+  "io_after": "rchar: 90363698\nwchar: 24\nsyscr: 2849\nsyscw: 3\nread_bytes: 0\nwrite_bytes: 0\ncancelled_write_bytes: 0\n"
+}

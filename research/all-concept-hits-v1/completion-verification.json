@@ -1,0 +1,228 @@
+{
+  "status": "passed",
+  "verified_unix": 1794444377.191802,
+  "compute_pid": 958654,
+  "scope": "completion hashes and run invariants; independent raw oracle audit recorded separately",
+  "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+  "output": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+  "binary_sha256": "8be7a2e15906ac7f3c80b1b752395d8b9499ddd871077e63e550d87fefea01a6",
+  "source_archive_sha256": "33b93a34feba8a0c2d45a29a6c3254975468745c20a42b51ab49058b886a9d2b",
+  "source_rows": 510372821,
+  "selected_works": 404079112,
+  "graph": {
+    "source_records": 510372821,
+    "member_source_records": 404079112,
+    "valid_year_source_records": 285365821,
+    "invalid_source_ids": 0,
+    "outside_source_corpus": 106293709,
+    "invalid_source_years": 27079089,
+    "outside_source_year_window": 91634202,
+    "reference_slots": 2615832789,
+    "invalid_reference_ids": 0,
+    "duplicate_references": 0,
+    "outside_target_corpus": 229708156,
+    "retained_edges": 2385146215,
+    "self_loops": 978418,
+    "counter_bytes": 87281088192,
+    "seen_source_bytes": 0,
+    "missing_target_references": 117779551,
+    "excluded_target_references": 111928605,
+    "future_target_edges": 13871993
+  },
+  "quality": {
+    "publication_works": 285365821,
+    "citation_calls": 586984532,
+    "citation_events": 2385146215,
+    "missing_country_publications": 180207949,
+    "missing_country_citations": 281487360,
+    "missing_discipline_publications": {
+      "concepts.0": 51637829,
+      "concepts.1": 95556884,
+      "topics.field": 41990826,
+      "topics.subfield": 41990826
+    },
+    "missing_discipline_citations": {
+      "concepts.0": 15562133,
+      "concepts.1": 100830984,
+      "topics.field": 2167955,
+      "topics.subfield": 2167955
+    },
+    "publication_assignments": {
+      "concepts.0": 387925859,
+      "concepts.1": 461267437,
+      "topics.field": 285365821,
+      "topics.subfield": 285365821
+    },
+    "citation_assignments": {
+      "concepts.0": 3190747228,
+      "concepts.1": 4896816404,
+      "topics.field": 2385146215,
+      "topics.subfield": 2385146215
+    }
+  },
+  "validation": {
+    "raw_row_conservation": true,
+    "selected_row_conservation": true,
+    "edge_counter_conservation": true,
+    "fractional_cube_conservation": true,
+    "country_fractional_assignment_conservation": true,
+    "whole_count_integrality": true,
+    "scenario_raw_counts_equal": true
+  },
+  "dimension_reused": false,
+  "edge_parts_reused": 0,
+  "count_partitions_reused": 0,
+  "cube_rows": 2570346,
+  "statistics_rows": 15013818,
+  "models": 216,
+  "model_status_counts": {
+    "ok": 216
+  },
+  "stage_seconds": {
+    "aggregate": 248.722618552,
+    "cache_validation": 19.203908098,
+    "citation_counts": 172.553766424,
+    "derive": 49.515484052,
+    "dictionary": 4.7961932,
+    "dictionary_validation": 0.172673433,
+    "dimensions": 859.736364992,
+    "eci": 1.963481273,
+    "export": 55.483190127,
+    "indices": 23.402908469,
+    "reference_projection": 306.161956009
+  },
+  "resources": {
+    "elapsed_seconds": 1746.104763352,
+    "samples": 1747,
+    "cpu_samples": 1747,
+    "mean_process_machine_cpu_percent": 14.433989477943376,
+    "peak_process_machine_cpu_percent": 33.333333333333336,
+    "peak_rss_bytes": 208761561088,
+    "peak_go_heap_bytes": 140718181160,
+    "host_total_memory_bytes": 811512836096,
+    "min_host_available_memory_bytes": 436712931328,
+    "gc_collections": 2378,
+    "gc_pause_seconds": 0.980263696,
+    "gc_cpu_seconds": 63.203013942000005,
+    "allocated_bytes": 821483800376,
+    "peak_process_swap_bytes": 0,
+    "io_available": true,
+    "physical_read_bytes": 3411193856,
+    "physical_write_bytes": 184578150400,
+    "logical_read_bytes": 124036949664,
+    "logical_write_bytes": 184554212757,
+    "host_swap_counters_available": true,
+    "host_swap_in_pages": 174,
+    "host_swap_out_pages": 203623,
+    "page_size_bytes": 4096
+  },
+  "scenarios": [
+    {
+      "id": "fractional-concept-whole-0.0",
+      "country_mode": "fractional",
+      "concept_mode": "whole",
+      "concept_threshold": 0,
+      "main": false
+    },
+    {
+      "id": "fractional-concept-whole-0.3",
+      "country_mode": "fractional",
+      "concept_mode": "whole",
+      "concept_threshold": 0.3,
+      "main": true
+    },
+    {
+      "id": "fractional-concept-whole-0.5",
+      "country_mode": "fractional",
+      "concept_mode": "whole",
+      "concept_threshold": 0.5,
+      "main": false
+    },
+    {
+      "id": "whole-concept-whole-0.0",
+      "country_mode": "whole",
+      "concept_mode": "whole",
+      "concept_threshold": 0,
+      "main": false
+    },
+    {
+      "id": "whole-concept-whole-0.3",
+      "country_mode": "whole",
+      "concept_mode": "whole",
+      "concept_threshold": 0.3,
+      "main": true
+    },
+    {
+      "id": "whole-concept-whole-0.5",
+      "country_mode": "whole",
+      "concept_mode": "whole",
+      "concept_threshold": 0.5,
+      "main": false
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/run.json",
+      "bytes": 2122252,
+      "sha256": "c53a10b5f54075e0e601da78abfd01ffeb1fb4e86d0a06409992fa1b4d386289"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/statistics.parquet",
+      "bytes": 491814477,
+      "sha256": "7e934a8d3fca14662b1abfb4379af846855cde7a18458979f028e776e170606d"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/cube.parquet",
+      "bytes": 179600562,
+      "sha256": "db6b38691ea04be8f4299737ddd7a1442c8ed293a5bac12940c48b2f0d6bd8b9"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/country_eci.parquet",
+      "bytes": 411455,
+      "sha256": "3c7349be696ad2ff51720603968519102cda35582a5c00d0bc6d5e0451543d12"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/discipline_pci.parquet",
+      "bytes": 283965,
+      "sha256": "b08a9ba333cc47674be8357d79de9811d3a63c9f9cfdb259f831adb62cd1b137"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/rca.parquet",
+      "bytes": 241539846,
+      "sha256": "5bdd36b41413f0cb04828c591e8f9b4229d7662b1ed79613289c9328da1b4711"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/coverage.json",
+      "bytes": 13133,
+      "sha256": "cd35201c68480a61f9e5a5ca890fe7dc645ce9d1cc9c751ccf2f42777a23da4c"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/scenarios.json",
+      "bytes": 939,
+      "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/dictionary.json",
+      "bytes": 108523,
+      "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/eci.json",
+      "bytes": 319266428,
+      "sha256": "a7d6aa4a9209f54bf63200e85e61f45c935b411bc343ba2de09712cbcf10c586"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/model_diagnostics.json",
+      "bytes": 2698096,
+      "sha256": "2d4d16a8fd794d06185489698ce5c03c79571f0d9ece1f171b8faeaacf21d0e4"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/methodology.json",
+      "bytes": 2666,
+      "sha256": "3c955ac6ac11c73fa71deb9c5a67ad06cf04dadbc671a9f69c63c072f4458657"
+    }
+  ],
+  "external_elapsed_seconds_kernel_approx": 1753.8450520038605,
+  "kernel_boot_clock_resolution_seconds": 1,
+  "gnu_time_wall_seconds": 1753.4
+}

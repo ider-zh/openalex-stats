@@ -1,0 +1,4 @@
+ok  	openalexstats/internal/aggregate	1.021s
+ok  	openalexstats/internal/results	1.895s
+ok  	openalexstats/internal/production	4.124s
+ok  	openalexstats/internal/web	1.560s

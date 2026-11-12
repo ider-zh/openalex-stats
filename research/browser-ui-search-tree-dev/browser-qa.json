@@ -1,0 +1,13 @@
+{
+  "mode": "formal",
+  "url": "http://192.168.1.229:8899",
+  "started_at": "2026-11-12T00:05:24.797Z",
+  "checks": [],
+  "errors": [],
+  "requests_outside_service": [],
+  "screenshots": [],
+  "asset_override": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\internal\\web\\static",
+  "status": "failed",
+  "failure": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#workspace') to be visible\u001b[22m\n\u001b[2m    64 × locator resolved to hidden <main hidden=\"\" id=\"workspace\" class=\"workspace\">…</main>\u001b[22m\n\n    at C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\scripts\\browser-qa.mjs:112:36",
+  "completed_at": "2026-11-12T00:05:56.418Z"
+}

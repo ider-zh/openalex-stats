@@ -1,0 +1,4 @@
+=== RUN   TestFullCacheValidationBenchmark
+    cache_validation_full_test.go:131: mode=parallel requested=24 effective=24 files=2446 rows=510372821 bytes=31900483518 manifest=0494c06b03ac97eea4deae6c9c22dce37ef69992e1cf3f64ea6c5b67c88057d2 elapsed=5.078975s
+--- PASS: TestFullCacheValidationBenchmark (5.17s)
+PASS

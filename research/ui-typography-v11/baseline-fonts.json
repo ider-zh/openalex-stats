@@ -1,0 +1,28 @@
+{
+  "url": "http://192.168.1.229:8900",
+  "binary": "v10 unchanged core reference",
+  "measurements": [
+    {
+      "viewport": "desktop",
+      "url": "http://192.168.1.229:8900/?scenario=fractional-concept-whole-0.3&scheme=topics&level=field&discipline=https%3A%2F%2Fopenalex.org%2Ffields%2F11&countries=CN%2CUS%2CGB%2CDE%2CFR%2CJP%2CIN%2CCA%2CKR&metric=publications&basis=publications&start=2000&end=2025&corpus=core",
+      "body": "14px",
+      "select": "11px",
+      "countries": "11px",
+      "table": "10px",
+      "legend": 10,
+      "axis": 9,
+      "tooltip": 11
+    },
+    {
+      "viewport": "mobile",
+      "url": "http://192.168.1.229:8900/?scenario=fractional-concept-whole-0.3&scheme=topics&level=field&discipline=https%3A%2F%2Fopenalex.org%2Ffields%2F11&countries=CN%2CUS%2CGB%2CDE%2CFR%2CJP%2CIN%2CCA%2CKR&metric=publications&basis=publications&start=2000&end=2025&corpus=core",
+      "body": "14px",
+      "select": "10px",
+      "countries": "10px",
+      "table": "10px",
+      "legend": 10,
+      "axis": 9,
+      "tooltip": 11
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+94b7e748f37538b3d59f77569a46bf869c9d4418689ba1c74fda7d3946db093c  /home/ider/tmpdata/openalex-stats-dev-20261112/openalex-stats-v8-source-and-evidence.tar.gz
+744b93484e7b56fb0099bd04515c145a55ef9527aecbea93fc5a39dac6db682e  /home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v8
+c8ad89711ce24997186bc06b7ffd4e812f1e3dfc4249c3622eacc23c5c30095f  /home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v7
+7edcd2e26e0e9b76b7b9e4da2e948fc4a80bef175ade2a9816443cd59461e333  /home/ider/tmpdata/openalex-stats-dev-20261112/source-v7.tar.gz
+db97d8525e3c79517ac917c7057b8e88e466aa45a34de7b9bbfcfa383673ff34  /home/ider/tmpdata/openalex-stats-dev-20261112/release-v8.json

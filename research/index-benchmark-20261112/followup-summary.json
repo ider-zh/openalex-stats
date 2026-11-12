@@ -1,0 +1,162 @@
+{
+  "status": "completed",
+  "recommendation": {
+    "index_workers": 32,
+    "shards": 256,
+    "reason": "50m build fastest observed; concurrent lookup3% slower than serial, far smaller than build savings across two full-corpus indexes",
+    "confidence": "5m3 repetitions plus50m1 scale repetition; v7 whole-graph timing should confirm",
+    "numa": "default placement; numactl unavailable and no installation attempted"
+  },
+  "five_million": {
+    "status": "completed_no_competing_audit",
+    "count": 3,
+    "sample_ids": 5000000,
+    "gomaxprocs": 46,
+    "round_order_rotated": true,
+    "numa": "default",
+    "started": "2026-11-12T02:51:19+08:00",
+    "completed": "2026-11-12T02:52:11+08:00",
+    "medians": [
+      {
+        "variant": "serial",
+        "build_seconds_median": 0.937167934,
+        "build_seconds_min": 0.926025193,
+        "build_seconds_max": 0.963556977,
+        "build_peak_rss_mib_max": 225.45703125,
+        "build_cpu_percent_median": 102.0,
+        "allocated_bytes_median": 191329624.0,
+        "single_lookup_ns_median": 245.8,
+        "concurrent_lookup_ns_median": 7.214,
+        "build_speedup": 1.0,
+        "concurrent_lookup_slowdown": 1.0
+      },
+      {
+        "variant": "parallel_w16_s64",
+        "build_seconds_median": 0.066514053,
+        "build_seconds_min": 0.063222745,
+        "build_seconds_max": 0.06902194,
+        "build_peak_rss_mib_max": 300.82421875,
+        "build_cpu_percent_median": 535.0,
+        "allocated_bytes_median": 271393704.0,
+        "single_lookup_ns_median": 227.5,
+        "concurrent_lookup_ns_median": 7.471,
+        "build_speedup": 14.08977338969255,
+        "concurrent_lookup_slowdown": 1.035625173274189
+      },
+      {
+        "variant": "parallel_w32_s256",
+        "build_seconds_median": 0.068548181,
+        "build_seconds_min": 0.04811086,
+        "build_seconds_max": 0.095014268,
+        "build_peak_rss_mib_max": 298.20703125,
+        "build_cpu_percent_median": 677.0,
+        "allocated_bytes_median": 271571448.0,
+        "single_lookup_ns_median": 233.0,
+        "concurrent_lookup_ns_median": 7.557,
+        "build_speedup": 13.671667436368589,
+        "concurrent_lookup_slowdown": 1.0475464374826726
+      },
+      {
+        "variant": "parallel_w48_s512",
+        "build_seconds_median": 0.044868887,
+        "build_seconds_min": 0.044140211,
+        "build_seconds_max": 0.045037835,
+        "build_peak_rss_mib_max": 297.83203125,
+        "build_cpu_percent_median": 922.0,
+        "allocated_bytes_median": 271820952.0,
+        "single_lookup_ns_median": 257.6,
+        "concurrent_lookup_ns_median": 7.698,
+        "build_speedup": 20.886810363715952,
+        "concurrent_lookup_slowdown": 1.067091766010535
+      }
+    ],
+    "limitations": [
+      "Small ID sample relative to510m full input",
+      "Median of3 runs; lookup includes query-generation controls",
+      "CPU percentage is whole subprocess average including untimed setup, not per-phase peak"
+    ]
+  },
+  "fifty_million": {
+    "status": "completed_no_competing_heavy_job",
+    "count": 1,
+    "sample_ids": 50000000,
+    "gomaxprocs": 46,
+    "sampling": "32 uniformly spaced nonoverlapping windows over510372821 source IDs",
+    "started": "2026-11-12T02:56:21+08:00",
+    "completed": "2026-11-12T02:57:37+08:00",
+    "correctness": "All50m IDs and original ordinal verified for serial/w16s64/w48s512 using46 parallel read-only verifiers; PASS18.10s",
+    "numa": {
+      "placement": "default",
+      "tool": "numactl",
+      "available": false,
+      "probe_exit_code": 127,
+      "actual_error": "/mnt/nvme0/public/openalex-stats/index-benchmark-20261112-5561618b61/run-scale.sh: 行 16: numactl: 未找到命令",
+      "action": "No install, global change or permission workaround attempted"
+    },
+    "results": [
+      {
+        "variant": "serial",
+        "sample_ids": 50000000,
+        "build_ns": 14370339124.0,
+        "build_seconds": 14.370339124,
+        "allocated_bytes": 1610593624,
+        "allocations": 131083,
+        "build_cpu_percent": 100.0,
+        "build_peak_rss_kib": 1972692,
+        "single_lookup_ns": 268.6,
+        "concurrent_lookup_ns": 9.929,
+        "build_speedup": 1.0,
+        "concurrent_lookup_slowdown": 1.0
+      },
+      {
+        "variant": "parallel_w16_s64",
+        "sample_ids": 50000000,
+        "build_ns": 1148535414.0,
+        "build_seconds": 1.148535414,
+        "allocated_bytes": 2410740048,
+        "allocations": 131404,
+        "build_cpu_percent": 648.0,
+        "build_peak_rss_kib": 2751068,
+        "single_lookup_ns": 349.6,
+        "concurrent_lookup_ns": 9.245,
+        "build_speedup": 12.511881609250928,
+        "concurrent_lookup_slowdown": 0.9311108872998287
+      },
+      {
+        "variant": "parallel_w32_s256",
+        "sample_ids": 50000000,
+        "build_ns": 484188708.0,
+        "build_seconds": 0.484188708,
+        "allocated_bytes": 2410909968,
+        "allocations": 132046,
+        "build_cpu_percent": 970.0,
+        "build_peak_rss_kib": 2750676,
+        "single_lookup_ns": 355.9,
+        "concurrent_lookup_ns": 10.23,
+        "build_speedup": 29.679211610197235,
+        "concurrent_lookup_slowdown": 1.0303152381911573
+      },
+      {
+        "variant": "parallel_w48_s512",
+        "sample_ids": 50000000,
+        "build_ns": 618854440.0,
+        "build_seconds": 0.61885444,
+        "allocated_bytes": 2411151904,
+        "allocations": 132795,
+        "build_cpu_percent": 964.0,
+        "build_peak_rss_kib": 2749952,
+        "single_lookup_ns": 287.3,
+        "concurrent_lookup_ns": 10.03,
+        "build_speedup": 23.220871008051585,
+        "concurrent_lookup_slowdown": 1.0101722227817502
+      }
+    ],
+    "limitations": [
+      "Scale build/lookup count1; 5m repeated3 times separately",
+      "NUMA interleave could not be tested because numactl is absent",
+      "GNU time CPU is whole subprocess average and RSS includes input sample/setup",
+      "No production/default switching performed by benchmark agent"
+    ]
+  },
+  "production_default_changed_by_agent": false
+}

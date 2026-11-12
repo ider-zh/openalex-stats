@@ -1,0 +1,65 @@
+{
+  "status": "completed",
+  "sample_size": 50000000,
+  "gomaxprocs": 46,
+  "workers": 32,
+  "shards": 256,
+  "cases": [
+    {
+      "policy": "default",
+      "run": 1,
+      "build_ns": 544700967.0,
+      "lookup_serial_ns": 361.3,
+      "lookup_concurrent_ns": 10.04,
+      "build_cpu_percent": 965.0,
+      "lookup_cpu_percent": 1922.0,
+      "build_peak_rss_mib": 2685.20703125,
+      "lookup_peak_rss_mib": 2685.95703125,
+      "build_maps": 1,
+      "lookup_maps": 4
+    },
+    {
+      "policy": "default",
+      "run": 2,
+      "build_ns": 545111732.0,
+      "lookup_serial_ns": 294.1,
+      "lookup_concurrent_ns": 9.519,
+      "build_cpu_percent": 954.0,
+      "lookup_cpu_percent": 2257.0,
+      "build_peak_rss_mib": 2685.20703125,
+      "lookup_peak_rss_mib": 2686.33203125,
+      "build_maps": 1,
+      "lookup_maps": 4
+    },
+    {
+      "policy": "interleave",
+      "run": 1,
+      "build_ns": 569925302.0,
+      "lookup_serial_ns": 282.0,
+      "lookup_concurrent_ns": 9.288,
+      "build_cpu_percent": 948.0,
+      "lookup_cpu_percent": 2215.0,
+      "build_peak_rss_mib": 2685.140625,
+      "lookup_peak_rss_mib": 2685.95703125,
+      "build_maps": 1,
+      "lookup_maps": 4
+    },
+    {
+      "policy": "interleave",
+      "run": 2,
+      "build_ns": 750926916.0,
+      "lookup_serial_ns": 283.5,
+      "lookup_concurrent_ns": 9.33,
+      "build_cpu_percent": 865.0,
+      "lookup_cpu_percent": 2223.0,
+      "build_peak_rss_mib": 2685.13671875,
+      "lookup_peak_rss_mib": 2685.91796875,
+      "build_maps": 1,
+      "lookup_maps": 4
+    }
+  ],
+  "remote_directory": "/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb",
+  "policies_confirmed_in_actual_go_process": true,
+  "production_sources_or_default_changed": false,
+  "conclusion": "Interleave improved the measured lookup times but slowed build in both rounds, with considerable variation. Two rounds do not establish a robust whole-pipeline benefit. Keep the production default and retain this result as the NUMA candidate comparison."
+}

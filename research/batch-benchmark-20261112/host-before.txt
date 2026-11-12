@@ -1,0 +1,12 @@
+    PID COMMAND         %CPU   RSS
+ 877825 oa-stats-v8     21.0 5107512
+  31907 tmux: server     2.2 18780
+ 881770 sshd             2.0 10752
+1874375 dockerd          1.9 88932
+1876131 weed             1.6 105672
+ 975079 pulseaudio       1.2  4604
+ 881809 bash             1.0  3072
+1875633 mongod           0.9 54688
+1876480 mongod           0.9 73264
+1876064 redis-server     0.8  5376
+1727019 python3          0.7 18888

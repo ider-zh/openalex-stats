@@ -1,0 +1,26 @@
+{
+  "version": "v7-to-v8-runtime-source-diff",
+  "runtime_go_files": 49,
+  "dependency_files_identical": true,
+  "changes": [
+    {
+      "path": "cmd/oa-stats/compute.go",
+      "v7_sha256": "38fef84c97983d5be2f144709b9818af0c41610d354b43d89eec4b97b6736899",
+      "v8_sha256": "666b8cb7371c8d4a1c4db82dd8d64e469d70aff9152d5bcdc6795d933d027d6e",
+      "added": false
+    },
+    {
+      "path": "internal/production/run.go",
+      "v7_sha256": "40ba99559f2a4cba03e631384dd1330be5be3622d49500196dce032fc8bfc5e0",
+      "v8_sha256": "96ebe7952ef9537e8d940c801f5a2c3b8d280a427acffce0c145b78d00e1db75",
+      "added": false
+    },
+    {
+      "path": "internal/production/cache_validation.go",
+      "v7_sha256": null,
+      "v8_sha256": "137ddf196e9353760838660e470f98ffb582e9de4f07f0b104faafc984e64f02",
+      "added": true
+    }
+  ],
+  "interpretation": "Pre-computation source/cache checksum validation parallelism and reader-budget CLI default/help only; numerical statistical kernels unchanged. Test and documentation differences are not runtime computation changes."
+}

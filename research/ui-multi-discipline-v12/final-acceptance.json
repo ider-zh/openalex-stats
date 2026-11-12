@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T03:59:53.697269+00:00",
+  "url": "http://192.168.1.229:8899",
+  "production": {
+    "pid": 1224966,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v12-multidiscipline-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v12-multidiscipline-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5122089525
+  },
+  "binary_sha256": "b08ecc8eeb1c058fe5974e1d3f37fb2312817017e5dc27f8b2f97624eeb05091",
+  "source_archive": "source-v12-multidiscipline-r2.tar.gz",
+  "source_sha256": "022e6045585e6748692658a91a1514eabc21a78fb2281992720364f5254f247c",
+  "datasets": {
+    "core": {
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "selected_works": 269194661
+    },
+    "all": {
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "selected_works": 404079112
+    }
+  },
+  "production_browser_qa": [
+    {
+      "corpus": "core",
+      "checks": 34,
+      "sha256": "5ba2a3ce3a7aa24ece0ba3d3206563c82742405931e9319d42c606c4bc87ce9d"
+    },
+    {
+      "corpus": "all",
+      "checks": 34,
+      "sha256": "e3392c267b4c723e34c2b6bee2f3cd93c0b35d05ca3f6f5bdc2a0b762cd8de6a"
+    }
+  ],
+  "feature_checks": 17,
+  "feature_qa_sha256": "45728dec0d4c8851bd1589987b7b68f3def0afd1d0a6ef05874e01b2595f6e61",
+  "assets_sha256": {
+    "bump.js": "b73c4815692f8945ce95dbfdaace22eaa5ebf1816a2f832cd9e7d70c851f883b",
+    "app.css": "d3b8718f3a07c168d30e36b3c4219e2e3616a0116991e458916a528b0fc17714",
+    "app.js": "8dccf1de293737f44df73efd9b2028a18d90554cd4e10bcaf2cee32a9141864f",
+    "index.html": "c4e9eaf8bf9fb90649b5225d5929ac2a600e6f2b6aff29e2d8fd727bb6b2ff07"
+  },
+  "flags": {
+    "project": "lipis/flag-icons",
+    "version": "7.6.0",
+    "license": "MIT",
+    "embedded": 248,
+    "runtime_external_requests": 0
+  },
+  "behavior": {
+    "cartesian_counts": true,
+    "max_curves": 48,
+    "eci_country_only": true,
+    "pci_global_subject_only": true,
+    "default_country_count": 9,
+    "tested_country_subject_combinations": 27
+  },
+  "candidate_stopped": true,
+  "rollback_used": false
+}

@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "corpus": "core",
+  "metric": "eci",
+  "basis": "publications",
+  "global_ranks": true,
+  "visible_annual_symbols": 234,
+  "tooltip_year": 2025,
+  "tooltip": [
+    {
+      "id": "IN",
+      "value": 2.739861362444185,
+      "rank": 3,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "CN",
+      "value": 2.7014276388659355,
+      "rank": 5,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "JP",
+      "value": 2.3546916612207784,
+      "rank": 9,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "KR",
+      "value": 2.2463507561347438,
+      "rank": 11,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "DE",
+      "value": 1.3023892364963496,
+      "rank": 32,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "FR",
+      "value": 0.5435295692000514,
+      "rank": 55,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "US",
+      "value": -0.23606292623448827,
+      "rank": 108,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "GB",
+      "value": -0.33796764880450375,
+      "rank": 117,
+      "universe": 228,
+      "year": 2025
+    },
+    {
+      "id": "CA",
+      "value": -0.6083721056062313,
+      "rank": 155,
+      "universe": 228,
+      "year": 2025
+    }
+  ],
+  "score_view_preserves_original_scores": true,
+  "no_horizontal_overflow": true
+}

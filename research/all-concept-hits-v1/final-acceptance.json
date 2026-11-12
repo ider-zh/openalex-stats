@@ -1,0 +1,272 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-12T01:23:41.941169+00:00",
+  "url": "http://192.168.1.229:8899",
+  "default_corpus": "core",
+  "available_corpora": [
+    "core",
+    "all"
+  ],
+  "service_binary_sha256": "ac0efd9804294ed05c9f96d28a20b477d46d963e881edd836aff969e56b10fba",
+  "production": {
+    "pid": 1031515,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121163093,
+    "kernel_stat": "1031515 (oa-stats-v10) S 1 1031515 1031515 0 -1 4194304 13049620 0 0 0 22053 1998 0 0 20 0 9 0 5121163093 13403410432 2891233 18446744073709551615 4194304 13305233 140725581914464 0 0 0 0 1 2143420158 0 0 0 17 7 0 0 0 0 0 23785472 24633024 220229632 140725581916399 140725581916633 140725581916633 140725581918140 0",
+    "clock_ticks_per_second": 100,
+    "linux_boot_unix_seconds": 1743234530
+  },
+  "health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "主数据 · Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "全数据 · Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "datasets": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  },
+  "completions": {
+    "core": {
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e"
+    },
+    "all": {
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43"
+    }
+  },
+  "compute": {
+    "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+    "source_rows": 510372821,
+    "selected_works": 404079112,
+    "publication_works": 285365821,
+    "retained_edges": 2385146215,
+    "models": 216,
+    "model_status_counts": {
+      "ok": 216
+    },
+    "gnu_time_wall_seconds": 1753.4,
+    "binary_sha256": "8be7a2e15906ac7f3c80b1b752395d8b9499ddd871077e63e550d87fefea01a6",
+    "source_archive_sha256": "33b93a34feba8a0c2d45a29a6c3254975468745c20a42b51ab49058b886a9d2b"
+  },
+  "independent_audits": [
+    {
+      "path": "/mnt/nvme1/backup/openalex-stats/core-concept-hits-audit-v1/audit.json",
+      "sha256": "7991cec4d944a3d18820ca00f87051fd8362f678f1253078539a96ad25837df9",
+      "exit_file": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-audit-v1/exit-code.txt",
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "checks": 2800,
+      "model_checks": 216
+    },
+    {
+      "path": "/mnt/nvme1/backup/openalex-stats/all-concept-hits-audit-v1/audit.json",
+      "sha256": "4cfb66b3fb4b4efc6dcb8f709e2d7f91a540ec4b364041fc75223579a44931c1",
+      "exit_file": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-audit-v1/exit-code.txt",
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "checks": 2797,
+      "model_checks": 216
+    }
+  ],
+  "comparison": {
+    "status": "passed",
+    "core_cells_compared": 14966202,
+    "scenario_layer_groups": 24,
+    "error_totals": {
+      "core_cells_missing_in_full": 0,
+      "invalid_full_count_cells": 0,
+      "publication_decreases": 0,
+      "citation_decreases": 0
+    },
+    "whole_country_integer_cells": 7506909,
+    "whole_country_invalid_publication_cells": 0,
+    "whole_country_invalid_citation_cells": 0,
+    "count_tolerance": "1e-7 + 1e-10 * abs(core)",
+    "scope": "All core country/year/discipline/scenario cells; count monotonicity only, not shares/RCA/ECI."
+  },
+  "browser_qa": [
+    {
+      "kind": "candidate",
+      "corpus": "core",
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/ui-8901/core-browser-qa.json",
+      "sha256": "481c8194b4ce586d417426b7f3c95a9af8fdde056246e1682402653db654293f",
+      "checks": 34,
+      "completed_at": "2026-11-12T01:14:50.754Z"
+    },
+    {
+      "kind": "candidate",
+      "corpus": "all",
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/ui-8901/all-browser-qa.json",
+      "sha256": "b937aec3830c75cd1e4b31fb659b34563c017ccc391307f1954ae916b3765d23",
+      "checks": 34,
+      "completed_at": "2026-11-12T01:14:50.844Z"
+    },
+    {
+      "kind": "production",
+      "corpus": "core",
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/ui-8899/core-browser-qa.json",
+      "sha256": "4163ae561a54746077eb0617c02ae9e7106f735e25374acb6813abe4fb4a0bb7",
+      "checks": 34,
+      "completed_at": "2026-11-12T01:20:33.689Z"
+    },
+    {
+      "kind": "production",
+      "corpus": "all",
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/ui-8899/all-browser-qa.json",
+      "sha256": "9a4ac18597c3ca69ea8fe8440943e0c559f19541c9da921569cf920beef1a5a8",
+      "checks": 34,
+      "completed_at": "2026-11-12T01:20:32.316Z"
+    }
+  ],
+  "production_download_isolation": {
+    "status": "passed",
+    "base_url": "http://127.0.0.1:8899",
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "主数据 · Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "全数据 · Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "checks": [
+      {
+        "corpus": "core",
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661,
+        "completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e",
+        "downloads": [
+          {
+            "file": "run.json",
+            "bytes": 923204,
+            "sha256": "d574e30787a9877708cd87b36e1f2cb959dbbdb9098280ef6c966983e59568e7"
+          },
+          {
+            "file": "coverage.json",
+            "bytes": 13113,
+            "sha256": "193912b19a51852df0505851e256ee33fe39232504e57be4eba2a1397a9295d3"
+          },
+          {
+            "file": "model_diagnostics.json",
+            "bytes": 2698129,
+            "sha256": "5c8d07d6791f93ed6ff08adb67e90636f433485fe6480d427ee407c36c1d5ac9"
+          },
+          {
+            "file": "cube.parquet",
+            "bytes": 179049337,
+            "sha256": "075d51d9450507703adf9b73d55cb04b7e1781b4a059062feaf4b2145751ac01"
+          }
+        ],
+        "parquet_range_status": 206
+      },
+      {
+        "corpus": "all",
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112,
+        "completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43",
+        "downloads": [
+          {
+            "file": "run.json",
+            "bytes": 2122252,
+            "sha256": "c53a10b5f54075e0e601da78abfd01ffeb1fb4e86d0a06409992fa1b4d386289"
+          },
+          {
+            "file": "coverage.json",
+            "bytes": 13133,
+            "sha256": "cd35201c68480a61f9e5a5ca890fe7dc645ce9d1cc9c751ccf2f42777a23da4c"
+          },
+          {
+            "file": "model_diagnostics.json",
+            "bytes": 2698096,
+            "sha256": "2d4d16a8fd794d06185489698ce5c03c79571f0d9ece1f171b8faeaacf21d0e4"
+          },
+          {
+            "file": "cube.parquet",
+            "bytes": 179600562,
+            "sha256": "db6b38691ea04be8f4299737ddd7a1442c8ed293a5bac12940c48b2f0d6bd8b9"
+          }
+        ],
+        "parquet_range_status": 206
+      }
+    ],
+    "default_download_corpus": "core"
+  },
+  "core_candidate_preserved": {
+    "pid": 963184,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8900"
+    ],
+    "start_clock_ticks": 5120848035,
+    "kernel_stat": "963184 (oa-stats-v10) S 1 963170 963170 0 -1 4194304 12970933 1440 0 0 38419 2525 16 2 20 0 44 0 5120848035 7770521600 1280977 18446744073709551615 4194304 13305233 140737140161904 0 0 0 0 1 2143420158 0 0 0 17 11 0 0 0 0 0 23785472 24633024 100564992 140737140169047 140737140169209 140737140169209 140737140170684 0",
+    "clock_ticks_per_second": 100,
+    "linux_boot_unix_seconds": 1743234530
+  },
+  "temporary_dual_candidate_cleanup": {
+    "status": "stopped",
+    "process": {
+      "pid": 1012647,
+      "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "argv": [
+        "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+        "serve",
+        "--data-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+        "--data-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+        "--listen",
+        "0.0.0.0:8901"
+      ],
+      "start_clock_ticks": 5121131616,
+      "kernel_stat": "1012647 (oa-stats-v10) S 1 1012490 1012490 0 -1 4194304 9879280 574 0 0 21152 1577 16 1 20 0 8 0 5121131616 14409904128 3132423 18446744073709551615 4194304 13305233 140728299205280 0 0 0 0 1 2143420158 0 0 0 17 10 0 0 0 0 0 23785472 24633024 736997376 140728299206912 140728299207146 140728299207146 140728299208636 0",
+      "clock_ticks_per_second": 100,
+      "linux_boot_unix_seconds": 1743234530
+    },
+    "stopped_at_utc": "2026-11-12T01:22:35.277344+00:00"
+  },
+  "rollback_needed": false,
+  "shared_lock": "/home/ider/tmpdata/openalex-stats-dev-20261112/production-service-8899.lock"
+}

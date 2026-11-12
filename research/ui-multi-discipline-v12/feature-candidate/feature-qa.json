@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "url": "http://192.168.1.229:8901",
+  "asset_override": false,
+  "checks": [
+    {
+      "name": "core_27_country_subject_curves_groups_and_styles",
+      "pass": true,
+      "detail": {
+        "countries": 9,
+        "disciplines": 3,
+        "series": 27
+      }
+    },
+    {
+      "name": "core_selection_preserves_count_share_rca_denominators",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "core_csv_has_every_pair_and_corpus",
+      "pass": true,
+      "detail": {
+        "rows": 702
+      }
+    },
+    {
+      "name": "core_multi_tree_chips_and_shareable_url",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "core_eci_country_only_and_global_rank",
+      "pass": true,
+      "detail": {
+        "curves": 9,
+        "cn_rank": 5
+      }
+    },
+    {
+      "name": "core_pci_subject_only_rank_score_and_neutral_global",
+      "pass": true,
+      "detail": {
+        "curves": 3
+      }
+    },
+    {
+      "name": "core_corpus_switch_preserves_multi_selection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_27_country_subject_curves_groups_and_styles",
+      "pass": true,
+      "detail": {
+        "countries": 9,
+        "disciplines": 3,
+        "series": 27
+      }
+    },
+    {
+      "name": "all_selection_preserves_count_share_rca_denominators",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_csv_has_every_pair_and_corpus",
+      "pass": true,
+      "detail": {
+        "rows": 702
+      }
+    },
+    {
+      "name": "all_multi_tree_chips_and_shareable_url",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_eci_country_only_and_global_rank",
+      "pass": true,
+      "detail": {
+        "curves": 9,
+        "cn_rank": 3
+      }
+    },
+    {
+      "name": "all_pci_subject_only_rank_score_and_neutral_global",
+      "pass": true,
+      "detail": {
+        "curves": 3
+      }
+    },
+    {
+      "name": "all_corpus_switch_preserves_multi_selection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile_long_subjects_27_curves_flags_fonts_no_overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": "16px",
+        "control": "15px",
+        "broken": 0,
+        "chart": 12
+      }
+    },
+    {
+      "name": "over_limit_rejected_without_truncation",
+      "pass": true,
+      "detail": {
+        "requested": 54
+      }
+    },
+    {
+      "name": "no_errors_external_requests_or_broken_assets",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "started_at": "2026-11-12T04:26:14.053Z",
+  "completed_at": "2026-11-12T04:26:33.085Z"
+}

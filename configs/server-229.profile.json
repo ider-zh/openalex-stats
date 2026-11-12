@@ -1,0 +1,76 @@
+{
+  "status": "engineering_profile_not_a_cli_run_config",
+  "server": "ider@192.168.1.229",
+  "observed_on": "2026-11-12",
+  "hardware": {
+    "physical_cores": 24,
+    "logical_cpus": 48,
+    "numa_nodes": 2,
+    "memory_bytes": 811512836096,
+    "go_version": "go1.26.0",
+    "duckdb_cli_version": "1.4.1"
+  },
+  "go": {
+    "gomaxprocs_start": 46,
+    "worker_candidates": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      46
+    ],
+    "reader_candidates": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "application_budget_gib": 640,
+    "go_memory_soft_limit_fraction": 0.85,
+    "goamd64": "v1",
+    "cgo_required_for_application": false,
+    "goamd64_note": "Actual portable release build; SHA CPU profile confirms runtime-dispatched AVX2 on229",
+    "normalized_validator_readers": 24,
+    "formal_dimension_readers": 24,
+    "raw_prepare_workers": 16
+  },
+  "targets": {
+    "compute_stage_process_machine_cpu_percent": 90,
+    "stable_window_seconds": 60,
+    "memory_policy": "use RAM for exact indices, counters and useful reusable buffers/cache; do not allocate dummy memory to meet a utilization number",
+    "application_max_rss_gib": 640,
+    "host_available_memory_floor_gib": 64,
+    "avoid_new_sustained_swap_io": true,
+    "performance_gate": "maximum correct work/edges per second under memory and IO budgets; report bottleneck when CPU target cannot be met"
+  },
+  "storage": {
+    "source": "/mnt/hg02/openalex-snapshot/data/parquet",
+    "planned_run_root": "/mnt/nvme0/public/openalex-stats/results",
+    "nvme_budgets_gib": {
+      "/mnt/nvme0/public/openalex-stats": 650,
+      "/mnt/nvme1/backup/openalex-stats": 512,
+      "/mnt/nvme2/public/openalex-stats": 512
+    },
+    "free_space_floor_per_device_gib": 128,
+    "locations_created": true
+  },
+  "alternative_engine_gate": {
+    "default": "Go parquet-go scanner + Go graph/aggregation + Gonum",
+    "duckdb_role_now": "independent correctness oracle",
+    "candidate_production_adapter": "DuckDB Go/Arrow projection adapter only after comparative benchmark",
+    "minimum_representative_speedup": 1.25,
+    "requirements": [
+      "same projected columns and statistical semantics",
+      "correctness equivalence",
+      "cold and warm runs",
+      "bounded RSS and temp space",
+      "Go/native thread budgets accounted together"
+    ]
+  },
+  "full_run_started": true,
+  "unresolved_statistical_choices": [],
+  "full_run_status": "full_snapshot_complete_independent_validation_and_final_service_accepted",
+  "statistical_contract": "docs/goal-prompt.txt"
+}

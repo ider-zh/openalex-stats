@@ -1,0 +1,15 @@
+{
+  "run": "core-goal-v2",
+  "trace_source": "attempt-v7-latest.json",
+  "stage": "reference_projection",
+  "whole_machine_cpus": 48,
+  "weighted_best_60s_machine_cpu_percent": 93.26542937762697,
+  "start_elapsed_seconds": 21.002909367,
+  "end_elapsed_seconds": 81.003212609,
+  "first_sample": 21,
+  "last_sample": 80,
+  "longest_consecutive_sample_intervals_at_least_90_percent_seconds": 46.018648238,
+  "stage_gc_cpu_seconds": 5.112399975,
+  "conservative_window_cpu_after_charging_all_stage_gc_percent": 93.08791638676271,
+  "note": "Window weights use actual elapsed differences; final sub-second sample is not counted as a full second. Conservative GC adjustment charges all115s GC CPU to this60s window."
+}

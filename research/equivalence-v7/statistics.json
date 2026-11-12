@@ -1,0 +1,3 @@
+[
+	{"artifact":"statistics","missing_baseline":0,"missing_candidate":0,"matched_rows":14966202,"duplicate_baseline":0,"duplicate_candidate":0,"numeric_mismatch_rows":0,"flag_mismatch_rows":0,"max_abs_publications":0.0,"max_abs_citations":1.862645149230957e-9,"max_abs_publication_share":8.881784197001252e-16,"max_abs_citation_share":1.2212453270876722e-15,"max_abs_publication_rca":5.184119800105691e-11,"max_abs_citation_rca":7.23048287909478e-11,"max_abs_publication_matrix_total":1.2945383787155151e-7,"max_abs_citation_matrix_total":0.0000027418136596679688}
+]

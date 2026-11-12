@@ -1,0 +1,85 @@
+{
+  "status": "completed_contended_preliminary_not_default_selection",
+  "started": "2026-11-12T02:41:30+08:00",
+  "completed": "2026-11-12T02:41:57+08:00",
+  "remote_directory": "/mnt/nvme0/public/openalex-stats/index-benchmark-20261112-5561618b61",
+  "source_artifact": {
+    "path": "/mnt/nvme1/backup/openalex-stats/core-goal-v1/all-ids.bin",
+    "bytes": 4082982576,
+    "sha256": "06b4f3d33c22645e3cb0851ebfcca739ebcb43a7ef65ec380b386d13f4749e75"
+  },
+  "source_rows": 510372821,
+  "sample_size": 5000000,
+  "sampling": "32 nonoverlapping windows spread uniformly across the full ID vector",
+  "gomaxprocs": 46,
+  "count": 1,
+  "go_version": "go version go1.26.0 linux/amd64",
+  "correctness": "All 5,000,000 sample IDs and original ordinals verified for serial, w16/s64 and w48/s512; invalid zero misses",
+  "competition": {
+    "observed_during": "w16/s64 lookup",
+    "duckdb_pid": 859059,
+    "duckdb_ps_pcpu": 4033,
+    "parent_audit_pid": 858720,
+    "parent_audit_ps_pcpu": 347,
+    "web_pid": 855541,
+    "web_ps_pcpu": 87.4,
+    "note": "Post-completion process snapshot also saved; ps pcpu is process lifetime CPU percentage, not an interval profiler."
+  },
+  "limitations": [
+    "Only one run per case",
+    "DuckDB audit overlapped and competed for CPU/RAM bandwidth",
+    "Concurrent ns/op measures aggregate throughput, not per-query latency",
+    "RSS includes input sample, runtime and untimed setup; B/op is allocation volume, not retained heap",
+    "Do not change production default from this preliminary run"
+  ],
+  "results": [
+    {
+      "variant": "serial",
+      "sample_ids": 5000000,
+      "build_ns": 1461507518.0,
+      "build_seconds": 1.461507518,
+      "build_ids_per_second": 3421125.0632786686,
+      "allocated_bytes": 191324512,
+      "allocations": 16390,
+      "build_peak_rss_kib": 231636,
+      "build_peak_rss_mib": 226.20703125,
+      "single_lookup_ns": 731.4,
+      "single_lookup_per_second": 1367240.9078479628,
+      "concurrent_lookup_ns_per_aggregate_operation": 17.31,
+      "concurrent_lookup_per_second": 57770075.101097636,
+      "build_speedup_vs_serial": 1.0
+    },
+    {
+      "variant": "parallel_w16_s64",
+      "sample_ids": 5000000,
+      "build_ns": 281861429.0,
+      "build_seconds": 0.281861429,
+      "build_ids_per_second": 17739213.264259722,
+      "allocated_bytes": 271397440,
+      "allocations": 16713,
+      "build_peak_rss_kib": 309588,
+      "build_peak_rss_mib": 302.33203125,
+      "single_lookup_ns": 522.0,
+      "single_lookup_per_second": 1915708.8122605365,
+      "concurrent_lookup_ns_per_aggregate_operation": 17.19,
+      "concurrent_lookup_per_second": 58173356.60267597,
+      "build_speedup_vs_serial": 5.185198709824181
+    },
+    {
+      "variant": "parallel_w48_s512",
+      "sample_ids": 5000000,
+      "build_ns": 279872065.0,
+      "build_seconds": 0.279872065,
+      "build_ids_per_second": 17865305.706734255,
+      "allocated_bytes": 271799344,
+      "allocations": 18071,
+      "build_peak_rss_kib": 305752,
+      "build_peak_rss_mib": 298.5859375,
+      "single_lookup_ns": 479.0,
+      "single_lookup_per_second": 2087682.6722338204,
+      "concurrent_lookup_ns_per_aggregate_operation": 15.57,
+      "concurrent_lookup_per_second": 64226075.78676943,
+      "build_speedup_vs_serial": 5.222055720352083
+    }
+  ]
+}

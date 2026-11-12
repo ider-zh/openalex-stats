@@ -1,0 +1,14 @@
+{
+  "remote_directory": "/mnt/nvme0/public/openalex-stats/cache-validation-benchmark-20261112-b7a06be80f",
+  "cache_directory": "/mnt/nvme0/public/openalex-stats/cache-20260626",
+  "source_manifest": "/mnt/hg02/openalex-snapshot/data/parquet/manifest.json",
+  "cases": [
+    "serial",
+    "parallel8",
+    "parallel16",
+    "parallel24"
+  ],
+  "gomaxprocs": 46,
+  "status": "completed",
+  "evidence_directory": "research/cache-validation-benchmark-20261112"
+}

@@ -1,0 +1,10 @@
+2026-11-12T02:42:33+08:00
+    PID COMMAND         %CPU %MEM
+ 859059 duckdb          2667  3.7
+ 858720 oa-stats-v5      153  0.0
+ 855541 oa-stats-v5     65.0  0.7
+  31907 tmux: server     2.2  0.0
+1874375 dockerd          1.9  0.0
+1876131 weed             1.6  0.0
+ 975079 pulseaudio       1.2  0.0
+ 859781 sshd             1.0  0.0

@@ -1,0 +1,388 @@
+{
+  "mode": "formal",
+  "url": "http://192.168.1.229:8901",
+  "started_at": "2026-11-12T03:41:56.722Z",
+  "checks": [
+    {
+      "name": "real_dataset_and_defaults",
+      "pass": true,
+      "detail": {
+        "corpus": "core",
+        "status": "full_snapshot_complete",
+        "selected_works": 269194661,
+        "snapshot_date": "2026-06-26",
+        "scenario": "fractional-concept-whole-0.3"
+      }
+    },
+    {
+      "name": "desktop_topics_field_rendered_paths_and_table_match_api",
+      "pass": true,
+      "detail": {
+        "finished": true,
+        "size": [
+          989,
+          460
+        ],
+        "table": [
+          {
+            "id": "CN",
+            "year": "2025",
+            "value": "50895.78924907463",
+            "text": "50,895.79"
+          },
+          {
+            "id": "IN",
+            "year": "2025",
+            "value": "30545.457810128664",
+            "text": "30,545.46"
+          },
+          {
+            "id": "US",
+            "year": "2025",
+            "value": "24906.702821200583",
+            "text": "24,906.7"
+          },
+          {
+            "id": "DE",
+            "year": "2025",
+            "value": "5951.35862390491",
+            "text": "5,951.36"
+          },
+          {
+            "id": "GB",
+            "year": "2025",
+            "value": "5442.529163425601",
+            "text": "5,442.53"
+          },
+          {
+            "id": "FR",
+            "year": "2025",
+            "value": "5207.013942740498",
+            "text": "5,207.01"
+          },
+          {
+            "id": "JP",
+            "year": "2025",
+            "value": "4651.682735143991",
+            "text": "4,651.68"
+          },
+          {
+            "id": "KR",
+            "year": "2025",
+            "value": "4077.360413064751",
+            "text": "4,077.36"
+          },
+          {
+            "id": "CA",
+            "year": "2025",
+            "value": "3567.1505307050447",
+            "text": "3,567.15"
+          }
+        ],
+        "series": [
+          {
+            "name": "中国",
+            "last_value": 50895.78924907463,
+            "expected_pixel": [
+              973,
+              114.95615920121588
+            ],
+            "rendered_pixel": [
+              973,
+              114.95616149902344
+            ]
+          },
+          {
+            "name": "美国",
+            "last_value": 24906.702821200583,
+            "expected_pixel": [
+              973,
+              266.12601192334995
+            ],
+            "rendered_pixel": [
+              973,
+              266.1260070800781
+            ]
+          },
+          {
+            "name": "英国",
+            "last_value": 5442.529163425601,
+            "expected_pixel": [
+              973,
+              379.3426220327411
+            ],
+            "rendered_pixel": [
+              973,
+              379.3426208496094
+            ]
+          },
+          {
+            "name": "德国",
+            "last_value": 5951.35862390491,
+            "expected_pixel": [
+              973,
+              376.3829306709531
+            ],
+            "rendered_pixel": [
+              973,
+              376.3829345703125
+            ]
+          },
+          {
+            "name": "法国",
+            "last_value": 5207.013942740498,
+            "expected_pixel": [
+              973,
+              380.7125355663928
+            ],
+            "rendered_pixel": [
+              973,
+              380.7125244140625
+            ]
+          },
+          {
+            "name": "日本",
+            "last_value": 4651.682735143991,
+            "expected_pixel": [
+              973,
+              383.9427120905791
+            ],
+            "rendered_pixel": [
+              973,
+              383.9427185058594
+            ]
+          },
+          {
+            "name": "印度",
+            "last_value": 30545.457810128664,
+            "expected_pixel": [
+              973,
+              233.3272537377516
+            ],
+            "rendered_pixel": [
+              973,
+              233.32725524902344
+            ]
+          },
+          {
+            "name": "加拿大",
+            "last_value": 3567.1505307050447,
+            "expected_pixel": [
+              973,
+              390.2510744130657
+            ],
+            "rendered_pixel": [
+              973,
+              390.2510681152344
+            ]
+          },
+          {
+            "name": "韩国",
+            "last_value": 4077.360413064751,
+            "expected_pixel": [
+              973,
+              387.28335359734
+            ],
+            "rendered_pixel": [
+              973,
+              387.2833557128906
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "default_nine_common_research_countries",
+      "pass": true,
+      "detail": [
+        "CN",
+        "US",
+        "GB",
+        "DE",
+        "FR",
+        "JP",
+        "IN",
+        "CA",
+        "KR"
+      ]
+    },
+    {
+      "name": "annual_points_visibly_drawn",
+      "pass": true,
+      "detail": [
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        },
+        {
+          "show": true,
+          "drawn": 26
+        }
+      ]
+    },
+    {
+      "name": "hover_tooltip_value_descending_null_last",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CN",
+          "value": 50895.78924907463
+        },
+        {
+          "id": "IN",
+          "value": 30545.457810128664
+        },
+        {
+          "id": "US",
+          "value": 24906.702821200583
+        },
+        {
+          "id": "DE",
+          "value": 5951.35862390491
+        },
+        {
+          "id": "GB",
+          "value": 5442.529163425601
+        },
+        {
+          "id": "FR",
+          "value": 5207.013942740498
+        },
+        {
+          "id": "JP",
+          "value": 4651.682735143991
+        },
+        {
+          "id": "KR",
+          "value": 4077.360413064751
+        },
+        {
+          "id": "CA",
+          "value": 3567.1505307050447
+        }
+      ]
+    },
+    {
+      "name": "chinese_english_iso_search_bulk_clear_reset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "searchable_tree_uses_real_parent_or_explicit_missing",
+      "pass": true,
+      "detail": {
+        "id": "https://openalex.org/subfields/1402",
+        "parents": [
+          "https://openalex.org/fields/14"
+        ]
+      }
+    },
+    {
+      "name": "concept_biology_multi_country_real_series",
+      "pass": true,
+      "detail": {
+        "countries": [
+          "CN",
+          "US",
+          "GB",
+          "DE",
+          "FR",
+          "JP",
+          "IN",
+          "CA",
+          "KR"
+        ],
+        "points": 26
+      }
+    },
+    {
+      "name": "concept_threshold_segmented_one_click",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "concept_hit_whole_country_fractional_explicit",
+      "pass": true,
+      "detail": {
+        "country_mode": "fractional",
+        "concept_mode": "whole",
+        "concept_threshold": 0.3,
+        "concept_threshold_applies": true,
+        "publication_counts_integer": false
+      }
+    },
+    {
+      "name": "concept_biology_whole_publications_and_citations_integer",
+      "pass": true,
+      "detail": {
+        "scenario": "whole-concept-whole-0.3",
+        "publication_points": 234,
+        "citation_points": 234
+      }
+    },
+    {
+      "name": "annual_received_citations",
+      "pass": true,
+      "detail": {
+        "series": 9,
+        "definition": "仅统计施引与被引文献都在圈定集合内的引用，按施引发表年计时，归属到被引文献。 国家均分：各归属国分得 1/N，论文量仍可为小数。Concepts 同层去重后每个命中标签记 1，不在标签间均分。Concepts score ≥ 0.3。"
+      }
+    },
+    {
+      "name": "global_bump_ranks_selection_independent_and_score_toggle",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "country_eci_is_subject_independent_and_invalid_scores_are_gaps",
+      "pass": true,
+      "detail": {
+        "series": 9
+      }
+    }
+  ],
+  "errors": [],
+  "requests_outside_service": [],
+  "screenshots": [
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\ui-multi-discipline-v12\\candidate-r1-core\\topics-field.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\ui-multi-discipline-v12\\candidate-r1-core\\biology-citations.png"
+  ],
+  "dataset": {
+    "corpus": "core",
+    "status": "full_snapshot_complete",
+    "selected_works": 269194661,
+    "snapshot_date": "2026-06-26",
+    "scenario": "fractional-concept-whole-0.3"
+  },
+  "status": "failed",
+  "failure": "page.waitForFunction: Timeout 30000ms exceeded.\n    at act (C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\scripts\\browser-qa.mjs:101:16)\n    at async file:///C:/Users/ider/Documents/ChatGPT/openalex-stats/scripts/browser-qa.mjs:229:15",
+  "completed_at": "2026-11-12T03:42:39.756Z"
+}

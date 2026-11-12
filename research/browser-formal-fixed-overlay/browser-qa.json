@@ -1,0 +1,363 @@
+{
+  "mode": "formal",
+  "url": "http://192.168.1.229:8899",
+  "started_at": "2026-11-11T18:46:29.299Z",
+  "checks": [
+    {
+      "name": "real_dataset_and_defaults",
+      "pass": true,
+      "detail": {
+        "status": "full_snapshot_complete",
+        "selected_works": 269194661,
+        "snapshot_date": "2026-06-26",
+        "scenario": "fractional-concept-0.3"
+      }
+    },
+    {
+      "name": "desktop_topics_field_rendered_paths_and_table_match_api",
+      "pass": true,
+      "detail": {
+        "finished": true,
+        "size": [
+          1013,
+          365
+        ],
+        "table": [
+          {
+            "id": "CN",
+            "year": "2025",
+            "value": "50895.789249074274",
+            "text": "50,895.79"
+          },
+          {
+            "id": "US",
+            "year": "2025",
+            "value": "24906.702821200575",
+            "text": "24,906.7"
+          },
+          {
+            "id": "GB",
+            "year": "2025",
+            "value": "5442.529163425601",
+            "text": "5,442.53"
+          }
+        ],
+        "series": [
+          {
+            "name": "China",
+            "last_value": 50895.789249074274,
+            "expected_pixel": [
+              997,
+              86.33457999180465
+            ],
+            "rendered_pixel": [
+              997,
+              86.33457946777344
+            ]
+          },
+          {
+            "name": "United States of America",
+            "last_value": 24906.702821200575,
+            "expected_pixel": [
+              997,
+              207.18383188141732
+            ],
+            "rendered_pixel": [
+              997,
+              207.183837890625
+            ]
+          },
+          {
+            "name": "United Kingdom of Great Britain and Northern Ireland",
+            "last_value": 5442.529163425601,
+            "expected_pixel": [
+              997,
+              297.692239390071
+            ],
+            "rendered_pixel": [
+              997,
+              297.6922302246094
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "concept_biology_multi_country_real_series",
+      "pass": true,
+      "detail": {
+        "countries": [
+          "CN",
+          "US",
+          "GB"
+        ],
+        "points": 26
+      }
+    },
+    {
+      "name": "annual_received_citations",
+      "pass": true,
+      "detail": {
+        "series": 3,
+        "definition": "仅统计施引与被引文献都在圈定集合内的引用，按施引发表年计时，归属到被引文献。"
+      }
+    },
+    {
+      "name": "country_eci_is_subject_independent_and_invalid_scores_are_gaps",
+      "pass": true,
+      "detail": {
+        "series": 3
+      }
+    },
+    {
+      "name": "discipline_pci_is_one_global_series",
+      "pass": true,
+      "detail": {
+        "id": "GLOBAL"
+      }
+    },
+    {
+      "name": "country_multiselect_updates_query",
+      "pass": true,
+      "detail": {
+        "countries": [
+          "CN",
+          "US",
+          "GB",
+          "FR"
+        ]
+      }
+    },
+    {
+      "name": "partial_year_explicitly_marked",
+      "pass": true,
+      "detail": {
+        "year": 2026
+      }
+    },
+    {
+      "name": "whole_scenario_does_not_borrow_fractional_eci",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "topics_subfield_rca",
+      "pass": true,
+      "detail": {
+        "points": 26
+      }
+    },
+    {
+      "name": "desktop_subfield_rca_rendered_paths_and_table_match_api",
+      "pass": true,
+      "detail": {
+        "finished": true,
+        "size": [
+          1013,
+          365
+        ],
+        "table": [
+          {
+            "id": "US",
+            "year": "2025",
+            "value": "0.6659720825416423",
+            "text": "0.67"
+          },
+          {
+            "id": "GB",
+            "year": "2025",
+            "value": "0.6541355506010912",
+            "text": "0.65"
+          },
+          {
+            "id": "CN",
+            "year": "2025",
+            "value": "0.40592426051080766",
+            "text": "0.41"
+          },
+          {
+            "id": "FR",
+            "year": "2025",
+            "value": "0.35716722139005747",
+            "text": "0.36"
+          }
+        ],
+        "series": [
+          {
+            "name": "China",
+            "last_value": 0.40592426051080766,
+            "expected_pixel": [
+              997,
+              260.0817396208248
+            ],
+            "rendered_pixel": [
+              997,
+              260.08172607421875
+            ]
+          },
+          {
+            "name": "United States of America",
+            "last_value": 0.6659720825416423,
+            "expected_pixel": [
+              997,
+              219.77432720604543
+            ],
+            "rendered_pixel": [
+              997,
+              219.77432250976562
+            ]
+          },
+          {
+            "name": "United Kingdom of Great Britain and Northern Ireland",
+            "last_value": 0.6541355506010912,
+            "expected_pixel": [
+              997,
+              221.60898965683086
+            ],
+            "rendered_pixel": [
+              997,
+              221.60899353027344
+            ]
+          },
+          {
+            "name": "France",
+            "last_value": 0.35716722139005747,
+            "expected_pixel": [
+              997,
+              267.6390806845411
+            ],
+            "rendered_pixel": [
+              997,
+              267.6390686035156
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "real_csv_parquet_download_and_path_safety",
+      "pass": true,
+      "detail": {
+        "header": "scenario,scheme,level,discipline,metric,basis,country,year,value,status,partial",
+        "csvRows": 105,
+        "signature": "PAR1",
+        "unsafeStatus": 400
+      }
+    },
+    {
+      "name": "mobile_rendered_paths_and_table_match_api",
+      "pass": true,
+      "detail": {
+        "finished": true,
+        "size": [
+          334,
+          335
+        ],
+        "table": [
+          {
+            "id": "US",
+            "year": "2025",
+            "value": "0.6659720825416423",
+            "text": "0.67"
+          },
+          {
+            "id": "GB",
+            "year": "2025",
+            "value": "0.6541355506010912",
+            "text": "0.65"
+          },
+          {
+            "id": "CN",
+            "year": "2025",
+            "value": "0.40592426051080766",
+            "text": "0.41"
+          },
+          {
+            "id": "FR",
+            "year": "2025",
+            "value": "0.35716722139005747",
+            "text": "0.36"
+          }
+        ],
+        "series": [
+          {
+            "name": "China",
+            "last_value": 0.40592426051080766,
+            "expected_pixel": [
+              318,
+              236.84714396267162
+            ],
+            "rendered_pixel": [
+              318,
+              236.84713745117188
+            ]
+          },
+          {
+            "name": "United States of America",
+            "last_value": 0.6659720825416423,
+            "expected_pixel": [
+              318,
+              200.8738619150728
+            ],
+            "rendered_pixel": [
+              318,
+              200.8738555908203
+            ]
+          },
+          {
+            "name": "United Kingdom of Great Britain and Northern Ireland",
+            "last_value": 0.6541355506010912,
+            "expected_pixel": [
+              318,
+              202.5112488335157
+            ],
+            "rendered_pixel": [
+              318,
+              202.51124572753906
+            ]
+          },
+          {
+            "name": "France",
+            "last_value": 0.35716722139005747,
+            "expected_pixel": [
+              318,
+              243.59186770770873
+            ],
+            "rendered_pixel": [
+              318,
+              243.5918731689453
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile_no_horizontal_overflow",
+      "pass": true,
+      "detail": {
+        "width": 390
+      }
+    },
+    {
+      "name": "no_page_errors_or_runtime_external_requests",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "requests_outside_service": [],
+  "screenshots": [
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\browser-formal-fixed-overlay\\topics-field.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\browser-formal-fixed-overlay\\biology-citations.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\browser-formal-fixed-overlay\\mobile.png"
+  ],
+  "asset_override": "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\internal\\web\\static",
+  "dataset": {
+    "status": "full_snapshot_complete",
+    "selected_works": 269194661,
+    "snapshot_date": "2026-06-26",
+    "scenario": "fractional-concept-0.3"
+  },
+  "status": "passed",
+  "completed_at": "2026-11-11T18:46:34.032Z"
+}

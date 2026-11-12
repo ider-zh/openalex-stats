@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+  "run": {
+    "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/run.json",
+    "bytes": 1038616,
+    "sha256": "21ee1107450ca93296b8c8575815263a00e5fd5b25784ed4773804d5d40cdf62"
+  },
+  "artifacts": [
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/statistics.parquet",
+      "bytes": 516864604,
+      "sha256": "cac3d8b6ce7bca2584c37103ba25181c25c47791d577dcd7e478d7f0fdb5cad7"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/cube.parquet",
+      "bytes": 179049337,
+      "sha256": "ed5bf062dfbe6317c6958c45140e681d224a656b868cfd3807f048c2c8188a12"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/country_eci.parquet",
+      "bytes": 411334,
+      "sha256": "545f9e4a61fad79b006e9d7853e5dbdc6de92f7ceeb6430f33efb1193e0f8dbe"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/discipline_pci.parquet",
+      "bytes": 283819,
+      "sha256": "0c2c6f535f49dcc15db04509b2ffd8a63eb80aafac0ee56e10ba6140b21008f7"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/rca.parquet",
+      "bytes": 240388279,
+      "sha256": "3b0ca6422681d961de4b166523930fc6ed100ad3515a88d664ddc83ef8fa9afa"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/coverage.json",
+      "bytes": 12969,
+      "sha256": "15699ebae31ad187f30a74740557952d71e99730cbad10b0efac97b1d39fd895"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/scenarios.json",
+      "bytes": 933,
+      "sha256": "c17da1bb01bd62c047fdda0838a8c7d512be5545cf305bf93db23e751775859d"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/dictionary.json",
+      "bytes": 87355,
+      "sha256": "3c790c06f9e0cbe698d26b17892dd4c1718fd8226bcd2d9a03e9cd19b2add030"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/eci.json",
+      "bytes": 319011756,
+      "sha256": "d49ac0f5059f21bc74e3ece241d36fba1ce70d6c5612d21d77b6edd2a90c7bf8"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/model_diagnostics.json",
+      "bytes": 2696497,
+      "sha256": "15fbc047d3e5807952924178ac68587e9ddfa332f9fae5cb6c7892083ec4d92d"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-goal-v2/methodology.json",
+      "bytes": 2369,
+      "sha256": "382ed7a00edeeeda578a3ba3b075040fa79b42b1e6d5676c5dadba87c0f43350"
+    }
+  ]
+}

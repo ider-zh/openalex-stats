@@ -1,0 +1,11 @@
+{
+  "name": "openalex-stats-pages",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "preview": "node scripts/preview-pages.mjs",
+    "test:pages": "node --test cloudflare/worker.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

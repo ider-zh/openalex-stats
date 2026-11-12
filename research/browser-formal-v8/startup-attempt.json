@@ -1,0 +1,12 @@
+{
+  "mode": "formal",
+  "url": "http://192.168.1.229:8899",
+  "started_at": "2026-11-11T19:32:54.906Z",
+  "checks": [],
+  "errors": [],
+  "requests_outside_service": [],
+  "screenshots": [],
+  "status": "failed",
+  "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://192.168.1.229:8899/\nCall log:\n\u001b[2m  - navigating to \"http://192.168.1.229:8899/\", waiting until \"networkidle\"\u001b[22m\n\n    at C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\scripts\\browser-qa.mjs:102:14",
+  "completed_at": "2026-11-11T19:32:57.792Z"
+}

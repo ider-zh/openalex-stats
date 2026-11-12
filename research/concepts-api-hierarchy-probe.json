@@ -1,0 +1,2295 @@
+{
+  "checked_at_utc": "2026-11-12T00:03:21.691927+00:00",
+  "purpose": "Navigation parent discovery only; no statistical reassignment",
+  "snapshot_target_ids": [
+    "https://openalex.org/C100001284",
+    "https://openalex.org/C100970517",
+    "https://openalex.org/C10138342",
+    "https://openalex.org/C105639569",
+    "https://openalex.org/C105702510",
+    "https://openalex.org/C105795698",
+    "https://openalex.org/C106159729",
+    "https://openalex.org/C107038049",
+    "https://openalex.org/C107053488",
+    "https://openalex.org/C107457646",
+    "https://openalex.org/C107826830",
+    "https://openalex.org/C107872376",
+    "https://openalex.org/C107993555",
+    "https://openalex.org/C108827166",
+    "https://openalex.org/C109214941",
+    "https://openalex.org/C110354214",
+    "https://openalex.org/C111368507",
+    "https://openalex.org/C111472728",
+    "https://openalex.org/C11171543",
+    "https://openalex.org/C111919701",
+    "https://openalex.org/C112698675",
+    "https://openalex.org/C112930515",
+    "https://openalex.org/C113775141",
+    "https://openalex.org/C11413529",
+    "https://openalex.org/C114614502",
+    "https://openalex.org/C114793014",
+    "https://openalex.org/C115903868",
+    "https://openalex.org/C116915560",
+    "https://openalex.org/C117671659",
+    "https://openalex.org/C118084267",
+    "https://openalex.org/C118487528",
+    "https://openalex.org/C118524514",
+    "https://openalex.org/C118552586",
+    "https://openalex.org/C118615104",
+    "https://openalex.org/C119599485",
+    "https://openalex.org/C119767625",
+    "https://openalex.org/C119857082",
+    "https://openalex.org/C120314980",
+    "https://openalex.org/C120665830",
+    "https://openalex.org/C121684516",
+    "https://openalex.org/C121864883",
+    "https://openalex.org/C121955636",
+    "https://openalex.org/C124101348",
+    "https://openalex.org/C124952713",
+    "https://openalex.org/C12554922",
+    "https://openalex.org/C126255220",
+    "https://openalex.org/C126322002",
+    "https://openalex.org/C126348684",
+    "https://openalex.org/C126838900",
+    "https://openalex.org/C126894567",
+    "https://openalex.org/C1276947",
+    "https://openalex.org/C131872663",
+    "https://openalex.org/C13280743",
+    "https://openalex.org/C133425853",
+    "https://openalex.org/C133731056",
+    "https://openalex.org/C134018914",
+    "https://openalex.org/C134306372",
+    "https://openalex.org/C134560507",
+    "https://openalex.org/C136229726",
+    "https://openalex.org/C136264566",
+    "https://openalex.org/C136764020",
+    "https://openalex.org/C13736549",
+    "https://openalex.org/C138496976",
+    "https://openalex.org/C138921699",
+    "https://openalex.org/C13965031",
+    "https://openalex.org/C139719470",
+    "https://openalex.org/C140793950",
+    "https://openalex.org/C141071460",
+    "https://openalex.org/C142724271",
+    "https://openalex.org/C143998085",
+    "https://openalex.org/C144027150",
+    "https://openalex.org/C144237770",
+    "https://openalex.org/C145236788",
+    "https://openalex.org/C145420912",
+    "https://openalex.org/C146978453",
+    "https://openalex.org/C147176958",
+    "https://openalex.org/C147597530",
+    "https://openalex.org/C147789679",
+    "https://openalex.org/C148383697",
+    "https://openalex.org/C149635348",
+    "https://openalex.org/C149782125",
+    "https://openalex.org/C149923435",
+    "https://openalex.org/C150903083",
+    "https://openalex.org/C151730666",
+    "https://openalex.org/C153294291",
+    "https://openalex.org/C153349607",
+    "https://openalex.org/C153911025",
+    "https://openalex.org/C154945302",
+    "https://openalex.org/C155202549",
+    "https://openalex.org/C155647269",
+    "https://openalex.org/C15708023",
+    "https://openalex.org/C159047783",
+    "https://openalex.org/C159110408",
+    "https://openalex.org/C159390177",
+    "https://openalex.org/C159467904",
+    "https://openalex.org/C159985019",
+    "https://openalex.org/C16005928",
+    "https://openalex.org/C161191863",
+    "https://openalex.org/C162118730",
+    "https://openalex.org/C162853370",
+    "https://openalex.org/C164705383",
+    "https://openalex.org/C165205528",
+    "https://openalex.org/C165556158",
+    "https://openalex.org/C16674752",
+    "https://openalex.org/C16685009",
+    "https://openalex.org/C166957645",
+    "https://openalex.org/C167562979",
+    "https://openalex.org/C169760540",
+    "https://openalex.org/C170154142",
+    "https://openalex.org/C171146098",
+    "https://openalex.org/C171250308",
+    "https://openalex.org/C173608175",
+    "https://openalex.org/C17409809",
+    "https://openalex.org/C175444787",
+    "https://openalex.org/C175605778",
+    "https://openalex.org/C177322064",
+    "https://openalex.org/C177713679",
+    "https://openalex.org/C178550888",
+    "https://openalex.org/C178790620",
+    "https://openalex.org/C178802073",
+    "https://openalex.org/C179104552",
+    "https://openalex.org/C180747234",
+    "https://openalex.org/C183696295",
+    "https://openalex.org/C184779094",
+    "https://openalex.org/C18547055",
+    "https://openalex.org/C185544564",
+    "https://openalex.org/C186060115",
+    "https://openalex.org/C1862650",
+    "https://openalex.org/C187212893",
+    "https://openalex.org/C187320778",
+    "https://openalex.org/C187736073",
+    "https://openalex.org/C188027245",
+    "https://openalex.org/C188147891",
+    "https://openalex.org/C18903297",
+    "https://openalex.org/C190253527",
+    "https://openalex.org/C19165224",
+    "https://openalex.org/C191897082",
+    "https://openalex.org/C19417346",
+    "https://openalex.org/C194828623",
+    "https://openalex.org/C195094911",
+    "https://openalex.org/C195244886",
+    "https://openalex.org/C19527891",
+    "https://openalex.org/C1965285",
+    "https://openalex.org/C199104240",
+    "https://openalex.org/C199289684",
+    "https://openalex.org/C199343813",
+    "https://openalex.org/C199360897",
+    "https://openalex.org/C199539241",
+    "https://openalex.org/C199639397",
+    "https://openalex.org/C200601418",
+    "https://openalex.org/C201995342",
+    "https://openalex.org/C202444582",
+    "https://openalex.org/C203014093",
+    "https://openalex.org/C204321447",
+    "https://openalex.org/C21547014",
+    "https://openalex.org/C21880701",
+    "https://openalex.org/C21951064",
+    "https://openalex.org/C22212356",
+    "https://openalex.org/C23123220",
+    "https://openalex.org/C24326235",
+    "https://openalex.org/C24667770",
+    "https://openalex.org/C24890656",
+    "https://openalex.org/C2522767166",
+    "https://openalex.org/C2524010",
+    "https://openalex.org/C2549261",
+    "https://openalex.org/C26271046",
+    "https://openalex.org/C26873012",
+    "https://openalex.org/C27206212",
+    "https://openalex.org/C28490314",
+    "https://openalex.org/C28826006",
+    "https://openalex.org/C29456083",
+    "https://openalex.org/C29595303",
+    "https://openalex.org/C29694066",
+    "https://openalex.org/C2989005",
+    "https://openalex.org/C30475298",
+    "https://openalex.org/C3079626",
+    "https://openalex.org/C3116431",
+    "https://openalex.org/C31258907",
+    "https://openalex.org/C31903555",
+    "https://openalex.org/C31972630",
+    "https://openalex.org/C33070731",
+    "https://openalex.org/C33332235",
+    "https://openalex.org/C34447519",
+    "https://openalex.org/C36289849",
+    "https://openalex.org/C37621935",
+    "https://openalex.org/C37914503",
+    "https://openalex.org/C38652104",
+    "https://openalex.org/C39549134",
+    "https://openalex.org/C40700",
+    "https://openalex.org/C41895202",
+    "https://openalex.org/C41999313",
+    "https://openalex.org/C42219234",
+    "https://openalex.org/C42360764",
+    "https://openalex.org/C42407357",
+    "https://openalex.org/C42475967",
+    "https://openalex.org/C4249254",
+    "https://openalex.org/C42972112",
+    "https://openalex.org/C43617362",
+    "https://openalex.org/C44154836",
+    "https://openalex.org/C44870925",
+    "https://openalex.org/C45355965",
+    "https://openalex.org/C459310",
+    "https://openalex.org/C46141821",
+    "https://openalex.org/C46312422",
+    "https://openalex.org/C47768531",
+    "https://openalex.org/C48824518",
+    "https://openalex.org/C49040817",
+    "https://openalex.org/C49204034",
+    "https://openalex.org/C49774154",
+    "https://openalex.org/C502942594",
+    "https://openalex.org/C50522688",
+    "https://openalex.org/C505870484",
+    "https://openalex.org/C509550671",
+    "https://openalex.org/C512399662",
+    "https://openalex.org/C52119013",
+    "https://openalex.org/C524765639",
+    "https://openalex.org/C526734887",
+    "https://openalex.org/C528095902",
+    "https://openalex.org/C53553401",
+    "https://openalex.org/C539667460",
+    "https://openalex.org/C542102704",
+    "https://openalex.org/C54286561",
+    "https://openalex.org/C54355233",
+    "https://openalex.org/C545542383",
+    "https://openalex.org/C54750564",
+    "https://openalex.org/C548081761",
+    "https://openalex.org/C548259974",
+    "https://openalex.org/C549774020",
+    "https://openalex.org/C55493867",
+    "https://openalex.org/C55587333",
+    "https://openalex.org/C556039675",
+    "https://openalex.org/C556758197",
+    "https://openalex.org/C56739046",
+    "https://openalex.org/C57879066",
+    "https://openalex.org/C58640448",
+    "https://openalex.org/C5900021",
+    "https://openalex.org/C59822182",
+    "https://openalex.org/C60644358",
+    "https://openalex.org/C61434518",
+    "https://openalex.org/C61696701",
+    "https://openalex.org/C62520636",
+    "https://openalex.org/C62649853",
+    "https://openalex.org/C6303427",
+    "https://openalex.org/C6557445",
+    "https://openalex.org/C66938386",
+    "https://openalex.org/C70410870",
+    "https://openalex.org/C70721500",
+    "https://openalex.org/C71240020",
+    "https://openalex.org/C73283319",
+    "https://openalex.org/C73484699",
+    "https://openalex.org/C74363100",
+    "https://openalex.org/C74650414",
+    "https://openalex.org/C74909509",
+    "https://openalex.org/C74916050",
+    "https://openalex.org/C75473681",
+    "https://openalex.org/C75630572",
+    "https://openalex.org/C76155785",
+    "https://openalex.org/C77088390",
+    "https://openalex.org/C77595967",
+    "https://openalex.org/C77805123",
+    "https://openalex.org/C78458016",
+    "https://openalex.org/C78519656",
+    "https://openalex.org/C78762247",
+    "https://openalex.org/C79403827",
+    "https://openalex.org/C8010536",
+    "https://openalex.org/C80444323",
+    "https://openalex.org/C8058405",
+    "https://openalex.org/C87355193",
+    "https://openalex.org/C87717796",
+    "https://openalex.org/C88463610",
+    "https://openalex.org/C89423630",
+    "https://openalex.org/C90856448",
+    "https://openalex.org/C90924648",
+    "https://openalex.org/C91375879",
+    "https://openalex.org/C91586092",
+    "https://openalex.org/C9390403",
+    "https://openalex.org/C94375191",
+    "https://openalex.org/C95124753",
+    "https://openalex.org/C95444343",
+    "https://openalex.org/C97137747",
+    "https://openalex.org/C97355855",
+    "https://openalex.org/C98274493",
+    "https://openalex.org/C99454951",
+    "https://openalex.org/C99508421"
+  ],
+  "sources": [
+    {
+      "url": "https://api.openalex.org/concepts?filter=level%3A1&per-page=200&page=1&select=id%2Cdisplay_name%2Clevel%2Cancestors%2Cupdated_date",
+      "count": 200,
+      "total": 284
+    },
+    {
+      "url": "https://api.openalex.org/concepts?filter=level%3A1&per-page=200&page=2&select=id%2Cdisplay_name%2Clevel%2Cancestors%2Cupdated_date",
+      "count": 84,
+      "total": 284
+    }
+  ],
+  "matched": 284,
+  "missing": [],
+  "nonempty_ancestors": 0,
+  "results": [
+    {
+      "id": "https://openalex.org/C100001284",
+      "display_name": "Public economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C100970517",
+      "display_name": "Physical geography",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C10138342",
+      "display_name": "Finance",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C105639569",
+      "display_name": "Economic policy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C105702510",
+      "display_name": "Anatomy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C106159729",
+      "display_name": "Financial economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C107038049",
+      "display_name": "Aesthetics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C107053488",
+      "display_name": "Construction engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C107457646",
+      "display_name": "Human–computer interaction",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C107826830",
+      "display_name": "Environmental resource management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C107872376",
+      "display_name": "Environmental chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C107993555",
+      "display_name": "Gender studies",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C108827166",
+      "display_name": "Internet privacy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C109214941",
+      "display_name": "Particle physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C110354214",
+      "display_name": "Engineering management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C111472728",
+      "display_name": "Epistemology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C11171543",
+      "display_name": "Psychoanalysis",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C112698675",
+      "display_name": "Advertising",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C112930515",
+      "display_name": "Risk analysis (engineering)",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C113775141",
+      "display_name": "Computer engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C114614502",
+      "display_name": "Combinatorics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C114793014",
+      "display_name": "Geomorphology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C115903868",
+      "display_name": "Software engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C116915560",
+      "display_name": "Nuclear engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C117671659",
+      "display_name": "Manufacturing engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C118084267",
+      "display_name": "Positive economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C118487528",
+      "display_name": "Ophthalmology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C118524514",
+      "display_name": "Computer architecture",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C118552586",
+      "display_name": "Psychiatry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C118615104",
+      "display_name": "Discrete mathematics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C119599485",
+      "display_name": "Electrical engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C119767625",
+      "display_name": "Optometry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C120314980",
+      "display_name": "Distributed computing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C121684516",
+      "display_name": "Computer graphics (images)",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C121864883",
+      "display_name": "Statistical physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C121955636",
+      "display_name": "Accounting",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C124952713",
+      "display_name": "Literature",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C12554922",
+      "display_name": "Biophysics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C126255220",
+      "display_name": "Mathematical optimization",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C126348684",
+      "display_name": "Polymer science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C126838900",
+      "display_name": "Radiology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C126894567",
+      "display_name": "Urology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C1276947",
+      "display_name": "Astronomy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C131872663",
+      "display_name": "Obstetrics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C13280743",
+      "display_name": "Geodesy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C133425853",
+      "display_name": "Neoclassical economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C133731056",
+      "display_name": "Control engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C134018914",
+      "display_name": "Endocrinology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C134560507",
+      "display_name": "Environmental economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C136229726",
+      "display_name": "Biomedical engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C136264566",
+      "display_name": "Economy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C13736549",
+      "display_name": "Industrial engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C138496976",
+      "display_name": "Developmental psychology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C138921699",
+      "display_name": "Political economy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C13965031",
+      "display_name": "Nuclear chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C139719470",
+      "display_name": "Macroeconomics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C140793950",
+      "display_name": "Animal science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C141071460",
+      "display_name": "Surgery",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C144027150",
+      "display_name": "Horticulture",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C144237770",
+      "display_name": "Mathematical economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C145236788",
+      "display_name": "Labour economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C145420912",
+      "display_name": "Mathematics education",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C146978453",
+      "display_name": "Aerospace engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C147176958",
+      "display_name": "Civil engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C147597530",
+      "display_name": "Computational chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C147789679",
+      "display_name": "Physical chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C148383697",
+      "display_name": "Regional science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C149635348",
+      "display_name": "Embedded system",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C149782125",
+      "display_name": "Econometrics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C149923435",
+      "display_name": "Demography",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C150903083",
+      "display_name": "Biotechnology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C153349607",
+      "display_name": "Visual arts",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C153911025",
+      "display_name": "Molecular biology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C155202549",
+      "display_name": "International trade",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C155647269",
+      "display_name": "Medicinal chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C15708023",
+      "display_name": "Humanities",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C159047783",
+      "display_name": "Virology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C159110408",
+      "display_name": "Nursing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C159390177",
+      "display_name": "Soil science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C159467904",
+      "display_name": "Chemical physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C159985019",
+      "display_name": "Composite material",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C16005928",
+      "display_name": "Dermatology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C161191863",
+      "display_name": "Library science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C162118730",
+      "display_name": "Actuarial science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C162853370",
+      "display_name": "Marketing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C164705383",
+      "display_name": "Cardiology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C165205528",
+      "display_name": "Seismology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C165556158",
+      "display_name": "Keynesian economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C16674752",
+      "display_name": "Mining engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C16685009",
+      "display_name": "Andrology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C167562979",
+      "display_name": "Classical economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C169760540",
+      "display_name": "Neuroscience",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C170154142",
+      "display_name": "Architectural engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C171146098",
+      "display_name": "Automotive engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C171250308",
+      "display_name": "Nanotechnology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C173608175",
+      "display_name": "Parallel computing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C17409809",
+      "display_name": "Geochemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C175444787",
+      "display_name": "Microeconomics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C175605778",
+      "display_name": "Natural resource economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C177322064",
+      "display_name": "Radiochemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C177713679",
+      "display_name": "Intensive care medicine",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C178550888",
+      "display_name": "Business administration",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C178790620",
+      "display_name": "Organic chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C178802073",
+      "display_name": "Aeronautics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C179104552",
+      "display_name": "Inorganic chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C180747234",
+      "display_name": "Cognitive psychology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C183696295",
+      "display_name": "Biochemical engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C184779094",
+      "display_name": "Atomic physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C18547055",
+      "display_name": "International economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C185544564",
+      "display_name": "Nuclear physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C186060115",
+      "display_name": "Biological system",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C1862650",
+      "display_name": "Physical therapy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C187212893",
+      "display_name": "Pediatrics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C187320778",
+      "display_name": "Geotechnical engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C187736073",
+      "display_name": "Management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C188027245",
+      "display_name": "Polymer chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C188147891",
+      "display_name": "Cognitive science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C190253527",
+      "display_name": "Law and economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C19165224",
+      "display_name": "Anthropology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C191897082",
+      "display_name": "Metallurgy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C19417346",
+      "display_name": "Pedagogy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C194828623",
+      "display_name": "Emergency medicine",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C195094911",
+      "display_name": "Process management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C195244886",
+      "display_name": "Ancient history",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C19527891",
+      "display_name": "Medical physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C1965285",
+      "display_name": "Earth science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C199104240",
+      "display_name": "Marine engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C199289684",
+      "display_name": "Mineralogy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C199343813",
+      "display_name": "Dentistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C199639397",
+      "display_name": "Engineering drawing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C200601418",
+      "display_name": "Reliability engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C201995342",
+      "display_name": "Systems engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C202444582",
+      "display_name": "Pure mathematics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C203014093",
+      "display_name": "Immunology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C21547014",
+      "display_name": "Operations management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C21880701",
+      "display_name": "Process engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C21951064",
+      "display_name": "Combinatorial chemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C22212356",
+      "display_name": "Transport engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C23123220",
+      "display_name": "Information retrieval",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C24326235",
+      "display_name": "Electronic engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C24667770",
+      "display_name": "Religious studies",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C24890656",
+      "display_name": "Acoustics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C2522767166",
+      "display_name": "Data science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C2549261",
+      "display_name": "Ethnology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C26271046",
+      "display_name": "Economic geography",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C26873012",
+      "display_name": "Condensed matter physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C27206212",
+      "display_name": "Theology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C28490314",
+      "display_name": "Speech recognition",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C29456083",
+      "display_name": "Gynecology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C29595303",
+      "display_name": "Media studies",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C29694066",
+      "display_name": "Orthodontics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C2989005",
+      "display_name": "Nuclear medicine",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C30475298",
+      "display_name": "Computational physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C3079626",
+      "display_name": "Quantum electrodynamics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C3116431",
+      "display_name": "Public administration",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C31258907",
+      "display_name": "Computer network",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C31903555",
+      "display_name": "Food science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C33070731",
+      "display_name": "Toxicology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C33332235",
+      "display_name": "Theoretical physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C34447519",
+      "display_name": "Market economy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C36289849",
+      "display_name": "Social science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C37621935",
+      "display_name": "Agricultural science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C37914503",
+      "display_name": "Mathematical physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C39549134",
+      "display_name": "Public relations",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C40700",
+      "display_name": "Industrial organization",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C41999313",
+      "display_name": "Molecular physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C42219234",
+      "display_name": "Anesthesia",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C42360764",
+      "display_name": "Chemical engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C42407357",
+      "display_name": "Physiology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C42475967",
+      "display_name": "Operations research",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C4249254",
+      "display_name": "Demographic economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C42972112",
+      "display_name": "Veterinary medicine",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C43617362",
+      "display_name": "Chromatography",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C44154836",
+      "display_name": "Simulation",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C44870925",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C45355965",
+      "display_name": "Socioeconomics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C459310",
+      "display_name": "Computational science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C46141821",
+      "display_name": "Nuclear magnetic resonance",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C46312422",
+      "display_name": "Communication",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C47768531",
+      "display_name": "Development economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C48824518",
+      "display_name": "Agricultural economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C49040817",
+      "display_name": "Optoelectronics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C49774154",
+      "display_name": "Multimedia",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C50522688",
+      "display_name": "Economic growth",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C505870484",
+      "display_name": "Fishery",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C509550671",
+      "display_name": "Medical education",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C512399662",
+      "display_name": "Family medicine",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C52119013",
+      "display_name": "Art history",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C524765639",
+      "display_name": "Water resource management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C526734887",
+      "display_name": "Environmental protection",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C528095902",
+      "display_name": "Pulp and paper industry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C53553401",
+      "display_name": "Genealogy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C539667460",
+      "display_name": "Management science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C542102704",
+      "display_name": "Psychotherapist",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C54286561",
+      "display_name": "Agroforestry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C545542383",
+      "display_name": "Medical emergency",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C54750564",
+      "display_name": "Commerce",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C548081761",
+      "display_name": "Waste management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C548259974",
+      "display_name": "Audiology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C549774020",
+      "display_name": "Welfare economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C55587333",
+      "display_name": "Engineering ethics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C556039675",
+      "display_name": "Traditional medicine",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C556758197",
+      "display_name": "Monetary economics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C56739046",
+      "display_name": "Knowledge management",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C57879066",
+      "display_name": "Mechanics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C5900021",
+      "display_name": "Petrology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C59822182",
+      "display_name": "Botany",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C60644358",
+      "display_name": "Bioinformatics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C61434518",
+      "display_name": "General surgery",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C61696701",
+      "display_name": "Engineering physics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C6303427",
+      "display_name": "Economic history",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C6557445",
+      "display_name": "Agronomy",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C66938386",
+      "display_name": "Structural engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C70410870",
+      "display_name": "Clinical psychology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C71240020",
+      "display_name": "Stereochemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C73283319",
+      "display_name": "Financial system",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C73484699",
+      "display_name": "Criminology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C74363100",
+      "display_name": "Economic system",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C74650414",
+      "display_name": "Classical mechanics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C74909509",
+      "display_name": "Gerontology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C74916050",
+      "display_name": "Classics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C75473681",
+      "display_name": "Photochemistry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C75630572",
+      "display_name": "Applied psychology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C77088390",
+      "display_name": "Database",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C77595967",
+      "display_name": "Forensic engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C77805123",
+      "display_name": "Social psychology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C78458016",
+      "display_name": "Evolutionary biology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C78519656",
+      "display_name": "Mechanical engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C78762247",
+      "display_name": "Petroleum engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C79403827",
+      "display_name": "Real-time computing",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C8010536",
+      "display_name": "Crystallography",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C80444323",
+      "display_name": "Theoretical computer science",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C8058405",
+      "display_name": "Geophysics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C87355193",
+      "display_name": "Astrobiology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C87717796",
+      "display_name": "Environmental engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C88463610",
+      "display_name": "Agricultural engineering",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C89423630",
+      "display_name": "Microbiology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C90856448",
+      "display_name": "Zoology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C90924648",
+      "display_name": "Gastroenterology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C91375879",
+      "display_name": "Environmental planning",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C91586092",
+      "display_name": "Atmospheric sciences",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C9390403",
+      "display_name": "Computer hardware",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C94375191",
+      "display_name": "Arithmetic",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C95124753",
+      "display_name": "Environmental ethics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C95444343",
+      "display_name": "Cell biology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C97137747",
+      "display_name": "Forestry",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C97355855",
+      "display_name": "Thermodynamics",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C98274493",
+      "display_name": "Pharmacology",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C99454951",
+      "display_name": "Environmental health",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    },
+    {
+      "id": "https://openalex.org/C99508421",
+      "display_name": "Physical medicine and rehabilitation",
+      "level": 1,
+      "ancestors": null,
+      "updated_date": "2026-11-11T04:05:12"
+    }
+  ]
+}

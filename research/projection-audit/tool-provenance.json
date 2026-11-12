@@ -1,0 +1,10 @@
+{
+  "tool": "raw-cache-projection-audit-v1",
+  "source": "scripts/projection-audit/main.go",
+  "source_sha256": "dcba694e651fe6bda8e8f6bd2b0bafb17406f9ce9a98c77c00d61532a60f25cc",
+  "linux_binary_sha256": "6a17e9bbe8124a11f7eb9d89757817a0a92f4d73de10ebbf28f9575996d518ec",
+  "target": "linux/amd64",
+  "build_go_version": "go version go1.26.2 windows/amd64",
+  "remote_binary": "/home/ider/tmpdata/openalex-stats-dev-20261112/projection-audit",
+  "evidence": "research/projection-audit/audit.json"
+}

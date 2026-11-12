@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+  "run": {
+    "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/run.json",
+    "bytes": 2122252,
+    "sha256": "c53a10b5f54075e0e601da78abfd01ffeb1fb4e86d0a06409992fa1b4d386289"
+  },
+  "artifacts": [
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/statistics.parquet",
+      "bytes": 491814477,
+      "sha256": "7e934a8d3fca14662b1abfb4379af846855cde7a18458979f028e776e170606d"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/cube.parquet",
+      "bytes": 179600562,
+      "sha256": "db6b38691ea04be8f4299737ddd7a1442c8ed293a5bac12940c48b2f0d6bd8b9"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/country_eci.parquet",
+      "bytes": 411455,
+      "sha256": "3c7349be696ad2ff51720603968519102cda35582a5c00d0bc6d5e0451543d12"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/discipline_pci.parquet",
+      "bytes": 283965,
+      "sha256": "b08a9ba333cc47674be8357d79de9811d3a63c9f9cfdb259f831adb62cd1b137"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/rca.parquet",
+      "bytes": 241539846,
+      "sha256": "5bdd36b41413f0cb04828c591e8f9b4229d7662b1ed79613289c9328da1b4711"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/coverage.json",
+      "bytes": 13133,
+      "sha256": "cd35201c68480a61f9e5a5ca890fe7dc645ce9d1cc9c751ccf2f42777a23da4c"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/scenarios.json",
+      "bytes": 939,
+      "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/dictionary.json",
+      "bytes": 108523,
+      "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/eci.json",
+      "bytes": 319266428,
+      "sha256": "a7d6aa4a9209f54bf63200e85e61f45c935b411bc343ba2de09712cbcf10c586"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/model_diagnostics.json",
+      "bytes": 2698096,
+      "sha256": "2d4d16a8fd794d06185489698ce5c03c79571f0d9ece1f171b8faeaacf21d0e4"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/methodology.json",
+      "bytes": 2666,
+      "sha256": "3c955ac6ac11c73fa71deb9c5a67ad06cf04dadbc671a9f69c63c072f4458657"
+    }
+  ]
+}

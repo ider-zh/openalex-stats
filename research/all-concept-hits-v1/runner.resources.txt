@@ -1,0 +1,23 @@
+	Command being timed: "bash /home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/run-all.sh /home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v9 8be7a2e15906ac7f3c80b1b752395d8b9499ddd871077e63e550d87fefea01a6"
+	User time (seconds): 11412.01
+	System time (seconds): 624.18
+	Percent of CPU this job got: 686%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 29:13.40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 203868712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 138
+	Minor (reclaiming a frame) page faults: 178610259
+	Voluntary context switches: 18867982
+	Involuntary context switches: 4127583
+	Swaps: 0
+	File system inputs: 6663200
+	File system outputs: 360511520
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,6 @@
+[
+	{"scheme":"concepts","level":"0","cells":114566,"noninteger_publication_cells":89216,"max_distance_to_integer":0.5},
+	{"scheme":"concepts","level":"1","cells":1286950,"noninteger_publication_cells":1008803,"max_distance_to_integer":0.5},
+	{"scheme":"topics","level":"field","cells":144937,"noninteger_publication_cells":0,"max_distance_to_integer":0.0},
+	{"scheme":"topics","level":"subfield","cells":1016325,"noninteger_publication_cells":0,"max_distance_to_integer":0.0}
+]

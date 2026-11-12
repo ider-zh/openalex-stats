@@ -1,0 +1,156 @@
+{
+  "status": "forecast_from_independent_raw_type_audit",
+  "expected_core_Q": 269194661,
+  "expected_eligible_XPAC": 134884451,
+  "expected_unknown_XPAC": 0,
+  "expected_full_Q": 404079112,
+  "raw_rows": 510372821,
+  "source": "research/snapshot-type-audit.json",
+  "source_sha256": "025ab362a383ac34900232c62820656c2fe065769bd2812a15b4758ba827b34f",
+  "blacklist": [
+    "editorial",
+    "erratum",
+    "retraction",
+    "paratext",
+    "peer-review",
+    "reference-entry",
+    "libguides",
+    "supplementary-materials",
+    "dataset",
+    "database",
+    "software",
+    "grant",
+    "standard",
+    "book",
+    "dissertation"
+  ],
+  "assumption": "Raw work IDs validated unique/nonzero in prior complete snapshot index; Q retains all publication years; subsequent full run must independently match these forecasts",
+  "groups": [
+    {
+      "type": "article",
+      "is_xpac": false,
+      "raw_works": 218098661,
+      "paratext_excluded": 0,
+      "expected_selected": 218098661
+    },
+    {
+      "type": "article",
+      "is_xpac": true,
+      "raw_works": 49350124,
+      "paratext_excluded": 0,
+      "expected_selected": 49350124
+    },
+    {
+      "type": "book-chapter",
+      "is_xpac": false,
+      "raw_works": 24948691,
+      "paratext_excluded": 0,
+      "expected_selected": 24948691
+    },
+    {
+      "type": "book-chapter",
+      "is_xpac": true,
+      "raw_works": 1109592,
+      "paratext_excluded": 0,
+      "expected_selected": 1109592
+    },
+    {
+      "type": "book-section",
+      "is_xpac": false,
+      "raw_works": 1648,
+      "paratext_excluded": 0,
+      "expected_selected": 1648
+    },
+    {
+      "type": "book-section",
+      "is_xpac": true,
+      "raw_works": 183,
+      "paratext_excluded": 0,
+      "expected_selected": 183
+    },
+    {
+      "type": "letter",
+      "is_xpac": false,
+      "raw_works": 1722244,
+      "paratext_excluded": 0,
+      "expected_selected": 1722244
+    },
+    {
+      "type": "letter",
+      "is_xpac": true,
+      "raw_works": 1136,
+      "paratext_excluded": 0,
+      "expected_selected": 1136
+    },
+    {
+      "type": "other",
+      "is_xpac": false,
+      "raw_works": 11352628,
+      "paratext_excluded": 0,
+      "expected_selected": 11352628
+    },
+    {
+      "type": "other",
+      "is_xpac": true,
+      "raw_works": 82216027,
+      "paratext_excluded": 0,
+      "expected_selected": 82216027
+    },
+    {
+      "type": "preprint",
+      "is_xpac": false,
+      "raw_works": 7511571,
+      "paratext_excluded": 0,
+      "expected_selected": 7511571
+    },
+    {
+      "type": "preprint",
+      "is_xpac": true,
+      "raw_works": 1296384,
+      "paratext_excluded": 0,
+      "expected_selected": 1296384
+    },
+    {
+      "type": "report",
+      "is_xpac": false,
+      "raw_works": 1404307,
+      "paratext_excluded": 0,
+      "expected_selected": 1404307
+    },
+    {
+      "type": "report",
+      "is_xpac": true,
+      "raw_works": 849405,
+      "paratext_excluded": 0,
+      "expected_selected": 849405
+    },
+    {
+      "type": "report-component",
+      "is_xpac": false,
+      "raw_works": 738,
+      "paratext_excluded": 0,
+      "expected_selected": 738
+    },
+    {
+      "type": "report-component",
+      "is_xpac": true,
+      "raw_works": 60,
+      "paratext_excluded": 0,
+      "expected_selected": 60
+    },
+    {
+      "type": "review",
+      "is_xpac": false,
+      "raw_works": 4154173,
+      "paratext_excluded": 0,
+      "expected_selected": 4154173
+    },
+    {
+      "type": "review",
+      "is_xpac": true,
+      "raw_works": 61540,
+      "paratext_excluded": 0,
+      "expected_selected": 61540
+    }
+  ]
+}

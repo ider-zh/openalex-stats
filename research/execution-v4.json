@@ -1,0 +1,13 @@
+{
+  "run": "core-goal-v1",
+  "pid": 851977,
+  "server": "ider@192.168.1.229",
+  "binary": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v4",
+  "binary_sha256": "a64232c11af4001495c11abe5e1d3380fe86b8e1f2eb0124ed90ef343fecd9fd",
+  "source_archive_sha256": "6ad6140c02e3155c0e87f24f341498528942ca14986466e0d1985267eb130582",
+  "linux_boot_unix_seconds": 1743234530,
+  "process_start_clock_ticks": 5118639909,
+  "clock_ticks_per_second": 100,
+  "execution_start_unix_seconds": 1794420929.09,
+  "note": "Kernel process start time captured while PID was verified live. Inner v4 run report starts after initial cache validation; final external elapsed will use this start and completion.json publication time."
+}

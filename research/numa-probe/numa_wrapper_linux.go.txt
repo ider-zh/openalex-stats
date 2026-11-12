@@ -1,0 +1,35 @@
+package main
+
+import (
+ "encoding/json"
+ "fmt"
+ "os"
+ "runtime"
+ "syscall"
+ "unsafe"
+)
+
+func main() {
+ runtime.LockOSThread()
+ if len(os.Args)==2 && os.Args[1]=="--get-policy" {
+  var mode int32
+  var nodes uint64
+  _,_,errno:=syscall.RawSyscall6(syscall.SYS_GET_MEMPOLICY,uintptr(unsafe.Pointer(&mode)),uintptr(unsafe.Pointer(&nodes)),64,0,0,0)
+  _=json.NewEncoder(os.Stdout).Encode(map[string]any{"operation":"get_mempolicy","mode":mode,"node_mask":nodes,"errno":int(errno)})
+  if errno!=0 { os.Exit(1) };return
+ }
+ // Linux MPOL_INTERLEAVE=3; uint64 mask selects nodes0 and1.
+ mask := uint64(3)
+ _,_,errno := syscall.RawSyscall6(syscall.SYS_SET_MEMPOLICY,3,uintptr(unsafe.Pointer(&mask)),64,0,0,0)
+ report := map[string]any{"operation":"per-process-interleave-probe","nodes":[]int{0,1},"errno":int(errno),"success":errno==0,"global_configuration_changed":false}
+ if errno!=0 { report["error"]=errno.Error() }
+ if len(os.Args)==1 || errno!=0 {
+  _=json.NewEncoder(os.Stdout).Encode(report)
+  if errno!=0 { os.Exit(1) }
+  return
+ }
+ // exec preserves this thread's memory policy while starting a fresh runtime;
+ // the benchmark process and its new threads inherit it, not other services.
+ if err:=syscall.Exec(os.Args[1],os.Args[1:],os.Environ()); err!=nil { fmt.Fprintln(os.Stderr,err);os.Exit(1) }
+}
+

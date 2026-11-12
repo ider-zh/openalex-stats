@@ -1,0 +1,6 @@
+goos: linux
+goarch: amd64
+pkg: openalexstats/internal/graph
+cpu: Intel(R) Xeon(R) CPU E5-2678 v3 @ 2.50GHz
+BenchmarkIndexBuild/parallel_w32_s256-46         	       1	 569925302 ns/op	 701.85 MB/s	  50000000 ids/op	2410910080 B/op	  132047 allocs/op
+PASS

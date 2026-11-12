@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-12",
+  "snapshot_date": "2026-06-26",
+  "remote_work_dir": "/home/ider/tmpdata/openalex-stats-dev-20261112",
+  "local_checks": [
+    "go test ./... passed",
+    "go vet ./... passed"
+  ],
+  "remote_checks": [
+    "GOMAXPROCS=4 CGO_ENABLED=1 go test -p 2 -race ./... passed",
+    "real Parquet early partition smoke passed",
+    "real Parquet latest partition 100000-row pilot passed"
+  ],
+  "independent_oracle": {
+    "engine": "DuckDB CLI 1.4.1",
+    "sql": "pilot-oracle.sql",
+    "expected_selected_works": 48319,
+    "expected_retained_edges": 581,
+    "expected_self_loops": 388,
+    "selected_works_match": true,
+    "retained_edges_match": true,
+    "self_loops_match": true
+  },
+  "full_run_started": false,
+  "utilization_90_percent_verified": false,
+  "source_archive_sha256": "a1c63712f51292927120e86dd505f473af831fd8839e73eae7a9e62ce0881215",
+  "binary_sha256": "3d9d042fe72ddb3cd7514896e292038eecee7b2dee38f439b9db9b16a6363955"
+}

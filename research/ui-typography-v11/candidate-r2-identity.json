@@ -1,0 +1,15 @@
+{
+  "pid": 1171297,
+  "argv": [
+    "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v11-typography-r2",
+    "serve",
+    "--data-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+    "--data-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+    "--listen",
+    "0.0.0.0:8901"
+  ],
+  "kernel_stat": "1171297 (oa-stats-v11-ty) S 1171278 1171297 1171297 0 -1 4194304 8078 0 0 0 20 3 0 0 20 0 6 0 5121811773 1378226176 10272 18446744073709551615 4194304 13305233 140722739665200 0 0 0 0 1 2143420158 0 0 0 17 6 0 0 0 0 0 23789568 24637120 198017024 140722739673280 140722739673528 140722739673528 140722739675054 0\n",
+  "sha256": "9c0d2bd5b9a559a679a1b1a5ca3b6f8f64e48773c0eb5f4a8d7a4e612a26b00c"
+}

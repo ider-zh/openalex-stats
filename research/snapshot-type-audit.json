@@ -1,0 +1,2614 @@
+{
+  "audit_utc": "2026-11-11T16:20:30.199816+00:00",
+  "snapshot_date": "2026-06-26",
+  "snapshot_path": "/mnt/hg02/openalex-snapshot/data/parquet",
+  "scope": "full works corpus; source breakdown restricted to is_xpac=false",
+  "settings": {
+    "threads": 4,
+    "memory_limit": "8GB"
+  },
+  "schema": {
+    "elapsed_seconds": 0.03,
+    "sql": "DESCRIBE SELECT * FROM read_parquet('/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2016-06-24/part_0000.parquet');",
+    "rows": [
+      {
+        "column_name": "id",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "doi",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "title",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "display_name",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "ids",
+        "column_type": "MAP(VARCHAR, VARCHAR)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "indexed_in",
+        "column_type": "VARCHAR[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "publication_date",
+        "column_type": "DATE",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "publication_year",
+        "column_type": "INTEGER",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "language",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "type",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "authorships",
+        "column_type": "STRUCT(author STRUCT(display_name VARCHAR, id VARCHAR, orcid VARCHAR), author_position VARCHAR, affiliations STRUCT(institution_ids VARCHAR[], raw_affiliation_string VARCHAR)[], countries VARCHAR[], raw_author_name VARCHAR, raw_orcid VARCHAR, is_corresponding BOOLEAN, raw_affiliation_strings VARCHAR[], institutions STRUCT(country_code VARCHAR, display_name VARCHAR, id VARCHAR, lineage VARCHAR[], ror VARCHAR, \"type\" VARCHAR)[])[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "authors_count",
+        "column_type": "INTEGER",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "corresponding_author_ids",
+        "column_type": "VARCHAR[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "corresponding_institution_ids",
+        "column_type": "VARCHAR[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "primary_topic",
+        "column_type": "STRUCT(id VARCHAR, display_name VARCHAR, score FLOAT, subfield STRUCT(id VARCHAR, display_name VARCHAR), field STRUCT(id VARCHAR, display_name VARCHAR), \"domain\" STRUCT(id VARCHAR, display_name VARCHAR))",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "topics",
+        "column_type": "STRUCT(id VARCHAR, display_name VARCHAR, score FLOAT, subfield STRUCT(id VARCHAR, display_name VARCHAR), field STRUCT(id VARCHAR, display_name VARCHAR), \"domain\" STRUCT(id VARCHAR, display_name VARCHAR))[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "keywords",
+        "column_type": "STRUCT(id VARCHAR, display_name VARCHAR, score FLOAT)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "concepts",
+        "column_type": "STRUCT(id VARCHAR, wikidata VARCHAR, display_name VARCHAR, \"level\" INTEGER, score FLOAT)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "locations",
+        "column_type": "STRUCT(id VARCHAR, \"source\" STRUCT(id VARCHAR, display_name VARCHAR, issn_l VARCHAR, issn VARCHAR[], is_oa BOOLEAN, is_in_doaj BOOLEAN, is_core BOOLEAN, host_organization VARCHAR, host_organization_name VARCHAR, host_organization_lineage VARCHAR[], host_organization_lineage_names VARCHAR[], \"type\" VARCHAR), is_oa BOOLEAN, is_published BOOLEAN, landing_page_url VARCHAR, pdf_url VARCHAR, raw_source_name VARCHAR, raw_type VARCHAR, provenance VARCHAR, license VARCHAR, license_id VARCHAR, \"version\" VARCHAR, is_accepted BOOLEAN)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "locations_count",
+        "column_type": "INTEGER",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "primary_location",
+        "column_type": "STRUCT(id VARCHAR, \"source\" STRUCT(id VARCHAR, display_name VARCHAR, issn_l VARCHAR, issn VARCHAR[], is_oa BOOLEAN, is_in_doaj BOOLEAN, is_core BOOLEAN, host_organization VARCHAR, host_organization_name VARCHAR, host_organization_lineage VARCHAR[], host_organization_lineage_names VARCHAR[], \"type\" VARCHAR), is_oa BOOLEAN, is_published BOOLEAN, landing_page_url VARCHAR, pdf_url VARCHAR, raw_source_name VARCHAR, raw_type VARCHAR, provenance VARCHAR, license VARCHAR, license_id VARCHAR, \"version\" VARCHAR, is_accepted BOOLEAN)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "best_oa_location",
+        "column_type": "STRUCT(id VARCHAR, \"source\" STRUCT(id VARCHAR, display_name VARCHAR, issn_l VARCHAR, issn VARCHAR[], is_oa BOOLEAN, is_in_doaj BOOLEAN, is_core BOOLEAN, host_organization VARCHAR, host_organization_name VARCHAR, host_organization_lineage VARCHAR[], host_organization_lineage_names VARCHAR[], \"type\" VARCHAR), is_oa BOOLEAN, is_published BOOLEAN, landing_page_url VARCHAR, pdf_url VARCHAR, raw_source_name VARCHAR, raw_type VARCHAR, provenance VARCHAR, license VARCHAR, license_id VARCHAR, \"version\" VARCHAR, is_accepted BOOLEAN)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "sustainable_development_goals",
+        "column_type": "STRUCT(id VARCHAR, display_name VARCHAR, score DOUBLE)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "awards",
+        "column_type": "STRUCT(id VARCHAR, display_name VARCHAR, funder_award_id VARCHAR, funder_id VARCHAR, funder_display_name VARCHAR)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "funders",
+        "column_type": "STRUCT(id VARCHAR, display_name VARCHAR, ror VARCHAR)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "institutions",
+        "column_type": "STRUCT(id VARCHAR, display_name VARCHAR, ror VARCHAR, country_code VARCHAR, \"type\" VARCHAR, lineage VARCHAR[])[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "countries_distinct_count",
+        "column_type": "INTEGER",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "institutions_distinct_count",
+        "column_type": "INTEGER",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "open_access",
+        "column_type": "STRUCT(is_oa BOOLEAN, oa_status VARCHAR, any_repository_has_fulltext BOOLEAN, oa_url VARCHAR)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "is_paratext",
+        "column_type": "BOOLEAN",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "is_retracted",
+        "column_type": "BOOLEAN",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "is_xpac",
+        "column_type": "BOOLEAN",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "biblio",
+        "column_type": "STRUCT(volume VARCHAR, issue VARCHAR, first_page VARCHAR, last_page VARCHAR)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "referenced_works",
+        "column_type": "VARCHAR[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "referenced_works_count",
+        "column_type": "INTEGER",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "related_works",
+        "column_type": "VARCHAR[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "abstract_inverted_index",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "cited_by_count",
+        "column_type": "INTEGER",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "counts_by_year",
+        "column_type": "STRUCT(\"year\" INTEGER, cited_by_count INTEGER)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "apc_list",
+        "column_type": "STRUCT(\"value\" INTEGER, currency VARCHAR, value_usd INTEGER)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "apc_paid",
+        "column_type": "STRUCT(\"value\" DOUBLE, currency VARCHAR, value_usd DOUBLE)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "fwci",
+        "column_type": "DOUBLE",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "citation_normalized_percentile",
+        "column_type": "STRUCT(\"value\" DOUBLE, is_in_top_1_percent BOOLEAN, is_in_top_10_percent BOOLEAN)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "cited_by_percentile_year",
+        "column_type": "STRUCT(min INTEGER, max INTEGER)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "mesh",
+        "column_type": "STRUCT(descriptor_ui VARCHAR, descriptor_name VARCHAR, qualifier_ui VARCHAR, qualifier_name VARCHAR, is_major_topic BOOLEAN)[]",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "has_content",
+        "column_type": "STRUCT(pdf BOOLEAN, grobid_xml BOOLEAN)",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "has_fulltext",
+        "column_type": "BOOLEAN",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "created_date",
+        "column_type": "TIMESTAMP WITH TIME ZONE",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "updated_date",
+        "column_type": "DATE",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      }
+    ]
+  },
+  "type_xpac": {
+    "elapsed_seconds": 140.48,
+    "sql": "SELECT type, is_xpac, count(*) AS works, count_if(is_paratext IS TRUE) AS paratext_true, count_if(is_retracted IS TRUE) AS retracted_true FROM read_parquet('/mnt/hg02/openalex-snapshot/data/parquet/works/*/*.parquet') GROUP BY type,is_xpac ORDER BY type,is_xpac;",
+    "rows": [
+      {
+        "type": "article",
+        "is_xpac": false,
+        "works": 218098661,
+        "paratext_true": 0,
+        "retracted_true": 88913
+      },
+      {
+        "type": "article",
+        "is_xpac": true,
+        "works": 49350124,
+        "paratext_true": 0,
+        "retracted_true": 891
+      },
+      {
+        "type": "book",
+        "is_xpac": false,
+        "works": 6195812,
+        "paratext_true": 0,
+        "retracted_true": 7
+      },
+      {
+        "type": "book",
+        "is_xpac": true,
+        "works": 1829586,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "book-chapter",
+        "is_xpac": false,
+        "works": 24948691,
+        "paratext_true": 0,
+        "retracted_true": 1784
+      },
+      {
+        "type": "book-chapter",
+        "is_xpac": true,
+        "works": 1109592,
+        "paratext_true": 0,
+        "retracted_true": 3
+      },
+      {
+        "type": "book-section",
+        "is_xpac": false,
+        "works": 1648,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book-section",
+        "is_xpac": true,
+        "works": 183,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "database",
+        "is_xpac": false,
+        "works": 3315,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "database",
+        "is_xpac": true,
+        "works": 82,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dataset",
+        "is_xpac": false,
+        "works": 24485942,
+        "paratext_true": 0,
+        "retracted_true": 100
+      },
+      {
+        "type": "dataset",
+        "is_xpac": true,
+        "works": 50274355,
+        "paratext_true": 0,
+        "retracted_true": 47
+      },
+      {
+        "type": "dissertation",
+        "is_xpac": false,
+        "works": 8610052,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "dissertation",
+        "is_xpac": true,
+        "works": 5498375,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "editorial",
+        "is_xpac": false,
+        "works": 787197,
+        "paratext_true": 0,
+        "retracted_true": 111
+      },
+      {
+        "type": "editorial",
+        "is_xpac": true,
+        "works": 2690,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "erratum",
+        "is_xpac": false,
+        "works": 419415,
+        "paratext_true": 0,
+        "retracted_true": 339
+      },
+      {
+        "type": "erratum",
+        "is_xpac": true,
+        "works": 93,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "grant",
+        "is_xpac": false,
+        "works": 173,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "letter",
+        "is_xpac": false,
+        "works": 1722244,
+        "paratext_true": 0,
+        "retracted_true": 600
+      },
+      {
+        "type": "letter",
+        "is_xpac": true,
+        "works": 1136,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "libguides",
+        "is_xpac": false,
+        "works": 1776335,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "is_xpac": false,
+        "works": 11352628,
+        "paratext_true": 0,
+        "retracted_true": 61
+      },
+      {
+        "type": "other",
+        "is_xpac": true,
+        "works": 82216027,
+        "paratext_true": 0,
+        "retracted_true": 130
+      },
+      {
+        "type": "paratext",
+        "is_xpac": false,
+        "works": 3950246,
+        "paratext_true": 3950246,
+        "retracted_true": 10
+      },
+      {
+        "type": "paratext",
+        "is_xpac": true,
+        "works": 9313,
+        "paratext_true": 9313,
+        "retracted_true": 0
+      },
+      {
+        "type": "peer-review",
+        "is_xpac": false,
+        "works": 966862,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "peer-review",
+        "is_xpac": true,
+        "works": 38499,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "preprint",
+        "is_xpac": false,
+        "works": 7511571,
+        "paratext_true": 0,
+        "retracted_true": 1000
+      },
+      {
+        "type": "preprint",
+        "is_xpac": true,
+        "works": 1296384,
+        "paratext_true": 0,
+        "retracted_true": 4
+      },
+      {
+        "type": "reference-entry",
+        "is_xpac": false,
+        "works": 909043,
+        "paratext_true": 0,
+        "retracted_true": 89
+      },
+      {
+        "type": "reference-entry",
+        "is_xpac": true,
+        "works": 1004,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report",
+        "is_xpac": false,
+        "works": 1404307,
+        "paratext_true": 0,
+        "retracted_true": 5
+      },
+      {
+        "type": "report",
+        "is_xpac": true,
+        "works": 849405,
+        "paratext_true": 0,
+        "retracted_true": 13
+      },
+      {
+        "type": "report-component",
+        "is_xpac": false,
+        "works": 738,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report-component",
+        "is_xpac": true,
+        "works": 60,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "retraction",
+        "is_xpac": false,
+        "works": 23142,
+        "paratext_true": 0,
+        "retracted_true": 17861
+      },
+      {
+        "type": "review",
+        "is_xpac": false,
+        "works": 4154173,
+        "paratext_true": 0,
+        "retracted_true": 3657
+      },
+      {
+        "type": "review",
+        "is_xpac": true,
+        "works": 61540,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "software",
+        "is_xpac": false,
+        "works": 13409,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "software",
+        "is_xpac": true,
+        "works": 2941,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "standard",
+        "is_xpac": false,
+        "works": 418217,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "standard",
+        "is_xpac": true,
+        "works": 11242,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "supplementary-materials",
+        "is_xpac": false,
+        "works": 66369,
+        "paratext_true": 0,
+        "retracted_true": 0
+      }
+    ]
+  },
+  "core_type_source": {
+    "elapsed_seconds": 50.66,
+    "sql": "SELECT type, primary_location.source.type AS source_type, count(*) AS works, count_if(is_paratext IS TRUE) AS paratext_true, count_if(is_retracted IS TRUE) AS retracted_true FROM read_parquet('/mnt/hg02/openalex-snapshot/data/parquet/works/*/*.parquet') WHERE is_xpac IS FALSE GROUP BY type,primary_location.source.type ORDER BY type,source_type;",
+    "rows": [
+      {
+        "type": "article",
+        "source_type": "book series",
+        "works": 335809,
+        "paratext_true": 0,
+        "retracted_true": 36
+      },
+      {
+        "type": "article",
+        "source_type": "conference",
+        "works": 2178490,
+        "paratext_true": 0,
+        "retracted_true": 1250
+      },
+      {
+        "type": "article",
+        "source_type": "ebook platform",
+        "works": 36309,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "article",
+        "source_type": "igsnCatalog",
+        "works": 2,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "article",
+        "source_type": "journal",
+        "works": 154993859,
+        "paratext_true": 0,
+        "retracted_true": 83477
+      },
+      {
+        "type": "article",
+        "source_type": "metadata",
+        "works": 20,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "article",
+        "source_type": "other",
+        "works": 4956,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "article",
+        "source_type": "repository",
+        "works": 33522949,
+        "paratext_true": 0,
+        "retracted_true": 1161
+      },
+      {
+        "type": "article",
+        "source_type": null,
+        "works": 27026267,
+        "paratext_true": 0,
+        "retracted_true": 2988
+      },
+      {
+        "type": "book",
+        "source_type": "book series",
+        "works": 193197,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "book",
+        "source_type": "conference",
+        "works": 340,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book",
+        "source_type": "ebook platform",
+        "works": 2074386,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book",
+        "source_type": "journal",
+        "works": 1031362,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book",
+        "source_type": "other",
+        "works": 31,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book",
+        "source_type": "repository",
+        "works": 645104,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book",
+        "source_type": null,
+        "works": 2251392,
+        "paratext_true": 0,
+        "retracted_true": 6
+      },
+      {
+        "type": "book-chapter",
+        "source_type": "book series",
+        "works": 3835201,
+        "paratext_true": 0,
+        "retracted_true": 567
+      },
+      {
+        "type": "book-chapter",
+        "source_type": "conference",
+        "works": 14537,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "book-chapter",
+        "source_type": "ebook platform",
+        "works": 10048830,
+        "paratext_true": 0,
+        "retracted_true": 617
+      },
+      {
+        "type": "book-chapter",
+        "source_type": "journal",
+        "works": 544886,
+        "paratext_true": 0,
+        "retracted_true": 20
+      },
+      {
+        "type": "book-chapter",
+        "source_type": "other",
+        "works": 264,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book-chapter",
+        "source_type": "repository",
+        "works": 755727,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book-chapter",
+        "source_type": null,
+        "works": 9749246,
+        "paratext_true": 0,
+        "retracted_true": 579
+      },
+      {
+        "type": "book-section",
+        "source_type": "book series",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book-section",
+        "source_type": "journal",
+        "works": 25,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "book-section",
+        "source_type": null,
+        "works": 1622,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "database",
+        "source_type": "repository",
+        "works": 6,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "database",
+        "source_type": null,
+        "works": 3309,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dataset",
+        "source_type": "book series",
+        "works": 1100,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dataset",
+        "source_type": "ebook platform",
+        "works": 5253,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dataset",
+        "source_type": "journal",
+        "works": 8839,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dataset",
+        "source_type": "other",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dataset",
+        "source_type": "repository",
+        "works": 23822611,
+        "paratext_true": 0,
+        "retracted_true": 100
+      },
+      {
+        "type": "dataset",
+        "source_type": null,
+        "works": 648138,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dissertation",
+        "source_type": "book series",
+        "works": 326,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dissertation",
+        "source_type": "conference",
+        "works": 148,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dissertation",
+        "source_type": "ebook platform",
+        "works": 1413,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dissertation",
+        "source_type": "journal",
+        "works": 169972,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dissertation",
+        "source_type": "other",
+        "works": 3266,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "dissertation",
+        "source_type": "repository",
+        "works": 4714379,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "dissertation",
+        "source_type": null,
+        "works": 3720548,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "editorial",
+        "source_type": "book series",
+        "works": 1676,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "editorial",
+        "source_type": "conference",
+        "works": 61,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "editorial",
+        "source_type": "ebook platform",
+        "works": 2041,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "editorial",
+        "source_type": "journal",
+        "works": 668675,
+        "paratext_true": 0,
+        "retracted_true": 107
+      },
+      {
+        "type": "editorial",
+        "source_type": "other",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "editorial",
+        "source_type": "repository",
+        "works": 110419,
+        "paratext_true": 0,
+        "retracted_true": 4
+      },
+      {
+        "type": "editorial",
+        "source_type": null,
+        "works": 4324,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "erratum",
+        "source_type": "book series",
+        "works": 2576,
+        "paratext_true": 0,
+        "retracted_true": 9
+      },
+      {
+        "type": "erratum",
+        "source_type": "conference",
+        "works": 85,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "erratum",
+        "source_type": "ebook platform",
+        "works": 475,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "erratum",
+        "source_type": "journal",
+        "works": 402995,
+        "paratext_true": 0,
+        "retracted_true": 327
+      },
+      {
+        "type": "erratum",
+        "source_type": "repository",
+        "works": 5019,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "erratum",
+        "source_type": null,
+        "works": 8265,
+        "paratext_true": 0,
+        "retracted_true": 2
+      },
+      {
+        "type": "grant",
+        "source_type": "book series",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "grant",
+        "source_type": "ebook platform",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "grant",
+        "source_type": "repository",
+        "works": 141,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "grant",
+        "source_type": null,
+        "works": 30,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "letter",
+        "source_type": "book series",
+        "works": 202,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "letter",
+        "source_type": "conference",
+        "works": 50,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "letter",
+        "source_type": "ebook platform",
+        "works": 2279,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "letter",
+        "source_type": "journal",
+        "works": 1538979,
+        "paratext_true": 0,
+        "retracted_true": 594
+      },
+      {
+        "type": "letter",
+        "source_type": "repository",
+        "works": 164846,
+        "paratext_true": 0,
+        "retracted_true": 6
+      },
+      {
+        "type": "letter",
+        "source_type": null,
+        "works": 15888,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "libguides",
+        "source_type": "conference",
+        "works": 2,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "libguides",
+        "source_type": "journal",
+        "works": 51,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "libguides",
+        "source_type": "repository",
+        "works": 20,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "libguides",
+        "source_type": null,
+        "works": 1776262,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "source_type": "book series",
+        "works": 115813,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "source_type": "conference",
+        "works": 1835,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "source_type": "ebook platform",
+        "works": 792,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "source_type": "igsnCatalog",
+        "works": 487748,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "source_type": "journal",
+        "works": 479077,
+        "paratext_true": 0,
+        "retracted_true": 10
+      },
+      {
+        "type": "other",
+        "source_type": "other",
+        "works": 176,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "source_type": "raidRegistry",
+        "works": 27,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "other",
+        "source_type": "repository",
+        "works": 8349996,
+        "paratext_true": 0,
+        "retracted_true": 50
+      },
+      {
+        "type": "other",
+        "source_type": null,
+        "works": 1917164,
+        "paratext_true": 0,
+        "retracted_true": 1
+      },
+      {
+        "type": "paratext",
+        "source_type": "book series",
+        "works": 50461,
+        "paratext_true": 50461,
+        "retracted_true": 0
+      },
+      {
+        "type": "paratext",
+        "source_type": "conference",
+        "works": 4089,
+        "paratext_true": 4089,
+        "retracted_true": 0
+      },
+      {
+        "type": "paratext",
+        "source_type": "ebook platform",
+        "works": 474949,
+        "paratext_true": 474949,
+        "retracted_true": 1
+      },
+      {
+        "type": "paratext",
+        "source_type": "journal",
+        "works": 2777178,
+        "paratext_true": 2777178,
+        "retracted_true": 9
+      },
+      {
+        "type": "paratext",
+        "source_type": "other",
+        "works": 19,
+        "paratext_true": 19,
+        "retracted_true": 0
+      },
+      {
+        "type": "paratext",
+        "source_type": "repository",
+        "works": 162090,
+        "paratext_true": 162090,
+        "retracted_true": 0
+      },
+      {
+        "type": "paratext",
+        "source_type": null,
+        "works": 481460,
+        "paratext_true": 481460,
+        "retracted_true": 0
+      },
+      {
+        "type": "peer-review",
+        "source_type": "book series",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "peer-review",
+        "source_type": "journal",
+        "works": 18,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "peer-review",
+        "source_type": "repository",
+        "works": 15401,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "peer-review",
+        "source_type": null,
+        "works": 951442,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "preprint",
+        "source_type": "book series",
+        "works": 8139,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "preprint",
+        "source_type": "conference",
+        "works": 4335,
+        "paratext_true": 0,
+        "retracted_true": 2
+      },
+      {
+        "type": "preprint",
+        "source_type": "ebook platform",
+        "works": 8249,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "preprint",
+        "source_type": "journal",
+        "works": 204708,
+        "paratext_true": 0,
+        "retracted_true": 26
+      },
+      {
+        "type": "preprint",
+        "source_type": "other",
+        "works": 72,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "preprint",
+        "source_type": "repository",
+        "works": 5867962,
+        "paratext_true": 0,
+        "retracted_true": 959
+      },
+      {
+        "type": "preprint",
+        "source_type": null,
+        "works": 1418106,
+        "paratext_true": 0,
+        "retracted_true": 13
+      },
+      {
+        "type": "reference-entry",
+        "source_type": "book series",
+        "works": 88,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "reference-entry",
+        "source_type": "conference",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "reference-entry",
+        "source_type": "ebook platform",
+        "works": 565,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "reference-entry",
+        "source_type": "journal",
+        "works": 869329,
+        "paratext_true": 0,
+        "retracted_true": 89
+      },
+      {
+        "type": "reference-entry",
+        "source_type": "repository",
+        "works": 9,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "reference-entry",
+        "source_type": null,
+        "works": 39051,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report",
+        "source_type": "book series",
+        "works": 22,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report",
+        "source_type": "conference",
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report",
+        "source_type": "ebook platform",
+        "works": 386,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report",
+        "source_type": "journal",
+        "works": 12720,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report",
+        "source_type": "repository",
+        "works": 504063,
+        "paratext_true": 0,
+        "retracted_true": 5
+      },
+      {
+        "type": "report",
+        "source_type": null,
+        "works": 887115,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report-component",
+        "source_type": "journal",
+        "works": 366,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "report-component",
+        "source_type": null,
+        "works": 372,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "retraction",
+        "source_type": "book series",
+        "works": 4,
+        "paratext_true": 0,
+        "retracted_true": 4
+      },
+      {
+        "type": "retraction",
+        "source_type": "journal",
+        "works": 22209,
+        "paratext_true": 0,
+        "retracted_true": 17629
+      },
+      {
+        "type": "retraction",
+        "source_type": "repository",
+        "works": 928,
+        "paratext_true": 0,
+        "retracted_true": 228
+      },
+      {
+        "type": "retraction",
+        "source_type": null,
+        "works": 1,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "review",
+        "source_type": "book series",
+        "works": 89110,
+        "paratext_true": 0,
+        "retracted_true": 12
+      },
+      {
+        "type": "review",
+        "source_type": "conference",
+        "works": 8387,
+        "paratext_true": 0,
+        "retracted_true": 37
+      },
+      {
+        "type": "review",
+        "source_type": "ebook platform",
+        "works": 13184,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "review",
+        "source_type": "journal",
+        "works": 3765252,
+        "paratext_true": 0,
+        "retracted_true": 3533
+      },
+      {
+        "type": "review",
+        "source_type": "other",
+        "works": 9,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "review",
+        "source_type": "repository",
+        "works": 160405,
+        "paratext_true": 0,
+        "retracted_true": 31
+      },
+      {
+        "type": "review",
+        "source_type": null,
+        "works": 117826,
+        "paratext_true": 0,
+        "retracted_true": 44
+      },
+      {
+        "type": "software",
+        "source_type": "journal",
+        "works": 2,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "software",
+        "source_type": "repository",
+        "works": 13387,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "software",
+        "source_type": null,
+        "works": 20,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "standard",
+        "source_type": "repository",
+        "works": 3480,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "standard",
+        "source_type": null,
+        "works": 414737,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "supplementary-materials",
+        "source_type": "book series",
+        "works": 6,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "supplementary-materials",
+        "source_type": "ebook platform",
+        "works": 45,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "supplementary-materials",
+        "source_type": "journal",
+        "works": 8002,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "supplementary-materials",
+        "source_type": "repository",
+        "works": 3450,
+        "paratext_true": 0,
+        "retracted_true": 0
+      },
+      {
+        "type": "supplementary-materials",
+        "source_type": null,
+        "works": 54866,
+        "paratext_true": 0,
+        "retracted_true": 0
+      }
+    ]
+  },
+  "example_sampling": {
+    "method": "five update-date strata, smallest Parquet file in each; illustrative, not representative",
+    "files": [
+      "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2016-06-24/part_0000.parquet",
+      "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2020-02-07/part_0000.parquet",
+      "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2025-10-19/part_0000.parquet",
+      "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2026-02-25/part_0001.parquet",
+      "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2026-06-26/part_0048.parquet"
+    ]
+  },
+  "examples": {
+    "elapsed_seconds": 0.65,
+    "sql": "SELECT id,display_name,type,primary_location.source.type AS source_type,primary_location.source.display_name AS source_name,primary_location.raw_type AS raw_type,primary_location.version AS version,is_paratext,is_retracted,is_xpac FROM read_parquet(['/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2016-06-24/part_0000.parquet','/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2020-02-07/part_0000.parquet','/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2025-10-19/part_0000.parquet','/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2026-02-25/part_0001.parquet','/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2026-06-26/part_0048.parquet']) WHERE is_xpac IS FALSE AND (type IN ('letter','editorial','book-chapter','other','preprint','erratum','retraction') OR (type='article' AND (primary_location.source.type='conference' OR is_paratext IS TRUE))) QUALIFY row_number() OVER (PARTITION BY type,primary_location.source.type ORDER BY id)<=3;",
+    "rows": [
+      {
+        "id": "https://openalex.org/W2980761036",
+        "display_name": "Effect and mechanism of propofol in hepatic ischemia/reperfusion injury of rat.",
+        "type": "retraction",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": true,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W3025663384",
+        "display_name": "Knockdown of long noncoding RNA linc-ITGB1 suppresses migration, invasion of hepatocellular carcinoma via regulating ZEB1.",
+        "type": "retraction",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": true,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1531116139",
+        "display_name": "From Description to Hybrid Logics, and Back",
+        "type": "book-chapter",
+        "source_type": "conference",
+        "source_name": "Advances in Modal Logic",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W3023725427",
+        "display_name": "Cellular Network Security",
+        "type": "book-chapter",
+        "source_type": "conference",
+        "source_name": "Network and System Security",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W4251652490",
+        "display_name": "Using background knowledge with attribute-oriented data mining.",
+        "type": "book-chapter",
+        "source_type": "conference",
+        "source_name": "Knowledge Discovery and Data Mining",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1872633795",
+        "display_name": "Tratamento da pancreatite aguda grave: ainda um desafio",
+        "type": "editorial",
+        "source_type": "journal",
+        "source_name": "Arquivos de Gastroenterologia",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1921751023",
+        "display_name": "World Hospital Pharmacy Research Consortium",
+        "type": "editorial",
+        "source_type": "journal",
+        "source_name": "International Journal of Pharmacy Practice",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1966414781",
+        "display_name": "Influenza A/H1N1 in 2009: a pandemic in evolution",
+        "type": "editorial",
+        "source_type": "journal",
+        "source_name": "Expert Review of Vaccines",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2213036844",
+        "display_name": "Erratum to: Lineare Pendelschwingungen und Zentralbewegungen",
+        "type": "erratum",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W3124247259",
+        "display_name": "Erratum zu: Globale Pharmaindustrie – quo vadis?",
+        "type": "erratum",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W4256581400",
+        "display_name": "Erratum",
+        "type": "erratum",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1158120481",
+        "display_name": "Le comportement des bactéries d'intérêt médical vis-à-vis des antibiotiques",
+        "type": "other",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "article",
+        "version": null,
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1479856941",
+        "display_name": "Splicing Decisions Shape Neuronal Protein Function across the Transcriptome",
+        "type": "other",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1480468876",
+        "display_name": "Molecular Recognition Using Amphiphilic Macromolecules",
+        "type": "other",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W160095106",
+        "display_name": "Erratum to: Psychophysiologische Grundlagen des Verhaltens",
+        "type": "erratum",
+        "source_type": "book series",
+        "source_name": "Heidelberger Taschenbücher",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1479984472",
+        "display_name": "Fluctuating Nonlinear Hydrodynamics, Dense Fluids, and the Glass Transition",
+        "type": "other",
+        "source_type": "book series",
+        "source_name": "Advances in chemical physics",
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1487832411",
+        "display_name": "DNA Based Metal Catalysis",
+        "type": "other",
+        "source_type": "book series",
+        "source_name": "Progress in inorganic chemistry",
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1523574933",
+        "display_name": "Residual Stress Measurement in YBCO Thin Films",
+        "type": "other",
+        "source_type": "book series",
+        "source_name": "Ceramic transactions /Ceramic transactions",
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W13929081",
+        "display_name": "Dimensions of Slovenian innovativeness",
+        "type": "article",
+        "source_type": "conference",
+        "source_name": "International Conference on Mathematical and Computational Methods in Science and Engineering",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W13977875",
+        "display_name": "Seeing Cheaply: Flexible Vision for Small Devices",
+        "type": "article",
+        "source_type": "conference",
+        "source_name": "Autonomous Minirobots for Research and Edutainment",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1481573983",
+        "display_name": "A new technique in distribution network reconfiguration for loss reduction and optimum operation",
+        "type": "article",
+        "source_type": "conference",
+        "source_name": "IET Conference Publications",
+        "raw_type": "proceedings-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1454782005",
+        "display_name": "Cloud Forensic Maturity Model",
+        "type": "book-chapter",
+        "source_type": "journal",
+        "source_name": "Lecture notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1480758825",
+        "display_name": "Decision-Directed Coherent Delay-Locked PN Tracking Loop for DS-CDMA",
+        "type": "book-chapter",
+        "source_type": "journal",
+        "source_name": "Wireless Personal Communications",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1482401401",
+        "display_name": "Quantile hedging for a jump-diffusion finanaicl market model",
+        "type": "book-chapter",
+        "source_type": "journal",
+        "source_name": "Mathematical Finance",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W3010932824",
+        "display_name": "Letter from John Muir to [Jeanne C. Carr], [1870] May 29.",
+        "type": "letter",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "Text",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1204954497",
+        "display_name": "Dematerialization of public contract and organizational change in french local administrations",
+        "type": "preprint",
+        "source_type": "repository",
+        "source_name": "RePEc: Research Papers in Economics",
+        "raw_type": null,
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W14568933",
+        "display_name": "Evolution of polygenic debris flows on a sand dune (Russell crater, Mars)",
+        "type": "preprint",
+        "source_type": "repository",
+        "source_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+        "raw_type": null,
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1482111807",
+        "display_name": "Dynamical systems accepting the normal shift on an arbitrary Riemannian manifold",
+        "type": "preprint",
+        "source_type": "repository",
+        "source_name": "ArXiv.org",
+        "raw_type": "text",
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1578565189",
+        "display_name": "Mental Health Act (1987): need for a paradigm shift from custodial to community care.",
+        "type": "editorial",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1909387693",
+        "display_name": "[Clinical usefulness of the detection of mutations of the HFE gene in hemochromatosis].",
+        "type": "editorial",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2247169437",
+        "display_name": "A symposium on hydatidosis.",
+        "type": "editorial",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2222676093",
+        "display_name": "Influence of Grain Size Distribution and Shape on GPR Waves – Study of Aeolian Dunes",
+        "type": "preprint",
+        "source_type": "conference",
+        "source_name": "72nd EAGE Conference and Exhibition incorporating SPE EUROPEC 2010",
+        "raw_type": "proceedings-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2920240795",
+        "display_name": "Utilizing Class Information for Deep Network Representation Shaping",
+        "type": "preprint",
+        "source_type": "conference",
+        "source_name": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W3110649026",
+        "display_name": "An Asynchronous Kalman Filter for Hybrid Event Cameras",
+        "type": "preprint",
+        "source_type": "conference",
+        "source_name": "2021 IEEE/CVF International Conference on Computer Vision (ICCV)",
+        "raw_type": "proceedings-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1539723998",
+        "display_name": "Contagious Sets in Dense Graphs",
+        "type": "preprint",
+        "source_type": "book series",
+        "source_name": "Lecture notes in computer science",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2800307111",
+        "display_name": "The Temporal Explorer Who Returns to the Base",
+        "type": "preprint",
+        "source_type": "book series",
+        "source_name": "Lecture notes in computer science",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2884606069",
+        "display_name": "Visual Mesh: Real-Time Object Detection Using Constant Sample Density",
+        "type": "preprint",
+        "source_type": "book series",
+        "source_name": "Lecture notes in computer science",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W44759967",
+        "display_name": "Erratum to: Mikrobiologie der Infektionserreger",
+        "type": "erratum",
+        "source_type": "ebook platform",
+        "source_name": "Steinkopff eBooks",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W10064366",
+        "display_name": "Full Field Dynamic Stress/Strain from Limited Sets of Measured Data",
+        "type": "book-chapter",
+        "source_type": "book series",
+        "source_name": "Conference proceedings of the Society for Experimental Mechanics",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W101250118",
+        "display_name": "Montage als Teil des Produktionssystems",
+        "type": "book-chapter",
+        "source_type": "book series",
+        "source_name": "Forschungsberichte - Iwb",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W11012728",
+        "display_name": "Mathematical models for the initiating and promotive action of carcinogens",
+        "type": "book-chapter",
+        "source_type": "book series",
+        "source_name": "Lecture notes in medical informatics",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1005594",
+        "display_name": "Resection Margins in Gastric Cancer",
+        "type": "book-chapter",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1005892368",
+        "display_name": "Rißausbreitungsphänomene und ihre experimentelle Untersuchung",
+        "type": "book-chapter",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1009458159",
+        "display_name": "Untersuchung von Kunststoffen",
+        "type": "book-chapter",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1435734473",
+        "display_name": "Body Mass Index in COPD Mortality",
+        "type": "letter",
+        "source_type": "journal",
+        "source_name": "CHEST Journal",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1490343666",
+        "display_name": "Altered Mitral Flow Pattern in Patients With Hypertrophic Obstructive Cardiomyopathy",
+        "type": "letter",
+        "source_type": "journal",
+        "source_name": "Circulation",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1532145391",
+        "display_name": "Improvement in Chronic Pain with Transcranial Magnetic Stimulation",
+        "type": "letter",
+        "source_type": "journal",
+        "source_name": "Australian & New Zealand Journal of Psychiatry",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1032663389",
+        "display_name": "Abformgenauigkeit der Einsenkstempel im Werkstück",
+        "type": "book-chapter",
+        "source_type": "ebook platform",
+        "source_name": "VS Verlag für Sozialwissenschaften eBooks",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W10712896",
+        "display_name": "Olfactory Bulb Physiology",
+        "type": "book-chapter",
+        "source_type": "ebook platform",
+        "source_name": "Elsevier eBooks",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W107279209",
+        "display_name": "Jugendkriminalität: Unterschiede zwischen Knaben und Mädchen",
+        "type": "book-chapter",
+        "source_type": "ebook platform",
+        "source_name": "VS Verlag für Sozialwissenschaften eBooks",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1903267668",
+        "display_name": "Oil, Dollars, Debt, and Crises",
+        "type": "preprint",
+        "source_type": "ebook platform",
+        "source_name": "Cambridge University Press eBooks",
+        "raw_type": "monograph",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2272997635",
+        "display_name": "Organisation du marché du travail et législation sociale chez Léon Walras",
+        "type": "preprint",
+        "source_type": "ebook platform",
+        "source_name": "Presses universitaires François-Rabelais eBooks",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2273129046",
+        "display_name": "Le sentier de la gloire",
+        "type": "preprint",
+        "source_type": "ebook platform",
+        "source_name": "Éditions Rue d’Ulm eBooks",
+        "raw_type": "book-chapter",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1488221165",
+        "display_name": "Correction to “Radial Basis Functions for Combining Shape and Speckle Tracking in 4D Echocardiography” [Jun 14 1275-1289]",
+        "type": "erratum",
+        "source_type": "journal",
+        "source_name": "IEEE Transactions on Medical Imaging",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1889346123",
+        "display_name": "Erratum",
+        "type": "erratum",
+        "source_type": "journal",
+        "source_name": "Gastrointestinal Endoscopy",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1896412670",
+        "display_name": "Erratum: “Multiple phases of Cu2ZnSnSe4 detected by room temperature photoluminescence” [J. Appl. Phys. <b>116</b>, 073509 (2014)]",
+        "type": "erratum",
+        "source_type": "journal",
+        "source_name": "Journal of Applied Physics",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1481459221",
+        "display_name": "Near‐Field Optical Microscopy",
+        "type": "other",
+        "source_type": "journal",
+        "source_name": "Handbook of Vibrational Spectroscopy",
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1528604577",
+        "display_name": "Microcrystalline Oxides: Bridging the Gap Between Single Crystals and Dispersed Oxides",
+        "type": "other",
+        "source_type": "journal",
+        "source_name": "Handbook of Heterogeneous Catalysis",
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1529821939",
+        "display_name": "Synthetic hydrocarbons as long‐term fuel option",
+        "type": "other",
+        "source_type": "journal",
+        "source_name": "Handbook of Fuel Cells",
+        "raw_type": "other",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W3094365578",
+        "display_name": "CORRECTION to: Primary Standardization of the massic activity of a <sup>233</sup>Pa solution, DOI:10.1007/S10967-018-6113-9.",
+        "type": "erratum",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W4392717331",
+        "display_name": "SCCS OPINION on Methylparaben (CAS No. 99-76-3, EC No. 202-785-7) - SCCS/1652/23– Final Opinion and Corrigendum",
+        "type": "erratum",
+        "source_type": "repository",
+        "source_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+        "raw_type": "Books",
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W7161024668",
+        "display_name": "Correction: Panoramic Assessment of Mental Foramen Location in Adult Patients in Riyadh, Saudi Arabia: A Retrospective Cross-Sectional Study.",
+        "type": "erratum",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1177103559",
+        "display_name": "Gaya Hidup Clubbers Pada Usia Emerging Adulthood",
+        "type": "other",
+        "source_type": "repository",
+        "source_name": "Ubaya Repository (University of Surabaya)",
+        "raw_type": "Undergraduate thesis",
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W121995193",
+        "display_name": "Parallel evolutionary algorithms : a review",
+        "type": "other",
+        "source_type": "repository",
+        "source_name": "Eureka! Institutional Repository (Eureka!)",
+        "raw_type": "Conference article",
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1522343916",
+        "display_name": "Cardiac arrest in the young: rare but possible",
+        "type": "other",
+        "source_type": "repository",
+        "source_name": "amber - ambulance research repository",
+        "raw_type": "Journal Article/Review",
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1536010102",
+        "display_name": "Clinical practice guidelines for treatment of diabetes mellitus.",
+        "type": "letter",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1548623348",
+        "display_name": "Prostate-specific antigen level and risk of bone metastasis in Sudanese patients with prostate cancer.",
+        "type": "letter",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1562081775",
+        "display_name": "Direct fluorescence on tzanck smears: a rapid test to confirm pemphigus.",
+        "type": "letter",
+        "source_type": "repository",
+        "source_name": "PubMed",
+        "raw_type": null,
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1538377377",
+        "display_name": "A Consumer Behavior Based Approach to Multi-Stage EV Charging Station Placement",
+        "type": "preprint",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "proceedings-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1550265077",
+        "display_name": "Comparing Multi-State Kalman Filter and ARIMA Forecasts: An Application to the Money Multiplier",
+        "type": "preprint",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "report",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1562472916",
+        "display_name": "RFID reader's synchronization to get a coordinated beam direction for warehouse application",
+        "type": "preprint",
+        "source_type": null,
+        "source_name": null,
+        "raw_type": "proceedings-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1544843411",
+        "display_name": "Het genereren van ideeën",
+        "type": "book-chapter",
+        "source_type": "repository",
+        "source_name": "Data Archiving and Networked Services (DANS)",
+        "raw_type": "info:eu-repo/semantics/bookpart",
+        "version": "submittedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2138922170",
+        "display_name": "Un antico dibattito, Ferrara 1932. Il secondo convegno di studi sindacali e corporativi",
+        "type": "book-chapter",
+        "source_type": "repository",
+        "source_name": "LUISSThesis - Open Archive",
+        "raw_type": "Monograph Section",
+        "version": "acceptedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W2189109555",
+        "display_name": "The Language, Hands, and Interaction of the Two Scribes of the Egerton 2726 Chaucer Manuscript (En1)",
+        "type": "book-chapter",
+        "source_type": "repository",
+        "source_name": "Zenodo (CERN European Organization for Nuclear Research)",
+        "raw_type": "article",
+        "version": null,
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1442999678",
+        "display_name": "On the extraction of spectral quantities with open boundary conditions.",
+        "type": "preprint",
+        "source_type": "journal",
+        "source_name": "Proceedings of The 32nd International Symposium on Lattice Field Theory — PoS(LATTICE2014)",
+        "raw_type": "proceedings-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1543127340",
+        "display_name": "Spherical Indicatrices of Involute of a Space Curve in Euclidean 3-Space",
+        "type": "preprint",
+        "source_type": "journal",
+        "source_name": "Tamkang Journal of Mathematics",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W1774245534",
+        "display_name": "Féminismes : théorie et politique",
+        "type": "preprint",
+        "source_type": "journal",
+        "source_name": "Cahiers du Genre",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W4255256899",
+        "display_name": "MicroRNA-579-3p Exerts Neuroprotective Effects Against Ischemic Stroke via Anti-Inflammation and Anti-Apoptosis [Retraction]",
+        "type": "retraction",
+        "source_type": "journal",
+        "source_name": "Neuropsychiatric Disease and Treatment",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": false,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W4393195883",
+        "display_name": "[Retracted] Predictors of efficacy of anamorelin in patients with non‑small cell lung cancer and cachexia: A retrospective study",
+        "type": "retraction",
+        "source_type": "journal",
+        "source_name": "Oncology Letters",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": true,
+        "is_xpac": false
+      },
+      {
+        "id": "https://openalex.org/W4401123793",
+        "display_name": "Retraction: LncRNA BLACAT1 accelerates non-small cell lung cancer through up-regulating the activation of sonic hedgehog pathway",
+        "type": "retraction",
+        "source_type": "journal",
+        "source_name": "Frontiers in Oncology",
+        "raw_type": "journal-article",
+        "version": "publishedVersion",
+        "is_paratext": false,
+        "is_retracted": true,
+        "is_xpac": false
+      }
+    ]
+  }
+}

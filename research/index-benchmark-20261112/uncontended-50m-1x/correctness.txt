@@ -1,0 +1,6 @@
+=== RUN   TestParallelIndexRealSample
+    parallel_index_benchmark_test.go:228: verified 50000000 real IDs and original ordinals: serial
+    parallel_index_benchmark_test.go:228: verified 50000000 real IDs and original ordinals: parallel_w16_s64
+    parallel_index_benchmark_test.go:228: verified 50000000 real IDs and original ordinals: parallel_w48_s512
+--- PASS: TestParallelIndexRealSample (18.10s)
+PASS

@@ -1,0 +1,17 @@
+{
+  "selection": "five deterministic source partitions; not random or full-corpus estimate",
+  "indices": [
+    489,
+    978,
+    1467,
+    1956,
+    2445
+  ],
+  "files": [
+    "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2025-11-06/part_0070.parquet",
+    "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2025-11-06/part_0559.parquet",
+    "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2025-11-06/part_1048.parquet",
+    "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2026-03-20/part_0005.parquet",
+    "/mnt/hg02/openalex-snapshot/data/parquet/works/updated_date=2026-06-26/part_0159.parquet"
+  ]
+}

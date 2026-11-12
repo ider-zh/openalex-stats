@@ -1,0 +1,77 @@
+[
+  {
+    "file": "biology-citations.png",
+    "bytes": 184233,
+    "sha256": "3ccd0c587f8156c5ce56b7de2e7249a9335655845d74f9dc8a04f2c675de9623"
+  },
+  {
+    "file": "browser-qa.json",
+    "bytes": 22390,
+    "sha256": "6f0cdd3115ad78f0a6aba4f84ec642c067a4859b54053ab31f2170b3a0798902"
+  },
+  {
+    "file": "catalog.json",
+    "bytes": 149,
+    "sha256": "fe4e9b1c0ff1e783f407b7d0ee4938dda85e1601edc3e51da44a14e610fcdd1d"
+  },
+  {
+    "file": "eci-global-rank.png",
+    "bytes": 254496,
+    "sha256": "666f9f9e2133da5f7ce8982b2329386118cc2706b0061bcf0ce23d9aecc07293"
+  },
+  {
+    "file": "eci-mobile-rank.png",
+    "bytes": 73094,
+    "sha256": "0508f7a76fb540eef0c8a072bc4c84eba27ca18501d4e650a1f91ef88892b9e7"
+  },
+  {
+    "file": "eci-rank-chart.png",
+    "bytes": 122389,
+    "sha256": "8a423d539764fd7d559a003262ee8594dfd24b9d1fed605cb2a262e5c008561a"
+  },
+  {
+    "file": "eci-rank-tooltip.png",
+    "bytes": 108245,
+    "sha256": "451a8fba3a5254c45b50e37c1b4c4e915069a789b828bb302bbe701f5facfe4a"
+  },
+  {
+    "file": "eci-score-chart.png",
+    "bytes": 90909,
+    "sha256": "74dbd4453154fb57a6101d521eedd4bf84edb7376b48c3b5b42b2c663bdf64bd"
+  },
+  {
+    "file": "metadata.json",
+    "bytes": 83104,
+    "sha256": "41ce70bae5e6dbd545cd17337ac80cd7f401a70777b090ac0fe6f43319e716bf"
+  },
+  {
+    "file": "mobile.png",
+    "bytes": 148926,
+    "sha256": "11456f1c206d2e07fbf522ebf65862ebac59b8575ddcccb4ef6b71a68fbaf1bd"
+  },
+  {
+    "file": "model-visual-checks.json",
+    "bytes": 1410,
+    "sha256": "2c9f4c56ee5a2956a72f3de9b19bfecd7a59222c1af2d6478b4bf2f160abe6e9"
+  },
+  {
+    "file": "served-run.json",
+    "bytes": 923204,
+    "sha256": "d574e30787a9877708cd87b36e1f2cb959dbbdb9098280ef6c966983e59568e7"
+  },
+  {
+    "file": "service-identity.json",
+    "bytes": 611,
+    "sha256": "3c96f3d4440eee796c9928d9bab37a6e0159846e4ae26018bd4c039964c4f718"
+  },
+  {
+    "file": "topics-field.png",
+    "bytes": 186490,
+    "sha256": "a19216fc95a0202eac70c7ecb0a75c168563a075f1bcc9315d55a82b5bea1939"
+  },
+  {
+    "file": "visual-review.json",
+    "bytes": 1121,
+    "sha256": "ccd86a5bcfd05abbfafed005cae6e761bdcf7fec2417d4dbe41798042e069548"
+  }
+]

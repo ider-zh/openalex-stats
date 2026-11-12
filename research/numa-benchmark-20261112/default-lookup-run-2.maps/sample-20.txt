@@ -1,0 +1,51 @@
+00400000 default file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test mapped=321 active=0 N1=321 kernelpagesize_kB=4
+00551000 default file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test mapped=390 active=0 N0=23 N1=367 kernelpagesize_kB=4
+006d7000 default file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test anon=7 dirty=7 mapped=35 active=0 N0=6 N1=29 kernelpagesize_kB=4
+006fa000 default anon=23 dirty=23 active=0 N0=2 N1=21 kernelpagesize_kB=4
+3baa80000000 default
+3baa80400000 default anon=540584 dirty=540584 active=236 N0=192469 N1=348115 kernelpagesize_kB=4
+3bab28c00000 default
+71f86a5e4000 default anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+71f86a624000 default anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+71f86a626000 default anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+71f86a666000 default anon=4 dirty=4 active=0 N0=4 kernelpagesize_kB=4
+71f86a66e000 default anon=48 dirty=48 active=0 N0=27 N1=21 kernelpagesize_kB=4
+71f86a69e000 default anon=37 dirty=37 active=0 N0=37 kernelpagesize_kB=4
+71f86a6d4000 default anon=128 dirty=128 active=0 N0=77 N1=51 kernelpagesize_kB=4
+71f86a7c0000 default anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+71f86a7c2000 default anon=16 dirty=16 active=0 N0=8 N1=8 kernelpagesize_kB=4
+71f86a7d2000 default anon=95 dirty=95 active=0 N0=65 N1=30 kernelpagesize_kB=4
+71f86a8da000 default anon=32 dirty=32 active=0 N0=15 N1=17 kernelpagesize_kB=4
+71f86a8fa000 default anon=18 dirty=18 active=0 N0=8 N1=10 kernelpagesize_kB=4
+71f86a90c000 default anon=3 dirty=3 active=0 N0=2 N1=1 kernelpagesize_kB=4
+71f86a912000 default anon=102 dirty=102 active=1 N0=55 N1=47 kernelpagesize_kB=4
+71f86a9da000 default anon=16 dirty=16 active=0 N0=3 N1=13 kernelpagesize_kB=4
+71f86a9ea000 default anon=1172 dirty=1172 active=3 N0=597 N1=575 kernelpagesize_kB=4
+71f86b3d0000 default anon=16 dirty=16 active=0 N0=1 N1=15 kernelpagesize_kB=4
+71f86b3e0000 default anon=209 dirty=209 active=2 N0=130 N1=79 kernelpagesize_kB=4
+71f86b5a0000 default anon=19 dirty=19 active=0 N0=9 N1=10 kernelpagesize_kB=4
+71f86b700000 default anon=22 dirty=22 active=0 N0=10 N1=12 kernelpagesize_kB=4
+71f86b800000 default anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+71f86d800000 default
+71f884f55000 default anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+71f884f57000 default
+71f88d800000 default
+71f8a4f55000 default anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+71f8a4f57000 default
+71f8b06ea000 default anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+71f8b06eb000 default
+71f8b1ddd000 default anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+71f8b1dde000 default
+71f8b2001000 default anon=2 dirty=2 active=1 N0=1 N1=1 kernelpagesize_kB=4
+71f8b2005000 default anon=16 dirty=16 active=0 N1=16 kernelpagesize_kB=4
+71f8b2015000 default anon=22 dirty=22 active=1 N0=6 N1=16 kernelpagesize_kB=4
+71f8b2055000 default anon=32 dirty=32 active=0 N0=7 N1=25 kernelpagesize_kB=4
+71f8b2075000 default anon=17 dirty=17 active=0 N1=17 kernelpagesize_kB=4
+71f8b2087000 default
+71f8b2142000 default anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+71f8b2143000 default
+71f8b2187000 default anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+71f8b21a7000 default anon=40 dirty=40 active=0 N0=3 N1=37 kernelpagesize_kB=4
+7ffde6d08000 default stack anon=4 dirty=4 active=0 N1=4 kernelpagesize_kB=4
+7ffde6d6e000 default
+7ffde6d72000 default

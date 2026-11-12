@@ -1,0 +1,15 @@
+{
+  "run": "core-goal-v2",
+  "pid": 869128,
+  "server": "ider@192.168.1.229",
+  "binary": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v7",
+  "binary_sha256": "c8ad89711ce24997186bc06b7ffd4e812f1e3dfc4249c3622eacc23c5c30095f",
+  "source_archive_sha256": "7edcd2e26e0e9b76b7b9e4da2e948fc4a80bef175ade2a9816443cd59461e333",
+  "linux_boot_unix_seconds": 1743234530,
+  "process_start_clock_ticks": 5118945920,
+  "clock_ticks_per_second": 100,
+  "execution_start_unix_seconds": 1794423989.2,
+  "note": "Verified live PID kernel start; baseline dimensions reused, references and counters rebuilt in separate dedicated caches. Full stage traces include cache validation, GC and process I/O; global swap counters are distinguished from process swap.",
+  "completion_commit_unix_seconds": 1794424569,
+  "external_elapsed_seconds_approx": 579.8
+}

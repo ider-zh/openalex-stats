@@ -1,0 +1,16 @@
+?   	openalexstats/cmd/oa-stats	[no test files]
+ok  	openalexstats/internal/aggregate	1.021s
+ok  	openalexstats/internal/audit	4.192s
+ok  	openalexstats/internal/cache	1.739s
+?   	openalexstats/internal/checkpoint	[no test files]
+ok  	openalexstats/internal/eci	1.021s
+ok  	openalexstats/internal/graph	1.110s
+?   	openalexstats/internal/model	[no test files]
+ok  	openalexstats/internal/pipeline	1.201s
+ok  	openalexstats/internal/policy	1.021s
+ok  	openalexstats/internal/production	4.537s
+ok  	openalexstats/internal/results	1.778s
+ok  	openalexstats/internal/scan	1.328s
+ok  	openalexstats/internal/store	1.045s
+ok  	openalexstats/internal/web	1.464s
+?   	openalexstats/scripts/projection-audit	[no test files]

@@ -1,0 +1,24 @@
+5616ad370000 interleave:0-1 file=/usr/bin/dash mapped=4 mapmax=10 active=0 N0=3 N1=1 kernelpagesize_kB=4
+5616ad374000 interleave:0-1 file=/usr/bin/dash mapped=20 mapmax=10 active=0 N0=5 N1=15 kernelpagesize_kB=4
+5616ad388000 interleave:0-1 file=/usr/bin/dash mapped=5 mapmax=10 active=0 N0=1 N1=4 kernelpagesize_kB=4
+5616ad38d000 interleave:0-1 file=/usr/bin/dash anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+5616ad38f000 interleave:0-1 file=/usr/bin/dash anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+5616ad390000 interleave:0-1 anon=1 dirty=1 N1=1 kernelpagesize_kB=4
+5616d047c000 interleave:0-1 heap anon=3 dirty=3 N0=2 N1=1 kernelpagesize_kB=4
+7d37d2400000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/libc.so.6 mapped=40 mapmax=38 active=0 N0=40 kernelpagesize_kB=4
+7d37d2428000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/libc.so.6 mapped=264 mapmax=38 active=0 N0=264 kernelpagesize_kB=4
+7d37d25bd000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/libc.so.6 mapped=32 mapmax=38 active=0 N0=32 kernelpagesize_kB=4
+7d37d2615000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/libc.so.6
+7d37d2616000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/libc.so.6 anon=4 dirty=4 active=0 N0=2 N1=2 kernelpagesize_kB=4
+7d37d261a000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/libc.so.6 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7d37d261c000 interleave:0-1 anon=4 dirty=4 active=0 N0=3 N1=1 kernelpagesize_kB=4
+7d37d273b000 interleave:0-1 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7d37d274f000 interleave:0-1 anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7d37d2751000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 mapped=2 mapmax=38 active=0 N0=2 kernelpagesize_kB=4
+7d37d2753000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 mapped=42 mapmax=38 active=0 N0=42 kernelpagesize_kB=4
+7d37d277d000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 mapped=11 mapmax=36 active=0 N0=11 kernelpagesize_kB=4
+7d37d2789000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7d37d278b000 interleave:0-1 file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7ffe5937b000 interleave:0-1 stack anon=3 dirty=3 active=0 N0=2 N1=1 kernelpagesize_kB=4
+7ffe593cf000 interleave:0-1
+7ffe593d3000 interleave:0-1

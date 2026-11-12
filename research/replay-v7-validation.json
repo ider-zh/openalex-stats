@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "binary_sha256": "c8ad89711ce24997186bc06b7ffd4e812f1e3dfc4249c3622eacc23c5c30095f",
+  "run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+  "completion_sha256": "77569da27845ff1822c9cd7b4096652444b6613742460f8bbf8eb9ab01819584",
+  "checks": {
+    "run_id_unchanged": true,
+    "completed_at_unchanged": true,
+    "completion_sha_unchanged": true,
+    "source_rows_unchanged": true,
+    "selected_works_unchanged": true,
+    "edges_unchanged": true
+  },
+  "resources_file": "replay-v7.resources.txt",
+  "note": "Exact same binary and CLI configuration; only cache/dictionary validation logged, no dimensions/index/reference/count/aggregate/export stages reran. Returned original completion time; immutable completion manifest unchanged."
+}

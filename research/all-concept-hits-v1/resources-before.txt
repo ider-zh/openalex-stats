@@ -1,0 +1,9 @@
+2026-11-11T23:53:46Z
+ 07:53:46 up 592 days, 16:04, 30 users,  load average: 2.40, 4.81, 5.47
+               total        used        free      shared  buff/cache   available
+内存：      755Gi        24Gi       121Gi       231Mi       610Gi       726Gi
+交换：       99Gi        40Gi        59Gi
+文件系统        大小  已用  可用 已用% 挂载点
+/dev/nvme0n1p1  1.9T  911G  951G   49% /mnt/nvme0
+/dev/nvme2n1p1  3.8T  2.9T  918G   76% /mnt/nvme1
+/dev/nvme1n1p1  3.8T  2.9T  847G   78% /mnt/nvme2

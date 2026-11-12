@@ -1,0 +1,47 @@
+[
+  {
+    "file": "biology-citations.png",
+    "bytes": 133880,
+    "sha256": "b20a41e9838b2b444f6d51246a4d2f8035ffbd351af30d77f11a3b6af1f12be0"
+  },
+  {
+    "file": "browser-qa.json",
+    "bytes": 10756,
+    "sha256": "033ec333d6cb8561d721ec63fc2a2ca73ee94ff4532ce09ddbb5a833ceb6eaa5"
+  },
+  {
+    "file": "metadata.json",
+    "bytes": 70580,
+    "sha256": "1f45e30c31699ac9d4bd4759313755172e4b2336526b804791ca317615533194"
+  },
+  {
+    "file": "mobile.png",
+    "bytes": 107752,
+    "sha256": "86da397218988b2aa3a898fcd537ae73d984ad2fbbea64eba5d2b5ddb02a85a8"
+  },
+  {
+    "file": "served-run.json",
+    "bytes": 1038616,
+    "sha256": "21ee1107450ca93296b8c8575815263a00e5fd5b25784ed4773804d5d40cdf62"
+  },
+  {
+    "file": "service-identity.json",
+    "bytes": 931,
+    "sha256": "3297804b23c9e17e684ba0896a96e384bb881beb3f2f1c9be59b977753464607"
+  },
+  {
+    "file": "startup-attempt.json",
+    "bytes": 549,
+    "sha256": "a9523ffea0d8ab9a8e01d6b4fd84849615ba224e9466989d5bac5fc8120886ef"
+  },
+  {
+    "file": "topics-field.png",
+    "bytes": 138031,
+    "sha256": "1554d6eab1ea82c98d51c1551277a290182d5c16547f199ee2066782b165d2f9"
+  },
+  {
+    "file": "visual-review.json",
+    "bytes": 642,
+    "sha256": "3f4f88d020d8d57169ce984b929609f48739bb3485f42bf1531e2a5e5ba575bd"
+  }
+]

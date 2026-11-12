@@ -1,0 +1,122 @@
+[
+  {
+    "case": "default-build-run-1.maps",
+    "actual_graph_snapshots": 1,
+    "peak_snapshot": {
+      "file": "sample-5.txt",
+      "resident_pages": 635388,
+      "nodes": {
+        "0": 411102,
+        "1": 224286
+      },
+      "policies": {
+        "default": 635388
+      }
+    }
+  },
+  {
+    "case": "default-build-run-2.maps",
+    "actual_graph_snapshots": 1,
+    "peak_snapshot": {
+      "file": "sample-5.txt",
+      "resident_pages": 514102,
+      "nodes": {
+        "0": 352138,
+        "1": 161964
+      },
+      "policies": {
+        "default": 514102
+      }
+    }
+  },
+  {
+    "case": "default-lookup-run-1.maps",
+    "actual_graph_snapshots": 4,
+    "peak_snapshot": {
+      "file": "sample-5.txt",
+      "resident_pages": 557479,
+      "nodes": {
+        "0": 169719,
+        "1": 387760
+      },
+      "policies": {
+        "default": 557479
+      }
+    }
+  },
+  {
+    "case": "default-lookup-run-2.maps",
+    "actual_graph_snapshots": 4,
+    "peak_snapshot": {
+      "file": "sample-20.txt",
+      "resident_pages": 543436,
+      "nodes": {
+        "0": 193570,
+        "1": 349866
+      },
+      "policies": {
+        "default": 543436
+      }
+    }
+  },
+  {
+    "case": "interleave-build-run-1.maps",
+    "actual_graph_snapshots": 1,
+    "peak_snapshot": {
+      "file": "sample-5.txt",
+      "resident_pages": 441056,
+      "nodes": {
+        "0": 220225,
+        "1": 220831
+      },
+      "policies": {
+        "interleave:0-1": 441056
+      }
+    }
+  },
+  {
+    "case": "interleave-build-run-2.maps",
+    "actual_graph_snapshots": 1,
+    "peak_snapshot": {
+      "file": "sample-5.txt",
+      "resident_pages": 184743,
+      "nodes": {
+        "0": 92052,
+        "1": 92691
+      },
+      "policies": {
+        "interleave:0-1": 184743
+      }
+    }
+  },
+  {
+    "case": "interleave-lookup-run-1.maps",
+    "actual_graph_snapshots": 4,
+    "peak_snapshot": {
+      "file": "sample-20.txt",
+      "resident_pages": 543451,
+      "nodes": {
+        "0": 271427,
+        "1": 272024
+      },
+      "policies": {
+        "interleave:0-1": 543451
+      }
+    }
+  },
+  {
+    "case": "interleave-lookup-run-2.maps",
+    "actual_graph_snapshots": 4,
+    "peak_snapshot": {
+      "file": "sample-20.txt",
+      "resident_pages": 543686,
+      "nodes": {
+        "0": 271559,
+        "1": 272127
+      },
+      "policies": {
+        "interleave:0-1": 543686
+      }
+    }
+  }
+]

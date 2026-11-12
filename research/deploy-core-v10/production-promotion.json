@@ -1,0 +1,62 @@
+{
+  "status": "ready",
+  "started_at_utc": "2026-11-12T00:56:00.798977+00:00",
+  "audit": "/mnt/nvme1/backup/openalex-stats/core-concept-hits-audit-v1/audit.json",
+  "audit_sha256": "7991cec4d944a3d18820ca00f87051fd8362f678f1253078539a96ad25837df9",
+  "audit_exit_file": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-audit-v1/exit-code.txt",
+  "audit_checks": 2800,
+  "old": {
+    "pid": 877825,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v8",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v8",
+      "serve",
+      "--data",
+      "/mnt/nvme0/public/openalex-stats/results/core-goal-v2",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5119097662,
+    "kernel_stat": "877825 (oa-stats-v8) S 1 877794 877794 0 -1 4194304 11195815 0 0 0 168115 2428 0 0 20 0 50 0 5119097662 7301455872 1274095 18446744073709551615 4194304 13262993 140724159377328 0 0 0 0 1 2143420158 0 0 0 17 17 0 0 0 0 0 23678976 24526528 903843840 140724159379795 140724159379943 140724159379943 140724159381437 0",
+    "clock_ticks_per_second": 100,
+    "linux_boot_unix_seconds": 1743234530
+  },
+  "old_binary_sha256": "744b93484e7b56fb0099bd04515c145a55ef9527aecbea93fc5a39dac6db682e",
+  "old_run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+  "new_binary_sha256": "ac0efd9804294ed05c9f96d28a20b477d46d963e881edd836aff969e56b10fba",
+  "expected_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+  "new_argv": [
+    "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "serve",
+    "--data-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+    "--listen",
+    "0.0.0.0:8899"
+  ],
+  "candidate_port": 8900,
+  "shared_lock": "/home/ider/tmpdata/openalex-stats-dev-20261112/production-service-8899.lock",
+  "updated_at_utc": "2026-11-12T00:57:59.368372+00:00",
+  "old_stopped_at_utc": "2026-11-12T00:56:01.004592+00:00",
+  "new": {
+    "pid": 1004466,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121043037,
+    "kernel_stat": "1004466 (oa-stats-v10) S 1004465 1004466 1004466 0 -1 4194304 4723 0 0 0 4 2 0 0 20 0 17 0 5121043037 1379778560 6528 18446744073709551615 4194304 13305233 140727081784080 0 0 0 0 3 2143420156 0 0 0 17 26 0 0 0 0 0 23785472 24633024 1071009792 140727081789762 140727081789924 140727081789924 140727081791420 0",
+    "clock_ticks_per_second": 100,
+    "linux_boot_unix_seconds": 1743234530
+  },
+  "log": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-v1/service-production.log",
+  "ready_at_utc": "2026-11-12T00:57:59.368311+00:00",
+  "selected_works": 269194661,
+  "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+  "corpus": "core",
+  "eci_scenario": "fractional-concept-whole-0.3"
+}

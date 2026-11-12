@@ -1,0 +1,24 @@
+645469ebd000 default file=/usr/bin/dash mapped=4 mapmax=10 active=0 N0=3 N1=1 kernelpagesize_kB=4
+645469ec1000 default file=/usr/bin/dash mapped=20 mapmax=10 active=0 N0=5 N1=15 kernelpagesize_kB=4
+645469ed5000 default file=/usr/bin/dash mapped=5 mapmax=10 active=0 N0=1 N1=4 kernelpagesize_kB=4
+645469eda000 default file=/usr/bin/dash anon=2 dirty=2 active=0 N1=2 kernelpagesize_kB=4
+645469edc000 default file=/usr/bin/dash anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+645469edd000 default anon=1 dirty=1 N1=1 kernelpagesize_kB=4
+64548f8d0000 default heap anon=3 dirty=3 N1=3 kernelpagesize_kB=4
+789116e00000 default file=/usr/lib/x86_64-linux-gnu/libc.so.6 mapped=40 mapmax=37 active=0 N0=40 kernelpagesize_kB=4
+789116e28000 default file=/usr/lib/x86_64-linux-gnu/libc.so.6 mapped=264 mapmax=37 active=0 N0=264 kernelpagesize_kB=4
+789116fbd000 default file=/usr/lib/x86_64-linux-gnu/libc.so.6 mapped=32 mapmax=37 active=0 N0=32 kernelpagesize_kB=4
+789117015000 default file=/usr/lib/x86_64-linux-gnu/libc.so.6
+789117016000 default file=/usr/lib/x86_64-linux-gnu/libc.so.6 anon=4 dirty=4 active=0 N1=4 kernelpagesize_kB=4
+78911701a000 default file=/usr/lib/x86_64-linux-gnu/libc.so.6 anon=2 dirty=2 active=0 N1=2 kernelpagesize_kB=4
+78911701c000 default anon=4 dirty=4 active=0 N1=4 kernelpagesize_kB=4
+7891170c0000 default anon=2 dirty=2 active=0 N1=2 kernelpagesize_kB=4
+7891170d4000 default anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7891170d6000 default file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 mapped=2 mapmax=37 active=0 N0=2 kernelpagesize_kB=4
+7891170d8000 default file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 mapped=42 mapmax=37 active=0 N0=42 kernelpagesize_kB=4
+789117102000 default file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 mapped=11 mapmax=35 active=0 N0=11 kernelpagesize_kB=4
+78911710e000 default file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 anon=2 dirty=2 active=0 N1=2 kernelpagesize_kB=4
+789117110000 default file=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 anon=2 dirty=2 active=0 N1=2 kernelpagesize_kB=4
+7ffcfb623000 default stack anon=3 dirty=3 active=0 N1=3 kernelpagesize_kB=4
+7ffcfb7eb000 default
+7ffcfb7ef000 default

@@ -1,0 +1,3 @@
+[
+	{"corpus":"all","artifact":"discipline_pci","expected_rows":31374,"actual_rows":31374,"missing_or_extra":0,"semantic_mismatches":0,"score_mismatches":0,"max_score_difference":0.0}
+]

@@ -1,0 +1,69 @@
+{
+  "status": "completed_no_competing_audit",
+  "count": 3,
+  "sample_ids": 5000000,
+  "gomaxprocs": 46,
+  "round_order_rotated": true,
+  "numa": "default",
+  "started": "2026-11-12T02:51:19+08:00",
+  "completed": "2026-11-12T02:52:11+08:00",
+  "medians": [
+    {
+      "variant": "serial",
+      "build_seconds_median": 0.937167934,
+      "build_seconds_min": 0.926025193,
+      "build_seconds_max": 0.963556977,
+      "build_peak_rss_mib_max": 225.45703125,
+      "build_cpu_percent_median": 102.0,
+      "allocated_bytes_median": 191329624.0,
+      "single_lookup_ns_median": 245.8,
+      "concurrent_lookup_ns_median": 7.214,
+      "build_speedup": 1.0,
+      "concurrent_lookup_slowdown": 1.0
+    },
+    {
+      "variant": "parallel_w16_s64",
+      "build_seconds_median": 0.066514053,
+      "build_seconds_min": 0.063222745,
+      "build_seconds_max": 0.06902194,
+      "build_peak_rss_mib_max": 300.82421875,
+      "build_cpu_percent_median": 535.0,
+      "allocated_bytes_median": 271393704.0,
+      "single_lookup_ns_median": 227.5,
+      "concurrent_lookup_ns_median": 7.471,
+      "build_speedup": 14.08977338969255,
+      "concurrent_lookup_slowdown": 1.035625173274189
+    },
+    {
+      "variant": "parallel_w32_s256",
+      "build_seconds_median": 0.068548181,
+      "build_seconds_min": 0.04811086,
+      "build_seconds_max": 0.095014268,
+      "build_peak_rss_mib_max": 298.20703125,
+      "build_cpu_percent_median": 677.0,
+      "allocated_bytes_median": 271571448.0,
+      "single_lookup_ns_median": 233.0,
+      "concurrent_lookup_ns_median": 7.557,
+      "build_speedup": 13.671667436368589,
+      "concurrent_lookup_slowdown": 1.0475464374826726
+    },
+    {
+      "variant": "parallel_w48_s512",
+      "build_seconds_median": 0.044868887,
+      "build_seconds_min": 0.044140211,
+      "build_seconds_max": 0.045037835,
+      "build_peak_rss_mib_max": 297.83203125,
+      "build_cpu_percent_median": 922.0,
+      "allocated_bytes_median": 271820952.0,
+      "single_lookup_ns_median": 257.6,
+      "concurrent_lookup_ns_median": 7.698,
+      "build_speedup": 20.886810363715952,
+      "concurrent_lookup_slowdown": 1.067091766010535
+    }
+  ],
+  "limitations": [
+    "Small ID sample relative to510m full input",
+    "Median of3 runs; lookup includes query-generation controls",
+    "CPU percentage is whole subprocess average including untimed setup, not per-phase peak"
+  ]
+}

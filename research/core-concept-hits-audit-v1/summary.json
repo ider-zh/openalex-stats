@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+  "checks": 2800,
+  "failed_checks": 0,
+  "model_checks": 216,
+  "model_failed": 0,
+  "exports": [
+    {
+      "file": "country_eci.parquet",
+      "passed": true,
+      "expected_rows": 53568,
+      "rows": 53568,
+      "missing_rows": 0,
+      "unexpected_rows": 0,
+      "duplicate_rows": 0,
+      "semantic_mismatches": 0,
+      "max_score_error": 0
+    },
+    {
+      "file": "discipline_pci.parquet",
+      "passed": true,
+      "expected_rows": 31374,
+      "rows": 31374,
+      "missing_rows": 0,
+      "unexpected_rows": 0,
+      "duplicate_rows": 0,
+      "semantic_mismatches": 0,
+      "max_score_error": 0
+    }
+  ],
+  "sql_seconds": 1748.58208116,
+  "started_at": "2026-11-12T00:24:51.322269266Z",
+  "completed_at": "2026-11-12T00:54:33.626163991Z",
+  "raw_rows": 510372821,
+  "selected_by_corpus": {
+    "core": 269194661,
+    "xpac": 0
+  },
+  "publications": 201267475,
+  "retained_edges": 2363318327,
+  "self_loops": 953374,
+  "future_target_edges": 13678393,
+  "audit_report": "/mnt/nvme1/backup/openalex-stats/core-concept-hits-audit-v1/audit.json",
+  "model_report": "/mnt/nvme1/backup/openalex-stats/core-concept-hits-audit-v1/model-audit.json",
+  "exit_evidence": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-audit-v1/exit-code.txt",
+  "audit_sha256": "7991cec4d944a3d18820ca00f87051fd8362f678f1253078539a96ad25837df9",
+  "model_sha256": "bc31b33be9542e64adaf120dcbb77f979b4443b970fbc9c819f564f6034b8da5",
+  "integer_and_dictionary_checks": [
+    {
+      "invalid_whole_integers": 0,
+      "invalid_counts": 0,
+      "invalid_dimensions": 0,
+      "invalid_scenario_metadata": 0,
+      "invalid_dictionary_labels": 0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "query": {
+    "corpus": "core",
+    "scenario": "whole-concept-whole-0.3",
+    "scheme": "concepts",
+    "level": "0",
+    "discipline": "https://openalex.org/C86803240",
+    "countries": [
+      "CN"
+    ],
+    "metric": "publications",
+    "basis": "publications",
+    "start": 2025,
+    "end": 2025
+  },
+  "attribution": "country_and_discipline_of_published_work",
+  "definition": "圈定范围内当年发表的文献量，按当前场景的国家及学科权重计数。 国家全计数：每个归属国记 1。Concepts 同层去重后每个命中标签记 1，不在标签间均分。当前论文量为整数计数。Concepts score ≥ 0.3。",
+  "series": [
+    {
+      "id": "CN",
+      "name": "China",
+      "points": [
+        {
+          "year": 2025,
+          "value": 146958,
+          "status": "ok",
+          "partial": false,
+          "rank": null,
+          "rank_universe": 0
+        }
+      ]
+    }
+  ],
+  "counting": {
+    "country_mode": "whole",
+    "concept_mode": "whole",
+    "concept_threshold": 0.3,
+    "concept_threshold_applies": true,
+    "publication_counts_integer": true
+  }
+}

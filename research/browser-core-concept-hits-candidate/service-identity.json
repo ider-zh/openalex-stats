@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-11-12T00:26:51.7256433Z",
+  "url": "http://192.168.1.229:8900",
+  "pid": 963184,
+  "binary": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+  "binary_sha256": "ac0efd9804294ed05c9f96d28a20b477d46d963e881edd836aff969e56b10fba",
+  "corpus": "core",
+  "data_dir": "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+  "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+  "selected_works": 269194661,
+  "status": "full_snapshot_complete",
+  "eci_scenario": "fractional-concept-whole-0.3",
+  "asset_override": false
+}

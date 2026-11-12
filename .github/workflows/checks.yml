@@ -1,0 +1,27 @@
+name: Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version-file: go.mod
+          cache: true
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - run: go test ./...
+      - run: go vet ./...
+      - run: node --test cloudflare/worker.test.mjs
+      - run: node scripts/bump-chart-test.mjs
+      - run: npm run build
+      - name: Build computation and export CLI
+        run: CGO_ENABLED=0 go build -trimpath -o /tmp/oa-stats ./cmd/oa-stats

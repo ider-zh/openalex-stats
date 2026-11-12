@@ -1,0 +1,11 @@
+--- baseline-scan.go
++++ batch-scan.go
+@@ -232,7 +232,7 @@
+ 	}
+ 	r := parquet.NewGenericReader[normalizedRow](pf, schema)
+ 	defer r.Close()
+-	batch := make([]normalizedRow, 128)
++	batch := make([]normalizedRow, 32)
+ 	for {
+ 		if err := ctx.Err(); err != nil {
+ 			return err

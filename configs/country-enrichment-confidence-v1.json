@@ -1,0 +1,15 @@
+{
+  "version": "country-enrichment-confidence-review-v1",
+  "automatic_application": false,
+  "probabilities_calibrated": false,
+  "classes": {
+    "institution_record_candidate": "Structured country on the paper's institution or a same-snapshot institution-ID lookup, without contrary authorship evidence. Institutional history and overseas campus attribution still require review.",
+    "explicit_country_text_candidate": "A complete country-name address segment, with no contrary institution/authorship evidence. It is a rule-based candidate, not a human-validated country label.",
+    "institution_and_text_candidate": "Both structured institution and explicit text provide accepted evidence for the previously UNKNOWN Work. Source-country sets and every evidence decision remain available.",
+    "existing_country_set_extension": "A previously country-known Work gains evidence from an unlabelled authorship; separate approval is needed because country fractional weights can change.",
+    "mixed_evidence_review_only": "An independent valid candidate and other conflicting evidence coexist on the same Work. The full rule result and the subset excluding whole-Work conflicts are both reported.",
+    "conflict_or_ambiguity_review_only": "Contradiction or ambiguous geography; no confidence probability or automatic replacement is assigned.",
+    "secondary_geo_name_review_only": "Same-snapshot institution.geo.country name matched through typed-country crosswalk; source code was missing. No reverse geocoder or institution-brand inference is used.",
+    "secondary_exact_dictionary_review_only": "An exact normalized raw affiliation is supported by at least five distinct Works, one country and one explicit institution group, with address specificity. Holdout consistency is not human-reviewed accuracy."
+  }
+}

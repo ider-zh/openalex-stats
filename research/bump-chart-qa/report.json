@@ -1,0 +1,38 @@
+{
+  "fixture": "synthetic server-assigned global ranks; not research results",
+  "echarts": "5.6.0",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "valid_points": 242,
+      "pass": true,
+      "checked": [
+        "rank path coordinates",
+        "rank1 above rank20",
+        "all annual dots",
+        "missing-year gap",
+        "actual hover score/rank and sort",
+        "no page errors or horizontal overflow"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "valid_points": 242,
+      "pass": true,
+      "checked": [
+        "rank path coordinates",
+        "rank1 above rank20",
+        "all annual dots",
+        "missing-year gap",
+        "actual hover score/rank and sort",
+        "no page errors or horizontal overflow"
+      ]
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\bump-chart-qa\\desktop.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\bump-chart-qa\\mobile.png"
+  ]
+}

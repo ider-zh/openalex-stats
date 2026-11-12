@@ -1,0 +1,17 @@
+{
+  "reviewed_at_utc": "2026-11-12T04:30:43.7766342Z",
+  "screenshots": [
+    "method-candidate-r2/core-desktop-java-eci-rank.png",
+    "method-candidate-r2/mobile-java-method-pci.png"
+  ],
+  "observations": [
+    "Large desktop and mobile typography remains readable",
+    "Local country SVG flags and neutral global identity correct",
+    "PCI explicitly describes one curve per selected discipline",
+    "Java 16/17 and independent direction warning and sensitivity link visible",
+    "No horizontal document overflow in real 390px mobile QA"
+  ],
+  "reviewer": "ui_multi_discipline",
+  "status": "passed",
+  "revision": "r2"
+}

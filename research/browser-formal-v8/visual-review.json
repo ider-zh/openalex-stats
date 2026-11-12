@@ -1,0 +1,17 @@
+{
+  "reviewed_at_utc": "2026-11-11T19:34:19.3786323Z",
+  "desktop": {
+    "file": "topics-field.png",
+    "passed": true,
+    "note": "Visible 2025 publication endpoints agree with table: CN 50895.79, US 24906.7, GB 5442.53. Filters, legend, axes and labels readable."
+  },
+  "mobile": {
+    "file": "mobile.png",
+    "passed": true,
+    "note": "390px mobile layout has no horizontal overflow. Accounting citation-RCA endpoints agree with 2025 table: US1.52, GB1.04, FR0.61, CN0.47. Controls and table readable."
+  },
+  "browser_checks": 24,
+  "page_errors": 0,
+  "external_runtime_requests": 0,
+  "asset_override": false
+}

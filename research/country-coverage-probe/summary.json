@@ -1,0 +1,4 @@
+[
+	{"is_xpac":false,"eligible_sample_works":339736,"missing_country":152087,"recoverable_embedded_country":0,"recoverable_institution_lookup":13,"recoverable_either":13,"missing_with_raw_affiliation":12422,"missing_with_institution_id":438},
+	{"is_xpac":true,"eligible_sample_works":258777,"missing_country":236008,"recoverable_embedded_country":0,"recoverable_institution_lookup":0,"recoverable_either":0,"missing_with_raw_affiliation":1555,"missing_with_institution_id":31}
+]

@@ -1,0 +1,6 @@
+[
+	{"scheme":"concepts","level":"0","country_years":6165,"max_delta_from_topics_whole_total":3.4458935260772705e-8,"mismatched_country_years":0},
+	{"scheme":"concepts","level":"1","country_years":6165,"max_delta_from_topics_whole_total":7.450580596923828e-9,"mismatched_country_years":0},
+	{"scheme":"topics","level":"field","country_years":6165,"max_delta_from_topics_whole_total":0.0,"mismatched_country_years":0},
+	{"scheme":"topics","level":"subfield","country_years":6165,"max_delta_from_topics_whole_total":0.0,"mismatched_country_years":0}
+]

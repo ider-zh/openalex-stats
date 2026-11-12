@@ -1,0 +1,11 @@
+{
+  "snapshot_date": "2026-06-26",
+  "manifest_sha256": "10c1785b4a6f9757823fc6dd005a052716e2c510ea751659cab4bcfba4c35e2a",
+  "files": 2446,
+  "rows": 510372821,
+  "reference_leaf_slots": 3473805571,
+  "reference_column_compressed_bytes": 31705282401,
+  "csr_two_directions_uint32_estimate_bytes": 35956409720,
+  "dense_uint32_scratch_per_worker_bytes": 2041491284,
+  "limitations": "Leaf slots include null/empty list placeholders and duplicates; not canonical edge count. CSR estimate excludes ID map, years, build buffers, allocator and per-worker scratch. No closure audit performed."
+}

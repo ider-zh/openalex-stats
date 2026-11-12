@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "baseline_run_id": "65644017413394b988bb5f1e81e7e4a055e2a119f4463650b8ce1f22b557d1d7",
+  "candidate_run_id": "e1c0135626bc7dfe950894a9e666df5d181d8c0d673023655221f27921445844",
+  "absolute_tolerance": 1E-07,
+  "relative_tolerance": 1E-10,
+  "duckdb_version": "1.4.1",
+  "baseline_independent_audit": "research/full-audit-v5/audit.json",
+  "baseline_audit_sha256": "29df8070359496f21e1b4bfadc37f3b2608c64995cde567ab15a4a92bee99f0d",
+  "candidate_model_audit": "research/model-audit-v7-v2.json",
+  "candidate_model_audit_sha256": "6da9fc3ff58a18a26819d99f374636f4d52c290814faaf55435733b9e638d430",
+  "sql": "research/compare-v4-v7.sql",
+  "sql_sha256": "e104e92f3499a2a8229ecfea0beeb9881fb3cb7e24d3e2ad203673409fd58bc4",
+  "tables": [
+    {
+      "artifact": "cube",
+      "missing_baseline": 0,
+      "missing_candidate": 0,
+      "matched_rows": 2562778,
+      "duplicate_baseline": 0,
+      "duplicate_candidate": 0,
+      "numeric_mismatch_rows": 0,
+      "flag_mismatch_rows": 0,
+      "max_abs_publications": 0.0,
+      "max_abs_citations": 4.656612873077393E-10
+    },
+    {
+      "artifact": "statistics",
+      "missing_baseline": 0,
+      "missing_candidate": 0,
+      "matched_rows": 14966202,
+      "duplicate_baseline": 0,
+      "duplicate_candidate": 0,
+      "numeric_mismatch_rows": 0,
+      "flag_mismatch_rows": 0,
+      "max_abs_publications": 0.0,
+      "max_abs_citations": 1.862645149230957E-09,
+      "max_abs_publication_share": 8.881784197001252E-16,
+      "max_abs_citation_share": 1.2212453270876722E-15,
+      "max_abs_publication_rca": 5.184119800105691E-11,
+      "max_abs_citation_rca": 7.23048287909478E-11,
+      "max_abs_publication_matrix_total": 1.2945383787155151E-07,
+      "max_abs_citation_matrix_total": 2.7418136596679688E-06
+    },
+    {
+      "artifact": "rca",
+      "missing_baseline": 0,
+      "missing_candidate": 0,
+      "matched_rows": 29932404,
+      "duplicate_baseline": 0,
+      "duplicate_candidate": 0,
+      "numeric_mismatch_rows": 0,
+      "flag_mismatch_rows": 0,
+      "max_abs_rca": 7.23048287909478E-11
+    }
+  ],
+  "note": "Independent SQL FULL JOIN of every exported cell; not a third full raw snapshot reconstruction. Baseline full citation-join audit plus all-cell equivalence and fresh candidate model audit establish final consistency. Small floating summation-order differences are reported, not claimed byte-identical."
+}

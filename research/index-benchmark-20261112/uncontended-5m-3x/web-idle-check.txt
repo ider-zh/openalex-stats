@@ -1,0 +1,5 @@
+Linux 6.8.0-52-generic (r730xd-2.lmd.wuzhen.ai) 	2026年11月12日 	_x86_64_	(48 CPU)
+
+02时51分19秒   UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+02时51分20秒  1001    861375    0.00    0.00    0.00    0.00    0.00    10  oa-stats-v6
+平均时间:  1001    861375    0.00    0.00    0.00    0.00    0.00     -  oa-stats-v6

@@ -1,0 +1,154 @@
+{
+  "status": "ready",
+  "old": {
+    "pid": 1031515,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121163093,
+    "kernel_stat": "1031515 (oa-stats-v10) S 1 1031515 1031515 0 -1 4194304 48691306 0 0 0 96413 5525 0 0 20 0 9 0 5121163093 13403410432 2581101 18446744073709551615 4194304 13305233 140725581914464 0 0 0 0 1 2143420158 0 0 0 17 7 0 0 0 0 0 23785472 24633024 220229632 140725581916399 140725581916633 140725581916633 140725581918140 0\n"
+  },
+  "candidate": {
+    "pid": 1171297,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v11-typography-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v11-typography-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8901"
+    ],
+    "start_clock_ticks": 5121811773,
+    "kernel_stat": "1171297 (oa-stats-v11-ty) S 1 1171297 1171297 0 -1 4194304 11462075 0 0 0 20353 1610 0 0 20 0 9 0 5121811773 13807886336 2991937 18446744073709551615 4194304 13305233 140722739665200 0 0 0 0 1 2143420158 0 0 0 17 4 0 0 0 0 0 23789568 24637120 198017024 140722739673280 140722739673528 140722739673528 140722739675054 0\n"
+  },
+  "new_binary_sha256": "9c0d2bd5b9a559a679a1b1a5ca3b6f8f64e48773c0eb5f4a8d7a4e612a26b00c",
+  "old_binary_sha256": "ac0efd9804294ed05c9f96d28a20b477d46d963e881edd836aff969e56b10fba",
+  "browser_gates": {
+    "core": {
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/ui-typography-v11/candidate-r2-core-browser-qa.json",
+      "sha256": "a0324a4677443c50ff75cd50c8be245f93eacb6b530ebfa951be1730468574fd",
+      "checks": 34
+    },
+    "all": {
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/ui-typography-v11/candidate-r2-all-browser-qa.json",
+      "sha256": "244d905b499f01d453e68d2645d06b949488e11c026c323bdaa7a2b242ffc652",
+      "checks": 34
+    }
+  },
+  "visual_qa_sha256": "d465e105e00ab12bf7d00f9bb29dab2c99bf0d0259c5681808b571783b01b401",
+  "candidate_health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "runs": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  },
+  "old_health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "runs": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  },
+  "updated_at_utc": "2026-11-12T03:12:06.286007+00:00",
+  "new": {
+    "pid": 1172407,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v11-typography-r2",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v11-typography-r2",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121844348,
+    "kernel_stat": "1172407 (oa-stats-v11-ty) S 1172406 1172407 1172407 0 -1 4194304 4318 0 0 0 5 1 0 0 20 0 6 0 5121844348 1377955840 6624 18446744073709551615 4194304 13305233 140723357550192 0 0 0 0 3 2143420156 0 0 0 17 35 0 0 0 0 0 23789568 24637120 214106112 140723357554897 140723357555145 140723357555145 140723357556654 0\n"
+  },
+  "health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "runs": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  }
+}

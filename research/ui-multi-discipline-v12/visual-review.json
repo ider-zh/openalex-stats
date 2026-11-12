@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "revision": "r2",
+  "reviewed_at_utc": "2026-11-12T03:50:18.6313863Z",
+  "images": [
+    "feature-candidate-r2/core-desktop-27-tooltip.png",
+    "feature-candidate-r2/mobile-27-long-subfield-tooltip.png",
+    "feature-candidate-r2/core-desktop-pci-rank.png",
+    "feature-candidate-r2/mobile-long-subfield-tree.png"
+  ],
+  "checks": [
+    "27 pair curves with country colors and subject line styles",
+    "country flags in chips picker tooltip legend and table, GLOBAL neutral",
+    "knowledge complexity separated from counts/citations and RCA",
+    "larger typography preserved, long subjects wrap without overflow",
+    "table numeric values never split across lines, table and tooltip scroll all rows",
+    "ECI per country and PCI per global discipline; score/rank and corpus switch remain valid"
+  ],
+  "asset_override": false
+}

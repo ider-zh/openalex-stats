@@ -1,0 +1,4 @@
+文件系统        大小  已用  可用 已用% 挂载点
+/dev/nvme0n1p1  1.9T  910G  953G   49% /mnt/nvme0
+/dev/nvme2n1p1  3.8T  2.9T  927G   76% /mnt/nvme1
+/dev/nvme1n1p1  3.8T  2.9T  901G   77% /mnt/nvme2

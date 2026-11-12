@@ -1,0 +1,15 @@
+/bin/
+/out/
+/dist/
+/research/country-enrichment*/
+/docs/country-enrichment-review.md
+/node_modules/
+/results/full/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.test
+*.prof
+*.tmp

@@ -1,0 +1,33 @@
+00400000 interleave:0-1 file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test mapped=321 active=0 N1=321 kernelpagesize_kB=4
+00551000 interleave:0-1 file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test mapped=390 active=0 N0=23 N1=367 kernelpagesize_kB=4
+006d7000 interleave:0-1 file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test anon=7 dirty=7 mapped=35 active=0 N0=9 N1=26 kernelpagesize_kB=4
+006fa000 interleave:0-1 anon=22 dirty=22 active=0 N0=12 N1=10 kernelpagesize_kB=4
+2002f4000000 interleave:0-1
+2002f7800000 interleave:0-1 anon=183313 dirty=183313 active=41 N0=91666 N1=91647 kernelpagesize_kB=4
+7fce3e99c000 interleave:0-1 anon=497 dirty=497 active=10 N0=256 N1=241 kernelpagesize_kB=4
+7fce3eea0000 interleave:0-1 anon=10 dirty=10 active=1 N0=6 N1=4 kernelpagesize_kB=4
+7fce3f000000 interleave:0-1 anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7fce41000000 interleave:0-1
+7fce55005000 interleave:0-1 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7fce55007000 interleave:0-1
+7fce61000000 interleave:0-1
+7fce75005000 interleave:0-1 anon=2 dirty=2 active=0 N0=1 N1=1 kernelpagesize_kB=4
+7fce75007000 interleave:0-1
+7fce83800000 interleave:0-1 anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7fce83801000 interleave:0-1
+7fce85500000 interleave:0-1 anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7fce85501000 interleave:0-1
+7fce85805000 interleave:0-1 anon=32 dirty=32 active=0 N0=16 N1=16 kernelpagesize_kB=4
+7fce85825000 interleave:0-1 anon=40 dirty=40 active=7 N0=21 N1=19 kernelpagesize_kB=4
+7fce858a5000 interleave:0-1 anon=16 dirty=16 active=0 N0=8 N1=8 kernelpagesize_kB=4
+7fce858b5000 interleave:0-1 anon=3 dirty=3 active=0 N0=1 N1=2 kernelpagesize_kB=4
+7fce858c5000 interleave:0-1 anon=10 dirty=10 active=0 N0=5 N1=5 kernelpagesize_kB=4
+7fce859c5000 interleave:0-1 anon=4 dirty=4 active=0 N0=2 N1=2 kernelpagesize_kB=4
+7fce859d7000 interleave:0-1
+7fce85a77000 interleave:0-1 anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7fce85a78000 interleave:0-1
+7fce85ad7000 interleave:0-1 anon=1 dirty=1 active=0 N1=1 kernelpagesize_kB=4
+7fce85af7000 interleave:0-1 anon=37 dirty=37 active=0 N0=19 N1=18 kernelpagesize_kB=4
+7ffec9b64000 interleave:0-1 stack anon=4 dirty=4 active=0 N0=3 N1=1 kernelpagesize_kB=4
+7ffec9b8a000 interleave:0-1
+7ffec9b8e000 interleave:0-1

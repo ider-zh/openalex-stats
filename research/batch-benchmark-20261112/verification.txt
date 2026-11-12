@@ -1,0 +1,2 @@
+PASS: all 12 complete scans have identical ordered full-field SHA256, totals and scan Stats
+{"concepts_0": 3414682, "concepts_1": 3394727, "countries": 1436748, "fields": 863977, "references": 10853745, "rows": 1434610, "sha256": "2e04815e8704a98874dffe8b56d979aa5d544d2d400a7eba3266f316553ba7b2", "subfields": 863977}

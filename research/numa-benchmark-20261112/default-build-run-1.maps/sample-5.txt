@@ -1,0 +1,38 @@
+00400000 default file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test dirty=321 active=0 N1=321 kernelpagesize_kB=4
+00551000 default file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test dirty=390 active=0 N1=390 kernelpagesize_kB=4
+006d7000 default file=/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb/graph.test anon=7 dirty=35 active=0 N0=7 N1=28 kernelpagesize_kB=4
+006fa000 default anon=23 dirty=23 active=0 N0=22 N1=1 kernelpagesize_kB=4
+259378000000 default
+259378c00000 default anon=632876 dirty=632876 active=313 N0=410312 N1=222564 kernelpagesize_kB=4
+259413800000 default
+7e1de75ea000 default anon=34 dirty=34 active=0 N0=14 N1=20 kernelpagesize_kB=4
+7e1de760e000 default anon=2 dirty=2 active=0 N0=2 kernelpagesize_kB=4
+7e1de762e000 default anon=24 dirty=24 active=0 N0=13 N1=11 kernelpagesize_kB=4
+7e1de7680000 default anon=32 dirty=32 active=0 N0=2 N1=30 kernelpagesize_kB=4
+7e1de76a4000 default anon=80 dirty=80 active=0 N0=43 N1=37 kernelpagesize_kB=4
+7e1de7732000 default anon=1370 dirty=1370 active=0 N0=559 N1=811 kernelpagesize_kB=4
+7e1de83a0000 default anon=17 dirty=17 active=0 N0=11 N1=6 kernelpagesize_kB=4
+7e1de8500000 default anon=20 dirty=20 active=0 N0=6 N1=14 kernelpagesize_kB=4
+7e1de8600000 default anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7e1dea600000 default
+7e1dff126000 default anon=3 dirty=3 active=0 N0=2 N1=1 kernelpagesize_kB=4
+7e1dff129000 default
+7e1e0a600000 default
+7e1e1f126000 default anon=3 dirty=3 active=0 N0=2 N1=1 kernelpagesize_kB=4
+7e1e1f129000 default
+7e1e2cf64000 default anon=2 dirty=2 active=0 N0=2 kernelpagesize_kB=4
+7e1e2cf66000 default
+7e1e2eb2c000 default anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7e1e2eb2d000 default
+7e1e2ee0d000 default anon=48 dirty=48 active=0 N0=33 N1=15 kernelpagesize_kB=4
+7e1e2ee3d000 default anon=28 dirty=28 active=0 N0=19 N1=9 kernelpagesize_kB=4
+7e1e2ee7d000 default anon=17 dirty=17 active=0 N0=2 N1=15 kernelpagesize_kB=4
+7e1e2ee9d000 default anon=15 dirty=15 active=0 N0=4 N1=11 kernelpagesize_kB=4
+7e1e2eeaf000 default
+7e1e2ef54000 default anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7e1e2ef55000 default
+7e1e2efaf000 default anon=1 dirty=1 active=0 N0=1 kernelpagesize_kB=4
+7e1e2efcf000 default anon=40 dirty=40 active=0 N0=39 N1=1 kernelpagesize_kB=4
+7ffed29a4000 default stack anon=4 dirty=4 active=0 N0=4 kernelpagesize_kB=4
+7ffed29c5000 default
+7ffed29c9000 default

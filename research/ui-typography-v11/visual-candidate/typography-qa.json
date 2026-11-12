@@ -1,0 +1,152 @@
+{
+  "url": "http://192.168.1.229:8901",
+  "asset_override": false,
+  "started_at": "2026-11-12T03:01:35.490Z",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "status": "passed",
+      "publication": {
+        "fonts": {
+          "body": "16px",
+          ".control-block legend": "15px",
+          ".control-block label": "14px",
+          ".switch button": "15px",
+          "#yearStart": "15px",
+          "#countrySearch": "15px",
+          ".country-option": "15px",
+          ".selected-countries button": "13px",
+          ".tree-picker>summary": "15px",
+          ".hint": "13px",
+          ".metric-tabs button": "14px",
+          ".metric-description": "14px",
+          ".chart-footer p": "13px",
+          "table": "15px",
+          "th": "13px",
+          "td": "15px",
+          ".method-panel>p": "15px"
+        },
+        "chart": {
+          "width": 989,
+          "height": 460,
+          "legend": 13,
+          "x_axis": 12,
+          "y_axis": 12,
+          "tooltip": 14,
+          "names": [
+            "中国",
+            "美国",
+            "英国",
+            "德国",
+            "法国",
+            "日本",
+            "印度",
+            "加拿大",
+            "韩国"
+          ]
+        },
+        "page_width": 1440,
+        "content_width": 1440
+      },
+      "bump": {
+        "fonts": {
+          "body": "16px",
+          ".control-block legend": "15px",
+          ".control-block label": "14px",
+          ".switch button": "15px",
+          "#yearStart": "15px",
+          "#countrySearch": "15px",
+          ".country-option": "15px",
+          ".selected-countries button": "13px",
+          ".tree-picker>summary": "15px",
+          ".hint": "13px",
+          ".metric-tabs button": "14px",
+          ".metric-description": "14px",
+          ".chart-footer p": "13px",
+          "table": "15px",
+          "th": "13px",
+          "td": "15px",
+          ".method-panel>p": "15px"
+        },
+        "chart": {
+          "width": 989,
+          "height": 460,
+          "legend": 13,
+          "x_axis": 12,
+          "y_axis": 12,
+          "tooltip": 14,
+          "names": [
+            "中国",
+            "美国",
+            "英国",
+            "德国",
+            "法国",
+            "日本",
+            "印度",
+            "加拿大",
+            "韩国"
+          ]
+        },
+        "page_width": 1440,
+        "content_width": 1440
+      },
+      "tooltip": {
+        "font": "14px",
+        "width": 253.03125,
+        "left": 1017,
+        "right": 1270.03125,
+        "chart_left": 391,
+        "chart_right": 1380,
+        "rank_rows": [
+          {
+            "id": "IN",
+            "rank": 3
+          },
+          {
+            "id": "CN",
+            "rank": 5
+          },
+          {
+            "id": "JP",
+            "rank": 9
+          },
+          {
+            "id": "KR",
+            "rank": 11
+          },
+          {
+            "id": "DE",
+            "rank": 32
+          },
+          {
+            "id": "FR",
+            "rank": 55
+          },
+          {
+            "id": "US",
+            "rank": 108
+          },
+          {
+            "id": "GB",
+            "rank": 117
+          },
+          {
+            "id": "CA",
+            "rank": 155
+          }
+        ]
+      },
+      "tree": {
+        "font": "15px",
+        "client": 270,
+        "scroll": 270,
+        "text": "Organizational Behavior and Human Resource Management"
+      },
+      "errors": []
+    }
+  ],
+  "status": "failed",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n481 !== 390\n\n    at file:///C:/Users/ider/Documents/ChatGPT/openalex-stats/scripts/typography-qa.mjs:58:10",
+  "completed_at": "2026-11-12T03:01:48.785Z"
+}

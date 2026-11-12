@@ -1,0 +1,9 @@
+{
+  "remote_directory": "/mnt/nvme0/public/openalex-stats/numa-benchmark-20261112-5d677c63eb",
+  "status": "completed",
+  "rounds": 2,
+  "sample_size": 50000000,
+  "gomaxprocs": 46,
+  "workers": 32,
+  "shards": 256
+}

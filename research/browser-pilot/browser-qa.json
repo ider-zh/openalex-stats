@@ -1,0 +1,119 @@
+{
+  "mode": "pilot",
+  "url": "http://192.168.1.229:8899",
+  "started_at": "2026-11-11T18:20:45.186Z",
+  "checks": [
+    {
+      "name": "real_dataset_and_defaults",
+      "pass": true,
+      "detail": {
+        "status": "pilot_complete",
+        "selected_works": 576100,
+        "snapshot_date": "",
+        "scenario": "fractional-concept-0.3"
+      }
+    },
+    {
+      "name": "concept_biology_multi_country_real_series",
+      "pass": true,
+      "detail": {
+        "countries": [
+          "CN",
+          "US",
+          "GB"
+        ],
+        "points": 26
+      }
+    },
+    {
+      "name": "annual_received_citations",
+      "pass": true,
+      "detail": {
+        "series": 3,
+        "definition": "仅统计施引与被引文献都在圈定集合内的引用，按施引发表年计时，归属到被引文献。"
+      }
+    },
+    {
+      "name": "country_eci_is_subject_independent_and_invalid_scores_are_gaps",
+      "pass": true,
+      "detail": {
+        "series": 3
+      }
+    },
+    {
+      "name": "discipline_pci_is_one_global_series",
+      "pass": true,
+      "detail": {
+        "id": "GLOBAL"
+      }
+    },
+    {
+      "name": "country_multiselect_updates_query",
+      "pass": true,
+      "detail": {
+        "countries": [
+          "CN",
+          "US",
+          "GB",
+          "FR"
+        ]
+      }
+    },
+    {
+      "name": "partial_year_explicitly_marked",
+      "pass": true,
+      "detail": {
+        "year": 2026
+      }
+    },
+    {
+      "name": "whole_scenario_does_not_borrow_fractional_eci",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "topics_subfield_rca",
+      "pass": true,
+      "detail": {
+        "points": 26
+      }
+    },
+    {
+      "name": "real_csv_parquet_download_and_path_safety",
+      "pass": true,
+      "detail": {
+        "header": "scenario,scheme,level,discipline,metric,basis,country,year,value,status,partial",
+        "csvRows": 105,
+        "signature": "PAR1",
+        "unsafeStatus": 400
+      }
+    },
+    {
+      "name": "mobile_no_horizontal_overflow",
+      "pass": true,
+      "detail": {
+        "width": 390
+      }
+    },
+    {
+      "name": "no_page_errors_or_runtime_external_requests",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "requests_outside_service": [],
+  "screenshots": [
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\browser-pilot\\topics-field.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\browser-pilot\\biology-citations.png",
+    "C:\\Users\\ider\\Documents\\ChatGPT\\openalex-stats\\research\\browser-pilot\\mobile.png"
+  ],
+  "dataset": {
+    "status": "pilot_complete",
+    "selected_works": 576100,
+    "snapshot_date": "",
+    "scenario": "fractional-concept-0.3"
+  },
+  "status": "passed",
+  "completed_at": "2026-11-11T18:20:49.532Z"
+}

@@ -1,0 +1,164 @@
+{
+  "status": "ready",
+  "old": {
+    "pid": 1004466,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121043037,
+    "kernel_stat": "1004466 (oa-stats-v10) S 1 1004466 1004466 0 -1 4194304 5737597 0 0 0 20519 1390 0 0 20 0 43 0 5121043037 7838146560 1281514 18446744073709551615 4194304 13305233 140727081784080 0 0 0 0 1 2143420158 0 0 0 17 28 0 0 0 0 0 23785472 24633024 1071009792 140727081789762 140727081789924 140727081789924 140727081791420 0",
+    "clock_ticks_per_second": 100,
+    "linux_boot_unix_seconds": 1743234530
+  },
+  "old_gomaxprocs": null,
+  "new_argv": [
+    "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "serve",
+    "--data-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+    "--data-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+    "--listen",
+    "0.0.0.0:8899"
+  ],
+  "binary_sha256": "ac0efd9804294ed05c9f96d28a20b477d46d963e881edd836aff969e56b10fba",
+  "gates": {
+    "core_audit": {
+      "path": "/mnt/nvme1/backup/openalex-stats/core-concept-hits-audit-v1/audit.json",
+      "sha256": "7991cec4d944a3d18820ca00f87051fd8362f678f1253078539a96ad25837df9",
+      "exit_file": "/home/ider/tmpdata/openalex-stats-dev-20261112/core-concept-hits-audit-v1/exit-code.txt",
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455"
+    },
+    "all_audit": {
+      "path": "/mnt/nvme1/backup/openalex-stats/all-concept-hits-audit-v1/audit.json",
+      "sha256": "4cfb66b3fb4b4efc6dcb8f709e2d7f91a540ec4b364041fc75223579a44931c1",
+      "exit_file": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-audit-v1/exit-code.txt",
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e"
+    },
+    "core_browser": {
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/ui-8901/core-browser-qa.json",
+      "sha256": "481c8194b4ce586d417426b7f3c95a9af8fdde056246e1682402653db654293f",
+      "corpus": "core",
+      "checks": 34
+    },
+    "all_browser": {
+      "path": "/home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/ui-8901/all-browser-qa.json",
+      "sha256": "b937aec3830c75cd1e4b31fb659b34563c017ccc391307f1954ae916b3765d23",
+      "corpus": "all",
+      "checks": 34
+    }
+  },
+  "candidate": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "datasets": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  },
+  "old_health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        }
+      ]
+    },
+    "datasets": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      }
+    }
+  },
+  "completions": {
+    "core": {
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e"
+    },
+    "all": {
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43"
+    }
+  },
+  "shared_lock": "/home/ider/tmpdata/openalex-stats-dev-20261112/production-service-8899.lock",
+  "updated_at_utc": "2026-11-12T01:18:49.861986+00:00",
+  "new": {
+    "pid": 1031515,
+    "exe": "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+    "argv": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10",
+      "serve",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--listen",
+      "0.0.0.0:8899"
+    ],
+    "start_clock_ticks": 5121163093,
+    "kernel_stat": "1031515 (oa-stats-v10) R 1031514 1031515 1031515 0 -1 4194304 4427 0 0 0 4 1 0 0 20 0 6 0 5121163093 1310777344 6720 18446744073709551615 4194304 13305233 140725581914464 0 0 0 0 3 2143420156 0 0 0 17 37 0 0 0 0 0 23785472 24633024 220229632 140725581916399 140725581916633 140725581916633 140725581918140 0",
+    "clock_ticks_per_second": 100,
+    "linux_boot_unix_seconds": 1743234530
+  },
+  "health": {
+    "catalog": {
+      "default_corpus": "core",
+      "datasets": [
+        {
+          "id": "core",
+          "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+          "status": "full_snapshot_complete",
+          "selected_works": 269194661
+        },
+        {
+          "id": "all",
+          "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+          "status": "full_snapshot_complete",
+          "selected_works": 404079112
+        }
+      ]
+    },
+    "datasets": {
+      "core": {
+        "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "selected_works": 269194661
+      },
+      "all": {
+        "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "selected_works": 404079112
+      }
+    }
+  }
+}

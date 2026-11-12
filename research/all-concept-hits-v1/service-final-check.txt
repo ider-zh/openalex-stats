@@ -1,0 +1,6 @@
+79fe00953e592efe6ef3b150a62ef2381432f7bb837b0d2191e4ed99955684c8  /home/ider/tmpdata/openalex-stats-dev-20261112/all-concept-hits-v1/final-acceptance.json
+    PID     ELAPSED %CPU   RSS S COMMAND
+ 963184    01:01:28 11.3 5123908 S /home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10 serve --data-core /mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1 --listen 0.0.0.0:8900
+1031515       08:58 47.9 11564932 S /home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-v10 serve --data-core /mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1 --data-all /mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1 --listen 0.0.0.0:8899
+LISTEN 0      4096               *:8900             *:*    users:(("oa-stats-v10",pid=963184,fd=3))      
+LISTEN 0      4096               *:8899             *:*    users:(("oa-stats-v10",pid=1031515,fd=3))     

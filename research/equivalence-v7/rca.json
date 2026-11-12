@@ -1,0 +1,3 @@
+[
+	{"artifact":"rca","missing_baseline":0,"missing_candidate":0,"matched_rows":29932404,"duplicate_baseline":0,"duplicate_candidate":0,"numeric_mismatch_rows":0,"flag_mismatch_rows":0,"max_abs_rca":7.23048287909478e-11}
+]
