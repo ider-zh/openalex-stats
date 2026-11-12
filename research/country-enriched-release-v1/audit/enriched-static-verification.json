@@ -1,0 +1,27 @@
+{
+  "comparison": "Exact float64 bits for all source count cells, all matrix margins, every published model score/status and independently sorted global competition rank",
+  "datasets": {
+    "all": {
+      "source_rows": 15055658,
+      "nonzero_source_cells": 15055658,
+      "nonzero_matrix_cells": 15055658,
+      "count_bit_differences": 0,
+      "margin_bit_differences": 0,
+      "source_models": 432,
+      "model_points": 169884,
+      "model_score_status_rank_differences": 0
+    },
+    "core": {
+      "source_rows": 15008456,
+      "nonzero_source_cells": 15008456,
+      "nonzero_matrix_cells": 15008456,
+      "count_bit_differences": 0,
+      "margin_bit_differences": 0,
+      "source_models": 432,
+      "model_points": 169884,
+      "model_score_status_rank_differences": 0
+    }
+  },
+  "files_sha256_verified": 7133,
+  "status": "passed"
+}

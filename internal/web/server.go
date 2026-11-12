@@ -21,8 +21,9 @@ import (
 var assets embed.FS
 
 type server struct {
-	data   *dataset
-	corpus string
+	data           *dataset
+	corpus         string
+	countryVersion string
 }
 
 // New loads query-ready artifacts once and returns a concurrency-safe Handler.
@@ -50,22 +51,28 @@ func New(dataDir string) (http.Handler, error) {
 	if corpus != "all" {
 		corpus = "core"
 	}
-	return &server{data: d, corpus: corpus}, nil
+	return &server{data: d, corpus: corpus, countryVersion: "original"}, nil
 }
 
 func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	setSecurityHeaders(w)
 	if r.URL.Path == "/api/catalog" {
-		serveCatalog(w, r, Catalog{DefaultCorpus: s.corpus, Datasets: []CatalogDataset{s.catalogDataset()}})
+		serveCatalog(w, r, Catalog{DefaultCorpus: s.corpus, Datasets: []CatalogDataset{s.catalogDataset()}, DefaultCountryVersion: s.version(), CountryVersions: []CountryVersionInfo{countryVersionInfo(s.version())}})
 		return
 	}
 	var err error
+	r, err = selectCountryVersion(r, s.version())
+	if err != nil {
+		apiError(w, http.StatusBadRequest, "invalid_parameter", err.Error())
+		return
+	}
 	r, err = selectCorpus(r, s.corpus)
 	if err != nil {
 		apiError(w, http.StatusBadRequest, "invalid_parameter", err.Error())
 		return
 	}
 	w.Header().Set("X-OpenAlex-Corpus", s.corpus)
+	w.Header().Set("X-OpenAlex-Country-Version", s.version())
 	s.serveSelected(w, r)
 }
 
@@ -112,6 +119,7 @@ func (s *server) serveSelected(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		q.Corpus = s.corpus
+		q.CountryVersion = s.version()
 		response := s.data.query(q)
 		if r.URL.Path == "/api/series.csv" {
 			writeCSV(w, response)
@@ -159,6 +167,7 @@ func (s *server) metadata(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	writeJSON(w, map[string]any{
+		"country_version": s.version(), "country_version_info": countryVersionInfo(s.version()),
 		"ready": true, "status": d.run.Status, "snapshot_date": d.snapshotDate, "corpus": s.corpus, "flag_codes": flagCodes(), "max_series": MaxSeries, "max_eci_countries": len(d.countries),
 		"methods": d.methodInfo, "eci_default_method": d.defaultMethod(),
 		"year_start": d.start, "year_end": d.end, "default_year_end": min(2025, d.end), "partial_years": partial,
@@ -253,7 +262,7 @@ func writeCSV(w http.ResponseWriter, response Response) {
 	w.Header().Set("Content-Type", "text/csv; charset=utf-8")
 	w.Header().Set("Content-Disposition", "attachment; filename=\"openalex-series.csv\"")
 	c := csv.NewWriter(w)
-	_ = c.Write([]string{"scenario", "scheme", "level", "discipline", "metric", "basis", "country", "year", "value", "status", "partial", "corpus", "rank", "rank_universe", "series_id", "country_name", "discipline_name", "method", "country_iterations", "discipline_iterations", "source_run_id", "method_applies"})
+	_ = c.Write([]string{"scenario", "scheme", "level", "discipline", "metric", "basis", "country", "year", "value", "status", "partial", "corpus", "rank", "rank_universe", "series_id", "country_name", "discipline_name", "method", "country_iterations", "discipline_iterations", "source_run_id", "method_applies", "country_version"})
 	for _, series := range response.Series {
 		for _, p := range series.Points {
 			value := ""
@@ -264,7 +273,7 @@ func writeCSV(w http.ResponseWriter, response Response) {
 			if p.Rank != nil {
 				rank = strconv.Itoa(*p.Rank)
 			}
-			_ = c.Write([]string{response.Query.Scenario, response.Query.Scheme, response.Query.Level, series.Discipline, response.Query.Metric, response.Query.Basis, series.Country, strconv.Itoa(p.Year), value, p.Status, strconv.FormatBool(p.Partial), response.Query.Corpus, rank, strconv.Itoa(p.RankUniverse), series.ID, series.CountryName, series.DisciplineName, response.Query.Method, strconv.Itoa(response.Method.CountryIterations), strconv.Itoa(response.Method.DisciplineIterations), response.Method.SourceRunID, strconv.FormatBool(response.MethodApplies)})
+			_ = c.Write([]string{response.Query.Scenario, response.Query.Scheme, response.Query.Level, series.Discipline, response.Query.Metric, response.Query.Basis, series.Country, strconv.Itoa(p.Year), value, p.Status, strconv.FormatBool(p.Partial), response.Query.Corpus, rank, strconv.Itoa(p.RankUniverse), series.ID, series.CountryName, series.DisciplineName, response.Query.Method, strconv.Itoa(response.Method.CountryIterations), strconv.Itoa(response.Method.DisciplineIterations), response.Method.SourceRunID, strconv.FormatBool(response.MethodApplies), response.Query.CountryVersion})
 		}
 	}
 	c.Flush()

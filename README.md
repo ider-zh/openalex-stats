@@ -89,9 +89,9 @@ node scripts/bump-chart-test.mjs
 
 ## 国家覆盖率与研究状态
 
-Core 输出年文献的国家信息覆盖率为 48.69%，Core+XPAC 为 36.85%；按被引对象计算的引用事件国家覆盖率分别为 88.32%、88.20%。UNKNOWN 仍保留在基础统计中，不进入 ECI/RCA 模型。覆盖率是元数据观测范围，不应当作没有国家标签的文献属于某个国家的证据。
+网站默认国家补全版，可切回原始版；该选择与 Core／含 XPAC 全数据、分类和复杂度方法独立。2000—2025 完整年论文国家覆盖率：Core **49.3127%→50.3009%**，Core+XPAC **36.8614%→37.5577%**。页面顶部覆盖率包含 2026 部分年，补全后分别约49.64%、37.53%。UNKNOWN 仍保留在基础统计中，不进入 ECI/RCA 模型。详见[双版本发布说明](docs/country-enriched-release.md)。
 
-`scripts/country-enrichment` 和相关工具是单独的旁路评估：机构字段、机构 ID 与署名文本补全须经过全量评估和 review 后决定是否采用。当前正式网站和 Release 结果不含未经 review 的补全候选，也不发布原始署名文本旁路文件。
+本次补全仅采用已通过冻结留出核验的严格署名文本路线，为原国家缺失的论文补入国家；已有非空国家误配尚未全面修正。Crossref／PubMed／开放全文候选本批未准入。原始版结果保留，原作者署名、盲审证据和原全文不发布。
 
 第三方浏览器资产的版本、许可和来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
@@ -101,6 +101,6 @@ Core 输出年文献的国家信息覆盖率为 48.69%，Core+XPAC 为 36.85%；
 
 首次成功打开图表后显示六步使用导引；完成、跳过或关闭后满七天再次提示，页首可随时重看。规则与验证见 [使用导引](docs/onboarding.md)。
 
-2026-11-13 研究结果已归档：[小国家／地区复杂度高排名审查](docs/small-country-complexity-review.md)、[国家补全最终 review](docs/country-enrichment-v3-review.md)及[可复核数据与工具](results/research-review-20261113/README.md)。国家补全 r3 是独立候选版本，未替换上述正式数据；小倪方法论的界面重命名与默认选择已单独发布，见[发布验证](docs/xiaoni-default-release.md)。
+2026-11-13 研究结果已归档：[小国家／地区复杂度高排名审查](docs/small-country-complexity-review.md)、[国家补全研究 review](docs/country-enrichment-v3-review.md)及[可复核数据与工具](results/research-review-20261113/README.md)。用户 review 后，国家补全 r3 已另作为网站可选版本发布并设默认，原始版保持可选；小倪方法论的重命名及默认方法保持，见[此前发布验证](docs/xiaoni-default-release.md)。
 
 原 Windows Java 项目中的国家名单、低多样性排名筛选、规模门槛备选与入口调用核查，见[小倪 Java 长尾处理审查](docs/xiaoni-java-longtail-review.md)。这些旧代码机制未自动加入当前网站。

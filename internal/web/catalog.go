@@ -13,8 +13,10 @@ type CatalogDataset struct {
 	SelectedWorks int    `json:"selected_works"`
 }
 type Catalog struct {
-	DefaultCorpus string           `json:"default_corpus"`
-	Datasets      []CatalogDataset `json:"datasets"`
+	DefaultCorpus         string               `json:"default_corpus"`
+	Datasets              []CatalogDataset     `json:"datasets"`
+	DefaultCountryVersion string               `json:"default_country_version"`
+	CountryVersions       []CountryVersionInfo `json:"country_versions"`
 }
 type catalogServer struct {
 	servers map[string]*server
@@ -42,7 +44,7 @@ func NewCatalogWithMethods(datasets, methodDirectories map[string]string) (http.
 			return nil, fmt.Errorf("web: method directory has no matching corpus")
 		}
 	}
-	out := &catalogServer{servers: map[string]*server{}, catalog: Catalog{DefaultCorpus: "core"}}
+	out := &catalogServer{servers: map[string]*server{}, catalog: Catalog{DefaultCorpus: "core", DefaultCountryVersion: "original", CountryVersions: []CountryVersionInfo{countryVersionInfo("original")}}}
 	for _, id := range []string{"core", "all"} {
 		dir, exists := datasets[id]
 		if !exists {

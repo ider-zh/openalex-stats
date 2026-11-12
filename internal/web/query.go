@@ -11,18 +11,19 @@ import (
 )
 
 type Query struct {
-	Method      string   `json:"method"`
-	Corpus      string   `json:"corpus"`
-	Scenario    string   `json:"scenario"`
-	Scheme      string   `json:"scheme"`
-	Level       string   `json:"level"`
-	Discipline  string   `json:"discipline"`
-	Disciplines []string `json:"disciplines"`
-	Countries   []string `json:"countries"`
-	Metric      string   `json:"metric"`
-	Basis       string   `json:"basis"`
-	Start       int      `json:"start"`
-	End         int      `json:"end"`
+	Method         string   `json:"method"`
+	Corpus         string   `json:"corpus"`
+	CountryVersion string   `json:"country_version"`
+	Scenario       string   `json:"scenario"`
+	Scheme         string   `json:"scheme"`
+	Level          string   `json:"level"`
+	Discipline     string   `json:"discipline"`
+	Disciplines    []string `json:"disciplines"`
+	Countries      []string `json:"countries"`
+	Metric         string   `json:"metric"`
+	Basis          string   `json:"basis"`
+	Start          int      `json:"start"`
+	End            int      `json:"end"`
 }
 type Point struct {
 	Year         int      `json:"year"`

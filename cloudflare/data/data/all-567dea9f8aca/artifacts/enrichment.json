@@ -1,0 +1,37 @@
+{
+  "base_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+  "baseline_reference_events": 2385146215,
+  "baseline_selected_works": 404079112,
+  "gates": [
+    {
+      "route": "v1_strict_text_only",
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/passed-gate.json",
+      "sha256": "66824b4596e4342ffe954c70fd40b90d42a1883354bbda7c3fc2e4c6466b680d"
+    }
+  ],
+  "manifest": {
+    "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/overlay-manifest.json",
+    "bytes": 1215,
+    "sha256": "9ad3194c158077641f6c668d5bbc2807c4a95ed7bb27e90b909ff48aa536416a"
+  },
+  "patch": {
+    "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/validated-text-patch.parquet",
+    "bytes": 8215839,
+    "sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3"
+  },
+  "production_applied": false,
+  "recovered": {
+    "Works": 2667126,
+    "Publications": 1949924,
+    "Citations": 19764899,
+    "Windows": {
+      "2000_2025": 1918210,
+      "2000_2026": 1949924
+    }
+  },
+  "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+  "source_counts": "/mnt/nvme2/public/openalex-stats/all-concept-hits-counts/9859f49a51abd149",
+  "source_dimensions": "/mnt/nvme1/backup/openalex-stats/all-concept-hits-v1/dimensions.bin",
+  "status": "completed_gated_full_corpus_reaggregation",
+  "unchanged_q_and_edges": true
+}

@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "url": "http://192.168.1.229:8898",
+  "checks": [
+    {
+      "name": "default_is_enriched_and_xiaoni",
+      "passed": true,
+      "detail": {
+        "country_version": "enriched",
+        "method": "java-reflections-v1"
+      }
+    },
+    {
+      "name": "core_switch_preserves_all_filters_and_changes_coverage",
+      "passed": true,
+      "detail": {
+        "original_missing": 103275459,
+        "enriched_missing": 101352219,
+        "curves": 6
+      }
+    },
+    {
+      "name": "core_both_versions_both_methods_eci_pci_csv_and_artifact_links",
+      "passed": true,
+      "detail": {
+        "combinations": 8
+      }
+    },
+    {
+      "name": "core_corpus_switch_preserves_country_version_and_model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_switch_preserves_all_filters_and_changes_coverage",
+      "passed": true,
+      "detail": {
+        "original_missing": 180207949,
+        "enriched_missing": 178258025,
+        "curves": 6
+      }
+    },
+    {
+      "name": "all_both_versions_both_methods_eci_pci_csv_and_artifact_links",
+      "passed": true,
+      "detail": {
+        "combinations": 8
+      }
+    },
+    {
+      "name": "all_corpus_switch_preserves_country_version_and_model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile_method_disclosure_and_explicit_original_reload",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "control": "14px"
+      }
+    },
+    {
+      "name": "mismatched_response_is_rejected_before_chart_draw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_page_errors_or_external_requests",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "started_at": "2026-11-12T23:15:42.249Z",
+  "completed_at": "2026-11-12T23:16:12.946Z"
+}

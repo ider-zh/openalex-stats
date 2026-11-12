@@ -1,0 +1,27 @@
+[
+  {
+    "port": 8798,
+    "root_pid": 18032,
+    "stopped_ids": [
+      18032,
+      79884
+    ],
+    "status": "stopped_owned_preview_after_acceptance"
+  },
+  {
+    "port": 8799,
+    "root_pid": 73824,
+    "stopped_ids": [
+      73824,
+      14776,
+      73836,
+      73684,
+      71664,
+      76224,
+      78908,
+      79600,
+      81972
+    ],
+    "status": "stopped_owned_preview_after_acceptance"
+  }
+]

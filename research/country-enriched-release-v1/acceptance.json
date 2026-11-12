@@ -1,0 +1,60 @@
+{
+  "status": "passed_country_enriched_default_release",
+  "website": "http://192.168.1.229:8899",
+  "default_country_version": "enriched",
+  "available_country_versions": [
+    "original",
+    "enriched"
+  ],
+  "default_complexity_method": "java-reflections-v1",
+  "original_results_preserved": true,
+  "published_release": "https://github.com/ider-zh/openalex-stats/releases/tag/snapshot-20260626-country-enriched-r3",
+  "release_assets": 42,
+  "release_bytes": 2765833596,
+  "reports": {
+    "static": {
+      "path": "research/country-enriched-release-v1/audit/enriched-static-verification.json",
+      "sha256": "4492627ee43b03e30a94877bc5bcfa72601b7a8dcd24875d7fddd2f7b6366b99",
+      "status": "passed"
+    },
+    "pages": {
+      "path": "research/country-enriched-release-v1/parity/pages-parity.json",
+      "sha256": "eae35584e7dea4db6f6a5bed33612ea5a2de1c0e7c672d1e706c63bd7019b40c",
+      "status": "passed"
+    },
+    "workerd": {
+      "path": "research/country-enriched-release-v1/parity/workerd-parity.json",
+      "sha256": "2dcde6b2748c68d3590aba2eceb0f03b22336c0df0eac26d502378045b0c5b25",
+      "status": "passed"
+    },
+    "candidate_ui": {
+      "path": "research/country-enriched-release-v1/ui/go-candidate-r2/country-version-ui-qa.json",
+      "sha256": "3d31e133be4d2f48284bd92aba1b6ff4733802e90725b112d3077b70d074d8bb",
+      "status": "passed"
+    },
+    "pages_ui": {
+      "path": "research/country-enriched-release-v1/ui/pages-r1/country-version-ui-qa.json",
+      "sha256": "dcac677095c3ad35cd0ce9ee4ad673e3bc8cceb9a171b48a671f29796a5a52cf",
+      "status": "passed"
+    },
+    "production_ui": {
+      "path": "research/country-enriched-release-v1/ui/production-r3/country-version-ui-qa.json",
+      "sha256": "eaea0fa3d15af4d064488d46f484d907d79dbd4f0f55624416781d7b39eb0fdf",
+      "status": "passed"
+    }
+  },
+  "source_and_export_sha256": {
+    "internal/web/static/app.js": "56c3ae3aa962491c1ab30ab7195f4d37d5fd487a78dd003880bd2eb410876842",
+    "internal/web/static/app.css": "86870441468294b4dfc5f6088fc161131b6d6ee068dc934ba9842ccb692e2574",
+    "internal/web/static/index.html": "852ca72534c7ae10c3e4f907ccd320b07b94a826c5fdc8a107853042414f8ebe",
+    "internal/web/static/onboarding.js": "8d8c7c7d4a44e91bfebf098c058a0c2863a24fc3f44183c54c097829c812517e",
+    "internal/web/server.go": "db3e549e169928889eecb2aeb9024dc09c2211ef2040ca8edebce90aa120734a",
+    "internal/web/country_versions.go": "277bce11256a3ff0873c7f5aeec5d3f338bbf7434e7b6315112b6995716e994d",
+    "internal/web/query.go": "3765c70cf1462241c4004c1ec13f73847c5a46717e1862f5f0492fbfd53d4e94",
+    "cmd/oa-stats/serve.go": "ea0ed678ea200ed8099f2ac7846456a87ef4c76e8a74519f47ccfcbd54d17f2e",
+    "cloudflare/worker.mjs": "1d77a092d7fc5c2047b5523033573a69ecebfc8eaed2f49c37a6b8b08cd38ea7",
+    "cloudflare/data/export-manifest.json": "ac1221940a1d0da5780b736573549e31456174ea0afd20f7e24f715b914e234d"
+  },
+  "raw_author_and_source_text_published": false,
+  "scope": "Strict text UNKNOWN-only country filling; existing nonempty country errors not comprehensively repaired; external metadata admitted0."
+}

@@ -1,5 +1,7 @@
 # Cloudflare Pages 部署与完整数据格式
 
+2026-11-13 国家双版本更新：当前构建默认“国家补全版”，可切换原始版；查询数据增加到 14,265 文件，网站 14,531 文件，最大文件约 4.06 MB。原科学数据分片保留。以下首次发布的 7,133 文件及原单组导出命令作为历史与基础说明；新增版本的合并、下载与验收见[国家双版本发布](country-enriched-release.md)和[Cloudflare 双版本格式](country-enriched-cloudflare.md)。
+
 本部署使用 Pages advanced mode：同一份 HTML/CSS/JavaScript、ECharts 和本地 SVG 旗帜用于 Go 服务与 Cloudflare 网站。Go 预先导出统计矩阵、完整分母和模型分值／全局排名；边缘适配层只做参数校验、按条件取值、份额／RCA 的标量计算及 CSV 序列化。
 
 ## 从 GitHub 部署

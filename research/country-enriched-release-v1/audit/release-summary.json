@@ -1,0 +1,129 @@
+{
+  "dataset_id": "country-enriched-v3-r3",
+  "label_zh": "国家覆盖补充",
+  "default": true,
+  "original_id": "original",
+  "original_label_zh": "原始国家信息",
+  "method_zh": "仅为原国家为空的文献，从原始署名单位文本提取明确国家证据；使用冻结的严格规则，排除冲突及歧义地址。原有非空国家集合不扩张、不替换。",
+  "precision": {
+    "supported": 255,
+    "audited": 256,
+    "point": 0.99609375,
+    "wilson95": [
+      0.9782090246194175,
+      0.9993101178330381
+    ],
+    "scope": "原快照身份和署名地址来源支持；不代表所有原始国家标签准确率，未为全部样本取得出版者独立全文"
+  },
+  "patch": {
+    "all_works": 2667126,
+    "core_works": 2635485,
+    "sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3",
+    "deferred_whole_works": 142,
+    "external_admitted_works": 0
+  },
+  "coverage": [
+    {
+      "corpus": "core",
+      "start_year": 2000,
+      "end_year": 2025,
+      "includes_partial_year": false,
+      "original": {
+        "publication_works": 191419523,
+        "known_country_publications": 94394212,
+        "citation_events": 2290773840,
+        "known_country_citations": 2017877491,
+        "publication_country_coverage": 0.49312740163917346,
+        "citation_country_coverage": 0.8808715447003708
+      },
+      "enriched": {
+        "publication_works": 191419523,
+        "known_country_publications": 96285782,
+        "citation_events": 2290773840,
+        "known_country_citations": 2037205607,
+        "publication_country_coverage": 0.5030092045522442,
+        "citation_country_coverage": 0.889308918858616
+      },
+      "recovered_publications": 1891570,
+      "recovered_citation_events": 19328116
+    },
+    {
+      "corpus": "core",
+      "start_year": 2000,
+      "end_year": 2026,
+      "includes_partial_year": true,
+      "original": {
+        "publication_works": 201267475,
+        "known_country_publications": 97992016,
+        "citation_events": 2363318327,
+        "known_country_citations": 2087285227,
+        "publication_country_coverage": 0.48687457325134126,
+        "citation_country_coverage": 0.8832010496231386
+      },
+      "enriched": {
+        "publication_works": 201267475,
+        "known_country_publications": 99915256,
+        "citation_events": 2363318327,
+        "known_country_citations": 2106993067,
+        "publication_country_coverage": 0.49643021556264866,
+        "citation_country_coverage": 0.8915401039836306
+      },
+      "recovered_publications": 1923240,
+      "recovered_citation_events": 19707840
+    },
+    {
+      "corpus": "all",
+      "start_year": 2000,
+      "end_year": 2025,
+      "includes_partial_year": false,
+      "original": {
+        "publication_works": 275493280,
+        "known_country_publications": 101550633,
+        "citation_events": 2312458058,
+        "known_country_citations": 2034149889,
+        "publication_country_coverage": 0.3686138297093853,
+        "citation_country_coverage": 0.879648338685674
+      },
+      "enriched": {
+        "publication_works": 275493280,
+        "known_country_publications": 103468843,
+        "citation_events": 2312458058,
+        "known_country_citations": 2053534645,
+        "publication_country_coverage": 0.3755766492743489,
+        "citation_country_coverage": 0.8880310879134656
+      },
+      "recovered_publications": 1918210,
+      "recovered_citation_events": 19384756
+    },
+    {
+      "corpus": "all",
+      "start_year": 2000,
+      "end_year": 2026,
+      "includes_partial_year": true,
+      "original": {
+        "publication_works": 285365821,
+        "known_country_publications": 105157872,
+        "citation_events": 2385146215,
+        "known_country_citations": 2103658855,
+        "publication_country_coverage": 0.36850198678838975,
+        "citation_country_coverage": 0.8819831848338069
+      },
+      "enriched": {
+        "publication_works": 285365821,
+        "known_country_publications": 107107796,
+        "citation_events": 2385146215,
+        "known_country_citations": 2123423754,
+        "publication_country_coverage": 0.37533505457894345,
+        "citation_country_coverage": 0.8902698462031184
+      },
+      "recovered_publications": 1949924,
+      "recovered_citation_events": 19764899
+    }
+  ],
+  "notes_zh": [
+    "覆盖率表示至少识别到一个国家，不等于全部合作国家完整或准确。",
+    "2026为部分年；当年被引按施引论文发表年，归属被引目标国家。",
+    "已有国家误配及长尾复杂度可靠性问题尚未由此次补全消除。",
+    "两种复杂度方法保持既定计算与方向；版本切换可能涉及结构变化及符号方向差异。"
+  ]
+}

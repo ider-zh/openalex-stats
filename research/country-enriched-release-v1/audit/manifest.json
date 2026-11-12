@@ -1,0 +1,930 @@
+{
+  "version": "country-enriched-release-v1",
+  "status": "passed_result_checksums_method_binding_score_schemas_and_annual_coverage",
+  "preferred_dataset": "country-enriched-v3-r3",
+  "patch_sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3",
+  "external_admitted_works": 0,
+  "originals_modified": false,
+  "source_scope": "Strict text only; original UNKNOWN works only; no repair or expansion of originally known country sets.",
+  "datasets": [
+    {
+      "corpus": "core",
+      "dataset": "original",
+      "base_directory": "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "methods_directory": "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e",
+      "method_completion_sha256": "3267f7a508d2f23dc1a45cda3f4286251423561938f644609c52f4d59d2f2a6a",
+      "method_manifest_sha256": "9c1afa8bf092c703c4ebd1736cf3e87d3543a4524544a75b876aa4575a282546",
+      "selected_works": 269194661,
+      "quality": {
+        "publication_works": 201267475,
+        "citation_calls": 583730060,
+        "citation_events": 2363318327,
+        "missing_country_publications": 103275459,
+        "missing_country_citations": 276033100,
+        "missing_discipline_publications": {
+          "concepts.0": 24525389,
+          "concepts.1": 57172814,
+          "topics.field": 12146871,
+          "topics.subfield": 12146871
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 14235638,
+          "concepts.1": 98664724,
+          "topics.field": 1670538,
+          "topics.subfield": 1670538
+        },
+        "publication_assignments": {
+          "concepts.0": 270094569,
+          "concepts.1": 338312886,
+          "topics.field": 201267475,
+          "topics.subfield": 201267475
+        },
+        "citation_assignments": {
+          "concepts.0": 3161469072,
+          "concepts.1": 4852927555,
+          "topics.field": 2363318327,
+          "topics.subfield": 2363318327
+        }
+      },
+      "scenarios": [
+        {
+          "id": "fractional-concept-whole-0.0",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "fractional-concept-whole-0.3",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "fractional-concept-whole-0.5",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.0",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.3",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "whole-concept-whole-0.5",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        }
+      ],
+      "known_dictionary_countries": 248,
+      "dictionary_sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+      "artifacts": [
+        {
+          "filename": "statistics.parquet",
+          "bytes": 489340382,
+          "sha256": "c24223b3a4bb3295ffdebb99811777b6b35f47359bc6eea28bd37147f721f7f7"
+        },
+        {
+          "filename": "cube.parquet",
+          "bytes": 179049337,
+          "sha256": "075d51d9450507703adf9b73d55cb04b7e1781b4a059062feaf4b2145751ac01"
+        },
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 411394,
+          "sha256": "25183996705c43540973a8977f877fb6a4c64983662198eb82f23b25b4be683a"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283965,
+          "sha256": "8cb34144b6a20b02ab3bb5be9400ff65559218cc2b6e2524f9dbdd77b2e3c0db"
+        },
+        {
+          "filename": "rca.parquet",
+          "bytes": 240557122,
+          "sha256": "7d860d85e72ff804090581e6a386072a8417e136cf97da6a83395e73ce37f0c4"
+        },
+        {
+          "filename": "coverage.json",
+          "bytes": 13113,
+          "sha256": "193912b19a51852df0505851e256ee33fe39232504e57be4eba2a1397a9295d3"
+        },
+        {
+          "filename": "scenarios.json",
+          "bytes": 939,
+          "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c"
+        },
+        {
+          "filename": "dictionary.json",
+          "bytes": 108523,
+          "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6"
+        },
+        {
+          "filename": "eci.json",
+          "bytes": 318936033,
+          "sha256": "98eb34cd7809ec7b83433f36446c9fc943fd1dbbd393fff1c4ecf58d3db457e3"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 2698129,
+          "sha256": "5c8d07d6791f93ed6ff08adb67e90636f433485fe6480d427ee407c36c1d5ac9"
+        },
+        {
+          "filename": "methodology.json",
+          "bytes": 2667,
+          "sha256": "02f687cf913ceff3a4e89cc3c527951a1156d3e2d693abfc2cb858bcd618c337"
+        },
+        {
+          "filename": "run.json",
+          "bytes": 923204,
+          "sha256": "d574e30787a9877708cd87b36e1f2cb959dbbdb9098280ef6c966983e59568e7"
+        }
+      ],
+      "method_artifacts": [
+        {
+          "filename": "java-reflections-v1.json",
+          "bytes": 142180947,
+          "sha256": "3011d9de5587011272c7147e32069c4f693e9b7ca0cbeed0b6a0228e68924fb5"
+        },
+        {
+          "filename": "audit.json",
+          "bytes": 261,
+          "sha256": "06a31c883790acc5db548800441aaa50688eb6c48271db6b88b1b58177bdab45"
+        },
+        {
+          "filename": "sensitivity.json",
+          "bytes": 155328,
+          "sha256": "ca64371479bbd5066d8603b05f0b9c5a709f57bb2bc41d78f2aef8e1b1883453"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 1437935,
+          "sha256": "e778470f558593c64b2ac5e67f8a6ae6cccd8ee4ed7fc610a3401e584cc0b667"
+        },
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 410249,
+          "sha256": "2531f209780aaaf5cf5700d6dd02991df6e0354c0153b11f2a106f154c8959af"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283965,
+          "sha256": "8c7dd0e09de6227ce915771099d609450c022a1c1baeeb170c1ad40b9ec4a394"
+        },
+        {
+          "filename": "manifest.json",
+          "bytes": 1851,
+          "sha256": "9c1afa8bf092c703c4ebd1736cf3e87d3543a4524544a75b876aa4575a282546"
+        }
+      ],
+      "score_checks": [
+        {
+          "method": "spectral-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "spectral-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        }
+      ]
+    },
+    {
+      "corpus": "core",
+      "dataset": "country-enriched-v3-r3",
+      "base_directory": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+      "methods_directory": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113",
+      "run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+      "completion_sha256": "7436c7704820b576a8658edf93e92eee58c7c683720d014157f81cae743e6ea2",
+      "method_completion_sha256": "ff5e2321f538706cba0ebb33ace73d6e9a8afabfa945a9b05f7d14233edd2796",
+      "method_manifest_sha256": "b05a4529af9960892887ac66d0a0a345459540623e70bff6cd276853bd515855",
+      "selected_works": 269194661,
+      "quality": {
+        "publication_works": 201267475,
+        "citation_calls": 583730060,
+        "citation_events": 2363318327,
+        "missing_country_publications": 101352219,
+        "missing_country_citations": 256325260,
+        "missing_discipline_publications": {
+          "concepts.0": 24525389,
+          "concepts.1": 57172814,
+          "topics.field": 12146871,
+          "topics.subfield": 12146871
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 14235638,
+          "concepts.1": 98664724,
+          "topics.field": 1670538,
+          "topics.subfield": 1670538
+        },
+        "publication_assignments": {
+          "concepts.0": 270094569,
+          "concepts.1": 338312886,
+          "topics.field": 201267475,
+          "topics.subfield": 201267475
+        },
+        "citation_assignments": {
+          "concepts.0": 3161469072,
+          "concepts.1": 4852927555,
+          "topics.field": 2363318327,
+          "topics.subfield": 2363318327
+        }
+      },
+      "scenarios": [
+        {
+          "id": "fractional-concept-whole-0.0",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "fractional-concept-whole-0.3",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "fractional-concept-whole-0.5",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.0",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.3",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "whole-concept-whole-0.5",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        }
+      ],
+      "known_dictionary_countries": 248,
+      "dictionary_sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+      "artifacts": [
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 416419,
+          "sha256": "fcaf5819c6a50549bc5bc8ab8a9087006a029eb24558065addd12d05e704e67a"
+        },
+        {
+          "filename": "coverage.json",
+          "bytes": 13113,
+          "sha256": "74df47b8b69d26ffafa36938b402d710282c095bd447f60fc0bda5aca3cf3ac2"
+        },
+        {
+          "filename": "cube.parquet",
+          "bytes": 179545921,
+          "sha256": "652ac0c3b33f01f795139254b53076b193e4e9804e4e5fd751530e0e7dfacc0b"
+        },
+        {
+          "filename": "dictionary.json",
+          "bytes": 108523,
+          "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283946,
+          "sha256": "2f667025f8987f4561fa89bc85f69cd09d74c0f32216a02dd273bd06b39f23eb"
+        },
+        {
+          "filename": "eci.json",
+          "bytes": 319198151,
+          "sha256": "ee94b459557482e223c621cbb4409a478341a2c76b6eb8bc74c3068706473d81"
+        },
+        {
+          "filename": "enrichment.json",
+          "bytes": 1493,
+          "sha256": "95596551b02884604c3d51249eeb887e2e9fd13b49d32fee71bdcf218288049d"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 2724751,
+          "sha256": "070de802d664cd321bb873834d936ccdd616c0a961757544a06f98b14ca1ce65"
+        },
+        {
+          "filename": "rca.parquet",
+          "bytes": 241293390,
+          "sha256": "fdba00af88ebba4cb99fac0a632c6e5d0b03315cc5968b39bd66bbbe84374a57"
+        },
+        {
+          "filename": "scenarios.json",
+          "bytes": 939,
+          "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c"
+        },
+        {
+          "filename": "statistics.parquet",
+          "bytes": 490753337,
+          "sha256": "fcc95c34a68ad85fc2050025cff2e5b561adf224c25f27fc8081afb0c6f2f520"
+        },
+        {
+          "filename": "run.json",
+          "bytes": 924140,
+          "sha256": "e578989cd541403d29a7fb919547a015a77fc5715c45fc2ce396ae4dd3c4bd12"
+        }
+      ],
+      "method_artifacts": [
+        {
+          "filename": "java-reflections-v1.json",
+          "bytes": 142420145,
+          "sha256": "4b5df17ed4b610933e6e1bce1a346f47288ae521f25f5d504a85ed5a57998083"
+        },
+        {
+          "filename": "audit.json",
+          "bytes": 261,
+          "sha256": "b4cc19fa24f5a2465915dddcb0fa4ee76316bd1fe3192ae9881184ab86f1ae58"
+        },
+        {
+          "filename": "sensitivity.json",
+          "bytes": 155420,
+          "sha256": "a1bb90b8d2bf673cd48b1625438216a75042769cbe2cff3852ff265d48e59970"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 1453395,
+          "sha256": "81de6198eecdb265e65f18b79ff02f3e1810aa34dcab48698e0092158cc89ef8"
+        },
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 415102,
+          "sha256": "d977d5b164bf14d3efd6a52e63c2e3ef19668551f3cee94a9faff1ceea571f14"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283947,
+          "sha256": "3668737336e9241fd07c0f30b06036e4e645767d2a50d100a614da21e0eaac1b"
+        },
+        {
+          "filename": "manifest.json",
+          "bytes": 1825,
+          "sha256": "b05a4529af9960892887ac66d0a0a345459540623e70bff6cd276853bd515855"
+        }
+      ],
+      "score_checks": [
+        {
+          "method": "spectral-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "spectral-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        }
+      ],
+      "enrichment": {
+        "base_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+        "baseline_reference_events": 2363318327,
+        "baseline_selected_works": 269194661,
+        "gates": [
+          {
+            "route": "v1_strict_text_only",
+            "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/passed-gate.json",
+            "sha256": "66824b4596e4342ffe954c70fd40b90d42a1883354bbda7c3fc2e4c6466b680d"
+          }
+        ],
+        "manifest": {
+          "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/overlay-manifest.json",
+          "bytes": 1215,
+          "sha256": "9ad3194c158077641f6c668d5bbc2807c4a95ed7bb27e90b909ff48aa536416a"
+        },
+        "patch": {
+          "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/validated-text-patch.parquet",
+          "bytes": 8215839,
+          "sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3"
+        },
+        "production_applied": false,
+        "recovered": {
+          "Works": 2635485,
+          "Publications": 1923240,
+          "Citations": 19707840,
+          "Windows": {
+            "2000_2025": 1891570,
+            "2000_2026": 1923240
+          }
+        },
+        "run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+        "source_counts": "/mnt/nvme2/public/openalex-stats/core-counts-v2/3b00c22308c75534",
+        "source_dimensions": "/mnt/nvme1/backup/openalex-stats/core-goal-v1/dimensions.bin",
+        "status": "completed_gated_full_corpus_reaggregation",
+        "unchanged_q_and_edges": true
+      }
+    },
+    {
+      "corpus": "all",
+      "dataset": "original",
+      "base_directory": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "methods_directory": "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43",
+      "method_completion_sha256": "a371bbcd4465ce24707dd78367ab122bac9c671bbcc55aebfcb15fdf9570bc1f",
+      "method_manifest_sha256": "b776fd2b927b75c97903add5a00779426410b7e2751fe6a04b870be23b230e4b",
+      "selected_works": 404079112,
+      "quality": {
+        "publication_works": 285365821,
+        "citation_calls": 586984532,
+        "citation_events": 2385146215,
+        "missing_country_publications": 180207949,
+        "missing_country_citations": 281487360,
+        "missing_discipline_publications": {
+          "concepts.0": 51637829,
+          "concepts.1": 95556884,
+          "topics.field": 41990826,
+          "topics.subfield": 41990826
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 15562133,
+          "concepts.1": 100830984,
+          "topics.field": 2167955,
+          "topics.subfield": 2167955
+        },
+        "publication_assignments": {
+          "concepts.0": 387925859,
+          "concepts.1": 461267437,
+          "topics.field": 285365821,
+          "topics.subfield": 285365821
+        },
+        "citation_assignments": {
+          "concepts.0": 3190747228,
+          "concepts.1": 4896816404,
+          "topics.field": 2385146215,
+          "topics.subfield": 2385146215
+        }
+      },
+      "scenarios": [
+        {
+          "id": "fractional-concept-whole-0.0",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "fractional-concept-whole-0.3",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "fractional-concept-whole-0.5",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.0",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.3",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "whole-concept-whole-0.5",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        }
+      ],
+      "known_dictionary_countries": 248,
+      "dictionary_sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+      "artifacts": [
+        {
+          "filename": "statistics.parquet",
+          "bytes": 491814477,
+          "sha256": "7e934a8d3fca14662b1abfb4379af846855cde7a18458979f028e776e170606d"
+        },
+        {
+          "filename": "cube.parquet",
+          "bytes": 179600562,
+          "sha256": "db6b38691ea04be8f4299737ddd7a1442c8ed293a5bac12940c48b2f0d6bd8b9"
+        },
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 411455,
+          "sha256": "3c7349be696ad2ff51720603968519102cda35582a5c00d0bc6d5e0451543d12"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283965,
+          "sha256": "b08a9ba333cc47674be8357d79de9811d3a63c9f9cfdb259f831adb62cd1b137"
+        },
+        {
+          "filename": "rca.parquet",
+          "bytes": 241539846,
+          "sha256": "5bdd36b41413f0cb04828c591e8f9b4229d7662b1ed79613289c9328da1b4711"
+        },
+        {
+          "filename": "coverage.json",
+          "bytes": 13133,
+          "sha256": "cd35201c68480a61f9e5a5ca890fe7dc645ce9d1cc9c751ccf2f42777a23da4c"
+        },
+        {
+          "filename": "scenarios.json",
+          "bytes": 939,
+          "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c"
+        },
+        {
+          "filename": "dictionary.json",
+          "bytes": 108523,
+          "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6"
+        },
+        {
+          "filename": "eci.json",
+          "bytes": 319266428,
+          "sha256": "a7d6aa4a9209f54bf63200e85e61f45c935b411bc343ba2de09712cbcf10c586"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 2698096,
+          "sha256": "2d4d16a8fd794d06185489698ce5c03c79571f0d9ece1f171b8faeaacf21d0e4"
+        },
+        {
+          "filename": "methodology.json",
+          "bytes": 2666,
+          "sha256": "3c955ac6ac11c73fa71deb9c5a67ad06cf04dadbc671a9f69c63c072f4458657"
+        },
+        {
+          "filename": "run.json",
+          "bytes": 2122252,
+          "sha256": "c53a10b5f54075e0e601da78abfd01ffeb1fb4e86d0a06409992fa1b4d386289"
+        }
+      ],
+      "method_artifacts": [
+        {
+          "filename": "java-reflections-v1.json",
+          "bytes": 142511569,
+          "sha256": "bb3431a004615e6536cd4e7d898aa3b4f884f4a8390ceddbc6378f4903826e76"
+        },
+        {
+          "filename": "audit.json",
+          "bytes": 261,
+          "sha256": "ecc7a46c4f0ef6b9c2a9b30c512fed3e63582dd8efe54f59f2f84186b6faec64"
+        },
+        {
+          "filename": "sensitivity.json",
+          "bytes": 155590,
+          "sha256": "555e08290ec3733d32cb0b148e6ce3893e20e07b3f51704616039507404593b8"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 1437895,
+          "sha256": "40baf1c8014f89ade54c4922c1a5ac9c7e8de29a721755d63fc520a601ba0ac1"
+        },
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 410174,
+          "sha256": "0c147b36ebbddc25258fe19c3311f4dd8442a3c0f26a5a757fe33884c4feb14f"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283965,
+          "sha256": "c0db5b59730539353644333c0ddb94185cde9dd1db9b8be394041a163b0e59c6"
+        },
+        {
+          "filename": "manifest.json",
+          "bytes": 1851,
+          "sha256": "b776fd2b927b75c97903add5a00779426410b7e2751fe6a04b870be23b230e4b"
+        }
+      ],
+      "score_checks": [
+        {
+          "method": "spectral-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "spectral-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        }
+      ]
+    },
+    {
+      "corpus": "all",
+      "dataset": "country-enriched-v3-r3",
+      "base_directory": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+      "methods_directory": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113",
+      "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+      "completion_sha256": "4ea14cec4548518f70bbf8e32ccef7ca42509bf7170850be0997602da8e7cfce",
+      "method_completion_sha256": "4a1b4a81e56c881eebaea492acc25b71019084e4c02aa835d51b72758ed80b0f",
+      "method_manifest_sha256": "90fa510b291d0d79fad8ef178114d32f58f999944e8243a5f20db21cfcb586ec",
+      "selected_works": 404079112,
+      "quality": {
+        "publication_works": 285365821,
+        "citation_calls": 586984532,
+        "citation_events": 2385146215,
+        "missing_country_publications": 178258025,
+        "missing_country_citations": 261722461,
+        "missing_discipline_publications": {
+          "concepts.0": 51637829,
+          "concepts.1": 95556884,
+          "topics.field": 41990826,
+          "topics.subfield": 41990826
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 15562133,
+          "concepts.1": 100830984,
+          "topics.field": 2167955,
+          "topics.subfield": 2167955
+        },
+        "publication_assignments": {
+          "concepts.0": 387925859,
+          "concepts.1": 461267437,
+          "topics.field": 285365821,
+          "topics.subfield": 285365821
+        },
+        "citation_assignments": {
+          "concepts.0": 3190747228,
+          "concepts.1": 4896816404,
+          "topics.field": 2385146215,
+          "topics.subfield": 2385146215
+        }
+      },
+      "scenarios": [
+        {
+          "id": "fractional-concept-whole-0.0",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "fractional-concept-whole-0.3",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "fractional-concept-whole-0.5",
+          "country_mode": "fractional",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.0",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0,
+          "main": false
+        },
+        {
+          "id": "whole-concept-whole-0.3",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.3,
+          "main": true
+        },
+        {
+          "id": "whole-concept-whole-0.5",
+          "country_mode": "whole",
+          "concept_mode": "whole",
+          "concept_threshold": 0.5,
+          "main": false
+        }
+      ],
+      "known_dictionary_countries": 248,
+      "dictionary_sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+      "artifacts": [
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 416317,
+          "sha256": "4246151c7f4c9d711fe196f634e63bbbaf3132bf0e95c416a61da085ea131978"
+        },
+        {
+          "filename": "coverage.json",
+          "bytes": 13133,
+          "sha256": "3886b42d01fcafe6d181d9d11e63b7209ec0cf4a2f8f2b2f1d354f9287dc8c2a"
+        },
+        {
+          "filename": "cube.parquet",
+          "bytes": 180093518,
+          "sha256": "2f389d27fd747b4ec93a75f74cc8d6b8057d56162394e9e9f76f14c90456f54e"
+        },
+        {
+          "filename": "dictionary.json",
+          "bytes": 108523,
+          "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283947,
+          "sha256": "3fceff5cfcd29072ebe9f733d9a2d79c9625ebf025be64f09269907e9fd73b50"
+        },
+        {
+          "filename": "eci.json",
+          "bytes": 319528002,
+          "sha256": "c7cc39b2540183283ac9c9f0c2086aff814d56e3c6ceafd90f440cf13b21b986"
+        },
+        {
+          "filename": "enrichment.json",
+          "bytes": 1509,
+          "sha256": "5c186ad5bc68333a51c72b04a66d958f0c9ed2c27ca225882c84c7382b70000d"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 2724827,
+          "sha256": "648ac5584f87d3b5a4f37ea6be504f1939e019ce67f4fc5f82962a4dc149cc5f"
+        },
+        {
+          "filename": "rca.parquet",
+          "bytes": 242260054,
+          "sha256": "720961036a1e73746d5a8fcfa1348bbabb8d788e6c0a49fc6c6be1e35ccd369a"
+        },
+        {
+          "filename": "scenarios.json",
+          "bytes": 939,
+          "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c"
+        },
+        {
+          "filename": "statistics.parquet",
+          "bytes": 493217314,
+          "sha256": "e07ad64c6a8dfd45846ea8fed9ce11688d37e5eb6a3f350355cec41b1451c520"
+        },
+        {
+          "filename": "run.json",
+          "bytes": 2123183,
+          "sha256": "e67febbd92b65db970f9b99827545312cf5858a88c5fd7a01e35ae475f3373b2"
+        }
+      ],
+      "method_artifacts": [
+        {
+          "filename": "java-reflections-v1.json",
+          "bytes": 142749631,
+          "sha256": "1fd8fb045cfd09b1d036880b001def1514346bde3fd75fcdb05d9831b02171f7"
+        },
+        {
+          "filename": "audit.json",
+          "bytes": 261,
+          "sha256": "21f7c0d6e0a2d193a73e0fc8596856c52b1a3a3785ca5793362b314283e027e7"
+        },
+        {
+          "filename": "sensitivity.json",
+          "bytes": 155551,
+          "sha256": "27a7781797ac57971c4582a09eb9407760a572d6096bf8e617055d71fe0d2109"
+        },
+        {
+          "filename": "model_diagnostics.json",
+          "bytes": 1453428,
+          "sha256": "bfaa2a589b824de2714ace2b9448e87cd62bf7d6e04fe393898d201084a6ad94"
+        },
+        {
+          "filename": "country_eci.parquet",
+          "bytes": 415050,
+          "sha256": "a917bf1f85a6e82b522c76596e96da31f738a2c7ee1491b7b3ab5a036de9df2a"
+        },
+        {
+          "filename": "discipline_pci.parquet",
+          "bytes": 283947,
+          "sha256": "c713caff5a3fdbd7d52c5f6cb924f92732316ab8cc85d4cfa19727b2daa3399d"
+        },
+        {
+          "filename": "manifest.json",
+          "bytes": 1825,
+          "sha256": "90fa510b291d0d79fad8ef178114d32f58f999944e8243a5f20db21cfcb586ec"
+        }
+      ],
+      "score_checks": [
+        {
+          "method": "spectral-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "spectral-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "country_eci.parquet",
+          "models": 216
+        },
+        {
+          "method": "java-reflections-v1",
+          "file": "discipline_pci.parquet",
+          "models": 216
+        }
+      ],
+      "enrichment": {
+        "base_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+        "baseline_reference_events": 2385146215,
+        "baseline_selected_works": 404079112,
+        "gates": [
+          {
+            "route": "v1_strict_text_only",
+            "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/passed-gate.json",
+            "sha256": "66824b4596e4342ffe954c70fd40b90d42a1883354bbda7c3fc2e4c6466b680d"
+          }
+        ],
+        "manifest": {
+          "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/overlay-manifest.json",
+          "bytes": 1215,
+          "sha256": "9ad3194c158077641f6c668d5bbc2807c4a95ed7bb27e90b909ff48aa536416a"
+        },
+        "patch": {
+          "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/validated-text-patch.parquet",
+          "bytes": 8215839,
+          "sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3"
+        },
+        "production_applied": false,
+        "recovered": {
+          "Works": 2667126,
+          "Publications": 1949924,
+          "Citations": 19764899,
+          "Windows": {
+            "2000_2025": 1918210,
+            "2000_2026": 1949924
+          }
+        },
+        "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+        "source_counts": "/mnt/nvme2/public/openalex-stats/all-concept-hits-counts/9859f49a51abd149",
+        "source_dimensions": "/mnt/nvme1/backup/openalex-stats/all-concept-hits-v1/dimensions.bin",
+        "status": "completed_gated_full_corpus_reaggregation",
+        "unchanged_q_and_edges": true
+      }
+    }
+  ],
+  "notes": [
+    "No scientific recomputation performed; full r3 recomputation already independently validated.",
+    "Coverage is at least one observed country, not full authorship-country completeness or correctness.",
+    "Frozen route source-supported precision255/256 is not precision of all original country tags.",
+    "Counts from conserved fractional primary-Field totals include UNKNOWN subjects; integer rounding residual <0.001.",
+    "Metadata 2026 is partial year; citation coverage follows citing year and target-country attribution.",
+    "Spectral Concepts0 citations cross-version sign reversal retained; no unannounced reorientation.",
+    "Historical production_applied=false in immutable computation manifests is provenance, not current deployment status."
+  ]
+}

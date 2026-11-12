@@ -1,0 +1,25 @@
+{
+  "observed_at_utc": "2026-11-12T23:23:57.0073749Z",
+  "runtime": "Wrangler 4.160.1 / local workerd official runtime",
+  "parity_report": "workerd-parity.json",
+  "runtime_protocol_check": "passed",
+  "processes": [
+    {
+      "Id": 73824,
+      "ProcessName": "node",
+      "StartTime": "2026-11-13T07:22:23.3542899+08:00",
+      "WorkingSet64": 58654720,
+      "PeakWorkingSet64": 58707968,
+      "CPU": 0.171875
+    },
+    {
+      "Id": 76224,
+      "ProcessName": "workerd",
+      "StartTime": "2026-11-13T07:22:30.5383679+08:00",
+      "WorkingSet64": 181497856,
+      "PeakWorkingSet64": 181497856,
+      "CPU": 7.5
+    }
+  ],
+  "measurement_scope": "Windows whole-process working set/peak and cumulative CPU, not per-isolate JS heap or per-request production CPU quota. Local workerd success validates ASSETS/runtime compatibility, not Cloudflare account plan limits."
+}

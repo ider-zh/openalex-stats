@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "dataset_version": "country-enriched-v3-r3",
+  "verification": "Independent source Parquet counts/OAQ1 decode and original model score/status/competition-rank comparison; no server adapter reused.",
+  "tool_path": "/home/ider/tmpdata/openalex-stats-dev-20261112/country-enriched-release-v1/verify-static-export",
+  "tool_sha256": "a5d7d277507ab4f09033beb7669f72f31867c7ff5978aa71c25920a180c6cd5b",
+  "verifier_source": "scripts/verify-static-export/main.go",
+  "verifier_source_sha256": "45c398cc0b049b5f1c110a2ddf3d0c4ff85b0e8fb72721c3e433bba0915819c2",
+  "export_root": "/mnt/nvme0/public/openalex-stats/analysis-country-enriched-release-v1-20261113/static-enriched-r1",
+  "export_manifest_sha256": "8bdf5687a8f42f5791760f17b78deb59f52b0f1b76ebe3557a90d8c1cb61a5f4",
+  "report_sha256": "4492627ee43b03e30a94877bc5bcfa72601b7a8dcd24875d7fddd2f7b6366b99",
+  "sources": [
+    {
+      "corpus": "core",
+      "run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+      "completion_sha256": "7436c7704820b576a8658edf93e92eee58c7c683720d014157f81cae743e6ea2",
+      "method_completion_sha256": "ff5e2321f538706cba0ebb33ace73d6e9a8afabfa945a9b05f7d14233edd2796",
+      "base_directory": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+      "methods_directory": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113"
+    },
+    {
+      "corpus": "all",
+      "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+      "completion_sha256": "4ea14cec4548518f70bbf8e32ccef7ca42509bf7170850be0997602da8e7cfce",
+      "method_completion_sha256": "4a1b4a81e56c881eebaea492acc25b71019084e4c02aa835d51b72758ed80b0f",
+      "base_directory": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+      "methods_directory": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113"
+    }
+  ],
+  "release_asset_count": 42,
+  "release_asset_set_sha256": "992fb57c0f3238667d67b3f67f08729fb15c4d1b9c884c72fa279867507572d0",
+  "release_asset_set_hash_definition": "SHA256 of UTF8 json.dumps(sorted(name,bytes,sha256 records by name),sort_keys=True,separators=(comma,colon))",
+  "checks": {
+    "files_sha256": 7133,
+    "count_cells": 30064114,
+    "models": 864,
+    "model_points": 339768,
+    "all_differences": 0
+  },
+  "scope": "Enriched single export checked. Original scientific data unchanged; original export retains its historical independent audit. Combined 4-dataset catalog and HTTP/UI version routing tested separately by publishing team.",
+  "verified_at_utc": "2026-11-12T23:14:39.128181+00:00"
+}

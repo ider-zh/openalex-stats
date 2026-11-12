@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {gzipSync} from 'node:zlib';
+import {gzipSync,gunzipSync} from 'node:zlib';
 import {handle,parseQuery,goFloat} from './worker.mjs';
 let serial=0;
 function matrix(records,totals=[[10,20],[0,0]],countries=2){const years=2,b=Buffer.alloc(16+(countries+1)*years*16);b.write('OAQ1');b.writeUInt16LE(2000,4);b.writeUInt16LE(years,6);b.writeUInt16LE(countries,8);for(let y=0;y<years;y++)for(let basis=0;basis<2;basis++)b.writeDoubleLE(totals[y][basis],16+y*16+basis*8);for(const [c,y,p,v] of records){const offset=16+years*16+(c*years+y)*16;b.writeDoubleLE(p,offset);b.writeDoubleLE(v,offset+8);}return gzipSync(b);}
@@ -51,3 +51,62 @@ test('invalid and excessive selectors reject rather than truncate',async()=>{con
 test('cold 48-curve RCA uses at most 50 static subrequests',async()=>{const f=fixture(),r=await f.query({countries:'CN',metric:'rca',disciplines:f.meta.layers[0].labels.map(d=>d.id).join(',')});assert.equal(r.status,200);assert.equal(r.body.series.length,48);assert.equal(f.requests.length,50);});
 test('CSV, download allowlist, HEAD and method/security headers',async()=>{const f=fixture(),r=await handle(new Request(`${f.origin}/api/series.csv?scheme=topics&level=field&discipline=f1&countries=CN&start=2000&end=2000`),f.env);assert.equal(r.status,200);assert.match(await r.text(),/CN,2000,2,ok,false,core/);assert.equal(r.headers.get('X-OpenAlex-Corpus'),'core');assert.ok(r.headers.has('Content-Security-Policy'));const small=await handle(new Request(`${f.origin}/download?file=run.json`),f.env);assert.equal(small.status,200);assert.equal(small.headers.get('X-Artifact-SHA256'),'abc');assert.equal((await handle(new Request(`${f.origin}/download?file=../secret`),f.env)).status,400);const big=await handle(new Request(`${f.origin}/download?file=statistics.parquet`),f.env);assert.equal(big.status,302);assert.match(big.headers.get('Location'),/^https:\/\/github.com\//);const head=await handle(new Request(`${f.origin}/api/meta`,{method:'HEAD'}),f.env);assert.equal(await head.text(),'');assert.equal((await handle(new Request(`${f.origin}/api/meta`,{method:'POST'}),f.env)).status,405);});
 test('Go shortest-float CSV notation keeps exponent boundaries',()=>{assert.equal(goFloat(1e6),'1e+06');assert.equal(goFloat(.00001),'1e-05');assert.equal(goFloat(.0001),'0.0001');assert.equal(goFloat(146958),'146958');assert.equal(goFloat(null),'');});
+
+function countryVersionFixture(){
+  const f=fixture(),versions={original:{},enriched:{}},base=[...f.store];
+  let marker=0;
+  for(const version of ['original','enriched'])for(const corpus of ['core','all']){
+    marker++;const prefix=`/data/${version}-${corpus}`,control=JSON.parse(JSON.stringify(f.control).replaceAll('/data/core-run',prefix));
+    control.meta.corpus=corpus;control.meta.quality={identified:marker};control.run_id=`${version}-${corpus}-run`;
+    control.downloads['run.json'].sha256=`${version}-${corpus}-hash`;
+    control.downloads['statistics.parquet'].url=`https://github.com/ider-zh/openalex-stats/releases/download/${version}/${corpus}-statistics.parquet`;
+    for(const template of Object.values(control.templates))template.method.source_run_id=control.run_id;
+    for(const [oldPath,bytes] of base){
+      if(!oldPath.startsWith('/data/core-run/'))continue;
+      const newPath=oldPath.replace('/data/core-run',prefix);
+      if(oldPath.includes('/counts/')){
+        const raw=gunzipSync(bytes);for(let offset=16;offset<raw.length;offset+=8)raw.writeDoubleLE(raw.readDoubleLE(offset)*marker,offset);f.store.set(newPath,gzipSync(raw));
+      }else if(oldPath.includes('/models/')){
+        const model=JSON.parse(gunzipSync(bytes));
+        for(const kind of ['countries','disciplines'])for(const entity of model[kind])if(entity[0][0]!=null){entity[0][0]+=marker;entity[0][2]=version==='enriched'?2:1;entity[0][3]=2;}
+        f.store.set(newPath,gzipSync(JSON.stringify(model)));
+      }else f.store.set(newPath,Buffer.from(JSON.stringify({run_id:control.run_id})));
+    }
+    versions[version][corpus]=control;
+  }
+  const catalog={default_corpus:'core',datasets:[{id:'core'},{id:'all'}],default_country_version:'enriched',country_versions:[{id:'original',display_name:'原始版',version:'snapshot-20260626-original'},{id:'enriched',display_name:'国家补全版',version:'country-enriched-v3-r3'}]};
+  f.store.set('/data/site.json',Buffer.from(JSON.stringify({version:'openalex-static-query-v1',catalog,datasets:versions.enriched,country_versions:versions})));
+  return {...f,versions};
+}
+
+test('country versions select full independent corpus controls, metadata, models and immutable global ranks',async()=>{
+  const f=countryVersionFixture();
+  const catalog=await (await handle(new Request(`${f.origin}/api/catalog`),f.env)).json();assert.equal(catalog.default_country_version,'enriched');assert.deepEqual(catalog.country_versions.map(x=>x.id),['original','enriched']);
+  const defaultResult=await f.query({disciplines:'f1',countries:'CN',end:'2000'});assert.equal(defaultResult.body.query.country_version,'enriched');assert.equal(defaultResult.body.series[0].points[0].value,6);
+  for(const version of ['enriched','original','enriched'])for(const corpus of ['core','all']){
+    const marker=version==='original'?(corpus==='core'?1:2):(corpus==='core'?3:4);
+    const r=await f.query({country_version:version,corpus,disciplines:'f1',countries:'CN',end:'2000'});assert.equal(r.status,200);assert.equal(r.body.query.country_version,version);assert.equal(r.body.query.corpus,corpus);assert.equal(r.body.series[0].points[0].value,2*marker);
+    const response=await handle(new Request(`${f.origin}/api/meta?corpus=${corpus}&country_version=${version}`),f.env),meta=await response.json();assert.equal(meta.country_version,version);assert.equal(meta.country_version_info.id,version);assert.equal(meta.quality.identified,marker);assert.equal(response.headers.get('X-OpenAlex-Country-Version'),version);
+    for(const method of ['spectral-v1','java-reflections-v1']){
+      const model=await f.query({country_version:version,corpus,metric:'eci',disciplines:'f1',countries:'CN',method,end:'2000'});assert.equal(model.body.series[0].points[0].value,(method==='spectral-v1'?1.2:.8)+marker);assert.equal(model.body.series[0].points[0].rank,version==='enriched'?2:1);assert.equal(model.body.method.source_run_id,`${version}-${corpus}-run`);
+      const pci=await f.query({country_version:version,corpus,metric:'pci',disciplines:'f1',method,end:'2000'});assert.equal(pci.body.series[0].country,'GLOBAL');assert.equal(pci.body.series[0].points[0].rank,version==='enriched'?2:1);
+    }
+  }
+});
+
+test('country version CSV, download bytes, redirect and HEAD remain selected-version bound',async()=>{
+  const f=countryVersionFixture();
+  for(const version of ['original','enriched']){
+    const csv=await handle(new Request(`${f.origin}/api/series.csv?country_version=${version}&corpus=all&scheme=topics&level=field&discipline=f1&countries=CN&start=2000&end=2000`),f.env),text=await csv.text();assert.equal(csv.headers.get('X-OpenAlex-Country-Version'),version);assert.equal(text.trim().split('\n')[0].split(',').at(-1),'country_version');assert.equal(text.trim().split('\n')[1].split(',').at(-1),version);
+    const small=await handle(new Request(`${f.origin}/download?country_version=${version}&corpus=all&file=run.json`),f.env);assert.deepEqual(await small.json(),{run_id:`${version}-all-run`});assert.equal(small.headers.get('X-Artifact-SHA256'),`${version}-all-hash`);
+    const big=await handle(new Request(`${f.origin}/download?country_version=${version}&corpus=all&file=statistics.parquet`),f.env);assert.equal(big.status,302);assert.match(big.headers.get('Location'),new RegExp(`/download/${version}/all-statistics.parquet$`));assert.equal(big.headers.get('X-OpenAlex-Country-Version'),version);
+    const head=await handle(new Request(`${f.origin}/api/meta?country_version=${version}`,{method:'HEAD'}),f.env);assert.equal(head.status,200);assert.equal(await head.text(),'');assert.equal(head.headers.get('X-OpenAlex-Country-Version'),version);
+  }
+});
+
+test('unknown, empty, duplicate and unavailable country versions reject consistently',async()=>{
+  const f=countryVersionFixture();
+  for(const tail of ['country_version=bogus','country_version=','country_version=original&country_version=enriched'])for(const endpoint of ['/api/meta','/api/series','/download'])assert.equal((await handle(new Request(`${f.origin}${endpoint}?${tail}`),f.env)).status,400);
+  const legacy=fixture(),meta=await (await handle(new Request(`${legacy.origin}/api/meta?country_version=original`),legacy.env)).json();assert.equal(meta.country_version,'original');assert.equal(meta.country_version_info.version,'snapshot-20260626-original');assert.equal((await handle(new Request(`${legacy.origin}/api/meta?country_version=enriched`),legacy.env)).status,400);
+  const catalog=await (await handle(new Request(`${legacy.origin}/api/catalog`),legacy.env)).json();assert.equal(catalog.default_country_version,'original');assert.deepEqual(catalog.country_versions,[meta.country_version_info]);
+});

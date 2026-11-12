@@ -1,0 +1,66 @@
+{
+  "artifacts": [
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/country_eci.parquet",
+      "bytes": 416317,
+      "sha256": "4246151c7f4c9d711fe196f634e63bbbaf3132bf0e95c416a61da085ea131978"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/coverage.json",
+      "bytes": 13133,
+      "sha256": "3886b42d01fcafe6d181d9d11e63b7209ec0cf4a2f8f2b2f1d354f9287dc8c2a"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/cube.parquet",
+      "bytes": 180093518,
+      "sha256": "2f389d27fd747b4ec93a75f74cc8d6b8057d56162394e9e9f76f14c90456f54e"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/dictionary.json",
+      "bytes": 108523,
+      "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/discipline_pci.parquet",
+      "bytes": 283947,
+      "sha256": "3fceff5cfcd29072ebe9f733d9a2d79c9625ebf025be64f09269907e9fd73b50"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/eci.json",
+      "bytes": 319528002,
+      "sha256": "c7cc39b2540183283ac9c9f0c2086aff814d56e3c6ceafd90f440cf13b21b986"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/enrichment.json",
+      "bytes": 1509,
+      "sha256": "5c186ad5bc68333a51c72b04a66d958f0c9ed2c27ca225882c84c7382b70000d"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/model_diagnostics.json",
+      "bytes": 2724827,
+      "sha256": "648ac5584f87d3b5a4f37ea6be504f1939e019ce67f4fc5f82962a4dc149cc5f"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/rca.parquet",
+      "bytes": 242260054,
+      "sha256": "720961036a1e73746d5a8fcfa1348bbabb8d788e6c0a49fc6c6be1e35ccd369a"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/scenarios.json",
+      "bytes": 939,
+      "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c"
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/statistics.parquet",
+      "bytes": 493217314,
+      "sha256": "e07ad64c6a8dfd45846ea8fed9ce11688d37e5eb6a3f350355cec41b1451c520"
+    }
+  ],
+  "run": {
+    "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/run.json",
+    "bytes": 2123183,
+    "sha256": "e67febbd92b65db970f9b99827545312cf5858a88c5fd7a01e35ae475f3373b2"
+  },
+  "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+  "version": 1
+}

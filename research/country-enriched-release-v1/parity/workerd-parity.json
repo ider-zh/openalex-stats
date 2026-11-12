@@ -1,0 +1,137 @@
+{
+  "status": "passed",
+  "edge": "http://127.0.0.1:8799",
+  "native": "http://192.168.1.229:8898",
+  "started_at_utc": "2026-11-12T23:22:56.438Z",
+  "cases": 1984,
+  "point_values": 667008,
+  "csv_cases": 56,
+  "metadata_cases": 4,
+  "small_downloads": 48,
+  "large_download_heads": 32,
+  "release_head_requested": true,
+  "release_head_checks": 32,
+  "invalid_cases": 14,
+  "head_cases": 8,
+  "default_cases": 4,
+  "version_difference_cases": 672,
+  "datasets": [
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e",
+      "selected_works": 269194661,
+      "countries": 248,
+      "layers": 4
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43",
+      "selected_works": 404079112,
+      "countries": 248,
+      "layers": 4
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+      "completion_sha256": "7436c7704820b576a8658edf93e92eee58c7c683720d014157f81cae743e6ea2",
+      "selected_works": 269194661,
+      "countries": 248,
+      "layers": 4
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+      "completion_sha256": "4ea14cec4548518f70bbf8e32ccef7ca42509bf7170850be0997602da8e7cfce",
+      "selected_works": 404079112,
+      "countries": 248,
+      "layers": 4
+    }
+  ],
+  "comparison_policy": {
+    "metadata": "ID-keyed arrays are semantic sets; labels are not keyed by display names.",
+    "series": "All query fields including country_version, all values/statuses/global ranks/universes, methods/source_run_id and series order are exact.",
+    "csv": "Header/order/text exact; numeric cells parsed as Float64.",
+    "downloads": "Small bodies byte-SHA match. Base completion is verified from the immutable static artifact (not public download allowlist) and bound to actual Go run.json bytes; method completion is live-downloaded. Large Go HEAD length and completion artifact SHA must match selected static control and Pages redirect; remote Release HEAD optional via CHECK_RELEASE_HEAD=1."
+  },
+  "version_difference_witnesses": [
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=spectral-v1&metric=publications&basis=publications&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "f684d1cebf724d67faa4be42f5834d650905504eafce269851328bfdbd3a5ba4",
+      "second_fingerprint": "2c2dbd8bbc75a232405085a91d9149ae5266f44ae58dc4a26def9643d6e626fa"
+    },
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=spectral-v1&metric=share&basis=citations&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "80d7401f254e663ec1862a4f333ea5f5ec36dabac72854dd0bec087d07b7a4f8",
+      "second_fingerprint": "72f053c655166fee006aaf0c0769a5d8f0110e0894c9cd17533190348ef9844c"
+    },
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=spectral-v1&metric=share&basis=publications&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "690fb4397eee6e1812ee39e364d6246ed290d0ddb64537dc08def127be6a2e72",
+      "second_fingerprint": "22c8e2ad501d104511dbe270919876c51fdbfc2023f2839d3d33e1a8f4f4e2a2"
+    },
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=spectral-v1&metric=citations&basis=publications&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "b197cb985e124e326982eb9f6bb9894bb4e0de2de6276e45ed6b161e600c2611",
+      "second_fingerprint": "94ed7470ad33e3736b84eed06a42b9c4804d05cf4080b0b9cece77959d0987c5"
+    },
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=spectral-v1&metric=rca&basis=publications&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "645a80807ff7e944276986d55ed50b7bec022856d8fe53758068d7912231f1ff",
+      "second_fingerprint": "10af9f87a7698182ca5c11b253d8d7870a27d1a6ce767eed1864d17dc2f8c422"
+    },
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=spectral-v1&metric=rca&basis=citations&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "c38e823e19078eb0e824b14049a2dc859892e2169ed8cd1c5ae54db8ac482b0c",
+      "second_fingerprint": "04a057aae0e13927baa4fc7d70e2764bed63d34f9d6440b57e7521d1f563049c"
+    },
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=java-reflections-v1&metric=publications&basis=publications&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "f684d1cebf724d67faa4be42f5834d650905504eafce269851328bfdbd3a5ba4",
+      "second_fingerprint": "2c2dbd8bbc75a232405085a91d9149ae5266f44ae58dc4a26def9643d6e626fa"
+    },
+    {
+      "query": "corpus=core&scheme=topics&level=field&scenario=fractional-concept-whole-0.3&method=java-reflections-v1&metric=citations&basis=publications&disciplines=https%3A%2F%2Fopenalex.org%2Ffields%2F11%2Chttps%3A%2F%2Fopenalex.org%2Ffields%2F24&countries=CN%2CUS%2CGB&start=2000&end=2026",
+      "versions": [
+        "original",
+        "enriched"
+      ],
+      "first_fingerprint": "b197cb985e124e326982eb9f6bb9894bb4e0de2de6276e45ed6b161e600c2611",
+      "second_fingerprint": "94ed7470ad33e3736b84eed06a42b9c4804d05cf4080b0b9cece77959d0987c5"
+    }
+  ],
+  "completed_at_utc": "2026-11-12T23:23:31.089Z"
+}

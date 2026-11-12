@@ -4,11 +4,13 @@ import path from 'node:path';
 import {createHash,randomUUID} from 'node:crypto';
 import {Readable,Transform} from 'node:stream';
 import {pipeline} from 'node:stream/promises';
-const params=new Map();for(let i=2;i<process.argv.length;i+=2){if(!['--corpus','--directory','--file'].includes(process.argv[i])||!process.argv[i+1])throw new Error('Usage: node scripts/download-results.mjs --corpus core|all [--directory results/full] [--file asset-name]');params.set(process.argv[i],process.argv[i+1]);}
+const params=new Map();for(let i=2;i<process.argv.length;i+=2){if(!['--corpus','--country-version','--directory','--file'].includes(process.argv[i])||!process.argv[i+1]||params.has(process.argv[i]))throw new Error('Usage: node scripts/download-results.mjs --corpus core|all [--country-version original|enriched] [--directory results/full] [--file asset-name]');params.set(process.argv[i],process.argv[i+1]);}
 const corpus=params.get('--corpus');if(!['core','all'].includes(corpus))throw new Error('--corpus core|all is required');
-const index=JSON.parse(await fs.readFile(new URL('../results/index.json',import.meta.url),'utf8'));
+const countryVersion=params.get('--country-version')||'original';
+if(!['original','enriched'].includes(countryVersion))throw new Error('--country-version original|enriched is required');
+const index=JSON.parse(await fs.readFile(new URL(countryVersion==='enriched'?'../results/country-enriched-v3-r3-index.json':'../results/index.json',import.meta.url),'utf8'));
 if(index.status!=='published')throw new Error('Release asset publication has not been verified yet');
-const root=path.resolve(params.get('--directory')||'results/full');
+const root=path.resolve(params.get('--directory')||(countryVersion==='enriched'?'results/full/enriched':'results/full'));
 const selected=index.assets.filter(a=>(a.corpus===corpus||a.group==='provenance')&&(!params.has('--file')||params.get('--file')===a.name));if(!selected.length)throw new Error('No matching result asset');
 async function fileSHA(file){const h=createHash('sha256');for await(const b of createReadStream(file))h.update(b);return h.digest('hex');}
 for(const asset of selected){

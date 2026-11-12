@@ -6,6 +6,7 @@ const allowed = new Set(['scenario','scheme','level','discipline','disciplines',
 const cache = new Map();
 const MAX_CACHE = 32;
 const xiaoNiMethod = 'java-reflections-v1';
+function countryInfo(id){return {id,display_name:id==='enriched'?'国家补全版':'原始版',version:id==='enriched'?'country-enriched-v3-r3':'snapshot-20260626-original'};}
 
 function defaultMethod(meta) {
   return (meta.methods||[]).some(m=>(typeof m==='string'?m:m.id)===xiaoNiMethod)?xiaoNiMethod:(meta.eci_default_method||'spectral-v1');
@@ -19,10 +20,11 @@ class InputError extends Error {}
 function fail(message) { throw new InputError(message); }
 function apiError(status, code, error) { return json({code,error},status); }
 function json(value,status=200) { return new Response(JSON.stringify(value)+'\n',{status,headers:{'Content-Type':MIME,'Cache-Control':'no-store'}}); }
-function secure(response,corpus,head=false) {
+function secure(response,corpus,head=false,countryVersion) {
   const headers=new Headers(response.headers);
   headers.set('X-Content-Type-Options','nosniff');headers.set('Referrer-Policy','no-referrer');headers.set('Content-Security-Policy',CSP);
   if(corpus)headers.set('X-OpenAlex-Corpus',corpus);
+  if(countryVersion)headers.set('X-OpenAlex-Country-Version',countryVersion);
   return new Response(head?null:response.body,{status:response.status,statusText:response.statusText,headers});
 }
 
@@ -147,16 +149,18 @@ export function goFloat(value){
 function csvCell(value){const s=String(value??'');return /[",\r\n]/.test(s)?`"${s.replaceAll('"','""')}"`:s;}
 export function csvResponse(response,header){
   header ||= ['scenario','scheme','level','discipline','metric','basis','country','year','value','status','partial','corpus','rank','rank_universe','series_id','country_name','discipline_name'];
+  if(!header.includes('country_version'))header=[...header,'country_version'];
   const lines=[header.join(',')];
   for(const s of response.series)for(const p of s.points){
-    const cells={scenario:response.query.scenario,scheme:response.query.scheme,level:response.query.level,discipline:s.discipline,metric:response.query.metric,basis:response.query.basis,country:s.country,year:p.year,value:goFloat(p.value),status:p.status,partial:String(p.partial),corpus:response.query.corpus,rank:p.rank??'',rank_universe:p.rank_universe,series_id:s.id,country_name:s.country_name,discipline_name:s.discipline_name,method:response.query.method,country_iterations:response.method?.country_iterations||0,discipline_iterations:response.method?.discipline_iterations||0,source_run_id:response.method?.source_run_id||'',method_applies:String(Boolean(response.method_applies))};
+    const cells={scenario:response.query.scenario,scheme:response.query.scheme,level:response.query.level,discipline:s.discipline,metric:response.query.metric,basis:response.query.basis,country:s.country,year:p.year,value:goFloat(p.value),status:p.status,partial:String(p.partial),corpus:response.query.corpus,rank:p.rank??'',rank_universe:p.rank_universe,series_id:s.id,country_name:s.country_name,discipline_name:s.discipline_name,method:response.query.method,country_iterations:response.method?.country_iterations||0,discipline_iterations:response.method?.discipline_iterations||0,source_run_id:response.method?.source_run_id||'',method_applies:String(Boolean(response.method_applies)),country_version:response.query.country_version||'original'};
     lines.push(header.map(key=>csvCell(cells[key])).join(','));
   }
   return new Response(lines.join('\n')+'\n',{headers:{'Content-Type':'text/csv; charset=utf-8','Content-Disposition':'attachment; filename="openalex-series.csv"','Cache-Control':'no-store'}});
 }
 
 export async function handle(request,env){
-  const url=new URL(request.url),head=request.method==='HEAD';let corpus;
+  const url=new URL(request.url),head=request.method==='HEAD';let corpus,countryVersion;
+  const finish=response=>secure(response,corpus,head,countryVersion);
   try{
     if(!['GET','HEAD'].includes(request.method)){const r=apiError(405,'method_not_allowed','只支持 GET 或 HEAD。');r.headers.set('Allow','GET, HEAD');return secure(r,null,head);}
     if(!['/api/catalog','/api/meta','/api/series','/api/series.csv','/download'].includes(url.pathname))return secure(await env.ASSETS.fetch(request),null,head);
@@ -164,16 +168,23 @@ export async function handle(request,env){
     if(site.version!=='openalex-static-query-v1')throw new Error('unsupported static export');
     if(url.pathname==='/api/catalog'){
       if([...url.searchParams].length)return secure(apiError(400,'invalid_parameter','catalog接口不接受参数。'),null,head);
-      return secure(json(site.catalog),null,head);
+      const catalog=site.country_versions?site.catalog:{...site.catalog,default_country_version:'original',country_versions:[countryInfo('original')]};
+      return finish(json(catalog));
     }
     corpus=site.catalog.default_corpus;
     if(url.searchParams.has('corpus')){const values=url.searchParams.getAll('corpus');if(values.length!==1||!values[0])fail('corpus必须唯一且为core或all。');corpus=values[0];}
-    const storedControl=site.datasets[corpus];if(!storedControl)fail('未知或未提供的语料版本。');
+    countryVersion=site.catalog.default_country_version||(site.country_versions?.enriched?'enriched':'original');
+    if(url.searchParams.has('country_version')){const values=url.searchParams.getAll('country_version');if(values.length!==1||!values[0])fail('country_version必须唯一且为original或enriched。');countryVersion=values[0];}
+    if(!['original','enriched'].includes(countryVersion))fail('未知或未提供的国家数据版本。');
+    const versionDatasets=site.country_versions?site.country_versions[countryVersion]:(countryVersion==='original'?site.datasets:null);
+    if(!versionDatasets)fail('未知或未提供的国家数据版本。');
+    const storedControl=versionDatasets[corpus];if(!storedControl)fail('未知或未提供的语料版本。');
     // Presentation defaults do not mutate the immutable exported manifest/models.
-    const control={...storedControl,meta:presentMetadata(storedControl.meta)};
-    const params=new URLSearchParams(url.searchParams);params.delete('corpus');
+    const info=site.catalog.country_versions?.find(v=>v.id===countryVersion)||countryInfo(countryVersion);
+    const control={...storedControl,meta:{...presentMetadata(storedControl.meta),country_version:countryVersion,country_version_info:info}};
+    const params=new URLSearchParams(url.searchParams);params.delete('corpus');params.delete('country_version');
     if(url.pathname==='/api/meta'){
-      if([...params].length)fail('metadata接口不接受参数。');return secure(json({...control.meta,max_eci_countries:control.meta.countries.length}),corpus,head);
+      if([...params].length)fail('metadata接口不接受参数。');return finish(json({...control.meta,max_eci_countries:control.meta.countries.length}));
     }
     if(url.pathname==='/download'){
       for(const key of new Set(params.keys()))if(!['file','method'].includes(key)||params.getAll(key).length!==1)fail('只能下载已列出的统计产物。');
@@ -182,18 +193,18 @@ export async function handle(request,env){
       if(!(control.meta.methods||[{id:'spectral-v1'}]).some(m=>(typeof m==='string'?m:m.id)===method))fail('未知或未提供的知识复杂度方法。');
       const name=params.get('file'),methodArtifact=control.method_downloads?.[method]?.[name];
       if(!methodArtifact&&!(control.meta.downloads||[]).includes(name))fail('只能下载已列出的统计产物。');
-      const artifact=methodArtifact||control.downloads[name];if(!artifact)return secure(new Response('404 page not found\n',{status:404}),corpus,head);
-      if(!artifact.path){const redirect=Response.redirect(artifact.url,302),headers=new Headers(redirect.headers);if(methodArtifact)headers.set('X-OpenAlex-Method',method);return secure(new Response(null,{status:302,headers}),corpus,head);}
+      const artifact=methodArtifact||control.downloads[name];if(!artifact)return finish(new Response('404 page not found\n',{status:404}));
+      if(!artifact.path){const redirect=Response.redirect(artifact.url,302),headers=new Headers(redirect.headers);if(methodArtifact)headers.set('X-OpenAlex-Method',method);return finish(new Response(null,{status:302,headers}));}
       const target=new URL(artifact.path,url.origin);const headers=new Headers();const range=request.headers.get('Range');if(range)headers.set('Range',range);
       const result=await env.ASSETS.fetch(new Request(target,{method:request.method,headers}));
       let filename=artifact.filename||name;if(methodArtifact&&!filename.startsWith(method))filename=`${method}-${filename}`;
       const outgoing=new Headers(result.headers);outgoing.set('Content-Disposition',`attachment; filename="${filename}"`);outgoing.set('X-Artifact-SHA256',artifact.sha256);if(methodArtifact)outgoing.set('X-OpenAlex-Method',method);
-      return secure(new Response(result.body,{status:result.status,headers:outgoing}),corpus,head);
+      return finish(new Response(result.body,{status:result.status,headers:outgoing}));
     }
-    const q=parseQuery(params,control.meta),response=await seriesResponse(q,control,env,url.origin);
-    return secure(url.pathname==='/api/series.csv'?csvResponse(response,control.csv_header):json(response),corpus,head);
+    const q={...parseQuery(params,control.meta),country_version:countryVersion},response=await seriesResponse(q,control,env,url.origin);
+    return finish(url.pathname==='/api/series.csv'?csvResponse(response,control.csv_header):json(response));
   }catch(error){
-    return secure(error instanceof InputError?apiError(400,'invalid_parameter',error.message):apiError(500,'static_data_unavailable','静态查询数据暂不可用，请检查本次部署的数据清单。'),corpus,head);
+    return finish(error instanceof InputError?apiError(400,'invalid_parameter',error.message):apiError(500,'static_data_unavailable','静态查询数据暂不可用，请检查本次部署的数据清单。'));
   }
 }
 

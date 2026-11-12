@@ -1,6 +1,6 @@
 # 2026-11-13 研究归档（待 review）
 
-本包不进入网站查询数据，也不覆盖原始结果。完整解读见[小国家／地区高复杂度审查](../../docs/small-country-complexity-review.md)和[国家补全最终报告](../../docs/country-enrichment-v3-review.md)。
+本包是发布前研究归档，不作为网站运行时查询数据，也不覆盖原始结果；manifest 中未应用生产的标记记录归档时点。用户随后确认采用，r3 已另行导出为网站可切换的默认国家补全版，见[后续发布记录](../../docs/country-enriched-release.md)。冻结的补丁、汇总和哈希保持不变。完整解读见[小国家／地区高复杂度审查](../../docs/small-country-complexity-review.md)和[国家补全最终报告](../../docs/country-enrichment-v3-review.md)。
 
 ## 结果目录
 

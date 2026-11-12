@@ -1,0 +1,480 @@
+{
+  "version": 1,
+  "status": "published",
+  "snapshot_date": "2026-06-26",
+  "dataset_version": "country-enriched-v3-r3",
+  "release_tag": "snapshot-20260626-country-enriched-r3",
+  "release_url": "https://github.com/ider-zh/openalex-stats/releases/tag/snapshot-20260626-country-enriched-r3",
+  "datasets": {
+    "core": {
+      "run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+      "completion_sha256": "7436c7704820b576a8658edf93e92eee58c7c683720d014157f81cae743e6ea2",
+      "selected_works": 269194661,
+      "publication_works": 201267475,
+      "retained_edges": 2363318327,
+      "methods": [
+        {
+          "id": "java-reflections-v1",
+          "display_name": "小倪方法论",
+          "country_iterations": 16,
+          "discipline_iterations": 17,
+          "normalization": "population-z",
+          "models": "java-reflections-v1.json",
+          "models_sha256": "4b5df17ed4b610933e6e1bce1a346f47288ae521f25f5d504a85ed5a57998083",
+          "residual_kind": "relative centered(T*z)-lambda2*z; finite-iteration diagnostic, not a convergence requirement"
+        }
+      ],
+      "method_completion_sha256": "ff5e2321f538706cba0ebb33ace73d6e9a8afabfa945a9b05f7d14233edd2796",
+      "country_coverage_summary": "research/country-enriched-release-v1/audit/release-summary.json"
+    },
+    "all": {
+      "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+      "completion_sha256": "4ea14cec4548518f70bbf8e32ccef7ca42509bf7170850be0997602da8e7cfce",
+      "selected_works": 404079112,
+      "publication_works": 285365821,
+      "retained_edges": 2385146215,
+      "methods": [
+        {
+          "id": "java-reflections-v1",
+          "display_name": "小倪方法论",
+          "country_iterations": 16,
+          "discipline_iterations": 17,
+          "normalization": "population-z",
+          "models": "java-reflections-v1.json",
+          "models_sha256": "1fd8fb045cfd09b1d036880b001def1514346bde3fd75fcdb05d9831b02171f7",
+          "residual_kind": "relative centered(T*z)-lambda2*z; finite-iteration diagnostic, not a convergence requirement"
+        }
+      ],
+      "method_completion_sha256": "4a1b4a81e56c881eebaea492acc25b71019084e4c02aa835d51b72758ed80b0f",
+      "country_coverage_summary": "research/country-enriched-release-v1/audit/release-summary.json"
+    }
+  },
+  "assets": [
+    {
+      "name": "all-completion.json",
+      "filename": "completion.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 2882,
+      "sha256": "4ea14cec4548518f70bbf8e32ccef7ca42509bf7170850be0997602da8e7cfce",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-completion.json",
+      "github_asset_id": 741443705
+    },
+    {
+      "name": "all-country_eci.parquet",
+      "filename": "country_eci.parquet",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 416317,
+      "sha256": "4246151c7f4c9d711fe196f634e63bbbaf3132bf0e95c416a61da085ea131978",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-country_eci.parquet",
+      "github_asset_id": 741443749
+    },
+    {
+      "name": "all-coverage.json",
+      "filename": "coverage.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 13133,
+      "sha256": "3886b42d01fcafe6d181d9d11e63b7209ec0cf4a2f8f2b2f1d354f9287dc8c2a",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-coverage.json",
+      "github_asset_id": 741443792
+    },
+    {
+      "name": "all-cube.parquet",
+      "filename": "cube.parquet",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 180093518,
+      "sha256": "2f389d27fd747b4ec93a75f74cc8d6b8057d56162394e9e9f76f14c90456f54e",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-cube.parquet",
+      "github_asset_id": 741443839
+    },
+    {
+      "name": "all-dictionary.json",
+      "filename": "dictionary.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 108523,
+      "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-dictionary.json",
+      "github_asset_id": 741445398
+    },
+    {
+      "name": "all-discipline_pci.parquet",
+      "filename": "discipline_pci.parquet",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 283947,
+      "sha256": "3fceff5cfcd29072ebe9f733d9a2d79c9625ebf025be64f09269907e9fd73b50",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-discipline_pci.parquet",
+      "github_asset_id": 741445459
+    },
+    {
+      "name": "all-eci.json",
+      "filename": "eci.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 319528002,
+      "sha256": "c7cc39b2540183283ac9c9f0c2086aff814d56e3c6ceafd90f440cf13b21b986",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-eci.json",
+      "github_asset_id": 741445539
+    },
+    {
+      "name": "all-enrichment.json",
+      "filename": "enrichment.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 1509,
+      "sha256": "5c186ad5bc68333a51c72b04a66d958f0c9ed2c27ca225882c84c7382b70000d",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-enrichment.json",
+      "github_asset_id": 741447740
+    },
+    {
+      "name": "all-methods-audit.json",
+      "filename": "audit.json",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 261,
+      "sha256": "21f7c0d6e0a2d193a73e0fc8596856c52b1a3a3785ca5793362b314283e027e7",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-audit.json",
+      "github_asset_id": 741454044
+    },
+    {
+      "name": "all-methods-completion.json",
+      "filename": "completion.json",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 1322,
+      "sha256": "4a1b4a81e56c881eebaea492acc25b71019084e4c02aa835d51b72758ed80b0f",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-completion.json",
+      "github_asset_id": 741454106
+    },
+    {
+      "name": "all-methods-country_eci.parquet",
+      "filename": "country_eci.parquet",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 415050,
+      "sha256": "a917bf1f85a6e82b522c76596e96da31f738a2c7ee1491b7b3ab5a036de9df2a",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-country_eci.parquet",
+      "github_asset_id": 741454168
+    },
+    {
+      "name": "all-methods-discipline_pci.parquet",
+      "filename": "discipline_pci.parquet",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 283947,
+      "sha256": "c713caff5a3fdbd7d52c5f6cb924f92732316ab8cc85d4cfa19727b2daa3399d",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-discipline_pci.parquet",
+      "github_asset_id": 741454222
+    },
+    {
+      "name": "all-methods-java-reflections-v1.json",
+      "filename": "java-reflections-v1.json",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 142749631,
+      "sha256": "1fd8fb045cfd09b1d036880b001def1514346bde3fd75fcdb05d9831b02171f7",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-java-reflections-v1.json",
+      "github_asset_id": 741454308
+    },
+    {
+      "name": "all-methods-manifest.json",
+      "filename": "manifest.json",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 1825,
+      "sha256": "90fa510b291d0d79fad8ef178114d32f58f999944e8243a5f20db21cfcb586ec",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-manifest.json",
+      "github_asset_id": 741455577
+    },
+    {
+      "name": "all-methods-model_diagnostics.json",
+      "filename": "model_diagnostics.json",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 1453428,
+      "sha256": "bfaa2a589b824de2714ace2b9448e87cd62bf7d6e04fe393898d201084a6ad94",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-model_diagnostics.json",
+      "github_asset_id": 741455623
+    },
+    {
+      "name": "all-methods-sensitivity.json",
+      "filename": "sensitivity.json",
+      "corpus": "all",
+      "group": "methods",
+      "bytes": 155551,
+      "sha256": "27a7781797ac57971c4582a09eb9407760a572d6096bf8e617055d71fe0d2109",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-methods-sensitivity.json",
+      "github_asset_id": 741455728
+    },
+    {
+      "name": "all-model_diagnostics.json",
+      "filename": "model_diagnostics.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 2724827,
+      "sha256": "648ac5584f87d3b5a4f37ea6be504f1939e019ce67f4fc5f82962a4dc149cc5f",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-model_diagnostics.json",
+      "github_asset_id": 741447782
+    },
+    {
+      "name": "all-rca.parquet",
+      "filename": "rca.parquet",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 242260054,
+      "sha256": "720961036a1e73746d5a8fcfa1348bbabb8d788e6c0a49fc6c6be1e35ccd369a",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-rca.parquet",
+      "github_asset_id": 741447895
+    },
+    {
+      "name": "all-run.json",
+      "filename": "run.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 2123183,
+      "sha256": "e67febbd92b65db970f9b99827545312cf5858a88c5fd7a01e35ae475f3373b2",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-run.json",
+      "github_asset_id": 741449746
+    },
+    {
+      "name": "all-scenarios.json",
+      "filename": "scenarios.json",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 939,
+      "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-scenarios.json",
+      "github_asset_id": 741449804
+    },
+    {
+      "name": "all-statistics.parquet",
+      "filename": "statistics.parquet",
+      "corpus": "all",
+      "group": "base",
+      "bytes": 493217314,
+      "sha256": "e07ad64c6a8dfd45846ea8fed9ce11688d37e5eb6a3f350355cec41b1451c520",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/all-statistics.parquet",
+      "github_asset_id": 741449898
+    },
+    {
+      "name": "core-completion.json",
+      "filename": "completion.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 2893,
+      "sha256": "7436c7704820b576a8658edf93e92eee58c7c683720d014157f81cae743e6ea2",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-completion.json",
+      "github_asset_id": 741431034
+    },
+    {
+      "name": "core-country_eci.parquet",
+      "filename": "country_eci.parquet",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 416419,
+      "sha256": "fcaf5819c6a50549bc5bc8ab8a9087006a029eb24558065addd12d05e704e67a",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-country_eci.parquet",
+      "github_asset_id": 741431062
+    },
+    {
+      "name": "core-coverage.json",
+      "filename": "coverage.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 13113,
+      "sha256": "74df47b8b69d26ffafa36938b402d710282c095bd447f60fc0bda5aca3cf3ac2",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-coverage.json",
+      "github_asset_id": 741431117
+    },
+    {
+      "name": "core-cube.parquet",
+      "filename": "cube.parquet",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 179545921,
+      "sha256": "652ac0c3b33f01f795139254b53076b193e4e9804e4e5fd751530e0e7dfacc0b",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-cube.parquet",
+      "github_asset_id": 741431181
+    },
+    {
+      "name": "core-dictionary.json",
+      "filename": "dictionary.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 108523,
+      "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-dictionary.json",
+      "github_asset_id": 741433024
+    },
+    {
+      "name": "core-discipline_pci.parquet",
+      "filename": "discipline_pci.parquet",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 283946,
+      "sha256": "2f667025f8987f4561fa89bc85f69cd09d74c0f32216a02dd273bd06b39f23eb",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-discipline_pci.parquet",
+      "github_asset_id": 741433085
+    },
+    {
+      "name": "core-eci.json",
+      "filename": "eci.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 319198151,
+      "sha256": "ee94b459557482e223c621cbb4409a478341a2c76b6eb8bc74c3068706473d81",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-eci.json",
+      "github_asset_id": 741433228
+    },
+    {
+      "name": "core-enrichment.json",
+      "filename": "enrichment.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 1493,
+      "sha256": "95596551b02884604c3d51249eeb887e2e9fd13b49d32fee71bdcf218288049d",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-enrichment.json",
+      "github_asset_id": 741435934
+    },
+    {
+      "name": "core-methods-audit.json",
+      "filename": "audit.json",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 261,
+      "sha256": "b4cc19fa24f5a2465915dddcb0fa4ee76316bd1fe3192ae9881184ab86f1ae58",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-audit.json",
+      "github_asset_id": 741442135
+    },
+    {
+      "name": "core-methods-completion.json",
+      "filename": "completion.json",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 1322,
+      "sha256": "ff5e2321f538706cba0ebb33ace73d6e9a8afabfa945a9b05f7d14233edd2796",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-completion.json",
+      "github_asset_id": 741442200
+    },
+    {
+      "name": "core-methods-country_eci.parquet",
+      "filename": "country_eci.parquet",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 415102,
+      "sha256": "d977d5b164bf14d3efd6a52e63c2e3ef19668551f3cee94a9faff1ceea571f14",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-country_eci.parquet",
+      "github_asset_id": 741442249
+    },
+    {
+      "name": "core-methods-discipline_pci.parquet",
+      "filename": "discipline_pci.parquet",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 283947,
+      "sha256": "3668737336e9241fd07c0f30b06036e4e645767d2a50d100a614da21e0eaac1b",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-discipline_pci.parquet",
+      "github_asset_id": 741442331
+    },
+    {
+      "name": "core-methods-java-reflections-v1.json",
+      "filename": "java-reflections-v1.json",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 142420145,
+      "sha256": "4b5df17ed4b610933e6e1bce1a346f47288ae521f25f5d504a85ed5a57998083",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-java-reflections-v1.json",
+      "github_asset_id": 741442376
+    },
+    {
+      "name": "core-methods-manifest.json",
+      "filename": "manifest.json",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 1825,
+      "sha256": "b05a4529af9960892887ac66d0a0a345459540623e70bff6cd276853bd515855",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-manifest.json",
+      "github_asset_id": 741443559
+    },
+    {
+      "name": "core-methods-model_diagnostics.json",
+      "filename": "model_diagnostics.json",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 1453395,
+      "sha256": "81de6198eecdb265e65f18b79ff02f3e1810aa34dcab48698e0092158cc89ef8",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-model_diagnostics.json",
+      "github_asset_id": 741443600
+    },
+    {
+      "name": "core-methods-sensitivity.json",
+      "filename": "sensitivity.json",
+      "corpus": "core",
+      "group": "methods",
+      "bytes": 155420,
+      "sha256": "a1bb90b8d2bf673cd48b1625438216a75042769cbe2cff3852ff265d48e59970",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-methods-sensitivity.json",
+      "github_asset_id": 741443676
+    },
+    {
+      "name": "core-model_diagnostics.json",
+      "filename": "model_diagnostics.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 2724751,
+      "sha256": "070de802d664cd321bb873834d936ccdd616c0a961757544a06f98b14ca1ce65",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-model_diagnostics.json",
+      "github_asset_id": 741435980
+    },
+    {
+      "name": "core-rca.parquet",
+      "filename": "rca.parquet",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 241293390,
+      "sha256": "fdba00af88ebba4cb99fac0a632c6e5d0b03315cc5968b39bd66bbbe84374a57",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-rca.parquet",
+      "github_asset_id": 741436091
+    },
+    {
+      "name": "core-run.json",
+      "filename": "run.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 924140,
+      "sha256": "e578989cd541403d29a7fb919547a015a77fc5715c45fc2ce396ae4dd3c4bd12",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-run.json",
+      "github_asset_id": 741438143
+    },
+    {
+      "name": "core-scenarios.json",
+      "filename": "scenarios.json",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 939,
+      "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-scenarios.json",
+      "github_asset_id": 741438186
+    },
+    {
+      "name": "core-statistics.parquet",
+      "filename": "statistics.parquet",
+      "corpus": "core",
+      "group": "base",
+      "bytes": 490753337,
+      "sha256": "fcc95c34a68ad85fc2050025cff2e5b561adf224c25f27fc8081afb0c6f2f520",
+      "url": "https://github.com/ider-zh/openalex-stats/releases/download/snapshot-20260626-country-enriched-r3/core-statistics.parquet",
+      "github_asset_id": 741438340
+    }
+  ],
+  "verified_at_utc": "2026-11-12T23:20:05.675114+00:00",
+  "scope_notes": [
+    "Strict-text UNKNOWN-only country enrichment; original nonempty country sets unchanged.",
+    "External Crossref/PubMed/PMC/PDF actual admissions0.",
+    "Prepared local bytes verified; publication status must be updated only after GitHub asset verification."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "status": "complete",
+  "base_run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+  "manifest_sha256": "90fa510b291d0d79fad8ef178114d32f58f999944e8243a5f20db21cfcb586ec",
+  "artifacts": [
+    {
+      "path": "java-reflections-v1.json",
+      "bytes": 142749631,
+      "sha256": "1fd8fb045cfd09b1d036880b001def1514346bde3fd75fcdb05d9831b02171f7"
+    },
+    {
+      "path": "audit.json",
+      "bytes": 261,
+      "sha256": "21f7c0d6e0a2d193a73e0fc8596856c52b1a3a3785ca5793362b314283e027e7"
+    },
+    {
+      "path": "sensitivity.json",
+      "bytes": 155551,
+      "sha256": "27a7781797ac57971c4582a09eb9407760a572d6096bf8e617055d71fe0d2109"
+    },
+    {
+      "path": "model_diagnostics.json",
+      "bytes": 1453428,
+      "sha256": "bfaa2a589b824de2714ace2b9448e87cd62bf7d6e04fe393898d201084a6ad94"
+    },
+    {
+      "path": "country_eci.parquet",
+      "bytes": 415050,
+      "sha256": "a917bf1f85a6e82b522c76596e96da31f738a2c7ee1491b7b3ab5a036de9df2a"
+    },
+    {
+      "path": "discipline_pci.parquet",
+      "bytes": 283947,
+      "sha256": "c713caff5a3fdbd7d52c5f6cb924f92732316ab8cc85d4cfa19727b2daa3399d"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1825,
+      "sha256": "90fa510b291d0d79fad8ef178114d32f58f999944e8243a5f20db21cfcb586ec"
+    }
+  ]
+}

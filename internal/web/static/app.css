@@ -94,3 +94,20 @@ td:first-child .country-icon{margin-right:6px}.comparison-panel{min-width:0}td:f
 #expandCountries{background:#e5ede2;color:#244d38}
 .method-selector .hint{margin:11px 0 0;max-width:850px}.method-report{display:inline-block;margin-top:8px;color:#315f7b;font-size:13px;text-underline-offset:3px}
 @media(max-width:560px){.method-selector-heading{align-items:flex-start;flex-direction:column}.method-selector-heading .switch{min-width:0;width:100%}}
+
+/* Country enrichment is independent of corpus and complexity methodology. */
+.country-version-switch{margin-top:7px}
+.country-version-switch button{font-size:14px;padding:9px 7px}
+#countryVersionHint{margin:9px 0 0}
+.country-version-help{border:0;background:none;padding:6px 0;color:#315f7b;font-size:13px;text-align:left;text-decoration:underline;text-underline-offset:3px;line-height:1.6}
+.country-version-help:hover{color:var(--accent)}
+.country-enrichment-method{grid-column:1/-1;padding-bottom:20px;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.country-enrichment-method:focus{outline:2px solid #b8cabc;outline-offset:8px}
+.country-enrichment-heading{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.country-enrichment-heading .badge{background:#e5ede2;color:#244d38}
+.country-enrichment-coverage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:16px 0}
+.country-enrichment-coverage>div{border-left:2px solid #b8cabc;padding:2px 12px;min-width:0}
+.country-enrichment-coverage>div>span{display:block;font-size:13px;color:var(--muted)}
+.country-enrichment-coverage strong{display:block;margin-top:5px;font-size:21px;font-weight:400;font-family:var(--serif);font-variant-numeric:tabular-nums;color:var(--ink);overflow-wrap:anywhere}
+.country-enrichment-coverage strong span{font-family:inherit;color:var(--accent);padding:0 3px}
+@media(max-width:560px){.country-version-switch button{font-size:14px}.country-enrichment-coverage{grid-template-columns:1fr;gap:14px}.country-enrichment-coverage strong{font-size:23px}}

@@ -80,8 +80,8 @@ def publish(args):
     if status == 404:
         status, release = request(token, "POST", base + "/releases", {
             "tag_name": args.tag, "target_commitish": args.ref,
-            "name": "OpenAlex 2026-06-26 — audited core and core+XPAC statistics",
-            "body": "Immutable audited results, checksums and methodology sidecars. The repository contains the complete Cloudflare query dataset and source. Country-enrichment candidates are excluded until review.",
+            "name": args.name or "OpenAlex 2026-06-26 — audited core and core+XPAC statistics",
+            "body": pathlib.Path(args.notes_file).read_text(encoding="utf-8") if args.notes_file else "Immutable audited results, checksums and methodology sidecars. The repository contains the complete Cloudflare query dataset and source. Country-enrichment candidates are excluded until review.",
             "draft": False, "prerelease": False,
         })
     if status not in (200, 201):
@@ -128,6 +128,8 @@ if __name__ == "__main__":
     parser.add_argument("--repo", default="ider-zh/openalex-stats")
     parser.add_argument("--tag", default="snapshot-20260626-v1")
     parser.add_argument("--ref", default="main")
+    parser.add_argument("--name", help="release title; existing releases are never overwritten")
+    parser.add_argument("--notes-file", help="UTF-8 release notes; keeps multiline content out of shell commands")
     parser.add_argument("--manifest", required=True, help="JSON array of local source/name/bytes/sha256 entries")
     parser.add_argument("--output", required=True, help="verified public release index JSON")
     try:

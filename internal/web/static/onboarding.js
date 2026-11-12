@@ -35,7 +35,7 @@
   let panel, marker, help, active = false, index = 0, previousFocus, pendingFrame;
   let ready = false;
   const steps = [
-    { title: '先确定数据范围', selector: '#corpusButtons', text: 'Core 是主数据；“含 XPAC 全数据”纳入扩展文献。两版独立统计，切换后用同一版本比较国家、年份和学科。' },
+    { title: '先确定数据范围', selector: '#corpusButtons', text: 'Core 是主数据；“含 XPAC 全数据”纳入扩展文献。国家信息默认使用补全版，可切回原始版对照；下方“补全方法与覆盖变化”解释其范围。' },
     { title: '选择分类与多个学科', selector: '#disciplinePicker', text: 'Topics 可选 Field / Subfield，Concepts 可选 Level 0 / 1。先定规范与层级，再打开学科选择器搜索、多选同层学科；数量类曲线会组合国家与学科。' },
     { title: '搜索国家，展开全球视野', selector: '.countries-block .search-box', text: '国家支持中文、英文和 ISO 搜索，也可批量选择。国家 ECI 的全球排名 Bump 可以容纳全部国家；排名始终基于全部有效国家，显示选择不会重新排名。' },
     { title: '从问题选择指标', selector: '.metric-groups', text: '“数量与引用”看论文量、当年被引与全球份额；RCA 看比较优势。“知识复杂度”里，ECI 比较国家的整体学科组合，PCI 比较学科本身。' },

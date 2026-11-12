@@ -1,0 +1,31 @@
+{
+  "pid": 3537001,
+  "args": [
+    "/home/ider/tmpdata/openalex-stats-dev-20261112/country-enriched-release-v1/oa-stats-v2",
+    "serve",
+    "--listen",
+    "0.0.0.0:8898",
+    "--data-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+    "--data-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+    "--methods-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+    "--methods-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+    "--data-core-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+    "--data-all-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+    "--methods-core-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113",
+    "--methods-all-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113"
+  ],
+  "started_at_unix": 1794524923.4861233,
+  "port": 8898,
+  "start_ticks": "5129039285",
+  "binary_sha256": "e760226dfefb4951dd69747d9be90ffee781c0373ec8ce459bc9ed8c725ef2f0",
+  "status": "stopped_owned_candidate_after_production_acceptance",
+  "stopped_at_unix": 1794526104.6749449
+}

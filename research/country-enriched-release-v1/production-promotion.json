@@ -1,0 +1,236 @@
+{
+  "status": "promoted_ready_default_enriched",
+  "production": {
+    "pid": 3547541,
+    "args": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/country-enriched-release-v1/oa-stats-v3",
+      "serve",
+      "--listen",
+      "0.0.0.0:8899",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--methods-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+      "--methods-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+      "--data-core-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+      "--data-all-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+      "--methods-core-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113",
+      "--methods-all-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113",
+      "--wait-for-listen",
+      "15m"
+    ],
+    "port": 8899,
+    "started_at_unix": 1794525550.3354518,
+    "start_ticks": "5129101970",
+    "binary_sha256": "a9cec12d1d15a14956ee0699a415f1a400cf80296ba41784959eb986297e48d9",
+    "previous": {
+      "pid": 2622389,
+      "args": [
+        "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-xiaoni-default-v2-linux",
+        "serve",
+        "--data-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+        "--data-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+        "--methods-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+        "--methods-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+        "--listen",
+        "0.0.0.0:8899"
+      ],
+      "start_ticks": "5126179902",
+      "binary_sha256": "4c218be10e5df06a1cc2c5f0506e78036c198851d24807fea5d10101472d1c96"
+    }
+  },
+  "catalog": {
+    "default_corpus": "core",
+    "datasets": [
+      {
+        "id": "core",
+        "display_name": "\u4e3b\u6570\u636e \u00b7 Core",
+        "status": "full_snapshot_complete",
+        "selected_works": 269194661
+      },
+      {
+        "id": "all",
+        "display_name": "\u5168\u6570\u636e \u00b7 Core + XPAC",
+        "status": "full_snapshot_complete",
+        "selected_works": 404079112
+      }
+    ],
+    "default_country_version": "enriched",
+    "country_versions": [
+      {
+        "id": "original",
+        "display_name": "\u539f\u59cb\u7248",
+        "version": "snapshot-20260626-original"
+      },
+      {
+        "id": "enriched",
+        "display_name": "\u56fd\u5bb6\u8865\u5168\u7248",
+        "version": "country-enriched-v3-r3"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "selected_works": 269194661,
+      "quality": {
+        "publication_works": 201267475,
+        "citation_calls": 583730060,
+        "citation_events": 2363318327,
+        "missing_country_publications": 103275459,
+        "missing_country_citations": 276033100,
+        "missing_discipline_publications": {
+          "concepts.0": 24525389,
+          "concepts.1": 57172814,
+          "topics.field": 12146871,
+          "topics.subfield": 12146871
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 14235638,
+          "concepts.1": 98664724,
+          "topics.field": 1670538,
+          "topics.subfield": 1670538
+        },
+        "publication_assignments": {
+          "concepts.0": 270094569,
+          "concepts.1": 338312886,
+          "topics.field": 201267475,
+          "topics.subfield": 201267475
+        },
+        "citation_assignments": {
+          "concepts.0": 3161469072,
+          "concepts.1": 4852927555,
+          "topics.field": 2363318327,
+          "topics.subfield": 2363318327
+        }
+      },
+      "retained_edges": 2363318327
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "selected_works": 404079112,
+      "quality": {
+        "publication_works": 285365821,
+        "citation_calls": 586984532,
+        "citation_events": 2385146215,
+        "missing_country_publications": 180207949,
+        "missing_country_citations": 281487360,
+        "missing_discipline_publications": {
+          "concepts.0": 51637829,
+          "concepts.1": 95556884,
+          "topics.field": 41990826,
+          "topics.subfield": 41990826
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 15562133,
+          "concepts.1": 100830984,
+          "topics.field": 2167955,
+          "topics.subfield": 2167955
+        },
+        "publication_assignments": {
+          "concepts.0": 387925859,
+          "concepts.1": 461267437,
+          "topics.field": 285365821,
+          "topics.subfield": 285365821
+        },
+        "citation_assignments": {
+          "concepts.0": 3190747228,
+          "concepts.1": 4896816404,
+          "topics.field": 2385146215,
+          "topics.subfield": 2385146215
+        }
+      },
+      "retained_edges": 2385146215
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "selected_works": 269194661,
+      "quality": {
+        "publication_works": 201267475,
+        "citation_calls": 583730060,
+        "citation_events": 2363318327,
+        "missing_country_publications": 101352219,
+        "missing_country_citations": 256325260,
+        "missing_discipline_publications": {
+          "concepts.0": 24525389,
+          "concepts.1": 57172814,
+          "topics.field": 12146871,
+          "topics.subfield": 12146871
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 14235638,
+          "concepts.1": 98664724,
+          "topics.field": 1670538,
+          "topics.subfield": 1670538
+        },
+        "publication_assignments": {
+          "concepts.0": 270094569,
+          "concepts.1": 338312886,
+          "topics.field": 201267475,
+          "topics.subfield": 201267475
+        },
+        "citation_assignments": {
+          "concepts.0": 3161469072,
+          "concepts.1": 4852927555,
+          "topics.field": 2363318327,
+          "topics.subfield": 2363318327
+        }
+      },
+      "retained_edges": 2363318327
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "selected_works": 404079112,
+      "quality": {
+        "publication_works": 285365821,
+        "citation_calls": 586984532,
+        "citation_events": 2385146215,
+        "missing_country_publications": 178258025,
+        "missing_country_citations": 261722461,
+        "missing_discipline_publications": {
+          "concepts.0": 51637829,
+          "concepts.1": 95556884,
+          "topics.field": 41990826,
+          "topics.subfield": 41990826
+        },
+        "missing_discipline_citations": {
+          "concepts.0": 15562133,
+          "concepts.1": 100830984,
+          "topics.field": 2167955,
+          "topics.subfield": 2167955
+        },
+        "publication_assignments": {
+          "concepts.0": 387925859,
+          "concepts.1": 461267437,
+          "topics.field": 285365821,
+          "topics.subfield": 285365821
+        },
+        "citation_assignments": {
+          "concepts.0": 3190747228,
+          "concepts.1": 4896816404,
+          "topics.field": 2385146215,
+          "topics.subfield": 2385146215
+        }
+      },
+      "retained_edges": 2385146215
+    }
+  ],
+  "handoff_seconds_to_catalog": 0.20876812934875488,
+  "promoted_at_unix": 1794525926.7942936,
+  "original_binaries_and_results_preserved": true
+}
