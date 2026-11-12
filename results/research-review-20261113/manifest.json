@@ -1,0 +1,359 @@
+{
+  "version": "review-20261113-r3",
+  "production_country_data_applied": false,
+  "production_complexity_models_changed": false,
+  "external_admitted_works": 0,
+  "coverage_file": "country/coverage.csv",
+  "rounding": "Coverage counts independently confirmed integral; aggregation roundoff <0.001 rounded to integer. Raw comparison JSON retained unchanged.",
+  "full_result_locations": [
+    "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+    "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+    "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113",
+    "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113"
+  ],
+  "files": [
+    {
+      "path": "country/core/statistics/china-2012-2018-discipline-count-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/china-2012-2018-discipline-count-changes.csv",
+      "bytes": 61920,
+      "sha256": "63ca05c17d1847cb50b988b7a2074648ef4887d0c7c0dd78cbe7f50617502cd2",
+      "uncompressed_sha256": "2a1433ca231b7407e0e34734bf3fcf7ec0f4db47e961dc358eee227714267a79"
+    },
+    {
+      "path": "country/core/statistics/country-whole-counts-2000-2025.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/country-whole-counts-2000-2025.csv",
+      "bytes": 5260,
+      "sha256": "dfc7dbe5df74e3bf704b0da1b9551818b24d352036e1db448b5cbd96b5dbc17b",
+      "uncompressed_sha256": "c67b1055c3a3e3bb1ce2628ab818fb7339d86beace53d6fe28320b0e41a63eac"
+    },
+    {
+      "path": "country/core/statistics/country_java_matched-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/country_java_matched-changes.csv",
+      "bytes": 1869308,
+      "sha256": "1d512b719e4894e3334005cb67a8e66482d45c4a0af291e99189571e6db20111",
+      "uncompressed_sha256": "a1eba1621a81f5a3e26a870c5eb42f150938b9292689088ff0c98b8edb6b3f9b"
+    },
+    {
+      "path": "country/core/statistics/country_java_numeric_only-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/country_java_numeric_only-changes.csv",
+      "bytes": 1294498,
+      "sha256": "1408f9520e0d6578c31476885981f2e4f861cae06edf2041cdb099aa0a3d1d30",
+      "uncompressed_sha256": "37f47a5c81f80962b8b80062be1693a6a974f9c939ec9c7a2e227203f4ade3e3"
+    },
+    {
+      "path": "country/core/statistics/country_spectral-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/country_spectral-changes.csv",
+      "bytes": 1883422,
+      "sha256": "1afd8c0176e413633554b4061eb75f30d615c29eccf26eeb2c5d75d28de20349",
+      "uncompressed_sha256": "1c95098dc6f5c04255554fb8172d64f64320c336042d19aca7a08bcd4afde3b1"
+    },
+    {
+      "path": "country/core/statistics/discipline_java_matched-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/discipline_java_matched-changes.csv",
+      "bytes": 1261054,
+      "sha256": "89d11f6169865338c2aa840fa6080eb4b4590915252cdc546d36e75ad1a33027",
+      "uncompressed_sha256": "8b45f852df932b74f4c5d2c4fb8d64c1f6c22612a8edc0d34b75b38d980804a1"
+    },
+    {
+      "path": "country/core/statistics/discipline_java_numeric_only-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/discipline_java_numeric_only-changes.csv",
+      "bytes": 898256,
+      "sha256": "c8c50d2d76f807f654a67e4dcfd606381755a300df9820ea91be61118f23a393",
+      "uncompressed_sha256": "325d25fea689e27cd5bad52f0e47e5418b36674859e308912d3b2eb499c5c785"
+    },
+    {
+      "path": "country/core/statistics/discipline_spectral-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/discipline_spectral-changes.csv",
+      "bytes": 1262351,
+      "sha256": "20d298be2c3a3b0ba24ea8563455529922130c606a7df21d2774a3f3a2d57a88",
+      "uncompressed_sha256": "6829646b0b18f508d5d41fafb717353fd9efc08e72fdfdaea93bc4cc569cee57"
+    },
+    {
+      "path": "country/core/statistics/review.json",
+      "source": "research/country-enrichment-v3/text-final-r3/core-statistics-review/review.json",
+      "bytes": 44570,
+      "sha256": "60ec66c4e3222bfca19da87d94066cb890bf0b9d5cb8b302f1d2723141b2acc0",
+      "uncompressed_sha256": "60ec66c4e3222bfca19da87d94066cb890bf0b9d5cb8b302f1d2723141b2acc0"
+    },
+    {
+      "path": "country/core/sign-diagnostic/java-country-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-sign-comparison/java-country-signmatched-diagnostic.csv",
+      "bytes": 1571682,
+      "sha256": "a2fc51d54062807d02c8de4abe957e54e5e757166be6c1e84b04d6bd83156a94",
+      "uncompressed_sha256": "b0479442d1bfcc64da50f5d079c1e5284dacee753ee66f2eb9be738700b23275"
+    },
+    {
+      "path": "country/core/sign-diagnostic/java-discipline-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-sign-comparison/java-discipline-signmatched-diagnostic.csv",
+      "bytes": 1053395,
+      "sha256": "533a8d0a9d2fb4911b0ec59ab2ab7a3586a50ed37ac5d907191e2188d2021656",
+      "uncompressed_sha256": "309222311be729a1c7feefd0e8f3976d6115d1dbaa9e48790f370741cdd800bc"
+    },
+    {
+      "path": "country/core/sign-diagnostic/review.json",
+      "source": "research/country-enrichment-v3/text-final-r3/core-sign-comparison/review.json",
+      "bytes": 260359,
+      "sha256": "fa4dc8421306364b4ef0218a32cfb89aa312ddfcd7d5517527f9cac0b9435c29",
+      "uncompressed_sha256": "fa4dc8421306364b4ef0218a32cfb89aa312ddfcd7d5517527f9cac0b9435c29"
+    },
+    {
+      "path": "country/core/sign-diagnostic/sha256.json",
+      "source": "research/country-enrichment-v3/text-final-r3/core-sign-comparison/sha256.json",
+      "bytes": 554,
+      "sha256": "92fc377bd2971cd0dfefd53431e0a8567a108d7fd683f8a3d9f99f9c2fbb6e07",
+      "uncompressed_sha256": "92fc377bd2971cd0dfefd53431e0a8567a108d7fd683f8a3d9f99f9c2fbb6e07"
+    },
+    {
+      "path": "country/core/sign-diagnostic/spectral-country-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-sign-comparison/spectral-country-signmatched-diagnostic.csv",
+      "bytes": 1589475,
+      "sha256": "e5b5faaffdfa3c2751286d185b47ea482eb8fbdb34ee43738f821acc6cee6eeb",
+      "uncompressed_sha256": "629e366a7039ef5e9f467c3fb8b81020481ba82a661896e5f89a7a6fc690425c"
+    },
+    {
+      "path": "country/core/sign-diagnostic/spectral-discipline-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/core-sign-comparison/spectral-discipline-signmatched-diagnostic.csv",
+      "bytes": 1053805,
+      "sha256": "c133cae98fb9b7145c70998f8baf21859cd409eaea5978c05d6535fb98fd120f",
+      "uncompressed_sha256": "ef6a3645fd882adfca0af1cdb0bff4ee59828b5e4e001c0ed6069c7c61a14716"
+    },
+    {
+      "path": "country/all/statistics/china-2012-2018-discipline-count-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/china-2012-2018-discipline-count-changes.csv",
+      "bytes": 61907,
+      "sha256": "df237c5b64dbee581141f69273e01954534a18a8092972cc0e73ca267a762466",
+      "uncompressed_sha256": "259c2b151aa9fe2e9f5ffeaafef4a126257c3f1d9812bdffcbc3efa7ae2fdaea"
+    },
+    {
+      "path": "country/all/statistics/country-whole-counts-2000-2025.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/country-whole-counts-2000-2025.csv",
+      "bytes": 5288,
+      "sha256": "a903ac81c04e97d0b401760e5a96ec1f7b60d6808780150adf57cbf71ea75395",
+      "uncompressed_sha256": "c78f31685522270c24556d44ae5f0b21298814291ca558fde6795ea7d16caf04"
+    },
+    {
+      "path": "country/all/statistics/country_java_matched-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/country_java_matched-changes.csv",
+      "bytes": 1868974,
+      "sha256": "fa781fc134a29e4ff440e5d1b8f05e83d127e3e42b64edc49d661b94750460d9",
+      "uncompressed_sha256": "d70a491182eda77bfa8f7619edfdb6c4edc6671a181b70c7b674d8acce12a3fb"
+    },
+    {
+      "path": "country/all/statistics/country_java_numeric_only-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/country_java_numeric_only-changes.csv",
+      "bytes": 1300731,
+      "sha256": "58bd2d65c45d20d8f5a5af13edf6458b3ecb6381389cdf8fb1be2f69c3e7ff9c",
+      "uncompressed_sha256": "ff7be69007a2f24205510d54fcb9e44557de12e8e7a7b094f0efc7494f2541db"
+    },
+    {
+      "path": "country/all/statistics/country_spectral-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/country_spectral-changes.csv",
+      "bytes": 1882753,
+      "sha256": "50973dcf0ae51f5b0cd4a9a7cccdb85350b9b3d7d8a3a9f7231c74e2c2621b7c",
+      "uncompressed_sha256": "9d46c82295ada19dc89c744bc8325af91de246a950c8a8ce770e5efa034d13ba"
+    },
+    {
+      "path": "country/all/statistics/discipline_java_matched-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/discipline_java_matched-changes.csv",
+      "bytes": 1261756,
+      "sha256": "b08305640c03f5e1199453a1c30ca938a7feca73bb351d213c7d4915d969a6b9",
+      "uncompressed_sha256": "9d1c54119b49771c7d073f4c358bd6068c492039163a3030f5127b829adbcb4e"
+    },
+    {
+      "path": "country/all/statistics/discipline_java_numeric_only-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/discipline_java_numeric_only-changes.csv",
+      "bytes": 896830,
+      "sha256": "a176a4ffd5a5332cc5a5cf381e17942012ef514f2ef09203518db79566dc58a8",
+      "uncompressed_sha256": "04b27760b3645bd7df9bb2d4cbf8b568bb4afc3e821d5774cf0be239c19cd64b"
+    },
+    {
+      "path": "country/all/statistics/discipline_spectral-changes.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/discipline_spectral-changes.csv",
+      "bytes": 1261941,
+      "sha256": "3e20e9a23ec2efc040c7b17dc178ebae64e9877d57dcdb5bdaeb39ecc68158c0",
+      "uncompressed_sha256": "27c064c03af47b6c402cefd93e7a208c666c0fb70b91e8ce243a70b83c6094c5"
+    },
+    {
+      "path": "country/all/statistics/review.json",
+      "source": "research/country-enrichment-v3/text-final-r3/all-statistics-review/review.json",
+      "bytes": 44496,
+      "sha256": "49da5c48b5610784db8a2d332747945903139d77de73e063e88f1f53e0c45c40",
+      "uncompressed_sha256": "49da5c48b5610784db8a2d332747945903139d77de73e063e88f1f53e0c45c40"
+    },
+    {
+      "path": "country/all/sign-diagnostic/java-country-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-sign-comparison/java-country-signmatched-diagnostic.csv",
+      "bytes": 1570852,
+      "sha256": "6e23121d2aad08c048a5aeeee09336ff3f4fafdd5e3a6b6e34778463a1d4b078",
+      "uncompressed_sha256": "ab106a282649ad8bbe60702033aff5e116ee5783e148a4df8e7790a47a43f6bc"
+    },
+    {
+      "path": "country/all/sign-diagnostic/java-discipline-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-sign-comparison/java-discipline-signmatched-diagnostic.csv",
+      "bytes": 1053187,
+      "sha256": "60804bf98717423679f08777e193f8dae9a21f40fca5b48c43bf982468fb280a",
+      "uncompressed_sha256": "a632202d78df1f4372970e5263cd44b2aece21a0abac308074fe6fc75db07b29"
+    },
+    {
+      "path": "country/all/sign-diagnostic/review.json",
+      "source": "research/country-enrichment-v3/text-final-r3/all-sign-comparison/review.json",
+      "bytes": 260358,
+      "sha256": "a6b04fb1f3fb44ee153b2ce5b224907445915b4932ca189bc6cace8ed855e5bd",
+      "uncompressed_sha256": "a6b04fb1f3fb44ee153b2ce5b224907445915b4932ca189bc6cace8ed855e5bd"
+    },
+    {
+      "path": "country/all/sign-diagnostic/sha256.json",
+      "source": "research/country-enrichment-v3/text-final-r3/all-sign-comparison/sha256.json",
+      "bytes": 554,
+      "sha256": "f60d23d399fe2ea21ee7bdd94bfb540ddcd3393fac8494182addf5082685514d",
+      "uncompressed_sha256": "f60d23d399fe2ea21ee7bdd94bfb540ddcd3393fac8494182addf5082685514d"
+    },
+    {
+      "path": "country/all/sign-diagnostic/spectral-country-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-sign-comparison/spectral-country-signmatched-diagnostic.csv",
+      "bytes": 1589422,
+      "sha256": "dbdb3e6687322c566f01dd93c9b39bafeb868747317d87453b70d7845d110b4f",
+      "uncompressed_sha256": "1449d1ce58d1c4e3e0a7491818cd356da4f013a448b7ce4bd0396a9b65eba8b3"
+    },
+    {
+      "path": "country/all/sign-diagnostic/spectral-discipline-signmatched-diagnostic.csv.gz",
+      "source": "research/country-enrichment-v3/text-final-r3/all-sign-comparison/spectral-discipline-signmatched-diagnostic.csv",
+      "bytes": 1054030,
+      "sha256": "b465367bd342f8b882ab450497e22954547758b99acc01682c9eaf31936fbb77",
+      "uncompressed_sha256": "fe5789ff5056f3d9223553500e7c5a33c47357e707ad92d5da57ca5a6d6aa8d7"
+    },
+    {
+      "path": "country/validated-text-patch.parquet",
+      "source": "research/country-enrichment-v3/text-final-r3/validated-text-patch.parquet",
+      "bytes": 8215839,
+      "sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3",
+      "uncompressed_sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3"
+    },
+    {
+      "path": "country/batch-deferred-work-ids.json",
+      "source": "research/country-enrichment-v3/text-final-r3/batch-deferred-work-ids.json",
+      "bytes": 3698,
+      "sha256": "217e91bb3eea79f36d027d25cfd81d93e04716c4100ee83a41b5685224b7dc72",
+      "uncompressed_sha256": "217e91bb3eea79f36d027d25cfd81d93e04716c4100ee83a41b5685224b7dc72"
+    },
+    {
+      "path": "country/overlay-manifest.json",
+      "source": "research/country-enrichment-v3/text-final-r3/overlay-manifest.json",
+      "bytes": 1215,
+      "sha256": "9ad3194c158077641f6c668d5bbc2807c4a95ed7bb27e90b909ff48aa536416a",
+      "uncompressed_sha256": "9ad3194c158077641f6c668d5bbc2807c4a95ed7bb27e90b909ff48aa536416a"
+    },
+    {
+      "path": "country/passed-gate.json",
+      "source": "research/country-enrichment-v3/text-final-r3/passed-gate.json",
+      "bytes": 1734,
+      "sha256": "66824b4596e4342ffe954c70fd40b90d42a1883354bbda7c3fc2e4c6466b680d",
+      "uncompressed_sha256": "66824b4596e4342ffe954c70fd40b90d42a1883354bbda7c3fc2e4c6466b680d"
+    },
+    {
+      "path": "country/exact-copy-conservation.json",
+      "source": "research/country-enrichment-v3/text-final-r3/exact-copy-conservation.json",
+      "bytes": 288,
+      "sha256": "03350d4e3b1f567657eaf70b5c13d74a93ab033971011fb2f25a388d4056849d",
+      "uncompressed_sha256": "03350d4e3b1f567657eaf70b5c13d74a93ab033971011fb2f25a388d4056849d"
+    },
+    {
+      "path": "country/final-r3-independent-audit-status.json",
+      "source": "research/country-enrichment-v3/validation/final-r3-independent-audit-status.json",
+      "bytes": 22209,
+      "sha256": "f20281ebfd42e64dadb044fdd1cff31d79ae81d9f3becb8761c271d736c10924",
+      "uncompressed_sha256": "f20281ebfd42e64dadb044fdd1cff31d79ae81d9f3becb8761c271d736c10924"
+    },
+    {
+      "path": "country/external-metadata-summary.json",
+      "source": "research/country-enrichment-v3/metadata/final-summary.json",
+      "bytes": 10118,
+      "sha256": "97bcb4ced549d3a364484b3a7f5bf5899c775368d92598db4878f3838485f28e",
+      "uncompressed_sha256": "97bcb4ced549d3a364484b3a7f5bf5899c775368d92598db4878f3838485f28e"
+    },
+    {
+      "path": "complexity/representative-experiment-inputs.json.gz",
+      "source": "research/small-country-complexity-v1/representative-experiment-inputs.json",
+      "bytes": 19959995,
+      "sha256": "06ced35e0585edc83f84130083a500e0e58fa4fad4acaa541250f20b008ee3f9",
+      "uncompressed_sha256": "65b62819f78da7869e9dc3e39d280bd48cee46240bf793d862b41b4438a479e6"
+    },
+    {
+      "path": "complexity/all-year-top20.csv.gz",
+      "source": "research/small-country-complexity-v1/all-year-top20.csv",
+      "bytes": 789992,
+      "sha256": "1f9867ca5ea61faffea57876dbb692b2e751581e6352a6837f5a6912a0624082",
+      "uncompressed_sha256": "84754ebb1884437758cae4d87c423e8d04abed289307e082f2e3c16db681efc9"
+    },
+    {
+      "path": "complexity/all-year-top10-20-size-summary-r2.csv.gz",
+      "source": "research/small-country-complexity-v1/all-year-top10-20-size-summary-r2.csv",
+      "bytes": 53552,
+      "sha256": "7906b03751f03a3098fdea0a13c386702e97be6988be77e74c18e9b44c47a9e1",
+      "uncompressed_sha256": "6b1b21251d23e5a4dfa2663fd4433c836d83dcca7928f470038094d8a9c4e505"
+    },
+    {
+      "path": "complexity/independent-matrix-audit.json",
+      "source": "research/small-country-complexity-v1/independent-matrix-audit.json",
+      "bytes": 22731,
+      "sha256": "990e277943a656a88ccb0cf2b67f7bc2683cdc95794198528581b791dd8895ad",
+      "uncompressed_sha256": "990e277943a656a88ccb0cf2b67f7bc2683cdc95794198528581b791dd8895ad"
+    },
+    {
+      "path": "complexity/extraction-manifest.json",
+      "source": "research/small-country-complexity-v1/extraction-manifest.json",
+      "bytes": 1630,
+      "sha256": "ba0be7190046e2eed0a3545e47085d62feb8ecafaba8cac1d92d6d09a40b102d",
+      "uncompressed_sha256": "ba0be7190046e2eed0a3545e47085d62feb8ecafaba8cac1d92d6d09a40b102d"
+    },
+    {
+      "path": "complexity/experiments-r1/experiments.json.gz",
+      "source": "research/small-country-complexity-v1/experiments-r1/experiments.json",
+      "bytes": 3804948,
+      "sha256": "7f6b984ae4df74b7e79b7cc51232501269c8d2fb9c7aec3d8aabd0bfa8e93c73",
+      "uncompressed_sha256": "5de9b1deeb291b58ca0a841ece10637bbf8cf6f0f756b23f168d1b47a087da47"
+    },
+    {
+      "path": "complexity/experiments-r1/all-country-diagnostic-ranks.csv.gz",
+      "source": "research/small-country-complexity-v1/experiments-r1/all-country-diagnostic-ranks.csv",
+      "bytes": 14384607,
+      "sha256": "5ab7c08125ded025d04ed2718d82a00162c9b5c3e93f47a3b67b902fe6a5dc12",
+      "uncompressed_sha256": "d0a7caaa49a6095cb7e4b577f4599d073964fe21922187a3b1d7d2b69ff8db96"
+    },
+    {
+      "path": "complexity/experiments-r1/summary.csv.gz",
+      "source": "research/small-country-complexity-v1/experiments-r1/summary.csv",
+      "bytes": 40183,
+      "sha256": "47dc7e1387f145e6760b1f1c0b135822750945df0751c0633e397d1b7cf7eafe",
+      "uncompressed_sha256": "3327b208936d377b4e84c86c4b0afc28cf03658315e16cf45f0767a513416788"
+    },
+    {
+      "path": "complexity/experiments-r1/manifest.json",
+      "source": "research/small-country-complexity-v1/experiments-r1/manifest.json",
+      "bytes": 2836,
+      "sha256": "b33cd20888db3e3f4641a13abb3196a48441ba42f7dd4227e67b35ea01885d37",
+      "uncompressed_sha256": "b33cd20888db3e3f4641a13abb3196a48441ba42f7dd4227e67b35ea01885d37"
+    },
+    {
+      "path": "complexity/experiments-r1/independent-grid-audit.json",
+      "source": "research/small-country-complexity-v1/experiments-r1/independent-grid-audit.json",
+      "bytes": 507,
+      "sha256": "69915032e4b2dd16a5d043f6d6857b751eb9296f249d137d95a86aacd3ba2016",
+      "uncompressed_sha256": "69915032e4b2dd16a5d043f6d6857b751eb9296f249d137d95a86aacd3ba2016"
+    },
+    {
+      "path": "country/coverage.csv",
+      "source": "derived from independently audited integer totals",
+      "bytes": 1052,
+      "sha256": "c496e03d7649ab02c790207c052355e8ba6d21bc9b7b0bdbdb7cfcfa461fb01e",
+      "uncompressed_sha256": "c496e03d7649ab02c790207c052355e8ba6d21bc9b7b0bdbdb7cfcfa461fb01e"
+    },
+    {
+      "path": "country/coverage.json",
+      "source": "derived from independently audited integer totals",
+      "bytes": 2546,
+      "sha256": "fff07359d083f48a17e30795220f94c1db799d85e4d965050d548103c1854453",
+      "uncompressed_sha256": "fff07359d083f48a17e30795220f94c1db799d85e4d965050d548103c1854453"
+    }
+  ]
+}

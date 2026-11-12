@@ -1,0 +1,16 @@
+{
+  "status": "passed_independent_csv_summary_audit",
+  "cases": 1152,
+  "rows": 285696,
+  "common_country_spearman_max_abs_error": 3.3306690738754696e-16,
+  "checks": [
+    "competition ties",
+    "coupled sign multiplication",
+    "common-country average-tie Spearman",
+    "active count",
+    "fractional attribution retention",
+    "display-only scores unchanged"
+  ],
+  "input_sha256": "d0a7caaa49a6095cb7e4b577f4599d073964fe21922187a3b1d7d2b69ff8db96",
+  "production_changed": false
+}

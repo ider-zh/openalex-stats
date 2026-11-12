@@ -1,0 +1,36 @@
+{
+  "status": "original_formal_outputs_projected_no_result_changes",
+  "sources": [
+    {
+      "corpus": "Core",
+      "method": "spectral",
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1/eci.json",
+      "sha256": "98eb34cd7809ec7b83433f36446c9fc943fd1dbbd393fff1c4ecf58d3db457e3"
+    },
+    {
+      "corpus": "Core",
+      "method": "java_reflections",
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1/java-reflections-v1.json",
+      "sha256": "3011d9de5587011272c7147e32069c4f693e9b7ca0cbeed0b6a0228e68924fb5"
+    },
+    {
+      "corpus": "All",
+      "method": "spectral",
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/eci.json",
+      "sha256": "a7d6aa4a9209f54bf63200e85e61f45c935b411bc343ba2de09712cbcf10c586"
+    },
+    {
+      "corpus": "All",
+      "method": "java_reflections",
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1/java-reflections-v1.json",
+      "sha256": "bb3431a004615e6536cd4e7d898aa3b4f884f4a8390ceddbc6378f4903826e76"
+    }
+  ],
+  "experimental_matrices": 32,
+  "all_matrix_edge_reconstruction_checks_passed": true,
+  "top_rows": 17298,
+  "size_summary_rows": 1728,
+  "size_definition": "Country/year Topics primary-field total including UNKNOWN discipline, separately whole and fractional; never Concepts multi-hit sum as unique paper count. Incoming citation events use current citing-year fixed graph.",
+  "ties": "Competition ranks; include all exact ties at top10/20 boundary, report actual listed count.",
+  "source_country_labels_not_assumed_sovereign_states": true
+}

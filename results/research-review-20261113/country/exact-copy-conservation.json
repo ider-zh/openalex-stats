@@ -1,0 +1,9 @@
+{
+  "status": "passed_exact_SQL_retained_row_copy",
+  "before": 2667268,
+  "deferred": 142,
+  "after": 2667126,
+  "new_or_modified_retained_rows": 0,
+  "source_independent_review_sha256": "fe764e640378b6aa138d2c039dbce4a14b813ac2c49557fdaf19e63ec068e9ee",
+  "production_applied": false
+}

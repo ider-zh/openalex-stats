@@ -1,0 +1,9 @@
+{
+  "status": "rejected_isolated_benchmark_not_shared_index",
+  "reason": "Reused generic Raw buffer containing ids MAP inherited absent keys across batches",
+  "only_output": "metadata/index-go-benchmark/part-01300.parquet",
+  "shared_index_affected": false,
+  "identity_policy_engine_affected": false,
+  "fix": "Explicit Raw{} reset before every Read; synthetic2049 row missing-key regression test passes",
+  "selected_production_projection": "DuckDB, faster native MAP/column projection"
+}

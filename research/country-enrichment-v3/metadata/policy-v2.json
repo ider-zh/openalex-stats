@@ -1,0 +1,37 @@
+{
+  "policy_id": "metadata-strict-v3-20261112-02",
+  "frozen_before_holdout_revelation": true,
+  "work_scope": "original selected Q, baseline country set empty; all eligible publication years including pre2000",
+  "doi_normalization": "lower/trim; remove canonical doi.org/dx.doi.org and doi: prefix only; no approximate identifier join",
+  "country_evidence": "Only explicit full-country tail in personal author affiliations; same frozen aliases as pilot v1; ambiguous or multiple country tail abstains; email tail stripped; never journal-country, references, HQ/ROR proxies",
+  "country_alias_sha256": "79c3d7458de015c00b186dce8d6953fda5faa993071f43a5a1c641fbe7db0357",
+  "crossref": {
+    "source_relationship": "contributor-affiliation",
+    "role": "author",
+    "institutional_contributor": "review_only",
+    "ror_proxy": "review_only_not_auto_country",
+    "identity": "exact DOI plus valid ISO7064-checksum ORCID exact match to one original Work authorship AND normalized exact source given+family (or family+given) equals that same authorship raw_author_name; only if raw name absent may original linked author display_name be used; source given/family both nonempty",
+    "fullname_without_orcid": "review_only (no source title/year in organisation dump)",
+    "eligibility": "at least one unambiguous direct author-country and identity-supported source assertion",
+    "unmatched_assertion_countries": "never union countries from authors not independently identity-matched",
+    "profile_orcid_name_conflict": "reject, never use a linked author-profile ORCID to override conflicting raw original name"
+  },
+  "pubmed": {
+    "identifiers": "exact original PMID or DOI; if DOI or PMID exists on both sides any conflict rejects",
+    "title": "exact Unicode lowercase letter/digit token normalization against source ArticleTitle or VernacularTitle; >=20 letter/digit characters and >=5 tokens, or >=10 CJK characters; no fuzzy/stemming",
+    "year": "at least one explicit PubMed publication year within +/-1 of original Work year; original invalid year rejects",
+    "author": "at least one valid exact ORCID, or normalized exact original full author name with >=2 tokens and >=8 letters, or >=3 CJK characters; no initial-only family match",
+    "country_paths": [
+      "MedlineCitation/Article/AuthorList/Author/AffiliationInfo/Affiliation",
+      "MedlineCitation/Article/Affiliation (legacy article affiliation, marked limited)"
+    ],
+    "eligible_record": "supported full Work identity and at least one unambiguous direct author country",
+    "conflicting_multiple_records": "no auto union if multiple candidate PubMed identities disagree",
+    "PubmedBookArticle": "not_supported_explicitly_reported",
+    "updates": "not applied in declared January2026 baseline-only source; never claim current complete PubMed"
+  },
+  "evidence": "raw source file SHA, record/line ordinal/SHA, source author affiliations, original id/year/title/authors and decision reasons; raw originals immutable; redact emails in review derivatives",
+  "quality": "source-supported country correctness distinct from all-author country-set completeness; preserve missing evidence and conflicts in denominator; gate frozen by independent validation agent",
+  "prohibited": "No per DOI/PMID metadata API; no overwriting original countries/cache/statistics/production; no holdout-driven tuning followed by claiming same holdout passed",
+  "replaces": "metadata-strict-v3-20261112-01 before any new holdout input/outcome revealed"
+}

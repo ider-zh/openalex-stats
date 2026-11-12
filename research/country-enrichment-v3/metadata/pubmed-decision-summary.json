@@ -1,0 +1,26 @@
+{
+  "distinct_work_reason_counts_may_overlap": true,
+  "eligible_records": 106967,
+  "gold_used": false,
+  "identity_reason_distinct_work_counts": {
+    "doi_conflict": 2371,
+    "original_author_not_supported": 49253,
+    "pmid_conflict": 330,
+    "publication_year_not_supported": 1676,
+    "strict_long_title_not_equal": 387514,
+    "strict_pubmed_identity": 106967
+  },
+  "identity_reason_record_counts": {
+    "doi_conflict": 2371,
+    "original_author_not_supported": 49253,
+    "pmid_conflict": 462,
+    "publication_year_not_supported": 1676,
+    "strict_long_title_not_equal": 387905,
+    "strict_pubmed_identity": 106967
+  },
+  "records": 548634,
+  "rules_changed": false,
+  "status": "descriptive_frozen_engine_decisions_not_accuracy",
+  "unique_works": 548022,
+  "works_with_any_eligible_record": 106967
+}

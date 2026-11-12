@@ -1,0 +1,241 @@
+{
+  "status": "complete_failed_external_gates_no_external_country_application",
+  "completed_date": "2026-11-13",
+  "actual_external_admitted_works": 0,
+  "external_patch_written": false,
+  "empty_or_pseudo_passed_patch_written": false,
+  "original_snapshot_cache_results_website_modified_by_metadata_route": false,
+  "source_scope": {
+    "crossref": {
+      "version": "v2 assertions through March2025",
+      "bytes": 4421007134,
+      "source_assertions": 140906929,
+      "prepared_personal_orcid_country_assertions": 12926936
+    },
+    "pubmed": {
+      "version": "complete January2026 baseline-only",
+      "daily_updates_applied": false,
+      "files": 1334,
+      "bytes": 54267874919,
+      "records": 39994988,
+      "country_records": 22380087,
+      "old_cached_files": 205,
+      "new_download_files": 1129,
+      "new_download_bytes": 47226633517
+    }
+  },
+  "common_original_unknown_frame": {
+    "rows": 277418468,
+    "core": 150377414,
+    "xpac": 127041054,
+    "source_parts": 2446
+  },
+  "original_author_projection": {
+    "first_version_works": 779238,
+    "first_version_parts": 2185,
+    "first_version_seconds": 3006.210325717926,
+    "full_pubmed_version_works": 843899,
+    "full_pubmed_version_parts": 2188,
+    "new_target_works": 64661,
+    "incremental_seconds": 835.5521337985992,
+    "first_version_preserved": true
+  },
+  "candidate_counts": {
+    "crossref_potential_works": 75846,
+    "crossref_frozen_automatic_works": 38995,
+    "pubmed_potential_works": 548022,
+    "pubmed_source_records_matched": 548634,
+    "pubmed_frozen_automatic_works": 106967,
+    "pubmed_collective_only_whole_work_quarantined": 82,
+    "pubmed_personal_domain_works": 106885,
+    "pubmed_provisional_net_after_text_before_development_exclusions": 25428,
+    "pubmed_audit_net_works": 25421,
+    "pubmed_audit_net_clusters": 25416
+  },
+  "gates": [
+    {
+      "route": "crossref",
+      "status": "failed_precision",
+      "selected_independent_clusters": 128,
+      "selected_member_works": 128,
+      "successful_clusters": 56,
+      "cluster_precision": 0.4375,
+      "cluster_wilson95_lower": 0.35462313127053047,
+      "cluster_wilson95_upper": 0.5240189882636581,
+      "eligible_cluster_frame_N": 38976,
+      "eligible_work_frame_N": 38990,
+      "confirmed_errors": 1,
+      "unverified": 71,
+      "domain": "overall",
+      "gate_sha256": "ca0b945698ac4e6270a84ab1ac8afad2ae86666505be20db87a03a5a6df65c08",
+      "gate_fraction_interpretation": "joint verification success, not actual precision because unresolved identity remains denominator"
+    },
+    {
+      "route": "crossref/net_new",
+      "status": "failed_precision",
+      "selected_independent_clusters": 128,
+      "selected_member_works": 128,
+      "successful_clusters": 48,
+      "cluster_precision": 0.375,
+      "cluster_wilson95_lower": 0.29592429097646555,
+      "cluster_wilson95_upper": 0.4613599480919116,
+      "eligible_cluster_frame_N": 330,
+      "eligible_work_frame_N": 330,
+      "confirmed_errors": 0,
+      "unverified": 80,
+      "domain": "net",
+      "gate_sha256": "2d06d84f71ba8448274012a846d6766fd54fc04c99e678c8cfc89863a96df067",
+      "gate_fraction_interpretation": "joint verification success, not actual precision because unresolved identity remains denominator"
+    },
+    {
+      "route": "pubmed_baseline",
+      "status": "failed_precision",
+      "selected_independent_clusters": 128,
+      "selected_member_works": 128,
+      "successful_clusters": 127,
+      "cluster_precision": 0.9921875,
+      "cluster_wilson95_lower": 0.9570737405611394,
+      "cluster_wilson95_upper": 0.9986195681071257,
+      "eligible_cluster_frame_N": 106821,
+      "eligible_work_frame_N": 106861,
+      "confirmed_errors": 1,
+      "unverified": 0,
+      "domain": "overall",
+      "gate_sha256": "3ce6f1968a76130c6fdd014e46a6e541d66257b683c4b0456c764bfda9e0e202",
+      "gate_fraction_interpretation": "observed independent joint paper identity and supported-country precision"
+    },
+    {
+      "route": "pubmed_baseline/net_new",
+      "status": "failed_precision",
+      "selected_independent_clusters": 128,
+      "selected_member_works": 128,
+      "successful_clusters": 127,
+      "cluster_precision": 0.9921875,
+      "cluster_wilson95_lower": 0.9570737405611394,
+      "cluster_wilson95_upper": 0.9986195681071257,
+      "eligible_cluster_frame_N": 25416,
+      "eligible_work_frame_N": 25421,
+      "confirmed_errors": 1,
+      "unverified": 0,
+      "domain": "net",
+      "gate_sha256": "51478c2dba644687cc39ed28dd67b2b7ca4cae8c5915ea6ef95cdfc53ef44d47",
+      "gate_fraction_interpretation": "observed independent joint paper identity and supported-country precision"
+    }
+  ],
+  "predeclared_gate": {
+    "minimum_independent_clusters": 128,
+    "point_precision_minimum": 0.99,
+    "wilson95_lower_minimum": 0.97,
+    "member_work_point_minimum": 0.99,
+    "no_outcome_adaptive_expansion_or_pooling": true
+  },
+  "role_scope": {
+    "original_engine_sha256": "9f17ef782ffc894317c04e26403871ce25f41179f01c0ed6eccd56411389bb10",
+    "append_sha256": "0927fdbaf719800370451b896b4bf9555e120a41c59fc91c169a1d827a1e79fd",
+    "code_sha256": "38fb4e3aa0ca2abac0db3d1ae327dbc6013551f087a865375fb8218c91f7dbea",
+    "affected_eligible_records": 103,
+    "role_views": 206,
+    "quarantined_whole_works": 82,
+    "same_country_personal_and_collective_kept": 19,
+    "independent_full_role_audit_passed": true,
+    "raw_outcomes_preserved": true
+  },
+  "source_title_diagnostic": {
+    "candidate_or_rule_changed": false,
+    "counts": {
+      "both_minimum_and_difference_rejections": 31100,
+      "difference_only_title_rejections": 348630,
+      "eligible_numeric_equal_records": 62,
+      "failed_minimum_title_length_or_token_rule": 39275,
+      "minimum_only_title_rejections": 8175,
+      "normalized_title_different_from_both_source_titles": 379730,
+      "numeric_work_id_equals_source_pmid_records": 357030,
+      "original_title_empty": 47,
+      "records": 548634,
+      "title_rejected_numeric_equal_below_minimum": 28153,
+      "title_rejected_numeric_equal_different": 356018,
+      "title_rejected_numeric_equal_original_pmid_empty": 355946,
+      "title_rejected_numeric_work_equals_source_pmid": 356024,
+      "title_rejected_records": 387905
+    },
+    "gold_used": false,
+    "normalization_and_minimum": "Exact unchanged frozen core.LongTitle/core.Normalize",
+    "numeric_equality": "Work numeric ID equals independent source PMID; a diagnostic indicator, not causal attribution or an error label",
+    "status": "descriptive_readonly_indicators_not_proven_identity_errors"
+  },
+  "decision_summary": {
+    "distinct_work_reason_counts_may_overlap": true,
+    "eligible_records": 106967,
+    "gold_used": false,
+    "identity_reason_distinct_work_counts": {
+      "doi_conflict": 2371,
+      "original_author_not_supported": 49253,
+      "pmid_conflict": 330,
+      "publication_year_not_supported": 1676,
+      "strict_long_title_not_equal": 387514,
+      "strict_pubmed_identity": 106967
+    },
+    "identity_reason_record_counts": {
+      "doi_conflict": 2371,
+      "original_author_not_supported": 49253,
+      "pmid_conflict": 462,
+      "publication_year_not_supported": 1676,
+      "strict_long_title_not_equal": 387905,
+      "strict_pubmed_identity": 106967
+    },
+    "records": 548634,
+    "rules_changed": false,
+    "status": "descriptive_frozen_engine_decisions_not_accuracy",
+    "unique_works": 548022,
+    "works_with_any_eligible_record": 106967
+  },
+  "known_identity_conflict_regression": {
+    "ids": [
+      19239315,
+      26184156,
+      34102155
+    ],
+    "pubmed_each_exact_source_record_matched": true,
+    "pubmed_all_three_rejected_reason": "strict_long_title_not_equal",
+    "crossref_W26184156_rejected_reason": "source_orcid_and_same_original_name_not_supported",
+    "all_known_cases_absent_from_automatic_candidates": true
+  },
+  "application_scope_closeout": {
+    "additional_text_defer_groups": [
+      78,
+      50,
+      14
+    ],
+    "additional_text_defer_works": 142,
+    "original_FH_error_defer_works": 1,
+    "total_application_defer_works": 143,
+    "gold_and_failed_denominators_unchanged": true,
+    "original_stage_versions_preserved": true,
+    "no_automatic_country_replacement": true,
+    "root_final_text_patch_works": 2667126,
+    "root_final_text_version": "text-final-r3",
+    "root_core_2000_2025_recovered_works": 1891570,
+    "root_core_2000_2025_country_any_coverage_percent": 50.30092
+  },
+  "cost_boundary": {
+    "pubmed_source_preparation_wall_seconds_including_network_wait": 5837.8,
+    "full_potential_hash_join_seconds": 63.729090213775635,
+    "adapter_and_go_and_aggregation_approx_wall_seconds": 260.03,
+    "go_engine_outcome_write_interval_approx_seconds": 96,
+    "role_scope_approx_wall_seconds": 48,
+    "role_go_output_interval_upper_bound_seconds": 1,
+    "overall_xml_128_records_121_files_48_go_workers_seconds": 10.534302711486816,
+    "net_xml_128_records_108_files_48_go_workers_seconds": 6.384458065032959,
+    "actual_90_percent_cpu_or_ram_utilization_not_claimed": true,
+    "no_per_doi_or_pmid_crossref_pubmed_metadata_api": true
+  },
+  "interpretation_limits": [
+    "No candidate count is a realized coverage gain or a precision estimate.",
+    "Crossref unresolved evidence is not a proven prediction error.",
+    "PubMed 127/128 in each domain meets the point threshold but fails the predeclared 95% Wilson lower threshold. Do not merge two different domains or expand after seeing failure.",
+    "Numeric WorkID=source PMID with title disagreement is a risk indicator; no causal attribution to an upstream service or universal wrong-paper claim without further independent audit.",
+    "The final143 application defers do not delete failed Gold or create a new independent accuracy claim.",
+    "Source-supported added country correctness does not establish complete author-country sets or original known-label accuracy.",
+    "All source pools remain available for a future separately preregistered study; this run ends without further source attempts or external admission."
+  ]
+}

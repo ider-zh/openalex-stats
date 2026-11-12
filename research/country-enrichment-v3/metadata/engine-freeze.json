@@ -1,0 +1,21 @@
+{
+  "policy_id": "metadata-strict-v3-20261112-02",
+  "policy_sha256": "2480962940e1ad708ca5f71638d40dc590ff0de72a9f634cd857db1751b8901e",
+  "before_new_holdout_input_read": true,
+  "files": {
+    "core/country.go": "d3cac1a7e9f431f1029beab600a8a16ec85599a5aa18e63a64028876d1045128",
+    "core/policy.go": "ad034516df230ad14f72fd198df53216ddb969d637ca26b01db1d4f5b608cf6b",
+    "core/policy_test.go": "9c068a44110308c7ab42236ac86da1621f7014420f3f7b0e7b6ba336b0778c98",
+    "policy-engine/main.go": "c503e34dd0a9ef4e684a48a4cb34b7f6b57db69ee6a7e0f7efd8dd06f66376fe",
+    "pubmed-pool/main.go": "05f283170219d8071bc2514138052db05a37cc1f801419431215b5aa5e84f367",
+    "pubmed-pool/parser.go": "8cf763dc91c00ab0f21f0ab6196f53fcb36b110385624a58793c7fa6a7d477ad",
+    "pubmed-pool/parser_test.go": "c90f23ab8df96831255bc875bf550542fb5fca3d765b3a920872d61e2e1d918e",
+    "crossref-pool/main.go": "609d8f0d2f0e3750c21844cece8a1ad296e3c8797a83403fa7acbc54d8b06c76"
+  },
+  "linux_binaries": {
+    "policy-engine": "9f17ef782ffc894317c04e26403871ce25f41179f01c0ed6eccd56411389bb10",
+    "pubmed-pool": "f3e106b8ad4d06437483f8034fafcaf030defc30c221c6e8e0a507f978314348",
+    "crossref-pool": "64e6366a2a0fd1cdefd620f84e8105ad951d3ea4c28cd8b424e7191922058ed7"
+  },
+  "tests": "3 strict identity/country tests + independent structural PubMed XML test all passed on synthetic/previous schemas; no new holdout input consulted"
+}

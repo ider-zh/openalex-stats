@@ -1,0 +1,619 @@
+{
+  "status": "passed_read_only_independent_numpy_check",
+  "matrices": 32,
+  "source_sha256": "65b62819f78da7869e9dc3e39d280bd48cee46240bf793d862b41b4438a479e6",
+  "max_spectral_error": 2.6645352591003757e-14,
+  "max_java16_error": 3.313486229838958e-08,
+  "production_changed": false,
+  "checks": [
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 6.439293542825908e-15,
+      "centered_right_T_eigen_residual_max": 1.887379141862766e-15,
+      "java16_max_abs_error_up_to_sign": 3.726536856873963e-10,
+      "spectral_vs_java_country_correlation": 0.9999461286273231,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.0436096431476471e-14,
+      "centered_right_T_eigen_residual_max": 1.7763568394002505e-15,
+      "java16_max_abs_error_up_to_sign": 1.5915502249441715e-10,
+      "spectral_vs_java_country_correlation": 0.9998152247428822,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.2823075934420558e-14,
+      "centered_right_T_eigen_residual_max": 1.8457457784393227e-15,
+      "java16_max_abs_error_up_to_sign": 5.1200477191315485e-09,
+      "spectral_vs_java_country_correlation": 0.9993503996501993,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 2.020605904817785e-14,
+      "centered_right_T_eigen_residual_max": 3.219646771412954e-15,
+      "java16_max_abs_error_up_to_sign": 2.7163223892401334e-09,
+      "spectral_vs_java_country_correlation": 0.9999101397581386,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 4.066191827689636e-15,
+      "centered_right_T_eigen_residual_max": 1.1102230246251565e-15,
+      "java16_max_abs_error_up_to_sign": 2.2459278881115097e-10,
+      "spectral_vs_java_country_correlation": 0.9999309676529515,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 7.216449660063518e-15,
+      "centered_right_T_eigen_residual_max": 2.4980018054066022e-15,
+      "java16_max_abs_error_up_to_sign": 1.5351342419478442e-10,
+      "spectral_vs_java_country_correlation": -0.9996637039110832,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 5.329070518200751e-15,
+      "centered_right_T_eigen_residual_max": 8.326672684688674e-16,
+      "java16_max_abs_error_up_to_sign": 2.5690808924672126e-09,
+      "spectral_vs_java_country_correlation": 0.9994749267667236,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.1546319456101628e-14,
+      "centered_right_T_eigen_residual_max": 1.5543122344752192e-15,
+      "java16_max_abs_error_up_to_sign": 6.725118240069605e-10,
+      "spectral_vs_java_country_correlation": 0.9999492017968962,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.2212453270876722e-14,
+      "centered_right_T_eigen_residual_max": 1.887379141862766e-15,
+      "java16_max_abs_error_up_to_sign": 4.090367489162361e-10,
+      "spectral_vs_java_country_correlation": 0.9999788107542986,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 7.882583474838611e-15,
+      "centered_right_T_eigen_residual_max": 2.3314683517128287e-15,
+      "java16_max_abs_error_up_to_sign": 2.5196844610775315e-10,
+      "spectral_vs_java_country_correlation": 0.9997464666309799,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.4634127243340345e-14,
+      "centered_right_T_eigen_residual_max": 8.604228440844963e-16,
+      "java16_max_abs_error_up_to_sign": 1.604616084449617e-08,
+      "spectral_vs_java_country_correlation": 0.9980082535935721,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.021405182655144e-14,
+      "centered_right_T_eigen_residual_max": 1.4988010832439613e-15,
+      "java16_max_abs_error_up_to_sign": 7.357016107434333e-09,
+      "spectral_vs_java_country_correlation": 0.9931796223450974,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 9.769962616701378e-15,
+      "centered_right_T_eigen_residual_max": 1.1102230246251565e-15,
+      "java16_max_abs_error_up_to_sign": 2.731219417295705e-10,
+      "spectral_vs_java_country_correlation": 0.9984952133041335,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 5.051514762044462e-15,
+      "centered_right_T_eigen_residual_max": 1.582067810090848e-15,
+      "java16_max_abs_error_up_to_sign": 2.635146545415523e-10,
+      "spectral_vs_java_country_correlation": -0.9999396034013912,
+      "selected_country_advantage_evidence": [
+        {
+          "country": "AG",
+          "advantage_cells": [
+            {
+              "discipline": "https://openalex.org/C15744967",
+              "fractional_label_input": 768.321663059163,
+              "rca": 1.5388823316556757,
+              "ubiquity": 78
+            },
+            {
+              "discipline": "https://openalex.org/C71924100",
+              "fractional_label_input": 4657.544284888269,
+              "rca": 3.9260689135259845,
+              "ubiquity": 120
+            }
+          ]
+        },
+        {
+          "country": "EH",
+          "advantage_cells": [
+            {
+              "discipline": "https://openalex.org/C144024400",
+              "fractional_label_input": 5.5,
+              "rca": 27.698656326165317,
+              "ubiquity": 110
+            },
+            {
+              "discipline": "https://openalex.org/C17744445",
+              "fractional_label_input": 5.5,
+              "rca": 30.296147951202567,
+              "ubiquity": 158
+            }
+          ]
+        },
+        {
+          "country": "SG",
+          "advantage_cells": [
+            {
+              "discipline": "https://openalex.org/C127413603",
+              "fractional_label_input": 47559.49184653758,
+              "rca": 1.5554035534021537,
+              "ubiquity": 78
+            },
+            {
+              "discipline": "https://openalex.org/C192562407",
+              "fractional_label_input": 286667.8913721645,
+              "rca": 1.682368823094513,
+              "ubiquity": 45
+            },
+            {
+              "discipline": "https://openalex.org/C41008148",
+              "fractional_label_input": 329797.3421016677,
+              "rca": 1.7195916450075828,
+              "ubiquity": 61
+            }
+          ]
+        },
+        {
+          "country": "KP",
+          "advantage_cells": [
+            {
+              "discipline": "https://openalex.org/C121332964",
+              "fractional_label_input": 257.0143396014105,
+              "rca": 1.8242517657909012,
+              "ubiquity": 39
+            },
+            {
+              "discipline": "https://openalex.org/C185592680",
+              "fractional_label_input": 785.5084054834053,
+              "rca": 1.5711216819851046,
+              "ubiquity": 50
+            },
+            {
+              "discipline": "https://openalex.org/C192562407",
+              "fractional_label_input": 909.595238095238,
+              "rca": 1.83493611647752,
+              "ubiquity": 45
+            },
+            {
+              "discipline": "https://openalex.org/C33923547",
+              "fractional_label_input": 211.65196078431373,
+              "rca": 1.9521641440107669,
+              "ubiquity": 71
+            },
+            {
+              "discipline": "https://openalex.org/C41008148",
+              "fractional_label_input": 717.4121848739496,
+              "rca": 1.2858121784830336,
+              "ubiquity": 61
+            }
+          ]
+        },
+        {
+          "country": "CN",
+          "advantage_cells": [
+            {
+              "discipline": "https://openalex.org/C127313418",
+              "fractional_label_input": 808425.125031027,
+              "rca": 1.1764073817666219,
+              "ubiquity": 98
+            },
+            {
+              "discipline": "https://openalex.org/C127413603",
+              "fractional_label_input": 1194305.573766835,
+              "rca": 1.4440333650241572,
+              "ubiquity": 78
+            },
+            {
+              "discipline": "https://openalex.org/C185592680",
+              "fractional_label_input": 7063121.260770252,
+              "rca": 1.5194307956059208,
+              "ubiquity": 50
+            },
+            {
+              "discipline": "https://openalex.org/C192562407",
+              "fractional_label_input": 8955357.715109011,
+              "rca": 1.9430366188607784,
+              "ubiquity": 45
+            },
+            {
+              "discipline": "https://openalex.org/C39432304",
+              "fractional_label_input": 2250106.034130077,
+              "rca": 1.1972510916233063,
+              "ubiquity": 155
+            },
+            {
+              "discipline": "https://openalex.org/C41008148",
+              "fractional_label_input": 5801075.512692926,
+              "rca": 1.118259461785332,
+              "ubiquity": 61
+            }
+          ]
+        },
+        {
+          "country": "US",
+          "advantage_cells": [
+            {
+              "discipline": "https://openalex.org/C121332964",
+              "fractional_label_input": 2116118.276770421,
+              "rca": 1.1375411684346077,
+              "ubiquity": 39
+            },
+            {
+              "discipline": "https://openalex.org/C144024400",
+              "fractional_label_input": 1261849.365766016,
+              "rca": 1.2831220976772901,
+              "ubiquity": 110
+            },
+            {
+              "discipline": "https://openalex.org/C15744967",
+              "fractional_label_input": 5836667.983468873,
+              "rca": 1.516118919458975,
+              "ubiquity": 78
+            },
+            {
+              "discipline": "https://openalex.org/C162324750",
+              "fractional_label_input": 1124253.1658933514,
+              "rca": 1.2635612802081422,
+              "ubiquity": 120
+            },
+            {
+              "discipline": "https://openalex.org/C17744445",
+              "fractional_label_input": 1033133.1271638991,
+              "rca": 1.1490673090654664,
+              "ubiquity": 158
+            },
+            {
+              "discipline": "https://openalex.org/C33923547",
+              "fractional_label_input": 1553477.8907558573,
+              "rca": 1.0851727419679704,
+              "ubiquity": 71
+            },
+            {
+              "discipline": "https://openalex.org/C71924100",
+              "fractional_label_input": 11194290.407074912,
+              "rca": 1.223780243616855,
+              "ubiquity": 120
+            },
+            {
+              "discipline": "https://openalex.org/C86803240",
+              "fractional_label_input": 8276654.539454846,
+              "rca": 1.2106460740069274,
+              "ubiquity": 103
+            },
+            {
+              "discipline": "https://openalex.org/C95457728",
+              "fractional_label_input": 179984.45629247196,
+              "rca": 1.4836960100962298,
+              "ubiquity": 114
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 2.6645352591003757e-14,
+      "centered_right_T_eigen_residual_max": 5.88418203051333e-15,
+      "java16_max_abs_error_up_to_sign": 6.037365940514405e-09,
+      "spectral_vs_java_country_correlation": 0.9985163329473781,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "Core",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 7.327471962526033e-15,
+      "centered_right_T_eigen_residual_max": 7.771561172376096e-16,
+      "java16_max_abs_error_up_to_sign": 1.3486105010507288e-09,
+      "spectral_vs_java_country_correlation": 0.9999035646273176,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 6.439293542825908e-15,
+      "centered_right_T_eigen_residual_max": 7.771561172376096e-16,
+      "java16_max_abs_error_up_to_sign": 4.760749572341183e-10,
+      "spectral_vs_java_country_correlation": 0.9999938527872585,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 7.771561172376096e-15,
+      "centered_right_T_eigen_residual_max": 2.275957200481571e-15,
+      "java16_max_abs_error_up_to_sign": 1.4634005118807636e-10,
+      "spectral_vs_java_country_correlation": 0.9998553802885897,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.3322676295501878e-14,
+      "centered_right_T_eigen_residual_max": 1.3877787807814457e-15,
+      "java16_max_abs_error_up_to_sign": 8.082482322313567e-09,
+      "spectral_vs_java_country_correlation": 0.999450528094669,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 2.1316282072803006e-14,
+      "centered_right_T_eigen_residual_max": 3.9968028886505635e-15,
+      "java16_max_abs_error_up_to_sign": 2.635868141809272e-09,
+      "spectral_vs_java_country_correlation": 0.9999214988263533,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 5.773159728050814e-15,
+      "centered_right_T_eigen_residual_max": 1.4432899320127035e-15,
+      "java16_max_abs_error_up_to_sign": 3.105862234065171e-10,
+      "spectral_vs_java_country_correlation": 0.9999137229293237,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 8.215650382226158e-15,
+      "centered_right_T_eigen_residual_max": 1.5265566588595902e-15,
+      "java16_max_abs_error_up_to_sign": 3.3509517383123466e-10,
+      "spectral_vs_java_country_correlation": -0.99944058498104,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 2.1760371282653068e-14,
+      "centered_right_T_eigen_residual_max": 1.0755285551056204e-15,
+      "java16_max_abs_error_up_to_sign": 1.506523572558649e-09,
+      "spectral_vs_java_country_correlation": 0.999316406106537,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2020,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.021405182655144e-14,
+      "centered_right_T_eigen_residual_max": 2.55351295663786e-15,
+      "java16_max_abs_error_up_to_sign": 6.549416425860599e-10,
+      "spectral_vs_java_country_correlation": 0.9999488466823794,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 6.439293542825908e-15,
+      "centered_right_T_eigen_residual_max": 1.4432899320127035e-15,
+      "java16_max_abs_error_up_to_sign": 1.1578578096305137e-09,
+      "spectral_vs_java_country_correlation": 0.9999112437680593,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "field",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 5.995204332975845e-15,
+      "centered_right_T_eigen_residual_max": 1.609823385706477e-15,
+      "java16_max_abs_error_up_to_sign": 2.3608448529444104e-10,
+      "spectral_vs_java_country_correlation": 0.9996401034149461,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.0220990720455347e-14,
+      "centered_right_T_eigen_residual_max": 1.1102230246251565e-15,
+      "java16_max_abs_error_up_to_sign": 3.313486229838958e-08,
+      "spectral_vs_java_country_correlation": 0.9930206556425838,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "topics",
+      "level": "subfield",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 7.882583474838611e-15,
+      "centered_right_T_eigen_residual_max": 1.5681900222830336e-15,
+      "java16_max_abs_error_up_to_sign": 1.4066673104107252e-08,
+      "spectral_vs_java_country_correlation": 0.9937574156299699,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.3211653993039363e-14,
+      "centered_right_T_eigen_residual_max": 1.5543122344752192e-15,
+      "java16_max_abs_error_up_to_sign": 7.946605595776646e-10,
+      "spectral_vs_java_country_correlation": 0.9949054104951163,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "0",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 5.10702591327572e-15,
+      "centered_right_T_eigen_residual_max": 1.5543122344752192e-15,
+      "java16_max_abs_error_up_to_sign": 3.558693340011132e-10,
+      "spectral_vs_java_country_correlation": -0.9999494509930121,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "publications",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 1.4432899320127035e-14,
+      "centered_right_T_eigen_residual_max": 2.275957200481571e-15,
+      "java16_max_abs_error_up_to_sign": 6.224907700413951e-09,
+      "spectral_vs_java_country_correlation": 0.9983116743658006,
+      "selected_country_advantage_evidence": []
+    },
+    {
+      "corpus": "All",
+      "year": 2025,
+      "scheme": "concepts",
+      "level": "1",
+      "metric": "citations",
+      "M_exact_equal": true,
+      "spectral_max_abs_error_up_to_sign": 8.43769498715119e-15,
+      "centered_right_T_eigen_residual_max": 9.992007221626409e-16,
+      "java16_max_abs_error_up_to_sign": 1.5255111618373007e-09,
+      "spectral_vs_java_country_correlation": 0.9999136298897628,
+      "selected_country_advantage_evidence": []
+    }
+  ]
+}

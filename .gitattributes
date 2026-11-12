@@ -14,4 +14,7 @@ research/cloudflare-v14/** -text whitespace=trailing-space,space-before-tab,cr-a
 research/ui-global-bump-v14/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 research/onboarding-qa-v14-candidate-r1/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 research/onboarding-qa-v14-production/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Frozen research allowlists and manifests checksum original file bytes.
+research/country-enrichment-v3/metadata/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/research-review-20261113/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 

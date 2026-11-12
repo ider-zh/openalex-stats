@@ -1,0 +1,573 @@
+{
+  "status": "passed_final_r3_patch_scope_gates_artifacts_and_statistics_independent_audit",
+  "patch_sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3",
+  "all_recovery_work_n": 2667126,
+  "core_recovery_work_n": 2635485,
+  "deferred_whole_work_n": 142,
+  "external_admitted_work_n": 0,
+  "checks": [
+    {
+      "check": "r3_patch_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original_stage_patch_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "defer_ids_equal_independent_review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "defer_review_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_scope_sha:postal-location-scope-readonly.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_scope_sha:text-known-canada-precise-independent-scope.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "defer_sha_bound_to_manifest_and_gate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gate_sha_bound_to_manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_gate_and_quarantine_immutable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original_passed_wrapper_immutable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original_255_of_256_not_deleted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "counts_all_core_unique_UNKNOWN_nonempty_text",
+      "passed": true,
+      "detail": [
+        2667126,
+        2667126,
+        2635485,
+        2667126,
+        2667126,
+        2667126
+      ]
+    },
+    {
+      "check": "all142_absent",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "exactly142_rows_removed",
+      "passed": true,
+      "detail": 142
+    },
+    {
+      "check": "removed_id_set_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "retained_rows_no_additions_or_country_changes",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "no_external_routes_applied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "side_version_review_not_production",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external_failed_retained:crossref-overall-cluster-gate.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external_failed_retained:crossref-net-cluster-gate.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external_failed_retained:pubmed-overall-cluster-gate.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external_failed_retained:pubmed-net-cluster-gate.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external_failed_retained:pmc-overall-cluster-gate.json",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "external_failed_gates_preserved": [
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/validation/crossref-overall-cluster-gate.json",
+      "sha256": "ca0b945698ac4e6270a84ab1ac8afad2ae86666505be20db87a03a5a6df65c08",
+      "status": "failed_precision",
+      "successful_clusters": 56,
+      "selected_independent_clusters": 128
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/validation/crossref-net-cluster-gate.json",
+      "sha256": "2d06d84f71ba8448274012a846d6766fd54fc04c99e678c8cfc89863a96df067",
+      "status": "failed_precision",
+      "successful_clusters": 48,
+      "selected_independent_clusters": 128
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/validation/pubmed-overall-cluster-gate.json",
+      "sha256": "3ce6f1968a76130c6fdd014e46a6e541d66257b683c4b0456c764bfda9e0e202",
+      "status": "failed_precision",
+      "successful_clusters": 127,
+      "selected_independent_clusters": 128
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/validation/pubmed-net-cluster-gate.json",
+      "sha256": "51478c2dba644687cc39ed28dd67b2b7ca4cae8c5915ea6ef95cdfc53ef44d47",
+      "status": "failed_precision",
+      "successful_clusters": 127,
+      "selected_independent_clusters": 128
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/validation/pmc-overall-cluster-gate.json",
+      "sha256": "14872a009ef6e9aca36fff395cfabbbecc033313f5d0526eed2a3bbd7ca4dab3",
+      "status": "failed_precision",
+      "successful_clusters": 126,
+      "selected_independent_clusters": 128
+    }
+  ],
+  "result_statistics_audit_status": "passed_core_and_all_spectral_and_java",
+  "original_data_and_gate_denominators_unchanged": true,
+  "production_applied": false,
+  "completed_results": [
+    {
+      "corpus": "core",
+      "run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+      "recovered_works": 2635485,
+      "completed_artifacts_verified": [
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/country_eci.parquet",
+          "sha256": "fcaf5819c6a50549bc5bc8ab8a9087006a029eb24558065addd12d05e704e67a",
+          "bytes": 416419,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/coverage.json",
+          "sha256": "74df47b8b69d26ffafa36938b402d710282c095bd447f60fc0bda5aca3cf3ac2",
+          "bytes": 13113,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/cube.parquet",
+          "sha256": "652ac0c3b33f01f795139254b53076b193e4e9804e4e5fd751530e0e7dfacc0b",
+          "bytes": 179545921,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/dictionary.json",
+          "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+          "bytes": 108523,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/discipline_pci.parquet",
+          "sha256": "2f667025f8987f4561fa89bc85f69cd09d74c0f32216a02dd273bd06b39f23eb",
+          "bytes": 283946,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/eci.json",
+          "sha256": "ee94b459557482e223c621cbb4409a478341a2c76b6eb8bc74c3068706473d81",
+          "bytes": 319198151,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/enrichment.json",
+          "sha256": "95596551b02884604c3d51249eeb887e2e9fd13b49d32fee71bdcf218288049d",
+          "bytes": 1493,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/model_diagnostics.json",
+          "sha256": "070de802d664cd321bb873834d936ccdd616c0a961757544a06f98b14ca1ce65",
+          "bytes": 2724751,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/rca.parquet",
+          "sha256": "fdba00af88ebba4cb99fac0a632c6e5d0b03315cc5968b39bd66bbbe84374a57",
+          "bytes": 241293390,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/scenarios.json",
+          "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c",
+          "bytes": 939,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/statistics.parquet",
+          "sha256": "fcc95c34a68ad85fc2050025cff2e5b561adf224c25f27fc8081afb0c6f2f520",
+          "bytes": 490753337,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113/run.json",
+          "sha256": "e578989cd541403d29a7fb919547a015a77fc5715c45fc2ce396ae4dd3c4bd12",
+          "bytes": 924140,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113/java-reflections-v1.json",
+          "sha256": "4b5df17ed4b610933e6e1bce1a346f47288ae521f25f5d504a85ed5a57998083",
+          "bytes": 142420145,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113/audit.json",
+          "sha256": "b4cc19fa24f5a2465915dddcb0fa4ee76316bd1fe3192ae9881184ab86f1ae58",
+          "bytes": 261,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113/sensitivity.json",
+          "sha256": "a1bb90b8d2bf673cd48b1625438216a75042769cbe2cff3852ff265d48e59970",
+          "bytes": 155420,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113/model_diagnostics.json",
+          "sha256": "81de6198eecdb265e65f18b79ff02f3e1810aa34dcab48698e0092158cc89ef8",
+          "bytes": 1453395,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113/country_eci.parquet",
+          "sha256": "d977d5b164bf14d3efd6a52e63c2e3ef19668551f3cee94a9faff1ceea571f14",
+          "bytes": 415102,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113/discipline_pci.parquet",
+          "sha256": "3668737336e9241fd07c0f30b06036e4e645767d2a50d100a614da21e0eaac1b",
+          "bytes": 283947,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113/manifest.json",
+          "sha256": "b05a4529af9960892887ac66d0a0a345459540623e70bff6cd276853bd515855",
+          "bytes": 1825,
+          "passed": true
+        }
+      ],
+      "statistics_audit_path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/validation/core-final-r3-statistics-independent-audit.json",
+      "statistics_audit_sha256": "e40f3142bbf823222d1662e5372621b0b603efb7f23daa441c8e1dff9fc5e24c",
+      "coverage": [
+        {
+          "start": 2000,
+          "end": 2025,
+          "publication_works": 191419522.99999642,
+          "known_before": 94394211.99999642,
+          "known_after": 96285781.99999657,
+          "recovered_publications": 1891570.0,
+          "coverage_before": 0.49312740163916396,
+          "coverage_after": 0.5030092045522352,
+          "citation_events": 2290773840.0000124,
+          "recovered_citation_events": 19328116.0,
+          "citation_coverage_before": 0.8808715447003714,
+          "citation_coverage_after": 0.8893089188586165
+        },
+        {
+          "start": 2000,
+          "end": 2026,
+          "publication_works": 201267474.9999956,
+          "known_before": 97992015.99999559,
+          "known_after": 99915255.99999571,
+          "recovered_publications": 1923240.0,
+          "coverage_before": 0.48687457325133005,
+          "coverage_after": 0.49643021556263794,
+          "citation_events": 2363318327.000008,
+          "recovered_citation_events": 19707840.0,
+          "citation_coverage_before": 0.8832010496231391,
+          "citation_coverage_after": 0.891540103983631
+        }
+      ],
+      "normalization": [
+        {
+          "method": "spectral",
+          "kind": "ECI",
+          "max_abs_mean": 2.441529422119392e-16,
+          "max_abs_second_moment_minus1": 1.3322676295501878e-15,
+          "valid_models": 216
+        },
+        {
+          "method": "spectral",
+          "kind": "PCI",
+          "max_abs_mean": 5.291181954661956e-16,
+          "max_abs_second_moment_minus1": 1.3322676295501878e-15,
+          "valid_models": 216
+        },
+        {
+          "method": "java_reflections",
+          "kind": "ECI",
+          "max_abs_mean": 1.4188948969424645e-16,
+          "max_abs_second_moment_minus1": 1.887379141862766e-15,
+          "valid_models": 216
+        },
+        {
+          "method": "java_reflections",
+          "kind": "PCI",
+          "max_abs_mean": 1.9867148861713328e-16,
+          "max_abs_second_moment_minus1": 2.220446049250313e-15,
+          "valid_models": 216
+        }
+      ]
+    },
+    {
+      "corpus": "all",
+      "run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+      "recovered_works": 2667126,
+      "completed_artifacts_verified": [
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/country_eci.parquet",
+          "sha256": "4246151c7f4c9d711fe196f634e63bbbaf3132bf0e95c416a61da085ea131978",
+          "bytes": 416317,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/coverage.json",
+          "sha256": "3886b42d01fcafe6d181d9d11e63b7209ec0cf4a2f8f2b2f1d354f9287dc8c2a",
+          "bytes": 13133,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/cube.parquet",
+          "sha256": "2f389d27fd747b4ec93a75f74cc8d6b8057d56162394e9e9f76f14c90456f54e",
+          "bytes": 180093518,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/dictionary.json",
+          "sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+          "bytes": 108523,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/discipline_pci.parquet",
+          "sha256": "3fceff5cfcd29072ebe9f733d9a2d79c9625ebf025be64f09269907e9fd73b50",
+          "bytes": 283947,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/eci.json",
+          "sha256": "c7cc39b2540183283ac9c9f0c2086aff814d56e3c6ceafd90f440cf13b21b986",
+          "bytes": 319528002,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/enrichment.json",
+          "sha256": "5c186ad5bc68333a51c72b04a66d958f0c9ed2c27ca225882c84c7382b70000d",
+          "bytes": 1509,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/model_diagnostics.json",
+          "sha256": "648ac5584f87d3b5a4f37ea6be504f1939e019ce67f4fc5f82962a4dc149cc5f",
+          "bytes": 2724827,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/rca.parquet",
+          "sha256": "720961036a1e73746d5a8fcfa1348bbabb8d788e6c0a49fc6c6be1e35ccd369a",
+          "bytes": 242260054,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/scenarios.json",
+          "sha256": "13ccf65471c8ec903ce325d58cc7d1ecd5085c5459ca01b7d276c677f5dfbc6c",
+          "bytes": 939,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/statistics.parquet",
+          "sha256": "e07ad64c6a8dfd45846ea8fed9ce11688d37e5eb6a3f350355cec41b1451c520",
+          "bytes": 493217314,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113/run.json",
+          "sha256": "e67febbd92b65db970f9b99827545312cf5858a88c5fd7a01e35ae475f3373b2",
+          "bytes": 2123183,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113/java-reflections-v1.json",
+          "sha256": "1fd8fb045cfd09b1d036880b001def1514346bde3fd75fcdb05d9831b02171f7",
+          "bytes": 142749631,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113/audit.json",
+          "sha256": "21f7c0d6e0a2d193a73e0fc8596856c52b1a3a3785ca5793362b314283e027e7",
+          "bytes": 261,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113/sensitivity.json",
+          "sha256": "27a7781797ac57971c4582a09eb9407760a572d6096bf8e617055d71fe0d2109",
+          "bytes": 155551,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113/model_diagnostics.json",
+          "sha256": "bfaa2a589b824de2714ace2b9448e87cd62bf7d6e04fe393898d201084a6ad94",
+          "bytes": 1453428,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113/country_eci.parquet",
+          "sha256": "a917bf1f85a6e82b522c76596e96da31f738a2c7ee1491b7b3ab5a036de9df2a",
+          "bytes": 415050,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113/discipline_pci.parquet",
+          "sha256": "c713caff5a3fdbd7d52c5f6cb924f92732316ab8cc85d4cfa19727b2daa3399d",
+          "bytes": 283947,
+          "passed": true
+        },
+        {
+          "path": "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113/manifest.json",
+          "sha256": "90fa510b291d0d79fad8ef178114d32f58f999944e8243a5f20db21cfcb586ec",
+          "bytes": 1825,
+          "passed": true
+        }
+      ],
+      "statistics_audit_path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/validation/all-final-r3-statistics-independent-audit.json",
+      "statistics_audit_sha256": "07112ce81a3a6ecf1f5955e4cca80d273913f18840614a351881a8f0bf79f142",
+      "coverage": [
+        {
+          "start": 2000,
+          "end": 2025,
+          "publication_works": 275493279.9999964,
+          "known_before": 101550632.99999642,
+          "known_after": 103468842.99999595,
+          "recovered_publications": 1918210.0,
+          "coverage_before": 0.3686138297093771,
+          "coverage_after": 0.3755766492743397,
+          "citation_events": 2312458058.0000057,
+          "recovered_citation_events": 19384756.0,
+          "citation_coverage_before": 0.8796483386856743,
+          "citation_coverage_after": 0.8880310879134657
+        },
+        {
+          "start": 2000,
+          "end": 2026,
+          "publication_works": 285365820.99999774,
+          "known_before": 105157871.99999774,
+          "known_after": 107107795.99999732,
+          "recovered_publications": 1949924.0,
+          "coverage_before": 0.36850198678838475,
+          "coverage_after": 0.37533505457893757,
+          "citation_events": 2385146215.0000005,
+          "recovered_citation_events": 19764899.0,
+          "citation_coverage_before": 0.881983184833807,
+          "citation_coverage_after": 0.8902698462031181
+        }
+      ],
+      "normalization": [
+        {
+          "method": "spectral",
+          "kind": "ECI",
+          "max_abs_mean": 2.8220206396859706e-16,
+          "max_abs_second_moment_minus1": 1.4432899320127035e-15,
+          "valid_models": 216
+        },
+        {
+          "method": "spectral",
+          "kind": "PCI",
+          "max_abs_mean": 5.736152293896642e-16,
+          "max_abs_second_moment_minus1": 2.4424906541753444e-15,
+          "valid_models": 216
+        },
+        {
+          "method": "java_reflections",
+          "kind": "ECI",
+          "max_abs_mean": 1.4876014650130934e-16,
+          "max_abs_second_moment_minus1": 1.5543122344752192e-15,
+          "valid_models": 216
+        },
+        {
+          "method": "java_reflections",
+          "kind": "PCI",
+          "max_abs_mean": 2.4539453361754454e-16,
+          "max_abs_second_moment_minus1": 1.5543122344752192e-15,
+          "valid_models": 216
+        }
+      ]
+    }
+  ],
+  "original_and_matched_reference_models_immutable": [
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1/eci.json",
+      "sha256": "98eb34cd7809ec7b83433f36446c9fc943fd1dbbd393fff1c4ecf58d3db457e3",
+      "passed": true
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1/java-reflections-v1.json",
+      "sha256": "3011d9de5587011272c7147e32069c4f693e9b7ca0cbeed0b6a0228e68924fb5",
+      "passed": true
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1/eci.json",
+      "sha256": "a7d6aa4a9209f54bf63200e85e61f45c935b411bc343ba2de09712cbcf10c586",
+      "passed": true
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1/java-reflections-v1.json",
+      "sha256": "bb3431a004615e6536cd4e7d898aa3b4f884f4a8390ceddbc6378f4903826e76",
+      "passed": true
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/core-baseline-java-stable-v3-20261112/java-reflections-v1.json",
+      "sha256": "0241f70e934bc6f8824b974fc27c158c164c6021fdfd5ab05481bb90790f22a0",
+      "passed": true
+    },
+    {
+      "path": "/mnt/nvme0/public/openalex-stats/results/all-baseline-java-stable-v3-20261112/java-reflections-v1.json",
+      "sha256": "e8df14bc22aef1484c5d6633fc2927be27fdefdb9a0c218a90536d51772c346e",
+      "passed": true
+    }
+  ],
+  "scope_note": "Final side version is original strict-text stage minus142 reviewed whole-Work deferrals; original255/256 and all external128 gate failures are unchanged, no new conditional precision validation claim."
+}

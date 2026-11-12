@@ -1,0 +1,10 @@
+import pathlib,json,hashlib,statistics,datetime
+root=pathlib.Path('bin/fulltext-v3-enriched');events=[json.loads(l) for l in (root/'fetch-events.jsonl').read_text(encoding='utf-8').splitlines()]
+complete=json.loads((root/'transport-complete.json').read_text(encoding='utf-8'));groups=[]
+durations={3:462.0,8:36.0,16:complete['run_seconds']}
+for workers in [3,8,16]:
+ rows=[r for r in events if r.get('workers',3)==workers and not r.get('cached')]
+ groups.append(dict(workers=workers,new_objects=len(rows),reached=sum(r['status']=='reached' for r in rows),failed=sum(r['status']=='failed' for r in rows),http429=sum(r.get('http_status')==429 for r in rows),http503=sum(r.get('http_status')==503 for r in rows),new_bytes=sum(r['bytes'] for r in rows),sum_request_seconds=sum(r['seconds'] for r in rows),median_request_seconds=statistics.median(r['seconds'] for r in rows),wall_seconds=durations[workers],wall_seconds_basis='rounded process creation/stop receipt times' if workers<16 else 'monotonic complete receipt (includes cached-object revalidation)',new_objects_per_second=len(rows)/durations[workers]))
+result=dict(status='static_s3_transport_only_benchmark_complete',authorization='Root explicitly authorized conservative self-imposed 3-worker limit to benchmark8then16; this was not a documented PMC S3 limit',policy_sha256='09312f219af3980328199a6cad05386a71ad8b957e505cb847ae6eefae1c28a1',frozen_identity_country_selection_checksum_version_unchanged=True,automatic_policy_not_retrained=True,source_host='pmc-oa-opendata.s3.amazonaws.com',plan_sha256=complete['plan_sha256'],fixed_plan_tasks=complete['tasks'],selected_works=3000,original_policy_network_workers=3,operational_transport_override_workers=16,same_successful_object_cache_verified_after_restart=True,stopped_only_exactly_identified_own_processes=True,benchmarks=groups,transport_source_sha256=hashlib.sha256(pathlib.Path('research/country-enrichment-v3/fulltext/pmc-transport.mjs').read_bytes()).hexdigest(),completed_plan=True)
+(root/'transport-benchmark.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+print(json.dumps(groups))

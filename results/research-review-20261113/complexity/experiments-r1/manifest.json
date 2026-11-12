@@ -1,0 +1,91 @@
+{
+  "baseline_edge_and_up_to_sign_score_checks": "all32 passed; both methods tolerance1e-6",
+  "case_method_results": 1152,
+  "cases": [
+    {
+      "kind": "baseline",
+      "parameter": 0
+    },
+    {
+      "kind": "display_only",
+      "parameter": 10
+    },
+    {
+      "kind": "country_scale_recompute_global_margins",
+      "parameter": 10
+    },
+    {
+      "kind": "display_only",
+      "parameter": 100
+    },
+    {
+      "kind": "country_scale_recompute_global_margins",
+      "parameter": 100
+    },
+    {
+      "kind": "display_only",
+      "parameter": 1000
+    },
+    {
+      "kind": "country_scale_recompute_global_margins",
+      "parameter": 1000
+    },
+    {
+      "kind": "display_only",
+      "parameter": 10000
+    },
+    {
+      "kind": "country_scale_recompute_global_margins",
+      "parameter": 10000
+    },
+    {
+      "kind": "cell_support_fixed_global_rca",
+      "parameter": 5
+    },
+    {
+      "kind": "cell_support_fixed_global_rca",
+      "parameter": 10
+    },
+    {
+      "kind": "cell_support_fixed_global_rca",
+      "parameter": 50
+    },
+    {
+      "kind": "rca_threshold",
+      "parameter": 0.5
+    },
+    {
+      "kind": "rca_threshold",
+      "parameter": 1.5
+    },
+    {
+      "kind": "rca_threshold",
+      "parameter": 2
+    },
+    {
+      "kind": "minimum_diversity_fixed_global_rca",
+      "parameter": 2
+    },
+    {
+      "kind": "minimum_diversity_fixed_global_rca",
+      "parameter": 3
+    },
+    {
+      "kind": "minimum_diversity_fixed_global_rca",
+      "parameter": 5
+    }
+  ],
+  "cell_support": "Retain original X/RCA global margins, filter M edges by X\u003e=support before T recompute.",
+  "country_scale": "Zero low-scale original fractional rows, recompute all global RCA margins; retained coauthor country fractions not renormalized.",
+  "coverage": "Known-country fractional attribution mass, including UNKNOWN subject via primary-field totals; not whole-country sum claimed as unique global papers. Citation-event support is not distinct cited-target paper count.",
+  "display_only": "Scores and M unchanged, only display/ranking universe filtered.",
+  "elapsed_seconds": 9.673475584,
+  "input_matrices": 32,
+  "input_path": "/mnt/nvme0/public/openalex-stats/analysis-small-country-complexity-20261112/representative-experiment-inputs.json",
+  "input_sha256": "65b62819f78da7869e9dc3e39d280bd48cee46240bf793d862b41b4438a479e6",
+  "orientation": "Each same-year result has raw scores plus one country-correlation multiplier applied jointly to its ECI/PCI for diagnostic comparison. Not a new temporal production model; weak correlation explicitly flagged.",
+  "production_models_changed": false,
+  "rankings": "Competition ranks, exact ties retained; no ranks when model disconnected/degenerate/empty.",
+  "status": "completed_isolated_diagnostics",
+  "workers": 32
+}

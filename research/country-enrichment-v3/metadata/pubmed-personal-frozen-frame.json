@@ -1,0 +1,61 @@
+{
+  "status": "frozen_full_personal_candidate_frame_pending_independent_cluster_gate",
+  "original_policy_sha256": "2480962940e1ad708ca5f71638d40dc590ff0de72a9f634cd857db1751b8901e",
+  "engine_sha256": "9f17ef782ffc894317c04e26403871ce25f41179f01c0ed6eccd56411389bb10",
+  "append_sha256": "0927fdbaf719800370451b896b4bf9555e120a41c59fc91c169a1d827a1e79fd",
+  "code_sha256": "38fb4e3aa0ca2abac0db3d1ae327dbc6013551f087a865375fb8218c91f7dbea",
+  "original_candidate_sha256": "481b9b2ec88087d4d84b319d9717c7631d29b3762ae48b67eaf53c8ab7b3b344",
+  "input_records_eligible": 106967,
+  "records_requiring_role_views": 103,
+  "original_candidate_works": 106967,
+  "personal_domain_works": 106885,
+  "whole_work_collective_only_quarantine": 82,
+  "personal_candidate_sha256": "14c92da032ddac72f81ff29b7715032d1907bf3b43d2af9d82a815b3300d6711",
+  "quarantine_sha256": "3bd03423b90327ee7409993aa3e2421c264616dbecae574f1020c6e18ed37d22",
+  "support_roles_sha256": "3b120eb59468d73edfba2ca93f1d6a56d293497aea7b65b4b364034fde2b9e93",
+  "original_countries_changed": false,
+  "original_outcomes_rewritten": false,
+  "gold_seen": false,
+  "production_applied": false,
+  "source_complete": true,
+  "source_scope": "All 1334 January2026 baseline files; later updates not applied",
+  "route": "pubmed_baseline",
+  "candidate_frame": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/full-pubmed-policy/personal-scope/pubmed_baseline-validation-candidates.jsonl",
+  "provenance": {
+    "original_inputs": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/full-pubmed-policy/private-policy-inputs.jsonl",
+      "sha256": "b45dbfba3eee9a2456923c7b3aa939be1d7a983304893ce33a07e9dca61a59e4"
+    },
+    "original_raw_outcomes": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/full-pubmed-policy/private-policy-record-outcomes.jsonl",
+      "sha256": "a69a893ad268a897584b7c69ce1b2279ca362d0fc1017fa4902330662ce5e5da"
+    },
+    "role_inputs": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/full-pubmed-policy/personal-scope/private-role-view-inputs.jsonl",
+      "sha256": "4d4c80e6db8ed4a2fe358fc1bb51727cacdd8eb8ea5ebd8fb029bc659b19608e"
+    },
+    "role_outcomes": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/full-pubmed-policy/personal-scope/private-role-view-outcomes.jsonl",
+      "sha256": "7c0e2528fab38f99ef2d31f00ba195a263c8d1615f51f04cc2b84ebe05603c41"
+    },
+    "source_pool_manifest": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/pubmed-pool-data/manifest.json",
+      "sha256": "69a0c2fdbfc215ace8cf947bb9b80a97f9fad42df9540fbafd104f227eaea4e7"
+    },
+    "author_manifest": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/shared/author-identities-pubmed-complete/manifest.json",
+      "sha256": "ad485cc33ba9e3405dfe55eb44b79c43a3b809b8f5a4a96bdad93b04c57178a6"
+    },
+    "priority": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/recovery-priority-v1.json",
+      "sha256": "77f4c06dc1af52940792d3c1d5f4c2af7c28d8aa7c449a92c5be3a338d39c2ff"
+    },
+    "known_conflict_quarantine": {
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/metadata/known-identity-conflicts-v1.json",
+      "sha256": "9c10249a8aee48c872bd5f1c54659d7902766a8c7984ef77fc4bfce62fc233f8"
+    }
+  },
+  "gate_passed": false,
+  "known_conflict_candidate_hits": [],
+  "provisional_net_after_text_only_before_development_and_cluster_exclusions": 25428
+}

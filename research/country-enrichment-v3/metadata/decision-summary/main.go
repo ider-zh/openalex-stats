@@ -1,0 +1,7 @@
+// Descriptive frozen-engine outcomes only; no gold labels or rule changes.
+package main
+import("bufio";"encoding/json";"fmt";"os")
+type Row struct{ID uint64 `json:"id"`;Eligible bool `json:"eligible"`;Identity struct{Reason string `json:"reason"`} `json:"identity"`}
+func main(){if len(os.Args)!=3{panic("usage: decision-summary outcomes.jsonl summary.json")};f,e:=os.Open(os.Args[1]);if e!=nil{panic(e)};defer f.Close();s:=bufio.NewScanner(f);s.Buffer(make([]byte,1<<20),16<<20);records:=0;accepted:=0;reasons:=map[string]int{};works:=map[uint64]bool{};eligible:=map[uint64]bool{};reasonWorks:=map[string]map[uint64]bool{}
+for s.Scan(){var r Row;if e=json.Unmarshal(s.Bytes(),&r);e!=nil{panic(e)};records++;works[r.ID]=true;reasons[r.Identity.Reason]++;if reasonWorks[r.Identity.Reason]==nil{reasonWorks[r.Identity.Reason]=map[uint64]bool{}};reasonWorks[r.Identity.Reason][r.ID]=true;if r.Eligible{accepted++;eligible[r.ID]=true}};if s.Err()!=nil{panic(s.Err())};counts:=map[string]int{};for reason,ids:=range reasonWorks{counts[reason]=len(ids)}
+result:=map[string]any{"status":"descriptive_frozen_engine_decisions_not_accuracy","records":records,"unique_works":len(works),"eligible_records":accepted,"works_with_any_eligible_record":len(eligible),"identity_reason_record_counts":reasons,"identity_reason_distinct_work_counts":counts,"distinct_work_reason_counts_may_overlap":true,"gold_used":false,"rules_changed":false};b,e:=json.MarshalIndent(result,"","  ");if e!=nil{panic(e)};if e=os.WriteFile(os.Args[2],append(b,'\n'),0644);e!=nil{panic(e)};fmt.Println(string(b))}

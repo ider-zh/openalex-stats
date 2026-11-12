@@ -1,0 +1,23 @@
+{
+  "candidate_or_rule_changed": false,
+  "counts": {
+    "both_minimum_and_difference_rejections": 31100,
+    "difference_only_title_rejections": 348630,
+    "eligible_numeric_equal_records": 62,
+    "failed_minimum_title_length_or_token_rule": 39275,
+    "minimum_only_title_rejections": 8175,
+    "normalized_title_different_from_both_source_titles": 379730,
+    "numeric_work_id_equals_source_pmid_records": 357030,
+    "original_title_empty": 47,
+    "records": 548634,
+    "title_rejected_numeric_equal_below_minimum": 28153,
+    "title_rejected_numeric_equal_different": 356018,
+    "title_rejected_numeric_equal_original_pmid_empty": 355946,
+    "title_rejected_numeric_work_equals_source_pmid": 356024,
+    "title_rejected_records": 387905
+  },
+  "gold_used": false,
+  "normalization_and_minimum": "Exact unchanged frozen core.LongTitle/core.Normalize",
+  "numeric_equality": "Work numeric ID equals independent source PMID; a diagnostic indicator, not causal attribution or an error label",
+  "status": "descriptive_readonly_indicators_not_proven_identity_errors"
+}

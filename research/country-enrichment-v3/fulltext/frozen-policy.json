@@ -1,0 +1,55 @@
+{
+  "policy_version": "fulltext-holdout-v3-20261112-01",
+  "frozen_before_holdout_inputs_released": true,
+  "created_at_utc": "2026-11-12T13:26:58.506767+00:00",
+  "identity": {
+    "all_routes": "exact normalized distinctive original title or explicit source translation; nonempty source and original year within 1; original full personal author exact normalized or exact full-name token set; nonempty DOI/PMID conflicts reject",
+    "xml": "must be confirmed published PMC metadata, explicit author xref or nested aff association, no sole-aff fallback",
+    "pdf": "same identity; year must equal original for nonpublished/unknown version; publishedVersion permits online/print +/-1"
+  },
+  "country": {
+    "evidence": "only linked author affiliation direct country element or exact terminal country alias; no references, journal country, publisher/HQ, free city/name inference",
+    "aliases": "old country-review-v1 aliases plus XML UK/U.K.; snapshot country dictionary",
+    "ambiguous_affiliations": "withhold that affiliation; other independent unambiguous author evidence may remain",
+    "complete_paper_country_set": null,
+    "visible_completeness": "reported separately; no claim every coauthor country observed"
+  },
+  "discovery": {
+    "pmc_idmap_sha256": "3c12867d7abf2c41cd2bbf10ca87a84a8aa7dc796609611154b699741a281fe8",
+    "pmc_inventory_plan_sha256": "c5c3cd2c30a2e4b202fca6e177c74557f2d05353dfe4b055be783f5ff20d1f9a",
+    "ambiguous_pmc_mappings": "if identifier/linkage points to multiple PMCID, defer rather than choose first",
+    "inventory_scope": "frozen official 2026-11-11 Cloud metadata inventory, not all possible publishers"
+  },
+  "validation_cohort": {
+    "eligible": "baseline UNKNOWN in fixed original Q, unique DOI/PMID to PMCID, present in frozen official PMC OA inventory; all pilot/development IDs excluded",
+    "first_stage_seed": "openalex-country-enrichment-v3-20261112-pmc-eligible-validation-01",
+    "first_stage_hash": "SHA256(seed+newline+decimalWorkID), ascending",
+    "first_stage_cap": 3000,
+    "first_stage_probability": "min(3000,N_eligible)/N_eligible",
+    "candidate_audit_seed": "openalex-country-enrichment-v3-20261112-route-candidate-audit-01",
+    "candidate_audit": "validation agent bottom128 of original automatic positives; failures/unknown never replaced",
+    "candidate_gate": "at least128; point>=99%; two-sided95%Wilson lower>=97%; no unisolated systemic mismatch",
+    "pdf": "new independent probability holdout, second stage max8 per original stratum; freeze ids/pi2 before fetch; insufficiency does not trigger unlimited further crawling"
+  },
+  "network": {
+    "external_workers": 3,
+    "pdf_limit_bytes": 20971520,
+    "xml_limit_bytes": 33554432,
+    "grobid_consolidateHeader": 0,
+    "grobid_consolidateCitations": 0,
+    "grobid_consolidateFunders": 0,
+    "crossref_pubmed_per_work_metadata_api_calls": 0
+  },
+  "country_dictionary_sha256": "c2c015f73249ec28bed1e06448417467529b3b6c854b0944f919e7d799416ea6",
+  "source_sha256": {
+    "cmd/frozen.go": "fc0727be0b0e42b6a1e149006d3ce74343a6e9f13bac4f7d21a6b1a60986d968",
+    "cmd/frozen_test.go": "75ca8c5ac4dad1aafe01a9d0592ff0d2506bacee23ee25096038b3b0265c1081",
+    "cmd/main.go": "09a1cff359389e7da267913d05204f3448275bf1329c99b57ed489de8b080b0c",
+    "cmd/policy.go": "789ef6db61cae37154a09b11642227b6131ac9e812a0d6fda11e9f070a62491f",
+    "cmd/rules.go": "7eba41f6bd87e70ffbf2374893d78ccf1558bd83fb6250b0f48fb33fce05905b",
+    "cmd/xml.go": "582d2cdf28d7e94279b07ab999504806b33ccbaba7039bcad9063bbb96e714d1",
+    "cmd/xml_test.go": "44750eed4e853cae82ab537452a1e91f45554f5154ae186b038d8159a5315ea8"
+  },
+  "tests": "8 tests passed before holdout access",
+  "production_applied": false
+}

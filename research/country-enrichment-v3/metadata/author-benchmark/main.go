@@ -1,0 +1,14 @@
+// Isolated projected-column benchmark; never a production author index.
+package main
+import("encoding/json";"flag";"fmt";"io";"os";"sort";"strconv";"time";"github.com/parquet-go/parquet-go")
+type Target struct{ID uint64 `parquet:"id"`;Year int32 `parquet:"year"`;Type string `parquet:"type"`;XPAC bool `parquet:"is_xpac"`;Row uint64 `parquet:"raw_row_index"`}
+type Person struct{Name *string `parquet:"display_name"`;ORCID *string `parquet:"orcid"`}
+type Author struct{Author *Person `parquet:"author"`;RawName *string `parquet:"raw_author_name"`;RawORCID *string `parquet:"raw_orcid"`}
+type Raw struct{ID *string `parquet:"id"`;Year *int32 `parquet:"publication_year"`;Type *string `parquet:"type"`;XPAC *bool `parquet:"is_xpac"`;Authors []*Author `parquet:"authorships,list"`}
+type Counter struct{R io.ReaderAt;N uint64};func(c *Counter)ReadAt(p []byte,o int64)(int,error){n,e:=c.R.ReadAt(p,o);c.N+=uint64(n);return n,e}
+func val(s *string)string{if s==nil{return ""};return *s};func must(e error){if e!=nil{panic(e)}}
+func main(){target:=flag.String("targets","","thin per-source targets");raw:=flag.String("raw","","original source");out:=flag.String("out","","isolated JSONL");mode:=flag.String("mode","sequential","sequential or sparse");flag.Parse();ts,e:=parquet.ReadFile[Target](*target);must(e);sort.Slice(ts,func(i,j int)bool{return ts[i].Row<ts[j].Row});f,e:=os.Open(*raw);must(e);defer f.Close();st,e:=f.Stat();must(e);counter:=&Counter{R:f};start:=time.Now();pf,e:=parquet.OpenFile(counter,st.Size(),parquet.SkipBloomFilters(true));must(e);r:=parquet.NewGenericReader[Raw](pf);defer r.Close();dest,e:=os.Create(*out);must(e);defer dest.Close();enc:=json.NewEncoder(dest)
+ emit:=func(t Target,a Raw){year:=int32(0);if a.Year!=nil{year=*a.Year};xpac:=a.XPAC!=nil&&*a.XPAC;if val(a.ID)!="https://openalex.org/W"+strconv.FormatUint(t.ID,10)||year!=t.Year||val(a.Type)!=t.Type||xpac!=t.XPAC{panic("original identity mismatch")};authors:=[]map[string]string{};for _,v:=range a.Authors{p:=map[string]string{"name":"","raw_author_name":"","orcid":"","raw_orcid":""};if v!=nil{p["raw_author_name"]=val(v.RawName);p["raw_orcid"]=val(v.RawORCID);if v.Author!=nil{p["name"]=val(v.Author.Name);p["orcid"]=val(v.Author.ORCID)}};authors=append(authors,p)};must(enc.Encode(map[string]any{"id":t.ID,"authors":authors}))}
+ if *mode=="sparse"{for _,t:=range ts{must(r.SeekToRow(int64(t.Row)));buf:=make([]Raw,1);n,e:=r.Read(buf);if e!=nil&&e!=io.EOF{panic(e)};if n!=1{panic("no sparse row")};emit(t,buf[0])}}else{buf:=make([]Raw,2048);var pos uint64;i:=0;for i<len(ts){for j:=range buf{buf[j]=Raw{}};n,e:=r.Read(buf);if e!=nil&&e!=io.EOF{panic(e)};if n==0{panic("early EOF")};for _,a:=range buf[:n]{if i==len(ts){break};if pos==ts[i].Row{emit(ts[i],a);i++};pos++}}}
+ fmt.Printf("mode=%s targets=%d elapsed=%.3f source_read_bytes=%d\n",*mode,len(ts),time.Since(start).Seconds(),counter.N)
+}

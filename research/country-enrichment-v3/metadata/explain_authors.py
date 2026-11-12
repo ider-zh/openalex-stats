@@ -1,0 +1,2 @@
+import duckdb,json,pathlib
+b=pathlib.Path('/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112');m=json.load(open(b/'shared/identifiers/manifest.json'));p=next(x['raw_path'] for x in m['parts'] if x['source_index']==1300);c=duckdb.connect();plan=c.execute('explain select list_transform(authorships,a->struct_pack(name:=a.author.display_name,raw_author_name:=a.raw_author_name,orcid:=a.author.orcid,raw_orcid:=a.raw_orcid)) from read_parquet(?)',[p]).fetchall();s='\n'.join(r[1] for r in plan);print(s);(b/'metadata/author-index-explain.txt').write_text(s)

@@ -100,3 +100,5 @@ Core 输出年文献的国家信息覆盖率为 48.69%，Core+XPAC 为 36.85%；
 全球 ECI Bump 默认展示全部 248 个国家／地区，使用 SVG 和至少 26px／名次的自适应长图，按终点标签所需空间继续加高。普通数量指标仍限制 12 国／48 条组合曲线，其国家选择与 ECI 独立保存。详见 [交互说明](docs/explorer-controls.md)。
 
 首次成功打开图表后显示六步使用导引；完成、跳过或关闭后满七天再次提示，页首可随时重看。规则与验证见 [使用导引](docs/onboarding.md)。
+
+2026-11-13 研究结果已归档：[小国家／地区复杂度高排名审查](docs/small-country-complexity-review.md)、[国家补全最终 review](docs/country-enrichment-v3-review.md)及[可复核数据与工具](results/research-review-20261113/README.md)。国家补全 r3 是独立候选版本，未替换上述正式数据；小倪方法论的界面重命名与默认选择已单独发布，见[发布验证](docs/xiaoni-default-release.md)。

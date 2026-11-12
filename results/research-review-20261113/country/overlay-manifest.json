@@ -1,0 +1,22 @@
+{
+  "status": "passed_validated_overlay",
+  "version": "v3-text-final-r3",
+  "rows": 2667126,
+  "patch_sha256": "fe6d3abaf6d94e5ca3c209c6a5e5270f7c8c85964dc34ac3d3ce9e6c662db5f3",
+  "gates": [
+    {
+      "route": "v1_strict_text_only",
+      "path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/passed-gate.json",
+      "sha256": "66824b4596e4342ffe954c70fd40b90d42a1883354bbda7c3fc2e4c6466b680d"
+    }
+  ],
+  "original_version_preserved": true,
+  "production_applied": false,
+  "previous_text_patch_path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-validation/validated-text-patch.parquet",
+  "previous_text_patch_sha256": "4d58bb4cf77acc084a2084359248b973d11d392304c77ba6b90b13e22b5ae3e7",
+  "batch_defer_path": "/mnt/nvme0/public/openalex-stats/analysis-country-enrichment-v3-20261112/text-final-r3/batch-deferred-work-ids.json",
+  "batch_defer_sha256": "217e91bb3eea79f36d027d25cfd81d93e04716c4100ee83a41b5685224b7dc72",
+  "excluded_since_stage1": 142,
+  "external_routes_applied": [],
+  "note": "Only independently-precision-passed text route admitted; external failed/unverified candidate streams never become recovered data."
+}

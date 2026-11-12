@@ -1,0 +1,371 @@
+{
+  "status": "explicit_publication_allowlist_only",
+  "metadata_stage_complete": true,
+  "external_actual_admitted_works": 0,
+  "files": [
+    {
+      "path": "research/country-enrichment-v3/metadata/additional_primary_evidence.mjs",
+      "kind": "source",
+      "bytes": 6292,
+      "sha256": "caf83170ede59f95be877795dc796b53711a6749badc5c2093f45feb63fedd55"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/audit_postal_markers.py",
+      "kind": "source",
+      "bytes": 2344,
+      "sha256": "e09ab612634fd8410dcb71add2b8cafdcf0d3af51fc12d8f11b266123cf29e7d"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/author-benchmark/main.go",
+      "kind": "source",
+      "bytes": 2886,
+      "sha256": "f0d871b04e640ef3ff15191f805f05eed8a9197bba24ed965c8756146d2b5129"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/build_author_index.py",
+      "kind": "source",
+      "bytes": 6031,
+      "sha256": "fe62354bbc7401f2d473839bf84fc6f451a969d289d9600e9c6dce8c3ec3e2df"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/build_crossref_blind_packets.py",
+      "kind": "source",
+      "bytes": 4049,
+      "sha256": "c9c8a0534b012b6d0c9fff5ff9818889a7b812bc8330f9b3f447e5b30e9f0d01"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/build_final_summary.py",
+      "kind": "source",
+      "bytes": 5860,
+      "sha256": "16cc2e00bc58a3c2b9f405189c513de294108b83c6798e76ad9086714aa72741"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/build_pubmed_blind_packets.py",
+      "kind": "source",
+      "bytes": 2887,
+      "sha256": "fce075ceb66ddb302339ab05bcc4e7f12f9bb0dd6c4a0393cf54947ba3f0bde6"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/build_work_index.py",
+      "kind": "source",
+      "bytes": 4648,
+      "sha256": "b88aef4643389dbed8ebafad52e7a12f9bdcb89000ae4e61fb3b38b76e5d3aa4"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/check_author_index.py",
+      "kind": "source",
+      "bytes": 1354,
+      "sha256": "a7c67c30a551ff3945bed2f3ecd18cecfbea5b0dfd9279c3c6917519f8e6fb6b"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/compare_index.py",
+      "kind": "source",
+      "bytes": 891,
+      "sha256": "3493b1699a1059030c5b015cfb707590b1b83f3e54fae6cdbab7a2ff4d5aead8"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/compare_index_fixed.py",
+      "kind": "source",
+      "bytes": 904,
+      "sha256": "6e10a93ad3f82d00993753f1b9c645858863365f8b3198a8d54daac259435b44"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/complete_pubmed_pipeline.py",
+      "kind": "source",
+      "bytes": 1445,
+      "sha256": "abc8ed8dd3ebf121a985381ff375da8100ea0950b46b27cd2fd80e39077d8ce0"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/core/country.go",
+      "kind": "source",
+      "bytes": 1456,
+      "sha256": "d3cac1a7e9f431f1029beab600a8a16ec85599a5aa18e63a64028876d1045128"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/core/policy.go",
+      "kind": "source",
+      "bytes": 4566,
+      "sha256": "ad034516df230ad14f72fd198df53216ddb969d637ca26b01db1d4f5b608cf6b"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/core/policy_test.go",
+      "kind": "source",
+      "bytes": 2098,
+      "sha256": "9c068a44110308c7ab42236ac86da1621f7014420f3f7b0e7b6ba336b0778c98"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/crossref-pool/main.go",
+      "kind": "source",
+      "bytes": 4733,
+      "sha256": "609d8f0d2f0e3750c21844cece8a1ad296e3c8797a83403fa7acbc54d8b06c76"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/decision-summary/main.go",
+      "kind": "source",
+      "bytes": 1576,
+      "sha256": "96eadb520aa80462387112f835c1880bfafd558f9422f6b09dd9f7d7d714ec44"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/evaluate_matches.py",
+      "kind": "source",
+      "bytes": 6910,
+      "sha256": "b1b47a9348be8007a3e54b9d86cb6f34f167408ca07a15251d487a77de9c12dd"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/explain_authors.py",
+      "kind": "source",
+      "bytes": 579,
+      "sha256": "336b4f27a500839085ac42c9615d2390a74103250362516e38a15902d94b86f3"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/extract_selected_pubmed.py",
+      "kind": "source",
+      "bytes": 3054,
+      "sha256": "dfcd475a13cc0c63203eec707ff0f14554c9f5cff58da56e992028202559a178"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/lookup_pubmed_bibliography.py",
+      "kind": "source",
+      "bytes": 2147,
+      "sha256": "a50ad42a37115142e16b61fb32b21aaea1cd9a69cc24b4c04545580ab248b885"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/make_public_files.py",
+      "kind": "source",
+      "bytes": 3154,
+      "sha256": "e0a725ed1f8dcb7a8690706633fa758732d65e05d639b7ec47b896aafeb0ea34"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/personal_country_scope.py",
+      "kind": "source",
+      "bytes": 6264,
+      "sha256": "38fb4e3aa0ca2abac0db3d1ae327dbc6013551f087a865375fb8218c91f7dbea"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/policy-engine/main.go",
+      "kind": "source",
+      "bytes": 2362,
+      "sha256": "c503e34dd0a9ef4e684a48a4cb34b7f6b57db69ee6a7e0f7efd8dd06f66376fe"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/prepare_matches.py",
+      "kind": "source",
+      "bytes": 5074,
+      "sha256": "31afb64f1132e9051e3cc7a2549d3fcde277326e6d06b8561eaf9743cf839277"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/prepare_primary_links.py",
+      "kind": "source",
+      "bytes": 1661,
+      "sha256": "5d1df2a77a8978b8fe6fb3aaf196dc93d0ddd92decf12dbadb4764be2c11b4ac"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/profile_authors.py",
+      "kind": "source",
+      "bytes": 1269,
+      "sha256": "825d642d127e1075c76d48fa11f62c50017a649278ac8c12e8b2efa70a17a9db"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-bridge.mjs",
+      "kind": "source",
+      "bytes": 3579,
+      "sha256": "be660567770eabcbd810ae9d3b8806a66fbab3d14e637e5e8d88ec86a064f572"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-curl-bridge.mjs",
+      "kind": "source",
+      "bytes": 4480,
+      "sha256": "bf0901b82c89ab8755b68c3c1313c856c084f1eca7f8bf3030faf7e87c99f510"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-pool/main.go",
+      "kind": "source",
+      "bytes": 7003,
+      "sha256": "05f283170219d8071bc2514138052db05a37cc1f801419431215b5aa5e84f367"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-pool/parser.go",
+      "kind": "source",
+      "bytes": 5502,
+      "sha256": "8cf763dc91c00ab0f21f0ab6196f53fcb36b110385624a58793c7fa6a7d477ad"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-pool/parser_test.go",
+      "kind": "source",
+      "bytes": 1509,
+      "sha256": "c90f23ab8df96831255bc875bf550542fb5fca3d765b3a920872d61e2e1d918e"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/raw-crossref/main.go",
+      "kind": "source",
+      "bytes": 3281,
+      "sha256": "8bfcd30f194c915140667c86c0771fbbf94e8e74650ab8056324dad844f3462b"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/receive/main.go",
+      "kind": "source",
+      "bytes": 1479,
+      "sha256": "d2ef6ebe3f77254df19fbec15995fb1b25c0b9cf1e2d5569d87ce087176a751a"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/test_personal_scope.py",
+      "kind": "source",
+      "bytes": 3635,
+      "sha256": "1d56058661c2353cf1015eefec8ba56eea9cbc0c949ea721a4ab80868312b5b6"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/title-diagnostic/main.go",
+      "kind": "source",
+      "bytes": 2810,
+      "sha256": "7f5ef55e7dd70063cd1bbc4a7bffe89722be53034a971ad7474b429752e4622e"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/work-index/main.go",
+      "kind": "source",
+      "bytes": 7454,
+      "sha256": "04c5488db0723b466052399eb95cdfb76bb95ab65567bc7b759f88dd58a44796"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/work-index/main_test.go",
+      "kind": "source",
+      "bytes": 1298,
+      "sha256": "50fe02d1b14a099f6da0f56aca64adacde154ad4efb17976a8e139940165fcc5"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/country-aliases.json",
+      "kind": "frozen_config",
+      "bytes": 33649,
+      "sha256": "79c3d7458de015c00b186dce8d6953fda5faa993071f43a5a1c641fbe7db0357"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/engine-freeze.json",
+      "kind": "frozen_config",
+      "bytes": 1433,
+      "sha256": "108bdc9fb0b066ba5801b91001b7b97a3a364a91d264ff89385b85914718ea87"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/known-identity-conflicts-v1.json",
+      "kind": "frozen_config",
+      "bytes": 1471,
+      "sha256": "9c10249a8aee48c872bd5f1c54659d7902766a8c7984ef77fc4bfce62fc233f8"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/personal-country-scope-v1.json",
+      "kind": "frozen_config",
+      "bytes": 2164,
+      "sha256": "0927fdbaf719800370451b896b4bf9555e120a41c59fc91c169a1d827a1e79fd"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/policy-v1.json",
+      "kind": "frozen_config",
+      "bytes": 3156,
+      "sha256": "a27f5d349534ed550b9d2d31271eaf67c6c64a5dd12de40e8c2af19106f19e73"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/policy-v2.json",
+      "kind": "frozen_config",
+      "bytes": 3557,
+      "sha256": "2480962940e1ad708ca5f71638d40dc590ff0de72a9f634cd857db1751b8901e"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/recovery-priority-v1.json",
+      "kind": "frozen_config",
+      "bytes": 920,
+      "sha256": "77f4c06dc1af52940792d3c1d5f4c2af7c28d8aa7c449a92c5be3a338d39c2ff"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/source-v1.json",
+      "kind": "frozen_config",
+      "bytes": 239501,
+      "sha256": "82a40df909414461fd8a6836213c052b452198a1a17d9b089ab25b3f6f939e5a"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/execution-timing.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 352,
+      "sha256": "5fa2a2282c8cab8051163e6b1d30d49028b3d3a4394bfe6c991eb1bad2c33f69"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/final-summary.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 10118,
+      "sha256": "97bcb4ced549d3a364484b3a7f5bf5899c775368d92598db4878f3838485f28e"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/index-go-rejected-benchmark.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 502,
+      "sha256": "10814a3b94d6cfc4205071843e4479f69274b1bb7dffa5ab64459d3f0c7febd9"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-complete-author-manifest.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 1878322,
+      "sha256": "ad485cc33ba9e3405dfe55eb44b79c43a3b809b8f5a4a96bdad93b04c57178a6"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-decision-summary.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 818,
+      "sha256": "33891cd3d222161347a1e421ed52201ed5891252de4146eb8468b6c31957e121"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-personal-frozen-frame.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 3740,
+      "sha256": "81b661495b237577c5f9297df4918d96252336668e3780b1ed941e996a9adc95"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-personal-scope-manifest.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 1138,
+      "sha256": "0fdf96e3004ed596a65139c4c062fe2c3ddbdd1a2d3369b28abb4457275ecf82"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-source-complete-manifest.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 1101605,
+      "sha256": "69a0c2fdbfc215ace8cf947bb9b80a97f9fad42df9540fbafd104f227eaea4e7"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/pubmed-title-diagnostic.json",
+      "kind": "pure_summary_no_raw_records",
+      "bytes": 1076,
+      "sha256": "e57455daeb88bf1d8945dffe6a7f99cb64b306824cbfbe5902fac9cfc44c117d"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/report.md",
+      "kind": "documentation",
+      "bytes": 9189,
+      "sha256": "63ad7b1024fda921cee13fe7cdc627e03861540d099fa337907b6a328583dafb"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/REPRODUCE.md",
+      "kind": "documentation",
+      "bytes": 2884,
+      "sha256": "6462bf617a784ba3239f89f21b7cec7df389e23317005aa702c66c482db87264"
+    },
+    {
+      "path": "research/country-enrichment-v3/metadata/SOURCE-ATTRIBUTION.md",
+      "kind": "documentation",
+      "bytes": 1269,
+      "sha256": "2f443683d557c6ca3eaaf9ca2566bb797909fe777c9d45d40cd212395535f382"
+    }
+  ],
+  "file_count": 58,
+  "total_bytes": 3425388,
+  "append_allowlist_file_itself": true,
+  "excluded_always": [
+    "all dumps and source Parquet data",
+    "all candidate/frame member streams",
+    "all raw authors and affiliation assertions",
+    "all XML/PDF/HTML/source response bytes",
+    "all private inputs/outcomes and role-view inputs/outcomes",
+    "all blind packet/source byte directories",
+    "all Gold/individual reviews and unsanitized gate records",
+    "all original per-Work identifier/author/source evidence or postal marker raw text",
+    "all transfer receipt/progress detail directories and cached local bulk objects",
+    "ad hoc restart_index.py/schedule_index.py operational process-control helpers"
+  ],
+  "security_note": "Do not git add the whole research directory. Add only these explicit paths and this manifest. Go dependencies are in root go.mod/go.sum. The optional original-machine proxy loader is not included; see REPRODUCE.md. No credentials are included."
+}

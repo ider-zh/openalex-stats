@@ -1,0 +1,9 @@
+{
+  "measurement": "Artifact timestamps: approximate wall intervals, not CPU time",
+  "adapter_total_from_author_ready_seconds": 260.03,
+  "go_engine_output_write_interval_seconds": 96,
+  "scope_total_from_view_input_creation_seconds": 48,
+  "records": 548634,
+  "role_affected_records": 103,
+  "scope_go_view_output_interval_upper_bound_seconds": 1
+}

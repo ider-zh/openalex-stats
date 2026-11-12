@@ -1,0 +1,18 @@
+{
+  "status": "frozen_static_policy_implementation_gap_quarantine_before_pubmed_gold",
+  "append_id": "metadata-personal-country-scope-v1",
+  "original_policy_sha256": "2480962940e1ad708ca5f71638d40dc590ff0de72a9f634cd857db1751b8901e",
+  "original_engine_sha256": "9f17ef782ffc894317c04e26403871ce25f41179f01c0ed6eccd56411389bb10",
+  "reason": "Static review found the frozen adapter omitted the source CollectiveName role while unioning article author countries. The declared personal-author scope remains the research standard.",
+  "source_roles": ["personal_author", "collective_author", "legacy_article_affiliation_limited"],
+  "classification": "Only an explicit nonempty PubMed CollectiveName is collective; no new name heuristics or geographical rules.",
+  "accepted_record_scope": "Only records eligible under the original frozen engine; keep its original raw outcomes and country proposals.",
+  "role_views": "Run the exact original engine binary after clearing affiliations outside each role. Preserve all source author names/ORCIDs, original Work fields and identity inputs in every view.",
+  "legacy": "Keep the original expressly allowed legacy Article Affiliation as its own limited role, without inventing a personal author association. Independent legacy support means evidence is not solely collective.",
+  "quarantine": "If any proposed country has support only from CollectiveName author affiliations across all originally accepted records, quarantine the whole Work. Do not silently remove countries and call it an original engine output.",
+  "same_country_personal_and_collective": "No quarantine when an individual author independently supports that country.",
+  "exhaustiveness": "Every original proposed country must be supported by the union of the role views; identities must remain exactly equal. Any mismatch blocks publication.",
+  "validation": "Overall and net-new independent precision frames use the frozen personal domain. Original probability sample and raw outcomes are unchanged. No PubMed country gold has been revealed; no post-gold tuning is allowed.",
+  "original_version_preserved": true,
+  "production_applied": false
+}

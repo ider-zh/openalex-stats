@@ -1,0 +1,1486 @@
+{
+  "version": "country-enrichment-review-v1",
+  "aliases": [
+    {
+      "Name": "Andorra",
+      "Code": "AD",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "United Arab Emirates",
+      "Code": "AE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Afghanistan",
+      "Code": "AF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Antigua and Barbuda",
+      "Code": "AG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Anguilla",
+      "Code": "AI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Albania",
+      "Code": "AL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Armenia",
+      "Code": "AM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Angola",
+      "Code": "AO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Antarctica",
+      "Code": "AQ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Argentina",
+      "Code": "AR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "American Samoa",
+      "Code": "AS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Austria",
+      "Code": "AT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Australia",
+      "Code": "AU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Aruba",
+      "Code": "AW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Åland Islands",
+      "Code": "AX",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Azerbaijan",
+      "Code": "AZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bosnia and Herzegovina",
+      "Code": "BA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Barbados",
+      "Code": "BB",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bangladesh",
+      "Code": "BD",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Belgium",
+      "Code": "BE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Burkina Faso",
+      "Code": "BF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bulgaria",
+      "Code": "BG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bahrain",
+      "Code": "BH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Burundi",
+      "Code": "BI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Benin",
+      "Code": "BJ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Saint Barthélemy",
+      "Code": "BL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bermuda",
+      "Code": "BM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Brunei Darussalam",
+      "Code": "BN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bolivia",
+      "Code": "BO",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Bolivia, Plurinational State of",
+      "Code": "BO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bonaire, Sint Eustatius and Saba",
+      "Code": "BQ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Brasil",
+      "Code": "BR",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Brazil",
+      "Code": "BR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bahamas",
+      "Code": "BS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bhutan",
+      "Code": "BT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Bouvet Island",
+      "Code": "BV",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Botswana",
+      "Code": "BW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Belarus",
+      "Code": "BY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Belize",
+      "Code": "BZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Canada",
+      "Code": "CA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cocos (Keeling) Islands",
+      "Code": "CC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Congo, Democratic Republic of the",
+      "Code": "CD",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "DR Congo",
+      "Code": "CD",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Democratic Republic of the Congo",
+      "Code": "CD",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Central African Republic",
+      "Code": "CF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Republic of the Congo",
+      "Code": "CG",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Switzerland",
+      "Code": "CH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Côte d'Ivoire",
+      "Code": "CI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cook Islands",
+      "Code": "CK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Chile",
+      "Code": "CL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cameroon",
+      "Code": "CM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "China",
+      "Code": "CN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "P. R. China",
+      "Code": "CN",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "P.R. China",
+      "Code": "CN",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "PR China",
+      "Code": "CN",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "People's Republic of China",
+      "Code": "CN",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "中华人民共和国",
+      "Code": "CN",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Colombia",
+      "Code": "CO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Costa Rica",
+      "Code": "CR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cuba",
+      "Code": "CU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cabo Verde",
+      "Code": "CV",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Curaçao",
+      "Code": "CW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Christmas Island",
+      "Code": "CX",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cyprus",
+      "Code": "CY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Czech Republic",
+      "Code": "CZ",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Czechia",
+      "Code": "CZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Allemagne",
+      "Code": "DE",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Deutschland",
+      "Code": "DE",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Germany",
+      "Code": "DE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Djibouti",
+      "Code": "DJ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Denmark",
+      "Code": "DK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Dominica",
+      "Code": "DM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Dominican Republic",
+      "Code": "DO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Algeria",
+      "Code": "DZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Ecuador",
+      "Code": "EC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Estonia",
+      "Code": "EE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Egypt",
+      "Code": "EG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Eritrea",
+      "Code": "ER",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "España",
+      "Code": "ES",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Spain",
+      "Code": "ES",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Ethiopia",
+      "Code": "ET",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Finland",
+      "Code": "FI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Fiji",
+      "Code": "FJ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Falkland Islands (Malvinas)",
+      "Code": "FK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Micronesia, Federated States of",
+      "Code": "FM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Faroe Islands",
+      "Code": "FO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "France",
+      "Code": "FR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Gabon",
+      "Code": "GA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "England",
+      "Code": "GB",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Great Britain",
+      "Code": "GB",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Northern Ireland",
+      "Code": "GB",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Scotland",
+      "Code": "GB",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "United Kingdom",
+      "Code": "GB",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "United Kingdom of Great Britain and Northern Ireland",
+      "Code": "GB",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Wales",
+      "Code": "GB",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Grenada",
+      "Code": "GD",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "French Guiana",
+      "Code": "GF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Guernsey",
+      "Code": "GG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Ghana",
+      "Code": "GH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Gibraltar",
+      "Code": "GI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Greenland",
+      "Code": "GL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Gambia",
+      "Code": "GM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Guinea",
+      "Code": "GN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Guadeloupe",
+      "Code": "GP",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Equatorial Guinea",
+      "Code": "GQ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Greece",
+      "Code": "GR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Hellas",
+      "Code": "GR",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "South Georgia and the South Sandwich Islands",
+      "Code": "GS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Guatemala",
+      "Code": "GT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Guam",
+      "Code": "GU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Guinea-Bissau",
+      "Code": "GW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Guyana",
+      "Code": "GY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Hong Kong",
+      "Code": "HK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Hong Kong SAR",
+      "Code": "HK",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Heard Island and McDonald Islands",
+      "Code": "HM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Honduras",
+      "Code": "HN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Croatia",
+      "Code": "HR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Haiti",
+      "Code": "HT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Hungary",
+      "Code": "HU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Indonesia",
+      "Code": "ID",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Ireland",
+      "Code": "IE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Israel",
+      "Code": "IL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Isle of Man",
+      "Code": "IM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "India",
+      "Code": "IN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "British Indian Ocean Territory",
+      "Code": "IO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Iraq",
+      "Code": "IQ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Iran",
+      "Code": "IR",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Iran, Islamic Republic of",
+      "Code": "IR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Islamic Republic of Iran",
+      "Code": "IR",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Iceland",
+      "Code": "IS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Italia",
+      "Code": "IT",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Italy",
+      "Code": "IT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Jamaica",
+      "Code": "JM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Jordan",
+      "Code": "JO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Japan",
+      "Code": "JP",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Kenya",
+      "Code": "KE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Kyrgyzstan",
+      "Code": "KG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cambodia",
+      "Code": "KH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Kiribati",
+      "Code": "KI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Comoros",
+      "Code": "KM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Saint Kitts and Nevis",
+      "Code": "KN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Democratic People's Republic of Korea",
+      "Code": "KP",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Korea, Democratic People's Republic of",
+      "Code": "KP",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "North Korea",
+      "Code": "KP",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Korea, Republic of",
+      "Code": "KR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Republic of Korea",
+      "Code": "KR",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "South Korea",
+      "Code": "KR",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Kuwait",
+      "Code": "KW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Cayman Islands",
+      "Code": "KY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Kazakhstan",
+      "Code": "KZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Lao PDR",
+      "Code": "LA",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Lao People's Democratic Republic",
+      "Code": "LA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Laos",
+      "Code": "LA",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Lebanon",
+      "Code": "LB",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Saint Lucia",
+      "Code": "LC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Liechtenstein",
+      "Code": "LI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Sri Lanka",
+      "Code": "LK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Liberia",
+      "Code": "LR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Lesotho",
+      "Code": "LS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Lithuania",
+      "Code": "LT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Luxembourg",
+      "Code": "LU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Latvia",
+      "Code": "LV",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Libya",
+      "Code": "LY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Morocco",
+      "Code": "MA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Monaco",
+      "Code": "MC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Moldova",
+      "Code": "MD",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Moldova, Republic of",
+      "Code": "MD",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Montenegro",
+      "Code": "ME",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Saint Martin (French part)",
+      "Code": "MF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Madagascar",
+      "Code": "MG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Marshall Islands",
+      "Code": "MH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "North Macedonia",
+      "Code": "MK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Mali",
+      "Code": "ML",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Myanmar",
+      "Code": "MM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Mongolia",
+      "Code": "MN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Macao",
+      "Code": "MO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Macau",
+      "Code": "MO",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Northern Mariana Islands",
+      "Code": "MP",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Martinique",
+      "Code": "MQ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Mauritania",
+      "Code": "MR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Montserrat",
+      "Code": "MS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Malta",
+      "Code": "MT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Mauritius",
+      "Code": "MU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Maldives",
+      "Code": "MV",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Malawi",
+      "Code": "MW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Mexico",
+      "Code": "MX",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "México",
+      "Code": "MX",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Malaysia",
+      "Code": "MY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Mozambique",
+      "Code": "MZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Namibia",
+      "Code": "NA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "New Caledonia",
+      "Code": "NC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Niger",
+      "Code": "NE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Norfolk Island",
+      "Code": "NF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Nigeria",
+      "Code": "NG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Nicaragua",
+      "Code": "NI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Netherlands",
+      "Code": "NL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Norway",
+      "Code": "NO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Nepal",
+      "Code": "NP",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Nauru",
+      "Code": "NR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Niue",
+      "Code": "NU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "New Zealand",
+      "Code": "NZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Oman",
+      "Code": "OM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Panama",
+      "Code": "PA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Peru",
+      "Code": "PE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "French Polynesia",
+      "Code": "PF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Papua New Guinea",
+      "Code": "PG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Philippines",
+      "Code": "PH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Pakistan",
+      "Code": "PK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Poland",
+      "Code": "PL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Polska",
+      "Code": "PL",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Saint Pierre and Miquelon",
+      "Code": "PM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Pitcairn",
+      "Code": "PN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Puerto Rico",
+      "Code": "PR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Palestine, State of",
+      "Code": "PS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Portugal",
+      "Code": "PT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Palau",
+      "Code": "PW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Paraguay",
+      "Code": "PY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Qatar",
+      "Code": "QA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Réunion",
+      "Code": "RE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Romania",
+      "Code": "RO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Serbia",
+      "Code": "RS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Russia",
+      "Code": "RU",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Russian Federation",
+      "Code": "RU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Российская Федерация",
+      "Code": "RU",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Россия",
+      "Code": "RU",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Rwanda",
+      "Code": "RW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Saudi Arabia",
+      "Code": "SA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Solomon Islands",
+      "Code": "SB",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Seychelles",
+      "Code": "SC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Sudan",
+      "Code": "SD",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Sweden",
+      "Code": "SE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Singapore",
+      "Code": "SG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Saint Helena, Ascension and Tristan da Cunha",
+      "Code": "SH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Slovenia",
+      "Code": "SI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Svalbard and Jan Mayen",
+      "Code": "SJ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Slovakia",
+      "Code": "SK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Sierra Leone",
+      "Code": "SL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "San Marino",
+      "Code": "SM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Senegal",
+      "Code": "SN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Somalia",
+      "Code": "SO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Suriname",
+      "Code": "SR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "South Sudan",
+      "Code": "SS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Sao Tome and Principe",
+      "Code": "ST",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "El Salvador",
+      "Code": "SV",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Sint Maarten",
+      "Code": "SX",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Syria",
+      "Code": "SY",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Syrian Arab Republic",
+      "Code": "SY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Eswatini",
+      "Code": "SZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Turks and Caicos Islands",
+      "Code": "TC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Chad",
+      "Code": "TD",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Togo",
+      "Code": "TG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Thailand",
+      "Code": "TH",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Tajikistan",
+      "Code": "TJ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Tokelau",
+      "Code": "TK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Timor-Leste",
+      "Code": "TL",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Turkmenistan",
+      "Code": "TM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Tunisia",
+      "Code": "TN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Tonga",
+      "Code": "TO",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Turkey",
+      "Code": "TR",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Türkiye",
+      "Code": "TR",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Trinidad and Tobago",
+      "Code": "TT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Tuvalu",
+      "Code": "TV",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Republic of China (Taiwan)",
+      "Code": "TW",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Taiwan",
+      "Code": "TW",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Taiwan R.O.C.",
+      "Code": "TW",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Taiwan, Province of China",
+      "Code": "TW",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Tanzania",
+      "Code": "TZ",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Tanzania, United Republic of",
+      "Code": "TZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Ukraine",
+      "Code": "UA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Uganda",
+      "Code": "UG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "U.S.A.",
+      "Code": "US",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "USA",
+      "Code": "US",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "United States",
+      "Code": "US",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "United States of America",
+      "Code": "US",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Uruguay",
+      "Code": "UY",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Uzbekistan",
+      "Code": "UZ",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Vatican City",
+      "Code": "VA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Saint Vincent and the Grenadines",
+      "Code": "VC",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Venezuela",
+      "Code": "VE",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Venezuela, Bolivarian Republic of",
+      "Code": "VE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Virgin Islands, British",
+      "Code": "VG",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Virgin Islands, U.S.",
+      "Code": "VI",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Viet Nam",
+      "Code": "VN",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Vietnam",
+      "Code": "VN",
+      "Source": "explicit_reviewed_name_alias"
+    },
+    {
+      "Name": "Vanuatu",
+      "Code": "VU",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Wallis and Futuna",
+      "Code": "WF",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Samoa",
+      "Code": "WS",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Kosovo",
+      "Code": "XK",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Yemen",
+      "Code": "YE",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Mayotte",
+      "Code": "YT",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "South Africa",
+      "Code": "ZA",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Zambia",
+      "Code": "ZM",
+      "Source": "snapshot_country_dictionary"
+    },
+    {
+      "Name": "Zimbabwe",
+      "Code": "ZW",
+      "Source": "snapshot_country_dictionary"
+    }
+  ],
+  "rejected_aliases": [
+    "all two-letter codes including US/UK/IN/CA",
+    "Georgia",
+    "Jersey",
+    "Congo",
+    "Korea",
+    "Virgin Islands"
+  ],
+  "descriptions": {
+    "candidate_policy": "Evidence-backed candidate only, not production or manually validated truth. Preserve originals. Unknown-to-known and extension of already-known sets reported separately.",
+    "disagreement": "Authorship baseline countries, institution candidates and text candidates are cross-checked. Novel countries on already-labelled authorships, embedded/lookup disagreement, or text/institution disagreement are retained for review and withheld from conservative candidates.",
+    "institution_embedded": "Country of the institution explicitly attached to this paper's authorship; conflicting embedded/lookup countries are review-only.",
+    "institution_lookup": "Same-snapshot institution ID lookup; includes authorship.institutions and authorship.affiliations.institution_ids; never author last-known affiliations.",
+    "raw_exact_tail_country": "Case-folded complete country-name segment in the final three comma/semicolon/newline-delimited address segments. A segment must consist entirely of the alias; no substrings, free-word matching, city/state guessing or two-letter abbreviations. Multiple distinct country codes in one text are review-only.",
+    "secondary_review_v1b": "Additional sidecars retain unresolved raw affiliations, exact snapshot institution-name matches and institution.geo.country_code when top-level country is absent. These do not enter v1 conservative candidates. Single-country authorship raw-string anchors are lowercased and whitespace-normalized, deduplicated per Work/country/text SHA256; all associated institution IDs are unioned for institution-grouped holdout evaluation."
+  }
+}

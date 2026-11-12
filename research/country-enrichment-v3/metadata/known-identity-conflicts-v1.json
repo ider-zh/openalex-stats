@@ -1,0 +1,15 @@
+{
+  "status": "mandatory_known_identity_conflict_quarantine",
+  "version": "v3-known-identity-conflicts-1",
+  "origin": "Old pilot v2 independent review, documented before v3 source/gold evaluation",
+  "documentation": "docs/country-enrichment-pilot-v2-review.md",
+  "ids": [19239315, 26184156, 34102155],
+  "cases": [
+    {"id": 19239315, "reason": "Original 2003 Japanese local article DOI points to a different 2009 chemistry paper; title, authors and year conflict. Its Work numeric ID coincides with that source paper's PMID."},
+    {"id": 26184156, "reason": "Original 2006 camera algorithm DOI points to a different 2015 melanoma paper; title, authors and year conflict. Its Work numeric ID coincides with that source paper's PMID."},
+    {"id": 34102155, "reason": "Original 2010 CFD/PIV work DOI points to a different 2021 ophthalmology paper with different authors."}
+  ],
+  "action": "Preserve frozen-engine outcomes and any failures for review. These known mismatched Works cannot receive a published external country patch, even if excluded from independent precision sampling as development records.",
+  "scope": "Known Work-level quarantine; no attribution to an upstream conversion service without a separate chain audit.",
+  "precision_claim": "No accuracy claim may remove these known development cases from its stated evaluation denominator after observing results. Independent new validation still excludes the predeclared development identities."
+}

@@ -1,0 +1,49 @@
+{
+  "version": "country-enrichment-v3-blind-holdout-protocol-03",
+  "previous_protocol_sha256": "29b273128655f6a5dcaa3f455496e172ee29f6ad55b359068e20ea810b2410e5",
+  "parent_authorized": true,
+  "timing": "Before full candidate streams or new net cohort country outcomes/gold revealed; current probability PMC7 gold already isolated and excluded from net cohort. Modification responds to repeated-paper dependence using identity fields only.",
+  "unchanged": [
+    "original probability sample IDs/N/n/weights",
+    "original PMC3000 source cohort",
+    "additional frozen net-only cap10000 source cohort",
+    "source identity/country rules",
+    "original minimum128 and point99%/Wilson95lower97% thresholds",
+    "original source data and production outputs"
+  ],
+  "development_identity_ledger": {
+    "path": "development-paper-identities-r2.json",
+    "sha256": "0841c01728f1549ba8bb41b135e7e74cbf4680e09540b78cdb7a454a2367a6f5",
+    "append_only": true,
+    "contents": "7035 explicitly exposed old development WorkIDs; recover6766 original UNKNOWN identity rows from full shared index; union adds132DOI/13PMID, totals3006DOI/210PMID/24PMCID; no new country/gold used",
+    "existing_sample_collision_audit": "development-paper-key-r2-frame-audit.json",
+    "all_existing_frames_known_overlap": 0
+  },
+  "candidate_independent_sampling_unit": {
+    "unit": "connected component of automatic-candidate Works linked by any exact canonical DOI/PMID/PMCID",
+    "domain": "Construct separately on full eligible overall and net-new candidate precision frames after predeclared development/prior-recovery exclusion; never use country labels or gold to link.",
+    "keys": "canonical lowercase DOI; numeric PMID; uppercase PMCdigits; same frozen exact-ID normalizations, no approximate title matching",
+    "missing_keys": "Own WorkID singleton, with limitation that unavailable identifiers cannot prove no hidden paper duplicate",
+    "hash": "SHA256(original route-audit seed + newline + route name + newline + decimal minimumWorkID in connected component)",
+    "selection": "bottom128 independent components, no failed/unverified replacement; retain every selected component member, never arbitrary first-wins",
+    "cluster_success": "Every candidate Work in selected component has independently verified paper identity and all predicted author-country labels supported by original evidence; any member incorrect or unverified makes entire component unsuccessful",
+    "quality_gate": {
+      "minimum_clusters": 128,
+      "cluster_point_precision_min": 0.99,
+      "cluster_two_sided_wilson95_lower_min": 0.97,
+      "all_selected_member_work_point_precision_min": 0.99,
+      "unisolated_systemic_error_allowed": false,
+      "unknowns_kept_in_denominator": true
+    },
+    "report": [
+      "cluster N/n/pi and duplicate member multiplicity",
+      "cluster precision and Wilson CI",
+      "all-member Work precision, not falsely labelled IID Wilson",
+      "visible country-set completeness separately",
+      "full-paper completeness unknown unless proven",
+      "no-source-key and transitive identifier-conflict limitations"
+    ],
+    "source_cohort_boundary": "Frozen Work source cohorts unchanged. A related same-paper Work outside the source cohort can be reviewed only as explicit cluster-associated evidence, not silently added to source sampling or counted as an additional independent observation."
+  },
+  "production_changed": false
+}

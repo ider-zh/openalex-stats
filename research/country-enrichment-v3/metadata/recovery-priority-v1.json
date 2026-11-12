@@ -1,0 +1,15 @@
+{
+  "status": "frozen_gold_blind_recovery_priority",
+  "version": "v3-priority-1",
+  "order": ["v1_strict_text_only", "crossref", "pubmed_baseline", "pmc"],
+  "overall_gate": "Each route's complete frozen automatic candidate frame is reviewed independently.",
+  "net_new_gate": "Subtract only final full patches of preceding routes whose overall and net gates have passed. Never subtract an unpassed candidate route.",
+  "crossref_net_waits_for": ["v1_strict_text_only"],
+  "pubmed_net_waits_for_final_state_of": ["crossref"],
+  "pmc_net_waits_for_final_state_of": ["crossref", "pubmed_baseline"],
+  "ledger_binding": "Each net candidate frame freezes preceding passed patch and gate SHA256 values.",
+  "failed_route": "A failed route contributes no recovered countries and no IDs to the exclusion ledger.",
+  "original_preserved": true,
+  "admission_policy_changed": false,
+  "country_gold_seen_by_developer": false
+}

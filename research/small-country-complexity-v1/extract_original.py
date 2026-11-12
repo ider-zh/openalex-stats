@@ -1,0 +1,38 @@
+import pathlib,json,duckdb,csv,hashlib,math,gc,collections
+b=pathlib.Path('/mnt/nvme0/public/openalex-stats/results');o=pathlib.Path('/mnt/nvme0/public/openalex-stats/analysis-small-country-complexity-20261112');o.mkdir(exist_ok=True);c=duckdb.connect();c.execute('set threads=8');c.execute("set memory_limit='16GB'")
+alltops=[];groups=[];inputs=[];source=[];scenario='fractional-concept-whole-0.3'
+for corpus,sd,jd in [('Core','core-concept-hits-v1','core-java-reflections-v1'),('All','all-concept-hits-v1','all-java-reflections-v1')]:
+ p=b/sd;dictionary=json.loads((p/'dictionary.json').read_text());names={x['id']:x['display_name'] for x in dictionary['countries']};st=str(p/'statistics.parquet');scale={}
+ for row in c.execute('select country,year,scenario_id,sum(publications),sum(citations) from read_parquet(?) where country!=\'UNKNOWN\' and scheme=\'topics\' and level=\'field\' and scenario_id in (?,?) group by country,year,scenario_id',[st,scenario,'whole-concept-whole-0.3']).fetchall():scale[(row[0],row[1],row[2])]=row[3:]
+ layerRows={}
+ for row in c.execute('select country,year,scheme,level,sum(publications),sum(citations) from read_parquet(?) where country!=\'UNKNOWN\' and discipline_id!=\'UNKNOWN\' and scenario_id=? group by country,year,scheme,level',[st,scenario]).fetchall():layerRows[(row[0],row[1],row[2],str(row[3]))]=row[4:]
+ targetVals={}
+ for row in c.execute('select country,year,scheme,level,discipline_id,publications,citations from read_parquet(?) where country!=\'UNKNOWN\' and discipline_id!=\'UNKNOWN\' and scenario_id=? and year in (2020,2025)',[st,scenario]).fetchall():targetVals[(row[0],row[1],row[2],str(row[3]),row[4])]=row[5:]
+ modelsByMethod={}
+ for method,d,file in [('spectral',sd,'eci.json'),('java_reflections',jd,'java-reflections-v1.json')]:
+  path=b/d/file;raw=path.read_bytes();source.append({'corpus':corpus,'method':method,'path':str(path),'sha256':hashlib.sha256(raw).hexdigest()});models=json.loads(raw);del raw;modelsByMethod[method]=models
+  for m in models:
+   r=m['result'];y=m['year'];scheme=m['scheme'];level=str(m['level']);metric=m['metric'];metrici=0 if metric=='publications' else 1;values={r['countries'][i]:x for i,x in zip(r.get('active_countries',[]),r.get('eci',[]))};valid=r['status']=='ok';ordered=sorted(values.items(),key=lambda kv:(-kv[1],kv[0])) if valid else [];rank={code:1+sum(x>val for x in values.values()) for code,val in values.items()};kc={r['countries'][i]:sum(r['advantage'][i]) for i in r.get('active_countries',[])};kd={j:sum(r['advantage'][i][j] for i in r.get('active_countries',[])) for j in r.get('active_disciplines',[])};rows=[]
+   for pos,(code,val) in enumerate(ordered):
+    if rank[code]>20:continue
+    whole=scale.get((code,y,'whole-concept-whole-0.3'),[0,0]);frac=scale.get((code,y,scenario),[0,0]);matrix=layerRows.get((code,y,scheme,level),[0,0]);ci=r['countries'].index(code);ub=[kd[j] for j in r.get('active_disciplines',[]) if r['advantage'][ci][j]];row={'corpus':corpus,'method':method,'year':y,'scheme':scheme,'level':level,'metric':metric,'country':code,'name':names.get(code,code),'rank':rank[code],'score':val,'active_countries':len(r.get('active_countries',[])),'whole_publications':whole[0],'whole_citations':whole[1],'fractional_publications':frac[0],'fractional_citations':frac[1],'classified_layer_matrix_mass':matrix[metrici],'diversity':kc.get(code),'mean_ubiquity_of_advantages':sum(ub)/len(ub) if ub else None,'minimum_ubiquity_of_advantages':min(ub) if ub else None,'unstable':r.get('unstable'),'eigen_gap':r.get('eigen_gap')};rows.append(row);alltops.append(row)
+   for top in [10,20]:
+    sel=[r for r in rows if r['rank']<=top];sizes=[r['whole_publications'] if metric=='publications' else r['whole_citations'] for r in sel];groups.append({'corpus':corpus,'method':method,'year':y,'scheme':scheme,'level':level,'metric':metric,'top':top,'status':r['status'],'active_countries':len(r.get('active_countries',[])),'listed_with_ties':len(sel),'research_output_below10':sum(n<10 for n in sizes),'below100':sum(n<100 for n in sizes),'below1000':sum(n<1000 for n in sizes),'below10000':sum(n<10000 for n in sizes),'median_whole_metric_scale':sorted(sizes)[len(sizes)//2] if sizes else None,'countries':[r['country'] for r in sel]})
+  print(corpus,method,'projected',len(models),'models',flush=True)
+ # Experiment inputs use exact stored label order and default-scenario X values.
+ for sm in modelsByMethod['spectral']:
+  if sm['year'] not in [2020,2025]:continue
+  r=sm['result'];year=sm['year'];scheme=sm['scheme'];level=str(sm['level']);metric=sm['metric'];mi=0 if metric=='publications' else 1;vals=[[targetVals.get((co,year,scheme,level,di),(0,0))[mi] for di in r['disciplines']] for co in r['countries']];total=sum(sum(row) for row in vals);cs=[sum(row) for row in vals];ds=[sum(vals[i][j] for i in range(len(vals))) for j in range(len(r['disciplines']))];bad=0;maxrel=0.
+  for i,row in enumerate(vals):
+   for j,x in enumerate(row):
+    rc=(x/cs[i])/(ds[j]/total) if cs[i]>0 and ds[j]>0 else 0.
+    if abs(rc-1)<=1e-12:rc=1.
+    if (rc>=1)!=r['advantage'][i][j]:bad+=1
+    old=r['rca'][i][j];maxrel=max(maxrel,abs(rc-old)/max(1,abs(old)))
+  assert bad==0,(corpus,year,scheme,level,metric,bad)
+  jm=next(m for m in modelsByMethod['java_reflections'] if all(m[k]==sm[k] for k in ['year','scheme','level','metric','scenario_id']));wholeP=[scale.get((co,year,'whole-concept-whole-0.3'),[0,0])[0] for co in r['countries']];wholeC=[scale.get((co,year,'whole-concept-whole-0.3'),[0,0])[1] for co in r['countries']];fracP=[scale.get((co,year,scenario),[0,0])[0] for co in r['countries']];fracC=[scale.get((co,year,scenario),[0,0])[1] for co in r['countries']];inputs.append({'corpus':corpus,'year':year,'scheme':scheme,'level':level,'metric':metric,'matrix':{'countries':r['countries'],'disciplines':r['disciplines'],'values':vals},'whole_publications':wholeP,'whole_citations':wholeC,'fractional_publications':fracP,'fractional_citations':fracC,'baseline_spectral':r,'baseline_java':jm['result'],'matrix_reconstructed_edge_mismatches':bad,'matrix_max_relative_rca_error':maxrel})
+ del modelsByMethod;gc.collect()
+for name,rows in [('all-year-top20.csv',alltops),('all-year-top10-20-size-summary.csv',groups)]:
+ with (o/name).open('w',newline='') as f:
+  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+(o/'representative-experiment-inputs.json').write_text(json.dumps(inputs,separators=(',',':'))+'\n');(o/'all-year-top20.json').write_text(json.dumps(alltops,separators=(',',':'))+'\n');(o/'all-year-top10-20-size-summary.json').write_text(json.dumps(groups,separators=(',',':'))+'\n');manifest={'status':'original_formal_outputs_projected_no_result_changes','sources':source,'experimental_matrices':len(inputs),'all_matrix_edge_reconstruction_checks_passed':True,'top_rows':len(alltops),'size_summary_rows':len(groups),'size_definition':'Country/year Topics primary-field total including UNKNOWN discipline, separately whole and fractional; never Concepts multi-hit sum as unique paper count. Incoming citation events use current citing-year fixed graph.','ties':'Competition ranks; include all exact ties at top10/20 boundary, report actual listed count.','source_country_labels_not_assumed_sovereign_states':True};(o/'extraction-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');print(json.dumps(manifest));print('EXAMPLE Core Java2025 TopicsField pubs',json.dumps([r for r in alltops if r['corpus']=='Core' and r['method']=='java_reflections' and r['year']==2025 and r['scheme']=='topics' and r['level']=='field' and r['metric']=='publications' and r['rank']<=10]))
