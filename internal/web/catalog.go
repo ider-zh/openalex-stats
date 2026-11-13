@@ -4,6 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"reflect"
+	"sync"
 )
 
 type CatalogDataset struct {
@@ -13,10 +15,12 @@ type CatalogDataset struct {
 	SelectedWorks int    `json:"selected_works"`
 }
 type Catalog struct {
-	DefaultCorpus         string               `json:"default_corpus"`
-	Datasets              []CatalogDataset     `json:"datasets"`
-	DefaultCountryVersion string               `json:"default_country_version"`
-	CountryVersions       []CountryVersionInfo `json:"country_versions"`
+	DefaultCorpus            string                  `json:"default_corpus"`
+	Datasets                 []CatalogDataset        `json:"datasets"`
+	DefaultCountryVersion    string                  `json:"default_country_version"`
+	CountryVersions          []CountryVersionInfo    `json:"country_versions"`
+	DefaultComplexityProfile string                  `json:"default_complexity_profile"`
+	ComplexityProfiles       []ComplexityProfileInfo `json:"complexity_profiles"`
 }
 type catalogServer struct {
 	servers map[string]*server
@@ -31,6 +35,10 @@ func NewCatalog(datasets map[string]string) (http.Handler, error) {
 }
 
 func NewCatalogWithMethods(datasets, methodDirectories map[string]string) (http.Handler, error) {
+	return NewCatalogWithProfiles(datasets, methodDirectories, nil)
+}
+
+func NewCatalogWithProfiles(datasets, methodDirectories, profileDirectories map[string]string) (http.Handler, error) {
 	if len(datasets) == 0 || datasets["core"] == "" {
 		return nil, errors.New("web: catalog requires a core result directory")
 	}
@@ -44,17 +52,50 @@ func NewCatalogWithMethods(datasets, methodDirectories map[string]string) (http.
 			return nil, fmt.Errorf("web: method directory has no matching corpus")
 		}
 	}
+	for id := range profileDirectories {
+		if _, ok := datasets[id]; !ok {
+			return nil, fmt.Errorf("web: profile directory has no matching corpus")
+		}
+	}
 	out := &catalogServer{servers: map[string]*server{}, catalog: Catalog{DefaultCorpus: "core", DefaultCountryVersion: "original", CountryVersions: []CountryVersionInfo{countryVersionInfo("original")}}}
-	for _, id := range []string{"core", "all"} {
+	type loadedCorpus struct {
+		server *server
+		err    error
+	}
+	ids := []string{"core", "all"}
+	loaded := make([]loadedCorpus, len(ids))
+	var loading sync.WaitGroup
+	for i, id := range ids {
+		if _, exists := datasets[id]; !exists {
+			continue
+		}
+		loading.Add(1)
+		go func(i int, id string) {
+			defer loading.Done()
+			handler, err := NewWithMethods(datasets[id], methodDirectories[id])
+			if err != nil {
+				loaded[i].err = fmt.Errorf("web corpus %s: %w", id, err)
+				return
+			}
+			s := handler.(*server)
+			if err = loadDatasetProfiles(s.data, profileDirectories[id]); err != nil {
+				loaded[i].err = fmt.Errorf("web profiles %s: %w", id, err)
+				return
+			}
+			loaded[i].server = s
+		}(i, id)
+	}
+	loading.Wait()
+	for i, id := range ids {
 		dir, exists := datasets[id]
 		if !exists {
 			continue
 		}
-		handler, err := NewWithMethods(dir, methodDirectories[id])
-		if err != nil {
-			return nil, fmt.Errorf("web corpus %s: %w", id, err)
+		_ = dir
+		if loaded[i].err != nil {
+			return nil, loaded[i].err
 		}
-		s := handler.(*server)
+		s := loaded[i].server
 		if !s.data.ready {
 			return nil, fmt.Errorf("web: corpus %s is not completed", id)
 		}
@@ -63,6 +104,13 @@ func NewCatalogWithMethods(datasets, methodDirectories map[string]string) (http.
 		}
 		out.servers[id] = s
 		out.catalog.Datasets = append(out.catalog.Datasets, s.catalogDataset())
+		if id == "core" {
+			out.catalog.DefaultComplexityProfile = s.data.defaultComplexityProfile()
+			out.catalog.ComplexityProfiles = s.data.complexityProfiles()
+		}
+		if id != "core" && (out.catalog.DefaultComplexityProfile != s.data.defaultComplexityProfile() || !reflect.DeepEqual(out.catalog.ComplexityProfiles, s.data.complexityProfiles())) {
+			return nil, fmt.Errorf("web: corpora must provide the same complexity profile rules")
+		}
 	}
 	return out, nil
 }

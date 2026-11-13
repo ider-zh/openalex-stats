@@ -1,0 +1,32 @@
+{
+  "matrices": 128,
+  "years": [
+    2000,
+    2012,
+    2020,
+    2025
+  ],
+  "sources": [
+    {
+      "dataset": "original-core",
+      "manifest_sha256": "b2874786e1e0c11350d5bf1b90846972f0ea215809e6f4ac9027c72a66e6282c",
+      "statistics_sha256": "c24223b3a4bb3295ffdebb99811777b6b35f47359bc6eea28bd37147f721f7f7"
+    },
+    {
+      "dataset": "original-all",
+      "manifest_sha256": "33793f13561e413ccb5b295a12aa09fce12584c51bbf1e542eabcbbe7a11c1d8",
+      "statistics_sha256": "7e934a8d3fca14662b1abfb4379af846855cde7a18458979f028e776e170606d"
+    },
+    {
+      "dataset": "enriched-core",
+      "manifest_sha256": "99bb171c44b0f9c44173bdbd618f787c64fdad9d91155e8fa6c1a137afbd0d75",
+      "statistics_sha256": "fcc95c34a68ad85fc2050025cff2e5b561adf224c25f27fc8081afb0c6f2f520"
+    },
+    {
+      "dataset": "enriched-all",
+      "manifest_sha256": "3d579c4313bc630a69df0020331ef163789040de952b96f747f4b6c04f0c16c2",
+      "statistics_sha256": "e07ad64c6a8dfd45846ea8fed9ce11688d37e5eb6a3f350355cec41b1451c520"
+    }
+  ],
+  "input_sha256": "a54ac06a3cdefb09f2a727cd97fc78f1253a2ca8bc8b47cd9900a6e2ecba48fa"
+}

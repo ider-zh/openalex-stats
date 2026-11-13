@@ -1,0 +1,738 @@
+{
+  "status": "promoted_verified_profile_default",
+  "production": {
+    "pid": 3601932,
+    "args": [
+      "/home/ider/tmpdata/openalex-stats-dev-20261112/longtail-profiles-v1/oa-stats-v3",
+      "serve",
+      "--listen",
+      "0.0.0.0:8899",
+      "--data-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+      "--data-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+      "--methods-core",
+      "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+      "--methods-all",
+      "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+      "--data-core-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+      "--data-all-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+      "--methods-core-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113",
+      "--methods-all-enriched",
+      "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113",
+      "--complexity-profiles-dir",
+      "/mnt/nvme0/public/openalex-stats/complexity-profiles-v2-20261113",
+      "--wait-for-listen",
+      "15m"
+    ],
+    "port": 8899,
+    "started_at_unix": 1794531294.6556203,
+    "start_ticks": "5129676402",
+    "binary_sha256": "13c8a92d0e564391704c59a3e0c37fecc605b9fc2232a22a37d096e8db3b3c52",
+    "previous": {
+      "pid": 3547541,
+      "args": [
+        "/home/ider/tmpdata/openalex-stats-dev-20261112/country-enriched-release-v1/oa-stats-v3",
+        "serve",
+        "--listen",
+        "0.0.0.0:8899",
+        "--data-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+        "--data-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+        "--methods-core",
+        "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+        "--methods-all",
+        "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+        "--data-core-enriched",
+        "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+        "--data-all-enriched",
+        "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+        "--methods-core-enriched",
+        "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113",
+        "--methods-all-enriched",
+        "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113",
+        "--wait-for-listen",
+        "15m"
+      ],
+      "port": 8899,
+      "started_at_unix": 1794525550.3354518,
+      "start_ticks": "5129101970",
+      "binary_sha256": "a9cec12d1d15a14956ee0699a415f1a400cf80296ba41784959eb986297e48d9",
+      "previous": {
+        "pid": 2622389,
+        "args": [
+          "/home/ider/tmpdata/openalex-stats-dev-20261112/oa-stats-xiaoni-default-v2-linux",
+          "serve",
+          "--data-core",
+          "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+          "--data-all",
+          "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+          "--methods-core",
+          "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+          "--methods-all",
+          "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+          "--listen",
+          "0.0.0.0:8899"
+        ],
+        "start_ticks": "5126179902",
+        "binary_sha256": "4c218be10e5df06a1cc2c5f0506e78036c198851d24807fea5d10101472d1c96"
+      }
+    },
+    "previous_standby_expired_without_changing_live_service": 3595376
+  },
+  "handoff_seconds_to_catalog": null,
+  "verification_resumed_after_label_order_only_comparison": true,
+  "metadata_comparison": "exact fields with layers/labels canonicalized by stable ID; no labels discarded",
+  "metadata_checks": 4,
+  "series_checks": [
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "original",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "original",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "core",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "publications",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "publications",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "citations",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "baseline-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "rca",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 12
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "baseline-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "eci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 6
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "baseline-v1",
+      "series": 2
+    },
+    {
+      "country_version": "enriched",
+      "corpus": "all",
+      "basis": "citations",
+      "metric": "pci",
+      "profile": "p1000-c1000-x5-d3-v1",
+      "series": 2
+    }
+  ],
+  "default_country_version": "enriched",
+  "default_complexity_profile": "p1000-c1000-x5-d3-v1",
+  "static_source_sha256_verified": true,
+  "original_binaries_and_results_preserved": true,
+  "promoted_at_unix": 1794532067.594822
+}

@@ -39,7 +39,7 @@
     { title: '选择分类与多个学科', selector: '#disciplinePicker', text: 'Topics 可选 Field / Subfield，Concepts 可选 Level 0 / 1。先定规范与层级，再打开学科选择器搜索、多选同层学科；数量类曲线会组合国家与学科。' },
     { title: '搜索国家，展开全球视野', selector: '.countries-block .search-box', text: '国家支持中文、英文和 ISO 搜索，也可批量选择。国家 ECI 的全球排名 Bump 可以容纳全部国家；排名始终基于全部有效国家，显示选择不会重新排名。' },
     { title: '从问题选择指标', selector: '.metric-groups', text: '“数量与引用”看论文量、当年被引与全球份额；RCA 看比较优势。“知识复杂度”里，ECI 比较国家的整体学科组合，PCI 比较学科本身。' },
-    { title: '用两种方法阅读复杂度', selector: '#methodWrap', fallback: '[data-metric="eci"]', text: '国家 ECI 和学科 PCI 默认使用小倪方法论，也可切换谱方法，并用全球排名 Bump 或分数折线查看。两种方法的排名可能不同；方法切换只影响知识复杂度。' },
+    { title: '用两种方法阅读复杂度', selector: '#methodWrap', fallback: '[data-metric="eci"]', text: '国家 ECI 和学科 PCI 默认使用小倪方法论，也可切换谱方法，并用全球排名 Bump 或分数折线查看。复杂度默认应用小倪补丁的推荐样本筛选，可切回不筛选对照或调整有限参数；它会重算模型，数量图保持原口径。' },
     { title: '读曲线，也保留数据', selector: '.chart-heading', text: '鼠标悬浮可看当年数值与排序，点击图例可切换曲线显示；“下载曲线 CSV”保存当前选择。年份从 2000 年起，2026 是截至快照日期的未完整年度，比较时请留意。' }
   ];
   function visible(element) { return !!element && !element.closest('[hidden]') && element.getClientRects().length > 0; }

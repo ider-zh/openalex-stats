@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-13T01:10:02.360137+00:00",
+  "build": {
+    "files": 16349,
+    "bytes": 870119276,
+    "max_file_bytes": 4105647
+  },
+  "scientific_export": {
+    "status": "passed",
+    "artifacts": 16083,
+    "artifact_bytes": 867252733,
+    "export_manifest_sha256": "457ddba7b31112357ddb5083bf1a3f8e37144cd6d6174f4176d8ea9495f08d85",
+    "seconds": 203.824,
+    "policy": "Every immutable descriptor size and SHA checked; exact manifest paths staged, no other research or binary trees"
+  },
+  "code": [
+    {
+      "path": "cloudflare/worker.mjs",
+      "bytes": 25394,
+      "sha256": "6dee549aa7e300de4a5bb4eb599dbb18cf3156065b1d192536159245dc65e461"
+    },
+    {
+      "path": "dist/_worker.js",
+      "bytes": 25394,
+      "sha256": "6dee549aa7e300de4a5bb4eb599dbb18cf3156065b1d192536159245dc65e461"
+    },
+    {
+      "path": "scripts/build-pages.mjs",
+      "bytes": 3804,
+      "sha256": "e67a5fb110e3f2bed9a656e5bda6206e512879c92a469afd44385a975a5e4b37"
+    },
+    {
+      "path": "scripts/complexity-profile-parity.mjs",
+      "bytes": 13769,
+      "sha256": "cd4252c56a80b1b95f5ea4b18193ce1415968d22ceeff092883dc65f68a0b3c2"
+    },
+    {
+      "path": "scripts/complexity-profile-cold-concurrency.mjs",
+      "bytes": 1905,
+      "sha256": "5bc227647064add8a0870880bfce4cbbe0ec949c75498f95699ee2ce2c8ab7d1"
+    }
+  ],
+  "reports": [
+    {
+      "path": "research/longtail-patch-v2/parity/pages-parity.json",
+      "bytes": 1039,
+      "sha256": "d395c76abb30d9f4ff1d041f96a144fe08804f2a3839a0969a17b1ee9fe2d852"
+    },
+    {
+      "path": "research/longtail-patch-v2/parity/workerd-parity.json",
+      "bytes": 1041,
+      "sha256": "a0f2987f9df2db353ed8dc5969499b1c28d2e95d9adbbfe8150faa52fcee29ff"
+    },
+    {
+      "path": "research/longtail-patch-v2/parity/workerd-cold-concurrency.json",
+      "bytes": 458,
+      "sha256": "276b2a5ac2662d0b9f4e34f62df8285fa7790136bdb4f4ad81fbe069fcf9338d"
+    },
+    {
+      "path": "research/longtail-patch-v2/parity/get-header-diagnostic.json",
+      "bytes": 1333,
+      "sha256": "6e2107db2d180388f3014833f052b67b585761d851ac32b3bc4282d31b3c19c6"
+    },
+    {
+      "path": "research/longtail-patch-v2/preview/final-cleanup.json",
+      "bytes": 2621,
+      "sha256": "1314cf97b3e30b455071ed3f48d1c96aba1f8114fc428a3107505b2c5214b258"
+    }
+  ],
+  "tests": {
+    "passed": 20,
+    "command": "node --test cloudflare/worker.test.mjs scripts/export-complexity-profiles.test.mjs"
+  },
+  "runtime": {
+    "official_workerd": true,
+    "cold_concurrent_requests": 12,
+    "cold_passes": 12,
+    "stderr_runtime_errors": 0,
+    "stderr_warning": "Wrangler proxy environment warning only; Pages stderr empty.",
+    "get_downloads_missing_content_length": 40,
+    "get_chunked_downloads": 40,
+    "policy": "HEAD requires exact Content-Length; GET may omit Content-Length, but any declared length, actual byte count and full raw SHA must match. Pending request-owned ASSETS/decompression I/O is never shared via the global cache."
+  },
+  "browser_qa": {
+    "groups_passed": 11,
+    "report_directory": "research/longtail-patch-v2/ui/workerd-r2/"
+  },
+  "cleanup": {
+    "owned_roots": [
+      83660,
+      21064
+    ],
+    "stopped_processes": 11,
+    "remaining_preview_listeners": 0
+  },
+  "limits": "Whole-process RSS is not an isolate-memory measurement; no claim of per-isolate quota usage is inferred from host RSS."
+}

@@ -3,6 +3,8 @@ package web
 import (
 	"fmt"
 	"net/http"
+	"reflect"
+	"sync"
 )
 
 // CountryVersionInfo describes country attribution, independently of corpus or
@@ -29,8 +31,9 @@ func (s *server) version() string {
 }
 
 type CountryVersionConfig struct {
-	Datasets          map[string]string
-	MethodDirectories map[string]string
+	Datasets           map[string]string
+	MethodDirectories  map[string]string
+	ProfileDirectories map[string]string
 }
 
 type countryVersionServer struct {
@@ -42,15 +45,36 @@ type countryVersionServer struct {
 // to enriched. Request selectors can never supply a filesystem path.
 func NewCountryVersionCatalog(original, enriched CountryVersionConfig) (http.Handler, error) {
 	out := &countryVersionServer{versions: map[string]*catalogServer{}}
-	for _, input := range []struct {
+	inputs := []struct {
 		id     string
 		config CountryVersionConfig
-	}{{"original", original}, {"enriched", enriched}} {
-		h, err := NewCatalogWithMethods(input.config.Datasets, input.config.MethodDirectories)
-		if err != nil {
-			return nil, fmt.Errorf("web country version %s: %w", input.id, err)
+	}{{"original", original}, {"enriched", enriched}}
+	loaded := make([]struct {
+		catalog *catalogServer
+		err     error
+	}, len(inputs))
+	var loading sync.WaitGroup
+	for i, input := range inputs {
+		loading.Add(1)
+		go func(i int, input struct {
+			id     string
+			config CountryVersionConfig
+		}) {
+			defer loading.Done()
+			h, err := NewCatalogWithProfiles(input.config.Datasets, input.config.MethodDirectories, input.config.ProfileDirectories)
+			if err != nil {
+				loaded[i].err = fmt.Errorf("web country version %s: %w", input.id, err)
+				return
+			}
+			loaded[i].catalog = h.(*catalogServer)
+		}(i, input)
+	}
+	loading.Wait()
+	for i, input := range inputs {
+		if loaded[i].err != nil {
+			return nil, loaded[i].err
 		}
-		c := h.(*catalogServer)
+		c := loaded[i].catalog
 		for _, s := range c.servers {
 			s.countryVersion = input.id
 		}
@@ -64,6 +88,9 @@ func NewCountryVersionCatalog(original, enriched CountryVersionConfig) (http.Han
 		after := b.servers[id]
 		if after == nil || before.data.run.SelectedWorks != after.data.run.SelectedWorks || before.data.snapshotDate != after.data.snapshotDate {
 			return nil, fmt.Errorf("web: country version corpus %s must preserve selected works and snapshot", id)
+		}
+		if before.data.defaultComplexityProfile() != after.data.defaultComplexityProfile() || !reflect.DeepEqual(before.data.complexityProfiles(), after.data.complexityProfiles()) {
+			return nil, fmt.Errorf("web: country versions must provide the same complexity profiles")
 		}
 	}
 	out.catalog = b.catalog

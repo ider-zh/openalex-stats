@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8798",
+  "asset_override": false,
+  "checks": [
+    {
+      "name": "recommended_default_and_19_frozen_profiles",
+      "passed": true,
+      "detail": {
+        "default": "p1000-c1000-x5-d3-v1",
+        "profiles": 19
+      }
+    },
+    {
+      "name": "excluded_country_retained_with_null_score_rank_and_reason",
+      "passed": true,
+      "detail": {
+        "country": "EH",
+        "status": "filtered_country_publications",
+        "eligible_country_count": 146
+      }
+    },
+    {
+      "name": "baseline_exact_model_and_profile_switch_preserve_selection_view_and_reload",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_18_precomputed_parameter_combinations_select_real_models",
+      "passed": true,
+      "detail": [
+        "p100-c1000-x0-d1-v1",
+        "p100-c1000-x0-d3-v1",
+        "p100-c1000-x5-d1-v1",
+        "p100-c1000-x5-d3-v1",
+        "p100-c1000-x20-d1-v1",
+        "p100-c1000-x20-d3-v1",
+        "p1000-c1000-x0-d1-v1",
+        "p1000-c1000-x0-d3-v1",
+        "p1000-c1000-x5-d1-v1",
+        "p1000-c1000-x5-d3-v1",
+        "p1000-c1000-x20-d1-v1",
+        "p1000-c1000-x20-d3-v1",
+        "p5000-c1000-x0-d1-v1",
+        "p5000-c1000-x0-d3-v1",
+        "p5000-c1000-x5-d1-v1",
+        "p5000-c1000-x5-d3-v1",
+        "p5000-c1000-x20-d1-v1",
+        "p5000-c1000-x20-d3-v1"
+      ]
+    },
+    {
+      "name": "country_selection_does_not_rerank_filtered_global_model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "both_country_versions_corpora_methods_eci_pci_and_csv_bound",
+      "passed": true,
+      "detail": {
+        "combinations": 16
+      }
+    },
+    {
+      "name": "counts_citations_share_and_ordinary_rca_are_unchanged_by_profile",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "explicit_support_units_and_current_profile_manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile_controls_and_filtered_status_no_overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "button": "15px"
+      }
+    },
+    {
+      "name": "mismatched_profile_rejected_and_old_downloads_disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_profile_rejected_no_page_errors_or_external_requests",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "started_at": "2026-11-13T00:38:29.072Z",
+  "completed_at": "2026-11-13T00:42:15.240Z"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "edge": "http://127.0.0.1:8799",
+  "native": "http://192.168.1.229:8898",
+  "started_at_utc": "2026-11-13T00:58:29.011Z",
+  "parallel_requests": 12,
+  "passes": 12,
+  "policy": "Twelve simultaneous identical requests on freshly restarted workerd, before profile/model cache warmup; exact Go response equality. Global cache may share only completed JS objects, never pending I/O.",
+  "completed_at_utc": "2026-11-13T00:58:29.955Z"
+}

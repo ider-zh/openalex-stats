@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-13T01:09:18.4590018Z",
+  "authorized_roots": [
+    83660,
+    21064
+  ],
+  "policy": "Root PID, creation time, and exact expected app arguments verified; descendants frozen from same process snapshot and each live identity rechecked before termination. No unrelated process touched.",
+  "actions": [
+    {
+      "pid": 73288,
+      "parent_pid": 77200,
+      "creation_utc": "2026-11-13T00:57:43.3372610Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 82704,
+      "parent_pid": 77456,
+      "creation_utc": "2026-11-13T00:57:43.0423170Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 77200,
+      "parent_pid": 79460,
+      "creation_utc": "2026-11-13T00:57:43.2826830Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 77456,
+      "parent_pid": 79460,
+      "creation_utc": "2026-11-13T00:57:42.9850970Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 77604,
+      "parent_pid": 79460,
+      "creation_utc": "2026-11-13T00:57:41.8664000Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 76688,
+      "parent_pid": 79460,
+      "creation_utc": "2026-11-13T00:57:41.5848830Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 79460,
+      "parent_pid": 21064,
+      "creation_utc": "2026-11-13T00:57:39.8516750Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 85012,
+      "parent_pid": 21064,
+      "creation_utc": "2026-11-13T00:57:39.6539870Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 77916,
+      "parent_pid": 83660,
+      "creation_utc": "2026-11-13T00:57:39.5816060Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 21064,
+      "parent_pid": 85892,
+      "creation_utc": "2026-11-13T00:57:39.5928130Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    },
+    {
+      "pid": 83660,
+      "parent_pid": 85892,
+      "creation_utc": "2026-11-13T00:57:39.5030380Z",
+      "identity_verified": true,
+      "status": "stopped_or_already_exited"
+    }
+  ],
+  "remaining_owned_processes": 0,
+  "remaining_preview_listeners": 0
+}

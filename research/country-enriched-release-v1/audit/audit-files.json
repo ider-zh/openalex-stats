@@ -1,0 +1,17 @@
+[
+  {
+    "path": "annual-country-coverage.csv",
+    "bytes": 13422,
+    "sha256": "be1f8bf6f4800c12d1d36339f8331ae191eb1195e535c3a2aa22a3edbec15b90"
+  },
+  {
+    "path": "annual-country-coverage.json",
+    "bytes": 49376,
+    "sha256": "60eb12840abc30c2ddf223735eb544797c0b71a8a4be56cbac1f1f1d21fd676f"
+  },
+  {
+    "path": "manifest.json",
+    "bytes": 32863,
+    "sha256": "8ba014355c963ce98a4fcca1001ca41febf7f6e2f80308bb3ecb72b3bcec7f23"
+  }
+]

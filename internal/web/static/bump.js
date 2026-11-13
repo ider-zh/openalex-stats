@@ -54,7 +54,8 @@
   }
 
   function definition(response) {
-    const universe = response?.query?.metric === 'pci' ? '同层全部有效学科' : '全部有效国家';
+    const filtered = response?.profile_applies && response?.query?.complexity_profile !== 'baseline-v1';
+    const universe = (filtered ? '筛后模型的' : '') + (response?.query?.metric === 'pci' ? '同层全部有效学科' : '全部有效国家');
     return `每年按${universe}的复杂度分数降序排名；并列同名次，后续名次跳号。只展示所选曲线，选择不改变全局排名。名次反映相对结构，不能解释为知识总量；原始分数见悬浮提示。`;
   }
 
@@ -90,7 +91,8 @@
       let html = `<div style="font-weight:700;margin-bottom:8px">${year}${partialYears.has(year) ? '* · 未完整年度' : ''}</div>`;
       html += '<div style="font-size:13px;color:#718087;margin-bottom:8px">全局名次 / 有效总数 · 原始分数</div><div class="tooltip-list">';
       for (const row of rows) {
-        const rank = row.rank === null ? '无有效排名' : `第 ${row.rank} / ${row.rankUniverse ?? '—'}`;
+        const unavailable = options.statusName?.(row.status) || (row.status.startsWith('filtered_') ? '不满足样本门槛' : '无有效排名');
+        const rank = row.rank === null ? unavailable : `第 ${row.rank} / ${row.rankUniverse ?? '—'}`;
         const score = row.value === null ? '—' : format(row.value);
         const flag=options.flagURL?.(row.id),icon=/^\/static\/flags\/[a-z]{2}\.svg$/.test(flag||'')?`<img class="country-flag" src="${flag}" alt="" aria-hidden="true">`:'<span class="country-neutral" aria-hidden="true">◎</span>';
         html += `<div data-tooltip-series="${escape(row.id)}" data-tooltip-value="${row.value ?? ''}" data-tooltip-year="${year}" data-tooltip-rank="${row.rank ?? ''}" data-tooltip-universe="${row.rankUniverse ?? ''}" class="tooltip-row">`;

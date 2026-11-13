@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-11-13T01:03:28.390Z",
+  "edge": "http://127.0.0.1:8798",
+  "native": "http://192.168.1.229:8898",
+  "json_cases": 3016,
+  "point_values": 1255176,
+  "csv_cases": 152,
+  "metadata_cases": 4,
+  "head_downloads": 888,
+  "byte_downloads": 40,
+  "get_missing_content_length": 0,
+  "get_chunked_transfer": 0,
+  "invalid_cases": 8,
+  "default_cases": 8,
+  "profiles": 19,
+  "datasets": 4,
+  "basic_count_invariance_cases": 432,
+  "method_support_invariance_cases": 608,
+  "policy": "Source/query/profile identities, context, support/masks, values, statuses, global ranks/universes and series order exact. Metadata ID sets canonicalized. CSV text/order exact, numeric Float64 exact. Profile download bodies compared by native raw SHA, including gzip-decoded bytes; all profile download HEADs require exact entity Content-Length; GET may be chunked/missing Content-Length, but any supplied length and every actual body byte count/SHA are exact.",
+  "completed_at_utc": "2026-11-13T01:04:15.387Z"
+}

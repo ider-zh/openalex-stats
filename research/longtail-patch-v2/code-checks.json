@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "command": "go test ./internal/complexityfilter ./scripts/complexity-profiles ./internal/web ./cmd/oa-stats",
+      "result": "passed"
+    },
+    {
+      "command": "go vet ./internal/complexityfilter ./scripts/complexity-profiles ./internal/web ./cmd/oa-stats",
+      "result": "passed"
+    },
+    {
+      "command": "node --test cloudflare/worker.test.mjs scripts/export-complexity-profiles.test.mjs",
+      "result": "passed",
+      "tests": 20,
+      "revision": "completed-cache-and-head-fixes, including concurrent request-owned I/O and artifact-sized HEAD regression"
+    },
+    {
+      "command": "node scripts/bump-chart-test.mjs",
+      "result": "passed",
+      "tests": 7
+    }
+  ],
+  "scope": "Tests exercise matrix pruning, RCA fixed-point closure, shared methods, source identity, exact baseline, profile API gaps/ranks, original-count invariance, artifact byte preservation, request-owned I/O and global Bump behavior. Full source data and production/runtime acceptance are recorded separately."
+}

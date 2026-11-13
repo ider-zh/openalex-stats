@@ -1,0 +1,16 @@
+{
+  "status": "passed_complete_v2_static_artifact_and_baseline_preservation",
+  "output": "bin\\complexity-profile-static-v2-r1",
+  "files": 16083,
+  "bytes": 867252733,
+  "manifest_sha256": "457ddba7b31112357ddb5083bf1a3f8e37144cd6d6174f4176d8ea9495f08d85",
+  "verified_artifacts": 16083,
+  "unchanged_base_scientific_and_download_artifacts": 14264,
+  "profiles": 19,
+  "default_complexity_profile": "p1000-c1000-x5-d3-v1",
+  "direction_policy": "baseline-pooled-common-year-sign-v1",
+  "new_artifacts": 1818,
+  "site_control_bytes": 4105647,
+  "elapsed_seconds": 138.361,
+  "production_installed": false
+}

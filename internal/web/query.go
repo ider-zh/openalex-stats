@@ -11,27 +11,30 @@ import (
 )
 
 type Query struct {
-	Method         string   `json:"method"`
-	Corpus         string   `json:"corpus"`
-	CountryVersion string   `json:"country_version"`
-	Scenario       string   `json:"scenario"`
-	Scheme         string   `json:"scheme"`
-	Level          string   `json:"level"`
-	Discipline     string   `json:"discipline"`
-	Disciplines    []string `json:"disciplines"`
-	Countries      []string `json:"countries"`
-	Metric         string   `json:"metric"`
-	Basis          string   `json:"basis"`
-	Start          int      `json:"start"`
-	End            int      `json:"end"`
+	Method            string   `json:"method"`
+	Corpus            string   `json:"corpus"`
+	CountryVersion    string   `json:"country_version"`
+	ComplexityProfile string   `json:"complexity_profile"`
+	Scenario          string   `json:"scenario"`
+	Scheme            string   `json:"scheme"`
+	Level             string   `json:"level"`
+	Discipline        string   `json:"discipline"`
+	Disciplines       []string `json:"disciplines"`
+	Countries         []string `json:"countries"`
+	Metric            string   `json:"metric"`
+	Basis             string   `json:"basis"`
+	Start             int      `json:"start"`
+	End               int      `json:"end"`
 }
 type Point struct {
-	Year         int      `json:"year"`
-	Value        *float64 `json:"value"`
-	Status       string   `json:"status"`
-	Partial      bool     `json:"partial"`
-	Rank         *int     `json:"rank"`
-	RankUniverse int      `json:"rank_universe"`
+	Year          int             `json:"year"`
+	Value         *float64        `json:"value"`
+	Status        string          `json:"status"`
+	Partial       bool            `json:"partial"`
+	Rank          *int            `json:"rank"`
+	RankUniverse  int             `json:"rank_universe"`
+	FilterReasons []string        `json:"filter_reasons,omitempty"`
+	Support       *ProfileSupport `json:"support,omitempty"`
 }
 type Series struct {
 	ID             string  `json:"id"`
@@ -46,13 +49,17 @@ type Series struct {
 const MaxSeries = 48
 
 type Response struct {
-	Query         Query      `json:"query"`
-	Attribution   string     `json:"attribution"`
-	Definition    string     `json:"definition"`
-	Series        []Series   `json:"series"`
-	Counting      Counting   `json:"counting"`
-	Method        MethodInfo `json:"method"`
-	MethodApplies bool       `json:"method_applies"`
+	Query             Query                 `json:"query"`
+	Attribution       string                `json:"attribution"`
+	Definition        string                `json:"definition"`
+	Series            []Series              `json:"series"`
+	Counting          Counting              `json:"counting"`
+	Method            MethodInfo            `json:"method"`
+	MethodApplies     bool                  `json:"method_applies"`
+	ComplexityProfile ComplexityProfileInfo `json:"complexity_profile"`
+	ProfileApplies    bool                  `json:"profile_applies"`
+	ProfileRunID      string                `json:"profile_run_id"`
+	ModelContext      ProfileModelContext   `json:"model_context"`
 }
 
 type Counting struct {
@@ -89,13 +96,23 @@ func (d *dataset) counting(q Query) (Counting, string) {
 }
 
 func (d *dataset) parseQuery(params url.Values) (Query, error) {
-	allowed := map[string]bool{"method": true, "scenario": true, "scheme": true, "level": true, "discipline": true, "disciplines": true, "countries": true, "metric": true, "basis": true, "start": true, "end": true}
+	allowed := map[string]bool{"complexity_profile": true, "method": true, "scenario": true, "scheme": true, "level": true, "discipline": true, "disciplines": true, "countries": true, "metric": true, "basis": true, "start": true, "end": true}
 	for k, values := range params {
 		if !allowed[k] || len(values) != 1 {
 			return Query{}, fmt.Errorf("未知或重复参数：%s", k)
 		}
 	}
 	q := Query{Scenario: params.Get("scenario"), Scheme: params.Get("scheme"), Level: params.Get("level"), Discipline: params.Get("discipline"), Metric: params.Get("metric"), Basis: params.Get("basis"), Start: max(2000, d.start), End: min(2025, d.end)}
+	q.ComplexityProfile = params.Get("complexity_profile")
+	if _, exists := params["complexity_profile"]; exists && q.ComplexityProfile == "" {
+		return q, fmt.Errorf("complexity_profile不能为空")
+	}
+	if q.ComplexityProfile == "" {
+		q.ComplexityProfile = d.defaultComplexityProfile()
+	}
+	if _, ok := d.profileInfo(q.ComplexityProfile); !ok {
+		return q, fmt.Errorf("未知或未提供的复杂度样本方案")
+	}
 	q.Method = params.Get("method")
 	if q.Method == "" {
 		q.Method = d.defaultMethod()
@@ -205,12 +222,19 @@ func (d *dataset) parseQuery(params url.Values) (Query, error) {
 }
 
 func (d *dataset) query(q Query) Response {
+	if q.ComplexityProfile == "" {
+		q.ComplexityProfile = d.defaultComplexityProfile()
+	}
 	if q.Method == "" {
 		q.Method = d.defaultMethod()
 	}
 	r := Response{Query: q, Attribution: "country_and_discipline_of_published_work", Series: []Series{}}
 	r.Method, _ = d.method(q.Method)
 	r.MethodApplies = q.Metric == "eci" || q.Metric == "pci"
+	r.ComplexityProfile, _ = d.profileInfo(q.ComplexityProfile)
+	r.ProfileApplies = r.MethodApplies
+	r.ModelContext = d.profileContext(q, r.Method)
+	r.ProfileRunID = r.ModelContext.ProfileRunID
 	if q.Metric == "citations" || ((q.Metric == "share" || q.Metric == "rca") && q.Basis == "citations") {
 		r.Attribution = "country_and_discipline_of_cited_work"
 	}
@@ -234,6 +258,9 @@ func (d *dataset) query(q Query) Response {
 	r.Counting, countingDefinition = d.counting(q)
 	r.Definition += " " + countingDefinition
 	if r.MethodApplies {
+		if !r.ComplexityProfile.Baseline {
+			r.Definition += " 样本筛选先改变国家与学科赋值矩阵，再重新计算 RCA 及 ECI/PCI；不按所选曲线重新排名。"
+		}
 		r.Definition += " 知识复杂度方法：" + r.Method.DisplayName + "。"
 		if r.Method.CountryIterations > 0 {
 			r.Definition += fmt.Sprintf("国家 %d 轮、学科 %d 轮；%s 标准化，共用同一 RCA 优势网络。", r.Method.CountryIterations, r.Method.DisciplineIterations, r.Method.Normalization)
@@ -281,7 +308,8 @@ func (d *dataset) query(q Query) Response {
 			for y := q.Start; y <= q.End; y++ {
 				p := Point{Year: y, Status: "ok", Partial: d.partialYears[y]}
 				if q.Metric == "eci" || q.Metric == "pci" {
-					model, ok := d.methodModels[q.Method][modelKey{q.Scenario, q.Scheme, q.Level, q.Basis, y}]
+					key := modelKey{q.Scenario, q.Scheme, q.Level, q.Basis, y}
+					model, ok := d.profileModel(q.ComplexityProfile, q.Method, key)
 					if !ok {
 						p.Status = "model_not_available"
 					} else if model.Status != "ok" {
@@ -298,6 +326,17 @@ func (d *dataset) query(q Query) Response {
 							}
 						} else {
 							p.Status = "inactive"
+						}
+					}
+					if q.Metric == "eci" && q.ComplexityProfile != "baseline-v1" {
+						if decision, found := d.profileCountry(q.ComplexityProfile, key, country); found {
+							p.Support = &ProfileSupport{WholePublications: decision.WholePublications, WholeCitations: decision.WholeCitations, FinalDiversity: decision.FinalDiversity}
+							p.FilterReasons = publicFilterReasons(decision)
+							if status := filteredStatus(p.FilterReasons); status != "" {
+								p.Status = status
+								p.Value = nil
+								p.Rank = nil
+							}
 						}
 					}
 				} else {

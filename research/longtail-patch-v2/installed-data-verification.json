@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "artifacts": 16083,
+  "artifact_bytes": 867252733,
+  "export_manifest_sha256": "457ddba7b31112357ddb5083bf1a3f8e37144cd6d6174f4176d8ea9495f08d85",
+  "seconds": 203.824,
+  "policy": "Every immutable descriptor size and SHA checked; exact manifest paths staged, no other research or binary trees"
+}

@@ -1,0 +1,4 @@
+[
+  {"id":"baseline-v1","display_name":"未筛选对照","country_min_publications":0,"country_min_citation_events":0,"cell_min_support":0,"min_diversity":0},
+  {"id":"p1000-c1000-x5-d3-v1","display_name":"P1000 · C1000 · X5 · D3","country_min_publications":1000,"country_min_citation_events":1000,"cell_min_support":5,"min_diversity":3}
+]

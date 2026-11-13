@@ -1,0 +1,93 @@
+{
+  "status": "explicit_publication_allowlist_only",
+  "files": [
+    {
+      "path": "research/longtail-patch-v2/ui/pages-r1/longtail-profile-ui-qa.json",
+      "bytes": 2507,
+      "sha256": "57aa3c74ec85a59563600aab7f1a192ca5b87f205d258f0e5d6841b3d99bff25"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/pages-r1/mobile-profile-mode.png",
+      "bytes": 45094,
+      "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/pages-r1/mobile-profile-parameters.png",
+      "bytes": 45094,
+      "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/pages-r1/mobile-filtered-country-status.png",
+      "bytes": 48940,
+      "sha256": "33ef1cede3f1441a30a182d263a4cc0bfe4bdb133906a681f0913077e36247d6"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/pages-r1/desktop-profile-controls.png",
+      "bytes": 176769,
+      "sha256": "7d85389549a762323ff226535af677a14f4144891bf8f9b4615d5aa7a2d3ffa4"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/workerd-r2/longtail-profile-ui-qa.json",
+      "bytes": 2507,
+      "sha256": "b0c2bff6064b46b2c5cf6d1b5b160674ccdf12acbea2c7ba7e7354c8f7ed4fb9"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/workerd-r2/mobile-profile-mode.png",
+      "bytes": 45094,
+      "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/workerd-r2/mobile-profile-parameters.png",
+      "bytes": 45094,
+      "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/workerd-r2/mobile-filtered-country-status.png",
+      "bytes": 48940,
+      "sha256": "33ef1cede3f1441a30a182d263a4cc0bfe4bdb133906a681f0913077e36247d6"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/workerd-r2/desktop-profile-controls.png",
+      "bytes": 176769,
+      "sha256": "7d85389549a762323ff226535af677a14f4144891bf8f9b4615d5aa7a2d3ffa4"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/production-v5/longtail-profile-ui-qa.json",
+      "bytes": 2511,
+      "sha256": "7f16c6216d9669b9eda573e5707ae3d63cc3296cfb45d0484570b0d8598e6f84"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/production-v5/mobile-profile-mode.png",
+      "bytes": 45094,
+      "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/production-v5/mobile-profile-parameters.png",
+      "bytes": 45094,
+      "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/production-v5/mobile-filtered-country-status.png",
+      "bytes": 48940,
+      "sha256": "33ef1cede3f1441a30a182d263a4cc0bfe4bdb133906a681f0913077e36247d6"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/production-v5/desktop-profile-controls.png",
+      "bytes": 176769,
+      "sha256": "7d85389549a762323ff226535af677a14f4144891bf8f9b4615d5aa7a2d3ffa4"
+    },
+    {
+      "path": "research/longtail-patch-v2/ui/qa-index.json",
+      "bytes": 5297,
+      "sha256": "5ecc5b5b81a64b3d48e6ea8dff083d58ff53720deddd4942f8b799dd8cee4741"
+    }
+  ],
+  "file_count": 16,
+  "total_bytes": 960513,
+  "append_allowlist_file_itself": true,
+  "excluded": [
+    "All earlier candidate/failed/overlay artifacts",
+    "Browser profiles, caches, local binaries and downloaded research source data"
+  ],
+  "note": "Only three passed final UI runs, each one JSON and four clean screenshots, plus qa-index.json. Do not git add the entire research tree."
+}

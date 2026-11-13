@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {gzipSync,gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
 import {handle,parseQuery,goFloat} from './worker.mjs';
 let serial=0;
 function matrix(records,totals=[[10,20],[0,0]],countries=2){const years=2,b=Buffer.alloc(16+(countries+1)*years*16);b.write('OAQ1');b.writeUInt16LE(2000,4);b.writeUInt16LE(years,6);b.writeUInt16LE(countries,8);for(let y=0;y<years;y++)for(let basis=0;basis<2;basis++)b.writeDoubleLE(totals[y][basis],16+y*16+basis*8);for(const [c,y,p,v] of records){const offset=16+years*16+(c*years+y)*16;b.writeDoubleLE(p,offset);b.writeDoubleLE(v,offset+8);}return gzipSync(b);}
@@ -97,7 +98,7 @@ test('country versions select full independent corpus controls, metadata, models
 test('country version CSV, download bytes, redirect and HEAD remain selected-version bound',async()=>{
   const f=countryVersionFixture();
   for(const version of ['original','enriched']){
-    const csv=await handle(new Request(`${f.origin}/api/series.csv?country_version=${version}&corpus=all&scheme=topics&level=field&discipline=f1&countries=CN&start=2000&end=2000`),f.env),text=await csv.text();assert.equal(csv.headers.get('X-OpenAlex-Country-Version'),version);assert.equal(text.trim().split('\n')[0].split(',').at(-1),'country_version');assert.equal(text.trim().split('\n')[1].split(',').at(-1),version);
+    const csv=await handle(new Request(`${f.origin}/api/series.csv?country_version=${version}&corpus=all&scheme=topics&level=field&discipline=f1&countries=CN&start=2000&end=2000`),f.env),text=await csv.text();assert.equal(csv.headers.get('X-OpenAlex-Country-Version'),version);const csvRows=text.trim().split('\n').map(row=>row.split(',')),versionIndex=csvRows[0].indexOf('country_version');assert.ok(versionIndex>=0);assert.equal(csvRows[1][versionIndex],version);
     const small=await handle(new Request(`${f.origin}/download?country_version=${version}&corpus=all&file=run.json`),f.env);assert.deepEqual(await small.json(),{run_id:`${version}-all-run`});assert.equal(small.headers.get('X-Artifact-SHA256'),`${version}-all-hash`);
     const big=await handle(new Request(`${f.origin}/download?country_version=${version}&corpus=all&file=statistics.parquet`),f.env);assert.equal(big.status,302);assert.match(big.headers.get('Location'),new RegExp(`/download/${version}/all-statistics.parquet$`));assert.equal(big.headers.get('X-OpenAlex-Country-Version'),version);
     const head=await handle(new Request(`${f.origin}/api/meta?country_version=${version}`,{method:'HEAD'}),f.env);assert.equal(head.status,200);assert.equal(await head.text(),'');assert.equal(head.headers.get('X-OpenAlex-Country-Version'),version);
@@ -109,4 +110,94 @@ test('unknown, empty, duplicate and unavailable country versions reject consiste
   for(const tail of ['country_version=bogus','country_version=','country_version=original&country_version=enriched'])for(const endpoint of ['/api/meta','/api/series','/download'])assert.equal((await handle(new Request(`${f.origin}${endpoint}?${tail}`),f.env)).status,400);
   const legacy=fixture(),meta=await (await handle(new Request(`${legacy.origin}/api/meta?country_version=original`),legacy.env)).json();assert.equal(meta.country_version,'original');assert.equal(meta.country_version_info.version,'snapshot-20260626-original');assert.equal((await handle(new Request(`${legacy.origin}/api/meta?country_version=enriched`),legacy.env)).status,400);
   const catalog=await (await handle(new Request(`${legacy.origin}/api/catalog`),legacy.env)).json();assert.equal(catalog.default_country_version,'original');assert.deepEqual(catalog.country_versions,[meta.country_version_info]);
+});
+
+function profileFixture(){
+  const f=countryVersionFixture(),site=JSON.parse(f.store.get('/data/site.json'));
+  const baseline={id:'baseline-v1',display_name:'不筛选 · 原模型',country_min_publications:0,country_min_citation_events:0,cell_min_support:0,min_diversity:0,engine:'baseline-v1',baseline:true,direction_policy:'published-baseline-v1'};
+  const profile={id:'p1000-c1000-x5-d3-v1',display_name:'P1000 · C1000 · X5 · D3',country_min_publications:1000,country_min_citation_events:1000,cell_min_support:5,min_diversity:3,engine:'support-filter-v1',baseline:false,direction_policy:'baseline-pooled-common-year-sign-v1'};
+  site.catalog.complexity_profiles=[baseline,profile];site.catalog.default_complexity_profile=profile.id;
+  const manifest={profile,direction_policy:'baseline-pooled-common-year-sign-v1',datasets:{original:{},enriched:{}}},rawDownloads=new Map();
+  const digest=b=>createHash('sha256').update(b).digest('hex');
+  for(const version of ['original','enriched'])for(const corpus of ['core','all']){
+    const control=site.country_versions[version][corpus];control.completion_sha256=`${version}-${corpus}-completion`;
+    control.meta.scenarios.push({id:'other'});
+    for(const [key,template] of Object.entries(control.templates))control.templates[key.replace('/main/','/other/')]=structuredClone(template);
+    const profileRun=`profile-${version}-${corpus}`,source=control.run_id,source_completion_sha256=control.completion_sha256;
+    const dataset={source_run_id:source,source_completion_sha256,profile_run_id:profileRun,models:{},downloads:{shared:{}}};
+    for(const method of ['spectral-v1','java-reflections-v1']){
+      const prefix=`/data/profiles/${profile.id}/${version}/${corpus}/${method}`;
+      const model={countries:[[[null,'filtered_country_publications',null,0,1,50,2000,0],[1.25,'ok',1,2,0,3000,5000,4]],[[null,'empty',null,0,0,2000,5000,3],[-1.25,'ok',2,2,0,4000,7000,3]]],disciplines:control.meta.layers[0].labels.map((_,i)=>[[null,'empty',null,0],i<2?[i?-.8:.8,'ok',i?2:1,2]:[null,'inactive',null,2]]),model_context:{profile_id:profile.id,profile_run_id:profileRun,source_run_id:source,source_completion_sha256,algorithm:'country-scale-cell-zero-monotone-diversity-v1',direction_policy:'baseline-pooled-common-year-sign-v1',years:[{year:2000,status:'empty',eligible_country_count:1,eligible_discipline_count:3,retained_mass_fraction:.5,closure_passes:1},{year:2001,status:'ok',eligible_country_count:2,eligible_discipline_count:4,retained_mass_fraction:.9,closure_passes:2}]}};
+      const modelPath=prefix+'/model.json.gz';f.store.set(modelPath,gzipSync(JSON.stringify(model)));dataset.models[[method,'main','topics','field','publications'].join('/')]=modelPath;
+      const raw=Buffer.from('{\n  "source_run_id": "'+source+'",\n  "profile_run_id": "'+profileRun+'",\n  "method": "'+method+'"\n}\n');
+      const download=prefix+'/eci.json.gz';f.store.set(download,gzipSync(raw));rawDownloads.set(`${version}/${corpus}/${method}`,raw);
+      dataset.downloads[method]={'eci.json':{filename:'eci.json',path:download,encoding:'gzip',bytes:raw.length,sha256:digest(raw)}};
+    }
+    manifest.datasets[version][corpus]=dataset;
+  }
+  const manifestPath=`/data/profiles/${profile.id}/manifest.json`;f.store.set(manifestPath,Buffer.from(JSON.stringify(manifest)));site.complexity_profile_manifests={[profile.id]:{path:manifestPath}};
+  site.datasets=site.country_versions.enriched;f.store.set('/data/site.json',Buffer.from(JSON.stringify(site)));
+  return {...f,site,manifest,profile,baseline,rawDownloads};
+}
+
+test('complexity profile defaults, baseline preservation, filtered support and same-network ECI/PCI context',async()=>{
+  const f=profileFixture();
+  const catalog=await (await handle(new Request(`${f.origin}/api/catalog`),f.env)).json();assert.equal(catalog.default_complexity_profile,f.profile.id);assert.deepEqual(catalog.complexity_profiles,[f.baseline,f.profile]);
+  for(const version of ['original','enriched'])for(const corpus of ['core','all'])for(const method of ['spectral-v1','java-reflections-v1']){
+    const p={country_version:version,corpus,method,metric:'eci',disciplines:'f1',countries:'CN,US'};
+    const {body,status}=await f.query(p);assert.equal(status,200);assert.equal(body.query.complexity_profile,f.profile.id);assert.deepEqual(body.complexity_profile,f.profile);assert.equal(body.profile_applies,true);assert.equal(body.profile_run_id,`profile-${version}-${corpus}`);
+    assert.equal(body.model_context.source_run_id,`${version}-${corpus}-run`);assert.equal(body.model_context.years.length,2);assert.equal(body.series[0].points[0].status,'filtered_country_publications');assert.deepEqual(body.series[0].points[0].filter_reasons,['country_publications']);assert.deepEqual(body.series[0].points[1].support,{whole_publications:3000,whole_citations:5000,final_diversity:4});assert.equal(body.series[1].points[1].rank,2);assert.equal(body.series[1].points[1].rank_universe,2);
+    const one=(await f.query({...p,countries:'US',start:'2001',end:'2001'})).body;assert.equal(one.series[0].points[0].rank,2);assert.deepEqual(one.model_context.years.map(y=>y.year),[2001]);
+    const pci=(await f.query({...p,metric:'pci',disciplines:'f1,f2'})).body;assert.equal(pci.profile_run_id,body.profile_run_id);assert.deepEqual(pci.model_context,body.model_context);assert.equal(pci.series[0].points[1].support,undefined);assert.equal(pci.series[1].points[1].rank,2);
+    const baseline=(await f.query({...p,complexity_profile:'baseline-v1'})).body;assert.equal(baseline.profile_run_id,`${version}-${corpus}-run`);assert.deepEqual(baseline.model_context.years,[]);assert.equal(baseline.model_context.algorithm,'baseline-v1');assert.equal(baseline.series[0].points[0].filter_reasons,undefined);assert.equal(baseline.series[0].points[0].support,undefined);assert.notEqual(baseline.series[0].points[0].value,null);
+    const unavailable=(await f.query({...p,scenario:'other'})).body;assert.equal(unavailable.profile_applies,true);assert.equal(unavailable.series[0].points[0].status,'model_not_available');assert.deepEqual(unavailable.model_context.years,[]);assert.equal(unavailable.series[0].points[0].support,undefined);
+  }
+});
+
+test('ordinary counts and RCA keep original values and cold 50-subrequest boundary without reading profile manifests',async()=>{
+  const f=profileFixture(),first=await f.query({countries:'CN',disciplines:f.meta.layers[0].labels.map(d=>d.id).join(','),metric:'rca'});
+  assert.equal(first.status,200);assert.equal(first.body.profile_applies,false);assert.equal(first.body.profile_run_id,'');assert.deepEqual(first.body.model_context.years,[]);assert.equal(f.requests.length,50);assert.ok(!f.requests.some(p=>p.includes('/profiles/')));
+  const filtered=(await f.query({metric:'publications',disciplines:'f1',countries:'CN'})).body,base=(await f.query({metric:'publications',disciplines:'f1',countries:'CN',complexity_profile:'baseline-v1'})).body;assert.deepEqual(filtered.series,base.series);
+});
+
+test('profile model downloads decode gzip raw bytes exactly, HEAD is raw-sized, and missing sensitivity never falls back',async()=>{
+  const f=profileFixture();
+  for(const version of ['original','enriched'])for(const corpus of ['core','all'])for(const method of ['spectral-v1','java-reflections-v1']){
+    const url=`${f.origin}/download?`+new URLSearchParams({country_version:version,corpus,method,complexity_profile:f.profile.id,file:'eci.json'}),expected=f.rawDownloads.get(`${version}/${corpus}/${method}`);
+    const r=await handle(new Request(url,{headers:{Range:'bytes=0-1'}}),f.env);assert.equal(r.status,200);assert.deepEqual(Buffer.from(await r.arrayBuffer()),expected);assert.equal(Number(r.headers.get('Content-Length')),expected.length);assert.equal(r.headers.get('X-Artifact-SHA256'),createHash('sha256').update(expected).digest('hex'));assert.match(r.headers.get('Content-Disposition'),new RegExp(f.profile.id));assert.match(r.headers.get('Content-Disposition'),new RegExp(method));assert.equal(r.headers.get('X-OpenAlex-Profile-Applies'),'true');
+    const head=await handle(new Request(url,{method:'HEAD'}),f.env);assert.equal(head.status,200);assert.equal(await head.text(),'');assert.equal(Number(head.headers.get('Content-Length')),expected.length);
+    const sensitivity=await handle(new Request(url.replace('file=eci.json','file=method-sensitivity.json')),f.env);assert.equal(sensitivity.status,400);
+    const quantity=await handle(new Request(url.replace('file=eci.json','file=statistics.parquet')),f.env);assert.equal(quantity.status,302);assert.equal(quantity.headers.get('X-OpenAlex-Profile-Applies'),'false');
+  }
+});
+
+test('unknown, empty, duplicate and source-mismatched profile selectors reject rather than fall back',async()=>{
+  const f=profileFixture();for(const value of ['', 'unknown'])assert.equal((await f.query({complexity_profile:value})).status,400);
+  const duplicated=await handle(new Request(`${f.origin}/api/series?complexity_profile=baseline-v1&complexity_profile=${f.profile.id}`),f.env);assert.equal(duplicated.status,400);
+  const broken=profileFixture();broken.manifest.datasets.enriched.core.source_run_id='wrong-source';broken.store.set(broken.site.complexity_profile_manifests[broken.profile.id].path,Buffer.from(JSON.stringify(broken.manifest)));assert.equal((await broken.query({metric:'eci'})).status,500);
+  const oldDirection=profileFixture();delete oldDirection.manifest.direction_policy;oldDirection.store.set(oldDirection.site.complexity_profile_manifests[oldDirection.profile.id].path,Buffer.from(JSON.stringify(oldDirection.manifest)));assert.equal((await oldDirection.query({metric:'eci'})).status,500);
+  for(const file of ['constructor','toString','__proto__'])assert.equal((await handle(new Request(`${f.origin}/download?file=${file}`),f.env)).status,400);
+  assert.equal((await handle(new Request(`${f.origin}/api/meta?corpus=constructor`),f.env)).status,400);
+});
+
+test('cold concurrent requests own their I/O and reuse only completed parsed cache values',async()=>{
+  const f=profileFixture();
+  const requests=await Promise.all([f.query({metric:'eci'}),f.query({metric:'eci'})]);
+  assert.equal(requests[0].status,200);assert.deepEqual(requests[0].body,requests[1].body);
+  assert.equal(f.requests.filter(p=>p==='/data/site.json').length,2,'Pending site fetch must not be shared across requests');
+  const before=f.requests.length;assert.equal((await f.query({metric:'eci'})).status,200);assert.equal(f.requests.length,before,'Completed plain objects remain cacheable');
+});
+
+test('plain HEAD entity length comes from artifact identity when ASSETS reports zero, without changing range lengths',async()=>{
+  const f=fixture(),bytes=f.store.get('/data/core-run/artifacts/run.json');f.control.downloads['run.json'].bytes=bytes.length;
+  f.store.set('/data/site.json',Buffer.from(JSON.stringify({version:'openalex-static-query-v1',catalog:{default_corpus:'core',datasets:[{id:'core'}]},datasets:{core:f.control}})));
+  const original=f.env.ASSETS.fetch;f.env.ASSETS.fetch=async input=>{
+    const request=input instanceof Request?input:new Request(input),result=await original(input);
+    if(request.method!=='HEAD'||!new URL(request.url).pathname.endsWith('/artifacts/run.json'))return result;
+    const headers=new Headers(result.headers);
+    if(request.headers.has('Range')){headers.set('Content-Length','2');headers.set('Content-Range',`bytes 0-1/${bytes.length}`);return new Response(null,{status:206,headers});}
+    headers.set('Content-Length','0');return new Response(null,{status:200,headers});
+  };
+  const url=f.origin+'/download?file=run.json',head=await handle(new Request(url,{method:'HEAD'}),f.env);assert.equal(head.status,200);assert.equal(Number(head.headers.get('Content-Length')),bytes.length);assert.equal(await head.text(),'');
+  const range=await handle(new Request(url,{method:'HEAD',headers:{Range:'bytes=0-1'}}),f.env);assert.equal(range.status,206);assert.equal(range.headers.get('Content-Length'),'2');
 });

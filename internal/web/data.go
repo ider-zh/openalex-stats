@@ -102,6 +102,9 @@ type dataset struct {
 	methodInfo        []MethodInfo
 	methodRoots       map[string]string
 	methodFiles       map[string]map[string]string
+	profiles          map[string]*profileDataset
+	profileInfos      []ComplexityProfileInfo
+	defaultProfileID  string
 	countries         []Label
 	countrySet        map[string]bool
 	layers            []Layer

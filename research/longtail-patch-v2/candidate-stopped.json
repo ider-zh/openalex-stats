@@ -1,0 +1,32 @@
+{
+  "pid": 3588154,
+  "args": [
+    "/home/ider/tmpdata/openalex-stats-dev-20261112/longtail-profiles-v1/oa-stats-v2",
+    "serve",
+    "--listen",
+    "0.0.0.0:8898",
+    "--data-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-concept-hits-v1",
+    "--data-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-concept-hits-v1",
+    "--methods-core",
+    "/mnt/nvme0/public/openalex-stats/results/core-java-reflections-v1",
+    "--methods-all",
+    "/mnt/nvme0/public/openalex-stats/results/all-java-reflections-v1",
+    "--data-core-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/core-country-validated-v3-r3-20261113",
+    "--data-all-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/all-country-validated-v3-r3-20261113",
+    "--methods-core-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/core-country-java-v3-r3-20261113",
+    "--methods-all-enriched",
+    "/mnt/nvme0/public/openalex-stats/results/all-country-java-v3-r3-20261113",
+    "--complexity-profiles-dir",
+    "/mnt/nvme0/public/openalex-stats/complexity-profiles-v2-20261113"
+  ],
+  "port": 8898,
+  "started_at_unix": 1794529124.5230753,
+  "start_ticks": "5129459389",
+  "binary_sha256": "030077ce631ed51b8c0abcdcce20f126f8d12b88c5cf23dbaadc1ff754ff8997",
+  "stopped_at_unix": 1794532119.7170837
+}

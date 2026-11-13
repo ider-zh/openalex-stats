@@ -1,0 +1,13 @@
+{
+  "status": "passed_independent_numpy_filters_network_hashes_scores_and_ranks",
+  "checker_sha256": "a2df0a89b55a929dde9f73e18580787c5830e44163cbcfa723fcb4803c6333ee",
+  "inputs": 128,
+  "fixed_points": 2432,
+  "score_pairs": 768,
+  "rank_models": 32832,
+  "direction_chains": 1152,
+  "exact_global_sign_model_pairs": 32832,
+  "max_spectral_error": 5.906386491005833e-14,
+  "max_reflection_error": 1.0457433607946598e-07,
+  "scope": "All19 profiles/4 datasets ranks+population z; independent fixed points on128 matrices (4years\u00d74layers\u00d72bases\u00d74data); eigenscores and16/17 reflections for3 frozen profiles, jointly sign-matched for numerical comparison. Full pooled-baseline direction independently reproduced; each new27-year ECI/PCI chain exactly one common factor relative to preserved v1 raw models. No audit alters any production output."
+}

@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"syscall"
 	"time"
 
@@ -26,6 +27,7 @@ func serveCommand(args []string) error {
 	allEnriched := fs.String("data-all-enriched", "", "matching country-enriched core+XPAC")
 	methodsCoreEnriched := fs.String("methods-core-enriched", "", "country-enriched core complexity-method sidecar")
 	methodsAllEnriched := fs.String("methods-all-enriched", "", "country-enriched all complexity-method sidecar")
+	profilesRoot := fs.String("complexity-profiles-dir", "", "precomputed original-core/original-all/enriched-core/enriched-all profile bundle root")
 	address := fs.String("listen", "127.0.0.1:8899", "bind address; use SSH forwarding or explicitly bind LAN")
 	waitForListen := fs.Duration("wait-for-listen", 0, "after loading results, wait up to this duration for an occupied listener during warm handoff (max 15m)")
 	if e := fs.Parse(args); e != nil {
@@ -41,6 +43,9 @@ func serveCommand(args []string) error {
 		return fmt.Errorf("method sidecars require matching --data-core/--data-all catalog entries")
 	}
 	hasEnriched := *coreEnriched != "" || *allEnriched != "" || *methodsCoreEnriched != "" || *methodsAllEnriched != ""
+	if *profilesRoot != "" && !hasEnriched {
+		return fmt.Errorf("complexity profiles require the matching country-version catalog")
+	}
 	if hasEnriched && (*data != "" || *coreEnriched == "" || ((*all == "") != (*allEnriched == ""))) {
 		return fmt.Errorf("country-enriched versions require --data-core-enriched and the same core/all corpora as the original catalog")
 	}
@@ -75,7 +80,14 @@ func serveCommand(args []string) error {
 			if *methodsAllEnriched != "" {
 				enrichedMethods["all"] = *methodsAllEnriched
 			}
-			handler, e = web.NewCountryVersionCatalog(web.CountryVersionConfig{Datasets: dirs, MethodDirectories: methodDirs}, web.CountryVersionConfig{Datasets: enrichedDirs, MethodDirectories: enrichedMethods})
+			originalProfiles, enrichedProfiles := map[string]string{}, map[string]string{}
+			if *profilesRoot != "" {
+				for corpus := range dirs {
+					originalProfiles[corpus] = filepath.Join(*profilesRoot, "original-"+corpus)
+					enrichedProfiles[corpus] = filepath.Join(*profilesRoot, "enriched-"+corpus)
+				}
+			}
+			handler, e = web.NewCountryVersionCatalog(web.CountryVersionConfig{Datasets: dirs, MethodDirectories: methodDirs, ProfileDirectories: originalProfiles}, web.CountryVersionConfig{Datasets: enrichedDirs, MethodDirectories: enrichedMethods, ProfileDirectories: enrichedProfiles})
 		} else {
 			handler, e = web.NewCatalogWithMethods(dirs, methodDirs)
 		}

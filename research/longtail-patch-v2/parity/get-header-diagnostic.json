@@ -1,0 +1,18 @@
+{
+  "status": "confirmed_full_raw_body_despite_absent_content_length",
+  "observed_at_utc": "2026-11-13T01:01:41Z",
+  "country_version": "original",
+  "corpus": "core",
+  "complexity_profile": "baseline-v1",
+  "method": "spectral-v1",
+  "file": "country_eci.parquet",
+  "expected_bytes": 411394,
+  "expected_sha256": "25183996705c43540973a8977f877fb6a4c64983662198eb82f23b25b4be683a",
+  "observations": [
+    {"surface": "workerd-download-api", "status": 200, "content_length": null, "transfer_encoding": "chunked", "actual_body_bytes": 411394, "sha256_matches": true},
+    {"surface": "workerd-static-path", "status": 200, "content_length": null, "transfer_encoding": "chunked", "actual_body_bytes": 411394, "sha256_matches": true},
+    {"surface": "pages-node-preview", "status": 200, "content_length": 411394, "transfer_encoding": null, "actual_body_bytes": 411394, "sha256_matches": true},
+    {"surface": "native-go", "status": 200, "content_length": 411394, "transfer_encoding": null, "actual_body_bytes": 411394, "sha256_matches": true}
+  ],
+  "conclusion": "The failure was Number(null) in the acceptance script, not an empty file or ASSETS HEAD cache poisoning. Final checks require exact HEAD entity size and every GET byte count/SHA; supplied GET Content-Length must match but may be absent for a legal chunked stream."
+}

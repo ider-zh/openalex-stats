@@ -1,0 +1,206 @@
+[
+  {
+    "scheme": "topics",
+    "level": "field",
+    "basis": "publications",
+    "profile": "baseline-v1",
+    "points": [
+      {
+        "country": "AG",
+        "status": "ok",
+        "rank": 148,
+        "universe": 229
+      },
+      {
+        "country": "EH",
+        "status": "inactive",
+        "rank": null,
+        "universe": 229
+      },
+      {
+        "country": "KP",
+        "status": "ok",
+        "rank": 2,
+        "universe": 229
+      },
+      {
+        "country": "SG",
+        "status": "ok",
+        "rank": 1,
+        "universe": 229
+      },
+      {
+        "country": "CN",
+        "status": "ok",
+        "rank": 4,
+        "universe": 229
+      },
+      {
+        "country": "US",
+        "status": "ok",
+        "rank": 103,
+        "universe": 229
+      }
+    ],
+    "summary": []
+  },
+  {
+    "scheme": "topics",
+    "level": "field",
+    "basis": "publications",
+    "profile": "p1000-c1000-x5-d3-v1",
+    "points": [
+      {
+        "country": "AG",
+        "status": "ok",
+        "rank": 69,
+        "universe": 147
+      },
+      {
+        "country": "EH",
+        "status": "filtered_country_publications",
+        "rank": null,
+        "universe": 147
+      },
+      {
+        "country": "KP",
+        "status": "filtered_country_publications",
+        "rank": null,
+        "universe": 147
+      },
+      {
+        "country": "SG",
+        "status": "ok",
+        "rank": 1,
+        "universe": 147
+      },
+      {
+        "country": "CN",
+        "status": "ok",
+        "rank": 2,
+        "universe": 147
+      },
+      {
+        "country": "US",
+        "status": "ok",
+        "rank": 55,
+        "universe": 147
+      }
+    ],
+    "summary": [
+      {
+        "year": 2025,
+        "status": "ok",
+        "eligible_country_count": 147,
+        "eligible_discipline_count": 26,
+        "retained_mass_fraction": 0.9982032726895996,
+        "closure_passes": 1,
+        "source_matrix_sha256": "952e0760fd61b28eb1f9ac9023f2ed7a26a6c4523a5a258e3a466202a8b4c487",
+        "final_matrix_sha256": "3ba1e6651638d964f4309444539dd75a16132a9712c1366b3f85b5f956678dda",
+        "final_network_sha256": "090bece86312ce21f4f35eef9e24bcbacbe2f9e01f47259bef7bc814c64c215f"
+      }
+    ]
+  },
+  {
+    "scheme": "concepts",
+    "level": "0",
+    "basis": "citations",
+    "profile": "baseline-v1",
+    "points": [
+      {
+        "country": "AG",
+        "status": "ok",
+        "rank": 2,
+        "universe": 234
+      },
+      {
+        "country": "EH",
+        "status": "ok",
+        "rank": 3,
+        "universe": 234
+      },
+      {
+        "country": "KP",
+        "status": "ok",
+        "rank": 230,
+        "universe": 234
+      },
+      {
+        "country": "SG",
+        "status": "ok",
+        "rank": 234,
+        "universe": 234
+      },
+      {
+        "country": "CN",
+        "status": "ok",
+        "rank": 228,
+        "universe": 234
+      },
+      {
+        "country": "US",
+        "status": "ok",
+        "rank": 121,
+        "universe": 234
+      }
+    ],
+    "summary": []
+  },
+  {
+    "scheme": "concepts",
+    "level": "0",
+    "basis": "citations",
+    "profile": "p1000-c1000-x5-d3-v1",
+    "points": [
+      {
+        "country": "AG",
+        "status": "filtered_min_diversity",
+        "rank": null,
+        "universe": 146
+      },
+      {
+        "country": "EH",
+        "status": "filtered_country_publications",
+        "rank": null,
+        "universe": 146
+      },
+      {
+        "country": "KP",
+        "status": "filtered_country_publications",
+        "rank": null,
+        "universe": 146
+      },
+      {
+        "country": "SG",
+        "status": "ok",
+        "rank": 146,
+        "universe": 146
+      },
+      {
+        "country": "CN",
+        "status": "ok",
+        "rank": 139,
+        "universe": 146
+      },
+      {
+        "country": "US",
+        "status": "ok",
+        "rank": 48,
+        "universe": 146
+      }
+    ],
+    "summary": [
+      {
+        "year": 2025,
+        "status": "ok",
+        "eligible_country_count": 146,
+        "eligible_discipline_count": 19,
+        "retained_mass_fraction": 0.9989433169974024,
+        "closure_passes": 2,
+        "source_matrix_sha256": "313a954051a050e9416cafd86f122fe1cd3669c02c82d0d83b216cdf4b1469b3",
+        "final_matrix_sha256": "f6ed2e17c54bae4f66034d392abcc60ae877f706db8e64b2868e7691538e115c",
+        "final_network_sha256": "82c2079989d8715ec84d7e94bee6e630da6e743190fafdc5a099308ff8acd9ce"
+      }
+    ]
+  }
+]

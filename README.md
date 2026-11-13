@@ -23,7 +23,8 @@
 - 国家搜索、真实 Topics 学科树、国旗 SVG、大字号、年度散点、当年值降序 tooltip 和 CSV 导出。
 - ECI 是当前层全部学科结构的国家复杂度，只按国家绘制；PCI 是各学科的全球值，只按学科绘制。
 - 复杂度提供全局 Bump 排名和原分数曲线。排名基于当年全部有效实体，改变所选国家／学科不会重新排名。
-- 方法 switch 保留默认 `spectral-v1`，另提供 `java-reflections-v1` 修正版。两方法共享同一 X、RCA、二值网络、标签和计数政策；反射法采用国家 16 轮、学科 17 轮、总体 z-score，并明确记录定向、异常状态及敏感性验证。
+- 方法 switch 默认**小倪方法论**（`java-reflections-v1`），可切换谱方法（`spectral-v1`）。两方法共享同一 X、RCA、二值网络、标签和计数政策；反射法采用国家 16 轮、学科 17 轮、总体 z-score，并明确记录定向、异常状态及敏感性验证。
+- 复杂度默认先筛国家年论文量、国家×学科赋值和优势学科数，再重算内部 RCA、ECI／PCI；可切回未筛选原模型，或切换 18 组预计算参数。低支撑年度无分值／名次，保留筛除原因。数量、当年被引与普通 RCA 不受该筛选影响。见[小倪补丁发布说明](docs/longtail-profile-release.md)。
 
 方法解释与限制见 [计数政策](docs/counting-policy.md)、[Java 方法 diff](docs/java-method-diff.md)、[Java 反射法修正版](docs/java-reflections-method.md)及 [Core/All 发布说明](docs/concept-hits-release.md)。ECI/PCI 是年度相对结构指标，不是知识总量。
 
@@ -53,7 +54,7 @@ npm run preview
 
 [GitHub Release：snapshot-20260626-v1](https://github.com/ider-zh/openalex-stats/releases/tag/snapshot-20260626-v1) 保存两版本完整 Parquet、模型 JSON、清单、诊断和独立方法 sidecar。文件 SHA-256、大小及下载地址见 [results/index.json](results/index.json)。
 
-已发布 44 个原始结果资产，共 2,761,138,916 字节，逐文件通过 GitHub 服务端 SHA-256 和公开下载验证。采用 Release 资产而不是 Git LFS；不把 724 GB 原始 Works 快照和中间引用图放入 Git。网站的全部可查询数据另以约 193 MB 的分片保存在 `cloudflare/data`，覆盖两个语料、四层学科、六场景、全部国家及输出年份。
+首次发布的 44 个原始结果资产共 2,761,138,916 字节；国家补全版另见[结果索引](results/country-enriched-v3-r3-index.json)，均逐文件校验 SHA-256。采用 Release 资产而不是 Git LFS；不把 724 GB 原始 Works 快照和中间引用图放入 Git。当前网站全部查询数据及模型下载约 867 MB，保存在 `cloudflare/data`，覆盖原始／补全、两个语料、四层学科、六场景、全部国家及输出年份，复杂度另含 19 组筛选配置。
 
 ```sh
 node scripts/download-results.mjs --corpus core
@@ -103,4 +104,6 @@ node scripts/bump-chart-test.mjs
 
 2026-11-13 研究结果已归档：[小国家／地区复杂度高排名审查](docs/small-country-complexity-review.md)、[国家补全研究 review](docs/country-enrichment-v3-review.md)及[可复核数据与工具](results/research-review-20261113/README.md)。用户 review 后，国家补全 r3 已另作为网站可选版本发布并设默认，原始版保持可选；小倪方法论的重命名及默认方法保持，见[此前发布验证](docs/xiaoni-default-release.md)。
 
-原 Windows Java 项目中的国家名单、低多样性排名筛选、规模门槛备选与入口调用核查，见[小倪 Java 长尾处理审查](docs/xiaoni-java-longtail-review.md)。这些旧代码机制未自动加入当前网站。
+原 Windows Java 项目中的国家名单、低多样性排名筛选、规模门槛备选与入口调用核查，见[小倪 Java 长尾处理审查](docs/xiaoni-java-longtail-review.md)。当前使用其规模／单格／多样性思路进行计算前筛选；原国家名单未采用。实现、参数与适用边界见[小倪补丁发布说明](docs/longtail-profile-release.md)及[引擎说明](docs/longtail-filter-engine.md)。
+
+筛选版交付的计算、独立 NumPy、官方 workerd、正式 Go 网站与桌面／手机证据见[本次验收索引](research/longtail-patch-v2/acceptance.json)。低支撑对象退出模型并不证明剩余 ECI／PCI 已是国家科研实力排名；旧模型对照与各层差异保留。

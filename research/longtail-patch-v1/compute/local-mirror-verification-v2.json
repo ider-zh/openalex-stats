@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "bundles": [
+    {
+      "name": "original-core",
+      "files": 229,
+      "manifest_sha256": "b2874786e1e0c11350d5bf1b90846972f0ea215809e6f4ac9027c72a66e6282c",
+      "bytes": 395250019
+    },
+    {
+      "name": "original-all",
+      "files": 229,
+      "manifest_sha256": "33793f13561e413ccb5b295a12aa09fce12584c51bbf1e542eabcbbe7a11c1d8",
+      "bytes": 396057887
+    },
+    {
+      "name": "enriched-core",
+      "files": 229,
+      "manifest_sha256": "99bb171c44b0f9c44173bdbd618f787c64fdad9d91155e8fa6c1a137afbd0d75",
+      "bytes": 395423670
+    },
+    {
+      "name": "enriched-all",
+      "files": 229,
+      "manifest_sha256": "3d579c4313bc630a69df0020331ef163789040de952b96f747f4b6c04f0c16c2",
+      "bytes": 396237791
+    }
+  ]
+}

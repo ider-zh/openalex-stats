@@ -92,8 +92,13 @@ func TestCountryVersionIsolationAndDefault(t *testing.T) {
 			if e != nil {
 				t.Fatal(e)
 			}
-			last := len(records[0]) - 1
-			if records[0][last] != "country_version" || records[1][last] != version {
+			versionColumn := -1
+			for i, name := range records[0] {
+				if name == "country_version" {
+					versionColumn = i
+				}
+			}
+			if versionColumn < 0 || records[1][versionColumn] != version {
 				t.Fatal(records)
 			}
 			p.Set("metric", "eci")

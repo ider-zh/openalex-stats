@@ -57,7 +57,7 @@ func New(dataDir string) (http.Handler, error) {
 func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	setSecurityHeaders(w)
 	if r.URL.Path == "/api/catalog" {
-		serveCatalog(w, r, Catalog{DefaultCorpus: s.corpus, Datasets: []CatalogDataset{s.catalogDataset()}, DefaultCountryVersion: s.version(), CountryVersions: []CountryVersionInfo{countryVersionInfo(s.version())}})
+		serveCatalog(w, r, Catalog{DefaultCorpus: s.corpus, Datasets: []CatalogDataset{s.catalogDataset()}, DefaultCountryVersion: s.version(), CountryVersions: []CountryVersionInfo{countryVersionInfo(s.version())}, DefaultComplexityProfile: s.data.defaultComplexityProfile(), ComplexityProfiles: s.data.complexityProfiles()})
 		return
 	}
 	var err error
@@ -120,6 +120,7 @@ func (s *server) serveSelected(w http.ResponseWriter, r *http.Request) {
 		}
 		q.Corpus = s.corpus
 		q.CountryVersion = s.version()
+		w.Header().Set("X-OpenAlex-Complexity-Profile", q.ComplexityProfile)
 		response := s.data.query(q)
 		if r.URL.Path == "/api/series.csv" {
 			writeCSV(w, response)
@@ -167,6 +168,7 @@ func (s *server) metadata(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	writeJSON(w, map[string]any{
+		"complexity_profiles": d.complexityProfiles(), "default_complexity_profile": d.defaultComplexityProfile(), "profile_model_downloads": d.profileModelDownloads(),
 		"country_version": s.version(), "country_version_info": countryVersionInfo(s.version()),
 		"ready": true, "status": d.run.Status, "snapshot_date": d.snapshotDate, "corpus": s.corpus, "flag_codes": flagCodes(), "max_series": MaxSeries, "max_eci_countries": len(d.countries),
 		"methods": d.methodInfo, "eci_default_method": d.defaultMethod(),
@@ -190,7 +192,7 @@ func (s *server) metadata(w http.ResponseWriter, r *http.Request) {
 func (s *server) download(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
 	for key, values := range q {
-		if (key != "file" && key != "method") || len(values) != 1 {
+		if (key != "file" && key != "method" && key != "complexity_profile") || len(values) != 1 {
 			apiError(w, http.StatusBadRequest, "invalid_parameter", "只能下载已列出的统计产物。")
 			return
 		}
@@ -206,6 +208,23 @@ func (s *server) download(w http.ResponseWriter, r *http.Request) {
 	}
 	if _, ok := s.data.method(methodID); !ok {
 		apiError(w, http.StatusBadRequest, "invalid_parameter", "未知或未提供的知识复杂度方法。")
+		return
+	}
+	profileID := q.Get("complexity_profile")
+	if _, exists := q["complexity_profile"]; exists && profileID == "" {
+		apiError(w, 400, "invalid_parameter", "complexity_profile不能为空。")
+		return
+	}
+	if profileID == "" {
+		profileID = s.data.defaultComplexityProfile()
+	}
+	if _, ok := s.data.profileInfo(profileID); !ok {
+		apiError(w, 400, "invalid_parameter", "未知或未提供的复杂度样本方案。")
+		return
+	}
+	w.Header().Set("X-OpenAlex-Complexity-Profile", profileID)
+	if profileID != baselineProfileID && isProfileModelFile(name) {
+		s.profileDownload(w, r, profileID, methodID, name)
 		return
 	}
 	root := s.data.root
@@ -262,7 +281,7 @@ func writeCSV(w http.ResponseWriter, response Response) {
 	w.Header().Set("Content-Type", "text/csv; charset=utf-8")
 	w.Header().Set("Content-Disposition", "attachment; filename=\"openalex-series.csv\"")
 	c := csv.NewWriter(w)
-	_ = c.Write([]string{"scenario", "scheme", "level", "discipline", "metric", "basis", "country", "year", "value", "status", "partial", "corpus", "rank", "rank_universe", "series_id", "country_name", "discipline_name", "method", "country_iterations", "discipline_iterations", "source_run_id", "method_applies", "country_version"})
+	_ = c.Write([]string{"scenario", "scheme", "level", "discipline", "metric", "basis", "country", "year", "value", "status", "partial", "corpus", "rank", "rank_universe", "series_id", "country_name", "discipline_name", "method", "country_iterations", "discipline_iterations", "source_run_id", "method_applies", "country_version", "complexity_profile", "profile_applies", "profile_run_id"})
 	for _, series := range response.Series {
 		for _, p := range series.Points {
 			value := ""
@@ -273,7 +292,7 @@ func writeCSV(w http.ResponseWriter, response Response) {
 			if p.Rank != nil {
 				rank = strconv.Itoa(*p.Rank)
 			}
-			_ = c.Write([]string{response.Query.Scenario, response.Query.Scheme, response.Query.Level, series.Discipline, response.Query.Metric, response.Query.Basis, series.Country, strconv.Itoa(p.Year), value, p.Status, strconv.FormatBool(p.Partial), response.Query.Corpus, rank, strconv.Itoa(p.RankUniverse), series.ID, series.CountryName, series.DisciplineName, response.Query.Method, strconv.Itoa(response.Method.CountryIterations), strconv.Itoa(response.Method.DisciplineIterations), response.Method.SourceRunID, strconv.FormatBool(response.MethodApplies), response.Query.CountryVersion})
+			_ = c.Write([]string{response.Query.Scenario, response.Query.Scheme, response.Query.Level, series.Discipline, response.Query.Metric, response.Query.Basis, series.Country, strconv.Itoa(p.Year), value, p.Status, strconv.FormatBool(p.Partial), response.Query.Corpus, rank, strconv.Itoa(p.RankUniverse), series.ID, series.CountryName, series.DisciplineName, response.Query.Method, strconv.Itoa(response.Method.CountryIterations), strconv.Itoa(response.Method.DisciplineIterations), response.Method.SourceRunID, strconv.FormatBool(response.MethodApplies), response.Query.CountryVersion, response.Query.ComplexityProfile, strconv.FormatBool(response.ProfileApplies), response.ProfileRunID})
 		}
 	}
 	c.Flush()

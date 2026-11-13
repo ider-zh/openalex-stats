@@ -1,0 +1,1473 @@
+{
+  "status": "completed",
+  "datasets": [
+    {
+      "dataset": "original-core",
+      "source_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "profiles": [
+        {
+          "profile": {
+            "id": "baseline-v1",
+            "display_name": "\u672a\u7b5b\u9009\u5bf9\u7167",
+            "country_min_publications": 0,
+            "country_min_citation_events": 0,
+            "cell_min_support": 0,
+            "min_diversity": 0
+          },
+          "profile_run_id": "7530c2114e511aadb9f9a72d7d53823ca027b21843bfda408f8e237ff7d395b1",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "10284bb0f2ffb76652242d26c066daa0cf6b331fee15cfbcaf3a292d3c8ec4b3",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "47edafe45f27e389d743700731d858119ca16152f1e62ebc44250d78b5dbc4f2",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "9967d3ecad1557ce04fb6d96e6306576b129cf67c9c5e856acceae55ee3fd633",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "ebaf6543655b12ff8bd0d626b9d6116e652ed6adf23d17dbc6827f344874f700",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "5bc0c56abb79dbd247d5d43ee8423ded03ab93dee6f0839f0ed084b620aba531",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "7984f755e7d75f50d442e1c5d06ee55f9221767c811a93cf9d3e18de95284b74",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "74b72681d45fef344ecc89078c31ab407d34a651aba18d4b8b338e2b5e4c316a",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "4eae4c7dce1511d3ad347026e72d8a69ba6efa0f4ffe508670ad76bffa305013",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "8f8654c19034181ef6b28114c2a7decac4b2350bd9afe153842af468e0706a0d",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "cf0d6e19673160ad1eebe03eedaf79aee730a2eb390e5d08dcf67efc0de2d69c",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "d5f9e23bd1001cd8945c4ceab35c15114321cfb14feda05745933df13cafd65e",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "ced8d45e6e9facfff5db4b21d5e744cc045138239261633029f6aaaacb4886d4",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "37e21fb56ba5ff6ad3df1f3f7faecb5c2c16b2f3c91f835734bf5ef38747c7a0",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "643d00e34921b426f7943982ddde4ab609dc527a46b5540df246f681180b8368",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "9989f38a5034cf109e84c486e0f05295abdc863e2dc12bc441f7a7e1897dfaa4",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "5278e21ec1ccd5f25a9117d0a91a26c35cf957a0c2faa20eab98ddb645ebfcc2",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "bfc6f3da345375a0776c79fd96c3e67bba8b1df24d48ebe799e746c227671ced",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "e5315cf3f5818d19c0b0ae6fc6400dd0444300e36474f4553f13395edd730dc7",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "original-all",
+      "source_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "profiles": [
+        {
+          "profile": {
+            "id": "baseline-v1",
+            "display_name": "\u672a\u7b5b\u9009\u5bf9\u7167",
+            "country_min_publications": 0,
+            "country_min_citation_events": 0,
+            "cell_min_support": 0,
+            "min_diversity": 0
+          },
+          "profile_run_id": "1dfeded13868dadd5a2285dc3c538c0eab274b9ee1ed8959256db17182e6ef3b",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "9cf3603be6d3dc8c8548522200df0f3265253b65cdc95ec3f063a5a1e9fd8543",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "159528f50f78f8601b93071df4bf9d48afb3561a3bfc2ab597a75757a7c11db9",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "ff2dbf6643f26f0bdd1488278f2e2dde6c82787ebb724eebeb9baa63bba603ad",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "aa01140fd02c6655dc3807123aeed6ed3a10183178ac191e54b5b2ce54c7fa2e",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "3348b96d9666693ea9c5e8a0f3fffc4c531839dc8f7899fa0d45a14138e91ca9",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "fff25f17bff75d9d43de55f81012236db3516116c02961494b8a46c6aff06f27",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "8e0ce82290b144456661f0b5d08292e062bfa637603438f02d31dd01afdb6a26",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "f1000d47ce87436f2606fa6d9ac3ef44fea5aed42c99b11cb32990b89d98e4e6",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "e1ec23c866480e3e7ba74a56c84b8edbb64c14db5776a6f55d3a5d8d72955765",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "2ac1b03e5bd23ac9e3acb4e771f2dc644de05670b0b7b36e2cce0c60652cfda0",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "ea08d6e6ce616d2e4611dddbf0b0765bf43c6f543b73e059bd21a742607f1d5c",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "2a7afc2205898cd7b26af5e2ec57d29daf681e9321addf203991992e921986c6",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "d14cb5d77d6813458f42a849018dc7017281158ef9e974b5933d2019a6c1b567",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "f9338f120133650709c28d0559aaf2e43029151bc7796a00352618d565f4cdc4",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "876f9b1804bb1cc36943ebaf6f6093e61628bbcbc32287ede2a74b373c8adf73",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "ecf49d26b2182a46f907cc7bbf266bd1e38a4497db57a22a8ab3615df13de295",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "f394b1dc8353302eb3ba10291ac9f9ee31ebb09f64c793ad93b1d182308091fc",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "bde74c91980849370cc894496ea45d2fffa8c2241d8000e7e84041ca3ba1eb0d",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "enriched-core",
+      "source_run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+      "profiles": [
+        {
+          "profile": {
+            "id": "baseline-v1",
+            "display_name": "\u672a\u7b5b\u9009\u5bf9\u7167",
+            "country_min_publications": 0,
+            "country_min_citation_events": 0,
+            "cell_min_support": 0,
+            "min_diversity": 0
+          },
+          "profile_run_id": "6130cab9808e6c1329283e804b818a5f060f4100d6634ff3cae6b9de8d9ba13f",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "19e9fa936a6cfbec9edfbac5e656d4dba7df3ec4e302fbcf28246793b1f59923",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "1bebd8f351300517e3e1da7d75fbb91b33e8c5088e65e13dc27cbe0167839a33",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "5cf76d2d4f4ba48e35ac656128f2e28b3429f15e29e160e71895f51d9fca4417",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "92c8329c82d5f189730b05b96313758907dd824071c70af99de1b6db569a02f8",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "9f9fbc88f6d948d9478de8206113eda27ad2b590e1589974238e24cdb19cab09",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "ece0352c3e40085087d5f011ec6b8d1c5c38e6ab1dc5f71b5aa7c08c83d8935b",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "bf45306e2924bb8bae09668aee6197516647d7cc23e6f59f02973e88bd34e624",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "f7aa0f1997082595d20c5859f6c2d96446ad682bcedd2564345a57ede2340246",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "90f35f0f8543abacb1bc4813d4bd263d4ef732b88bd56caaaae36c661f2a4694",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "969a518b393cbc91a43dbfd334020dbcdc958b8a828efaaa150b109dd8906d5f",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "266fd684a54ad83a777f7dae2002290421fc1d993b6da34d7730ae97e9a1f4d4",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "ad76f3effb7f3950e8f748264fbfe0c06aca2f3bf32b3609faa3c90c5a475fb4",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "0a5ec11d5008ca209470f2c052e9e1ae570a3dee62a453bc7cd626bd3bc16799",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "725cca93ffc96cf05f8a770cb3c27f3d23c44a505fc4bfa58c16987e796b938a",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "63cc9266ae52682dda80f994b970a295624b28cb4f68817a3942223d21a00df8",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "fc7ecb1f29c3269a3551e861349afe94ea24c37302ee7db5de3d3b8b882a1559",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "be9700489abf1f31ec7c69dcccc7b4fe235b0358bfceb91605139ff049717517",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "9f2307f6d8a0a231b93a2b67504361d76a9bb94ec9ac13f98e95ce580e2e2562",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "enriched-all",
+      "source_run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+      "profiles": [
+        {
+          "profile": {
+            "id": "baseline-v1",
+            "display_name": "\u672a\u7b5b\u9009\u5bf9\u7167",
+            "country_min_publications": 0,
+            "country_min_citation_events": 0,
+            "cell_min_support": 0,
+            "min_diversity": 0
+          },
+          "profile_run_id": "b7f35f502fc63e21773d13d1e92cba21dd2b85d52ce13064182a43fd397f91ed",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "a0c1b823c415e058feced6e1ba747bf9c30d8482bdd9a581bec21ef692013e8b",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x0-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "50e6099a7ed01024b9aa9bbd792e7d5d8844d0db7f47fe898fedfde3a053da15",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "3982743638f4109754af572fd307bce27c573df69cc4b7b4a31b464eeb4549b8",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x5-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "d8bff7f8ca0b7eff04ec0a89b793fb34fda36b5dab64c0b5ba89d07a7d115937",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d1-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "7963cd7f93f2213e4d68747cc6ffefeea860fd4b5a4cf8a91b3a8f3030e68f32",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p100-c1000-x20-d3-v1",
+            "display_name": "P100 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 100,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "ed5b8449e084bad5882eb8f19633cf19a91929bc691ee33140c5ad3f1c93f846",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "efa6d6fd8b4d6295a61f5378bd4f654f8a4147515243673fcb56274db5b3f3d6",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x0-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "accb8cef6357c1c6be94e2e59d9c910df90acd83d532b9d993f3977931b79fa6",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "9a054ff5d31656b85c2a66e1e88b5f0850f746d49237d97d44604adaeb66eb44",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x5-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "643cb28d3fef5d30712110e213658dbcf2b1e5315d3c9eb502d723ab128d6024",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d1-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "c6aad4c8dfc923a6407387cc8020fabd40ac38c45d6897f564b4e6dc782cecf7",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p1000-c1000-x20-d3-v1",
+            "display_name": "P1000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 1000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "79345d9ded80910b872a104f236a43df4f694c684845a094d33fcf9378377af5",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 1
+          },
+          "profile_run_id": "ed927cebd1b58629d15c82190653955730c6fe54768697b9f123e1e4c02d894f",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x0-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X0 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 0,
+            "min_diversity": 3
+          },
+          "profile_run_id": "c6ad4dbd628d0d34f0af1d1d7e4b5f86d20aa0d146ff4b4c0d66826251620bf9",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 1
+          },
+          "profile_run_id": "1167691d8e22c419e70ab759eb23717993160c741f370ae97a0ad2fc34c53670",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x5-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X5 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 5,
+            "min_diversity": 3
+          },
+          "profile_run_id": "a2bcafef2e3b8acdf62cf4e921179967203583fc37f1ceac3d6b9c2d85c36b60",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d1-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D1",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 1
+          },
+          "profile_run_id": "436c4374a6604a199b1e8c26cd6ddd25399ebb44977e2d464255239a42823d66",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        },
+        {
+          "profile": {
+            "id": "p5000-c1000-x20-d3-v1",
+            "display_name": "P5000 \u00b7 C1000 \u00b7 X20 \u00b7 D3",
+            "country_min_publications": 5000,
+            "country_min_citation_events": 1000,
+            "cell_min_support": 20,
+            "min_diversity": 3
+          },
+          "profile_run_id": "80ff5291589b8125dac5261774b92d5c85399871679b42c8ae6f85e536bd0622",
+          "model_status_counts": {
+            "java-reflections-v1": {
+              "ok": 216
+            },
+            "spectral-v1": {
+              "ok": 216
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

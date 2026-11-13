@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "status": "completed_final_official_workerd_and_production_ui_acceptance",
+  "static_frozen": true,
+  "entries": [
+    {
+      "name": "pages-r1",
+      "scope": "Actual dist on Node compatibility preview; verifies UI and data contract, not official edge runtime",
+      "status": "passed",
+      "checks": 11,
+      "url": "http://127.0.0.1:8798",
+      "started_at": "2026-11-13T00:38:29.072Z",
+      "completed_at": "2026-11-13T00:42:15.240Z",
+      "asset_override": false,
+      "final_visual_evidence": true,
+      "artifacts": [
+        {
+          "path": "research/longtail-patch-v2/ui/pages-r1/longtail-profile-ui-qa.json",
+          "bytes": 2507,
+          "sha256": "57aa3c74ec85a59563600aab7f1a192ca5b87f205d258f0e5d6841b3d99bff25"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/pages-r1/mobile-profile-mode.png",
+          "bytes": 45094,
+          "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/pages-r1/mobile-profile-parameters.png",
+          "bytes": 45094,
+          "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/pages-r1/mobile-filtered-country-status.png",
+          "bytes": 48940,
+          "sha256": "33ef1cede3f1441a30a182d263a4cc0bfe4bdb133906a681f0913077e36247d6"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/pages-r1/desktop-profile-controls.png",
+          "bytes": 176769,
+          "sha256": "7d85389549a762323ff226535af677a14f4144891bf8f9b4615d5aa7a2d3ffa4"
+        }
+      ]
+    },
+    {
+      "name": "workerd-r2",
+      "scope": "Official workerd runtime wrapper21064 / completed-cache-and-head-fixes",
+      "status": "passed",
+      "checks": 11,
+      "url": "http://127.0.0.1:8799",
+      "started_at": "2026-11-13T00:59:04.857Z",
+      "completed_at": "2026-11-13T01:00:06.383Z",
+      "asset_override": false,
+      "final_visual_evidence": true,
+      "artifacts": [
+        {
+          "path": "research/longtail-patch-v2/ui/workerd-r2/longtail-profile-ui-qa.json",
+          "bytes": 2507,
+          "sha256": "b0c2bff6064b46b2c5cf6d1b5b160674ccdf12acbea2c7ba7e7354c8f7ed4fb9"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/workerd-r2/mobile-profile-mode.png",
+          "bytes": 45094,
+          "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/workerd-r2/mobile-profile-parameters.png",
+          "bytes": 45094,
+          "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/workerd-r2/mobile-filtered-country-status.png",
+          "bytes": 48940,
+          "sha256": "33ef1cede3f1441a30a182d263a4cc0bfe4bdb133906a681f0913077e36247d6"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/workerd-r2/desktop-profile-controls.png",
+          "bytes": 176769,
+          "sha256": "7d85389549a762323ff226535af677a14f4144891bf8f9b4615d5aa7a2d3ffa4"
+        }
+      ]
+    },
+    {
+      "name": "production-v5",
+      "scope": "Final Go production 192.168.1.229:8899 / PID3601932 / v5",
+      "status": "passed",
+      "checks": 11,
+      "url": "http://192.168.1.229:8899",
+      "started_at": "2026-11-13T01:07:05.316Z",
+      "completed_at": "2026-11-13T01:07:48.024Z",
+      "asset_override": false,
+      "final_visual_evidence": true,
+      "artifacts": [
+        {
+          "path": "research/longtail-patch-v2/ui/production-v5/longtail-profile-ui-qa.json",
+          "bytes": 2511,
+          "sha256": "7f16c6216d9669b9eda573e5707ae3d63cc3296cfb45d0484570b0d8598e6f84"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/production-v5/mobile-profile-mode.png",
+          "bytes": 45094,
+          "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/production-v5/mobile-profile-parameters.png",
+          "bytes": 45094,
+          "sha256": "ef749826625c062099460bbc5119bb68255cb0c442443ef7150c39ca1ab27d93"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/production-v5/mobile-filtered-country-status.png",
+          "bytes": 48940,
+          "sha256": "33ef1cede3f1441a30a182d263a4cc0bfe4bdb133906a681f0913077e36247d6"
+        },
+        {
+          "path": "research/longtail-patch-v2/ui/production-v5/desktop-profile-controls.png",
+          "bytes": 176769,
+          "sha256": "7d85389549a762323ff226535af677a14f4144891bf8f9b4615d5aa7a2d3ffa4"
+        }
+      ]
+    }
+  ],
+  "pending": [],
+  "exclusions": [
+    "Pre-mobile-CSS-repair candidate report/screenshots remain private and are not final acceptance evidence.",
+    "Failed or asset-overlay experiments are excluded."
+  ],
+  "scope": "Browser checks compare rendered points with selected-version/profile API. Independent source/mathematical/edge API parity and production promotion are separate parent-owned audits."
+}

@@ -1,0 +1,1435 @@
+{
+  "status": "passed_artifacts_baseline_exact_scores_and_independent_ranks",
+  "default_profile_id": "p1000-c1000-x5-d3-v1",
+  "direction_policy": "baseline-pooled-common-year-sign-v1",
+  "bundles": [
+    {
+      "name": "original-core",
+      "root": "/mnt/nvme0/public/openalex-stats/complexity-profiles-v2-20261113/original-core",
+      "source_run_id": "4b15b4dd0b68e80aeec24172418d55f7d20972b8ef6468a087bca0db7d4ab455",
+      "source_completion_sha256": "bbc200299527dadb725dcfc9a8c31504bdba40720491f54c353522cd8904074e",
+      "engine_binary_sha256": "efa38fba287b7b3bdc73f4421899337bf535cd4daf80d9612513244314164599",
+      "profiles": 19,
+      "models_per_method_per_profile": 216,
+      "unique_artifacts_verified": 228,
+      "baseline_exact_model_checks": 432,
+      "rank_json_and_parquet_checks": "all profiles/methods/country+discipline passed",
+      "default_cases": [
+        {
+          "year": 2025,
+          "scheme": "topics",
+          "level": "field",
+          "metric": "publications",
+          "retained_assignment_fraction": 0.9982062841154804,
+          "country_scale_removed": 101,
+          "diversity_removed": 0,
+          "rounds": 1,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3371,
+              "whole_citations": 15576,
+              "whole_basis_events": 3371,
+              "original_matrix_mass": 1355.424709384891,
+              "retained_matrix_mass": 1338.582552522146,
+              "final_diversity": 9,
+              "excluded": false
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1417293,
+              "whole_citations": 36543384,
+              "whole_basis_events": 1417293,
+              "original_matrix_mass": 1214081.7180872473,
+              "retained_matrix_mass": 1214081.7180872473,
+              "final_diversity": 12,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 0,
+              "original_matrix_mass": 0,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 868,
+              "whole_citations": 7699,
+              "whole_basis_events": 868,
+              "original_matrix_mass": 495.76111845670664,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 42195,
+              "whole_citations": 2144688,
+              "whole_basis_events": 42195,
+              "original_matrix_mass": 22372.60926252884,
+              "retained_matrix_mass": 22372.60926252884,
+              "final_diversity": 10,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1254151,
+              "whole_citations": 55652109,
+              "whole_basis_events": 1254151,
+              "original_matrix_mass": 914269.7758765876,
+              "retained_matrix_mass": 914269.7758765876,
+              "final_diversity": 11,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.29720607071242355,
+                "rank": 71,
+                "universe": 147
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.6688639435105928,
+                "rank": 1,
+                "universe": 147
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.5311704659618885,
+                "rank": 2,
+                "universe": 147
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.0748850714554429,
+                "rank": 62,
+                "universe": 147
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.24177492285060376,
+                "rank": 69,
+                "universe": 147
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.6531628128814835,
+                "rank": 1,
+                "universe": 147
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.548967963527241,
+                "rank": 2,
+                "universe": 147
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.0018318014749362033,
+                "rank": 55,
+                "universe": 147
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        },
+        {
+          "year": 2025,
+          "scheme": "concepts",
+          "level": "0",
+          "metric": "citations",
+          "retained_assignment_fraction": 0.998950284562467,
+          "country_scale_removed": 101,
+          "diversity_removed": 1,
+          "rounds": 2,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3371,
+              "whole_citations": 15576,
+              "whole_basis_events": 15576,
+              "original_matrix_mass": 7065.357958034962,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "exclusion_round": 1,
+              "reasons": [
+                "min_diversity"
+              ]
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1417293,
+              "whole_citations": 36543384,
+              "whole_basis_events": 36543384,
+              "original_matrix_mass": 38362130.14539561,
+              "retained_matrix_mass": 38362130.14539561,
+              "final_diversity": 6,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 11,
+              "original_matrix_mass": 11,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications",
+                "country_min_citation_events"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 868,
+              "whole_citations": 7699,
+              "whole_basis_events": 7699,
+              "original_matrix_mass": 4125.988289181242,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 42195,
+              "whole_citations": 2144688,
+              "whole_basis_events": 2144688,
+              "original_matrix_mass": 1418268.9729474809,
+              "retained_matrix_mass": 1418268.9729474809,
+              "final_diversity": 3,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1254151,
+              "whole_citations": 55652109,
+              "whole_basis_events": 55652109,
+              "original_matrix_mass": 54478887.05371355,
+              "retained_matrix_mass": 54478887.05371355,
+              "final_diversity": 9,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 3.3916024240976865,
+                "rank": 1,
+                "universe": 146
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.1877138040792947,
+                "rank": 8,
+                "universe": 146
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.6361516257653601,
+                "rank": 98,
+                "universe": 146
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": -3.393891474650356,
+                "rank": 146,
+                "universe": 146
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": -2.187833747241161,
+                "rank": 139,
+                "universe": 146
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.6377235850512613,
+                "rank": 48,
+                "universe": 146
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        }
+      ],
+      "manifest_sha256": "b2874786e1e0c11350d5bf1b90846972f0ea215809e6f4ac9027c72a66e6282c",
+      "archive_path": "/mnt/nvme0/public/openalex-stats/analysis-longtail-profiles-v1-20261113/package-audit-v2/original-core.tar.gz",
+      "archive_bytes": 105559547,
+      "archive_sha256": "f8b68ba3d88a1fd10814ceed21613d1eab5d3520700d31e0851472dd9b29b8bd",
+      "unpacked_bytes": 395250019,
+      "direction_policy": "baseline-pooled-common-year-sign-v1",
+      "filter_diagnostics_unchanged_v1": true,
+      "baseline_model_bytes_unchanged_v1": true
+    },
+    {
+      "name": "original-all",
+      "root": "/mnt/nvme0/public/openalex-stats/complexity-profiles-v2-20261113/original-all",
+      "source_run_id": "dd679f119b4d24a9d6725e79dec96af9d731265de59844ae04bbd028a719153e",
+      "source_completion_sha256": "3fb578c744fba450d2b125f452b5e267e5620f3155706c3646c89977b76a3f43",
+      "engine_binary_sha256": "efa38fba287b7b3bdc73f4421899337bf535cd4daf80d9612513244314164599",
+      "profiles": 19,
+      "models_per_method_per_profile": 216,
+      "unique_artifacts_verified": 228,
+      "baseline_exact_model_checks": 432,
+      "rank_json_and_parquet_checks": "all profiles/methods/country+discipline passed",
+      "default_cases": [
+        {
+          "year": 2025,
+          "scheme": "topics",
+          "level": "field",
+          "metric": "publications",
+          "retained_assignment_fraction": 0.9984635161284039,
+          "country_scale_removed": 97,
+          "diversity_removed": 0,
+          "rounds": 1,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3427,
+              "whole_citations": 15664,
+              "whole_basis_events": 3427,
+              "original_matrix_mass": 1381.5413760515569,
+              "retained_matrix_mass": 1368.2325525221452,
+              "final_diversity": 9,
+              "excluded": false
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1506511,
+              "whole_citations": 37174832,
+              "whole_basis_events": 1506511,
+              "original_matrix_mass": 1280409.492589599,
+              "retained_matrix_mass": 1280409.492589599,
+              "final_diversity": 10,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 0,
+              "original_matrix_mass": 0,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 965,
+              "whole_citations": 7797,
+              "whole_basis_events": 965,
+              "original_matrix_mass": 540.8348058803941,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 46206,
+              "whole_citations": 2177386,
+              "whole_basis_events": 46206,
+              "original_matrix_mass": 24166.28387122076,
+              "retained_matrix_mass": 24166.28387122076,
+              "final_diversity": 10,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1430957,
+              "whole_citations": 56287172,
+              "whole_basis_events": 1430957,
+              "original_matrix_mass": 1026155.8271302696,
+              "retained_matrix_mass": 1026155.8271302696,
+              "final_diversity": 10,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.4535146395905662,
+                "rank": 84,
+                "universe": 151
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.6868266465662116,
+                "rank": 3,
+                "universe": 151
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.693129409086417,
+                "rank": 2,
+                "universe": 151
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.3915412125611854,
+                "rank": 78,
+                "universe": 151
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.3461751091721188,
+                "rank": 77,
+                "universe": 151
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.6951776668402845,
+                "rank": 3,
+                "universe": 151
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.7213168120439053,
+                "rank": 2,
+                "universe": 151
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.2678605850805695,
+                "rank": 74,
+                "universe": 151
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        },
+        {
+          "year": 2025,
+          "scheme": "concepts",
+          "level": "0",
+          "metric": "citations",
+          "retained_assignment_fraction": 0.9990941929912417,
+          "country_scale_removed": 98,
+          "diversity_removed": 1,
+          "rounds": 2,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3427,
+              "whole_citations": 15664,
+              "whole_basis_events": 15664,
+              "original_matrix_mass": 7111.322970760892,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "exclusion_round": 1,
+              "reasons": [
+                "min_diversity"
+              ]
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1506511,
+              "whole_citations": 37174832,
+              "whole_basis_events": 37174832,
+              "original_matrix_mass": 39040147.49942819,
+              "retained_matrix_mass": 39040147.49942819,
+              "final_diversity": 6,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 11,
+              "original_matrix_mass": 11,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications",
+                "country_min_citation_events"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 965,
+              "whole_citations": 7797,
+              "whole_basis_events": 7797,
+              "original_matrix_mass": 4187.837531605485,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 46206,
+              "whole_citations": 2177386,
+              "whole_basis_events": 2177386,
+              "original_matrix_mass": 1441810.5132472005,
+              "retained_matrix_mass": 1441810.5132472005,
+              "final_diversity": 3,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1430957,
+              "whole_citations": 56287172,
+              "whole_basis_events": 56287172,
+              "original_matrix_mass": 55123824.99138406,
+              "retained_matrix_mass": 55123824.99138406,
+              "final_diversity": 9,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 3.4306510707820954,
+                "rank": 1,
+                "universe": 149
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.2059572536175014,
+                "rank": 8,
+                "universe": 149
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.6146554585032868,
+                "rank": 100,
+                "universe": 149
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": -3.424297774668035,
+                "rank": 149,
+                "universe": 149
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": -2.2065918162819775,
+                "rank": 142,
+                "universe": 149
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.6141224057932946,
+                "rank": 50,
+                "universe": 149
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        }
+      ],
+      "manifest_sha256": "33793f13561e413ccb5b295a12aa09fce12584c51bbf1e542eabcbbe7a11c1d8",
+      "archive_path": "/mnt/nvme0/public/openalex-stats/analysis-longtail-profiles-v1-20261113/package-audit-v2/original-all.tar.gz",
+      "archive_bytes": 106220810,
+      "archive_sha256": "04918b46a196d5ed6edfcb7e87b0d505b8dc04b3935f4f36efa6fe7d7bff754c",
+      "unpacked_bytes": 396057887,
+      "direction_policy": "baseline-pooled-common-year-sign-v1",
+      "filter_diagnostics_unchanged_v1": true,
+      "baseline_model_bytes_unchanged_v1": true
+    },
+    {
+      "name": "enriched-core",
+      "root": "/mnt/nvme0/public/openalex-stats/complexity-profiles-v2-20261113/enriched-core",
+      "source_run_id": "90af69cb5c5416dd34fcde73df461469133a43d9d692e5984f2e4f49c2edb18e",
+      "source_completion_sha256": "7436c7704820b576a8658edf93e92eee58c7c683720d014157f81cae743e6ea2",
+      "engine_binary_sha256": "efa38fba287b7b3bdc73f4421899337bf535cd4daf80d9612513244314164599",
+      "profiles": 19,
+      "models_per_method_per_profile": 216,
+      "unique_artifacts_verified": 228,
+      "baseline_exact_model_checks": 432,
+      "rank_json_and_parquet_checks": "all profiles/methods/country+discipline passed",
+      "default_cases": [
+        {
+          "year": 2025,
+          "scheme": "topics",
+          "level": "field",
+          "metric": "publications",
+          "retained_assignment_fraction": 0.9982032726895996,
+          "country_scale_removed": 101,
+          "diversity_removed": 0,
+          "rounds": 1,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3371,
+              "whole_citations": 15581,
+              "whole_basis_events": 3371,
+              "original_matrix_mass": 1355.4247093848908,
+              "retained_matrix_mass": 1338.5825525221458,
+              "final_diversity": 9,
+              "excluded": false
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1425480,
+              "whole_citations": 36623478,
+              "whole_basis_events": 1425480,
+              "original_matrix_mass": 1222157.3727880982,
+              "retained_matrix_mass": 1222157.3727880982,
+              "final_diversity": 12,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 0,
+              "original_matrix_mass": 0,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 898,
+              "whole_citations": 8612,
+              "whole_basis_events": 898,
+              "original_matrix_mass": 525.7611184567068,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 42410,
+              "whole_citations": 2149532,
+              "whole_basis_events": 42410,
+              "original_matrix_mass": 22570.06759586216,
+              "retained_matrix_mass": 22570.06759586216,
+              "final_diversity": 10,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1259042,
+              "whole_citations": 55864333,
+              "whole_basis_events": 1259042,
+              "original_matrix_mass": 918898.8050783331,
+              "retained_matrix_mass": 918898.8050783331,
+              "final_diversity": 11,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.2577025989970837,
+                "rank": 70,
+                "universe": 147
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.676716258887376,
+                "rank": 1,
+                "universe": 147
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.5663369280755193,
+                "rank": 2,
+                "universe": 147
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.01551484128160175,
+                "rank": 57,
+                "universe": 147
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.19363667733676668,
+                "rank": 69,
+                "universe": 147
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.655109172195194,
+                "rank": 1,
+                "universe": 147
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.584208403599746,
+                "rank": 2,
+                "universe": 147
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.07850543220375453,
+                "rank": 55,
+                "universe": 147
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        },
+        {
+          "year": 2025,
+          "scheme": "concepts",
+          "level": "0",
+          "metric": "citations",
+          "retained_assignment_fraction": 0.9989433169974024,
+          "country_scale_removed": 101,
+          "diversity_removed": 1,
+          "rounds": 2,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3371,
+              "whole_citations": 15581,
+              "whole_basis_events": 15581,
+              "original_matrix_mass": 7070.357958034963,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "exclusion_round": 1,
+              "reasons": [
+                "min_diversity"
+              ]
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1425480,
+              "whole_citations": 36623478,
+              "whole_basis_events": 36623478,
+              "original_matrix_mass": 38463772.502613984,
+              "retained_matrix_mass": 38463772.502613984,
+              "final_diversity": 6,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 11,
+              "original_matrix_mass": 11,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications",
+                "country_min_citation_events"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 898,
+              "whole_citations": 8612,
+              "whole_basis_events": 8612,
+              "original_matrix_mass": 5498.988289181242,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 42410,
+              "whole_citations": 2149532,
+              "whole_basis_events": 2149532,
+              "original_matrix_mass": 1424456.9221879465,
+              "retained_matrix_mass": 1424456.9221879465,
+              "final_diversity": 3,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1259042,
+              "whole_citations": 55864333,
+              "whole_basis_events": 55864333,
+              "original_matrix_mass": 54750402.968373574,
+              "retained_matrix_mass": 54750402.968373574,
+              "final_diversity": 9,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": -3.328781144641798,
+                "rank": 146,
+                "universe": 146
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": -2.176356845919017,
+                "rank": 139,
+                "universe": 146
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.6524259371615236,
+                "rank": 48,
+                "universe": 146
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": -3.3345384996017713,
+                "rank": 146,
+                "universe": 146
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": -2.175979874534752,
+                "rank": 139,
+                "universe": 146
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.6540815184152409,
+                "rank": 48,
+                "universe": 146
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        }
+      ],
+      "manifest_sha256": "99bb171c44b0f9c44173bdbd618f787c64fdad9d91155e8fa6c1a137afbd0d75",
+      "archive_path": "/mnt/nvme0/public/openalex-stats/analysis-longtail-profiles-v1-20261113/package-audit-v2/enriched-core.tar.gz",
+      "archive_bytes": 105648671,
+      "archive_sha256": "8ca961702d3d35c5fbc840415775123ee1417a386f7242f3a90ab60925ce69b7",
+      "unpacked_bytes": 395423670,
+      "direction_policy": "baseline-pooled-common-year-sign-v1",
+      "filter_diagnostics_unchanged_v1": true,
+      "baseline_model_bytes_unchanged_v1": true
+    },
+    {
+      "name": "enriched-all",
+      "root": "/mnt/nvme0/public/openalex-stats/complexity-profiles-v2-20261113/enriched-all",
+      "source_run_id": "567dea9f8acaff29eae40bf3ed0c5b415eb34633222df9e2bface813b759ce2d",
+      "source_completion_sha256": "4ea14cec4548518f70bbf8e32ccef7ca42509bf7170850be0997602da8e7cfce",
+      "engine_binary_sha256": "efa38fba287b7b3bdc73f4421899337bf535cd4daf80d9612513244314164599",
+      "profiles": 19,
+      "models_per_method_per_profile": 216,
+      "unique_artifacts_verified": 228,
+      "baseline_exact_model_checks": 432,
+      "rank_json_and_parquet_checks": "all profiles/methods/country+discipline passed",
+      "default_cases": [
+        {
+          "year": 2025,
+          "scheme": "topics",
+          "level": "field",
+          "metric": "publications",
+          "retained_assignment_fraction": 0.9985120086017149,
+          "country_scale_removed": 96,
+          "diversity_removed": 0,
+          "rounds": 1,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3427,
+              "whole_citations": 15669,
+              "whole_basis_events": 3427,
+              "original_matrix_mass": 1381.5413760515576,
+              "retained_matrix_mass": 1368.2325525221459,
+              "final_diversity": 9,
+              "excluded": false
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1514946,
+              "whole_citations": 37256259,
+              "whole_basis_events": 1514946,
+              "original_matrix_mass": 1288728.980623774,
+              "retained_matrix_mass": 1288728.980623774,
+              "final_diversity": 10,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 0,
+              "original_matrix_mass": 0,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 997,
+              "whole_citations": 8734,
+              "whole_basis_events": 997,
+              "original_matrix_mass": 572.8348058803942,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 46423,
+              "whole_citations": 2182296,
+              "whole_basis_events": 46423,
+              "original_matrix_mass": 24365.2422045541,
+              "retained_matrix_mass": 24365.2422045541,
+              "final_diversity": 10,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1436183,
+              "whole_citations": 56502230,
+              "whole_basis_events": 1436183,
+              "original_matrix_mass": 1031106.2174431427,
+              "retained_matrix_mass": 1031106.2174431427,
+              "final_diversity": 10,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.4790126981445503,
+                "rank": 85,
+                "universe": 152
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.666672537681466,
+                "rank": 3,
+                "universe": 152
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.6822918237762896,
+                "rank": 2,
+                "universe": 152
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.4107235976173797,
+                "rank": 79,
+                "universe": 152
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": true,
+                "status": "ok",
+                "score": -0.3633077084556156,
+                "rank": 77,
+                "universe": 152
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": 2.673416498038946,
+                "rank": 3,
+                "universe": 152
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": 2.7114227983625696,
+                "rank": 2,
+                "universe": 152
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": -0.27878422493229765,
+                "rank": 74,
+                "universe": 152
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        },
+        {
+          "year": 2025,
+          "scheme": "concepts",
+          "level": "0",
+          "metric": "citations",
+          "retained_assignment_fraction": 0.9991492358964514,
+          "country_scale_removed": 97,
+          "diversity_removed": 1,
+          "rounds": 2,
+          "focus": [
+            {
+              "country": "AG",
+              "whole_publications": 3427,
+              "whole_citations": 15669,
+              "whole_basis_events": 15669,
+              "original_matrix_mass": 7116.322970760892,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "exclusion_round": 1,
+              "reasons": [
+                "min_diversity"
+              ]
+            },
+            {
+              "country": "CN",
+              "whole_publications": 1514946,
+              "whole_citations": 37256259,
+              "whole_basis_events": 37256259,
+              "original_matrix_mass": 39143586.6899798,
+              "retained_matrix_mass": 39143586.6899798,
+              "final_diversity": 6,
+              "excluded": false
+            },
+            {
+              "country": "EH",
+              "whole_publications": 0,
+              "whole_citations": 11,
+              "whole_basis_events": 11,
+              "original_matrix_mass": 11,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications",
+                "country_min_citation_events"
+              ]
+            },
+            {
+              "country": "KP",
+              "whole_publications": 997,
+              "whole_citations": 8734,
+              "whole_basis_events": 8734,
+              "original_matrix_mass": 5594.837531605485,
+              "retained_matrix_mass": 0,
+              "final_diversity": 0,
+              "excluded": true,
+              "reasons": [
+                "country_min_publications"
+              ]
+            },
+            {
+              "country": "SG",
+              "whole_publications": 46423,
+              "whole_citations": 2182296,
+              "whole_basis_events": 2182296,
+              "original_matrix_mass": 1448089.9624876662,
+              "retained_matrix_mass": 1448089.9624876662,
+              "final_diversity": 3,
+              "excluded": false
+            },
+            {
+              "country": "US",
+              "whole_publications": 1436183,
+              "whole_citations": 56502230,
+              "whole_basis_events": 56502230,
+              "original_matrix_mass": 55399306.47276205,
+              "retained_matrix_mass": 55399306.47276205,
+              "final_diversity": 9,
+              "excluded": false
+            }
+          ],
+          "methods": {
+            "spectral-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": -3.4092745292575932,
+                "rank": 150,
+                "universe": 150
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": -2.2113658137758816,
+                "rank": 143,
+                "universe": 150
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.6091641818792386,
+                "rank": 50,
+                "universe": 150
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ],
+            "java-reflections-v1": [
+              {
+                "country": "AG",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "EH",
+                "active": false,
+                "status": "ok"
+              },
+              {
+                "country": "SG",
+                "active": true,
+                "status": "ok",
+                "score": -3.407652880902491,
+                "rank": 150,
+                "universe": 150
+              },
+              {
+                "country": "CN",
+                "active": true,
+                "status": "ok",
+                "score": -2.211634479823888,
+                "rank": 143,
+                "universe": 150
+              },
+              {
+                "country": "US",
+                "active": true,
+                "status": "ok",
+                "score": 0.6094805009335593,
+                "rank": 50,
+                "universe": 150
+              },
+              {
+                "country": "KP",
+                "active": false,
+                "status": "ok"
+              }
+            ]
+          }
+        }
+      ],
+      "manifest_sha256": "3d579c4313bc630a69df0020331ef163789040de952b96f747f4b6c04f0c16c2",
+      "archive_path": "/mnt/nvme0/public/openalex-stats/analysis-longtail-profiles-v1-20261113/package-audit-v2/enriched-all.tar.gz",
+      "archive_bytes": 106295411,
+      "archive_sha256": "0cd5058b6b62944158df36cae104dac6701d96e36e7cfb4ec56e7d4113a709dc",
+      "unpacked_bytes": 396237791,
+      "direction_policy": "baseline-pooled-common-year-sign-v1",
+      "filter_diagnostics_unchanged_v1": true,
+      "baseline_model_bytes_unchanged_v1": true
+    }
+  ]
+}

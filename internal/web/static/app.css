@@ -111,3 +111,24 @@ td:first-child .country-icon{margin-right:6px}.comparison-panel{min-width:0}td:f
 .country-enrichment-coverage strong{display:block;margin-top:5px;font-size:21px;font-weight:400;font-family:var(--serif);font-variant-numeric:tabular-nums;color:var(--ink);overflow-wrap:anywhere}
 .country-enrichment-coverage strong span{font-family:inherit;color:var(--accent);padding:0 3px}
 @media(max-width:560px){.country-version-switch button{font-size:14px}.country-enrichment-coverage{grid-template-columns:1fr;gap:14px}.country-enrichment-coverage strong{font-size:23px}}
+
+/* Finite model profiles select separately recomputed complexity results. */
+.profile-selector{border-bottom:1px solid var(--line);padding:17px 0 18px}
+.profile-selector-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:#536770}
+.profile-selector-heading .switch{min-width:280px}.profile-selector-heading .switch button{font-size:14px;padding:8px 12px}
+.profile-selector>.hint{margin:10px 0;max-width:880px}
+.profile-summary{font-size:13px;line-height:1.8;border-left:2px solid #b8cabc;padding:6px 10px;margin:10px 0;background:#edf1e9;font-variant-numeric:tabular-nums;color:#315645}
+.profile-details{margin-top:10px}.profile-details>summary{font-size:13px;line-height:1.6;cursor:pointer;color:#315f7b;padding:5px 0;text-underline-offset:3px}
+.profile-details[open]>summary{margin-bottom:12px}.profile-details p{font-size:13px;line-height:1.9;color:#61757c;margin:12px 0 0}
+.profile-parameter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.profile-parameter-grid fieldset{border:0;margin:0;padding:0;min-width:0}.profile-parameter-grid legend{font-size:14px;color:#536770;line-height:1.6;margin-bottom:8px;padding:0}
+.profile-parameter-grid .switch button{font-size:14px;padding:7px;min-height:40px}
+.profile-reset{border:0;background:none;font-size:13px;color:#315f7b;padding:7px 0;text-decoration:underline;text-underline-offset:3px;margin-top:7px}
+.profile-reset:disabled{opacity:.45;text-decoration:none;cursor:default}
+a[aria-disabled=true]{opacity:.45;pointer-events:none;cursor:default}
+@media(max-width:1050px){.profile-parameter-grid{grid-template-columns:1fr;gap:14px}}
+@media(max-width:560px){.profile-selector-heading{align-items:flex-start;flex-direction:column}.profile-selector-heading .switch{min-width:0;width:100%}.profile-selector-heading .switch button{font-size:14px}.profile-details p{font-size:14px}.profile-summary{font-size:13px}.profile-parameter-grid .switch button{font-size:15px;min-height:44px}}
+
+/* Long filter reasons wrap without squeezing country names or numeric ranks. */
+.comparison-panel th:first-child,.comparison-panel td:first-child{min-width:90px}
+.comparison-panel th:last-child,.comparison-panel td:last-child{white-space:normal;overflow-wrap:anywhere;min-width:118px;max-width:220px;line-height:1.7}

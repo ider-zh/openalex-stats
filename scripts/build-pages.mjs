@@ -16,11 +16,20 @@ for(const artifact of manifest.artifacts){
   const destination=path.join(output,relative);await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination,bytes);
 }
 await fs.cp(path.join(root,'internal','web','static'),path.join(output,'static'),{recursive:true});
-await fs.copyFile(path.join(root,'internal','web','static','index.html'),path.join(output,'index.html'));
+// Change browser cache keys whenever embedded UI resources change. The native
+// Go service revalidates these resources; Pages serves them with a bounded TTL.
+let indexHTML=await fs.readFile(path.join(root,'internal','web','static','index.html'),'utf8');
+for(const name of ['app.css','onboarding.css','app.js','bump.js','onboarding.js']){
+  const bytes=await fs.readFile(path.join(root,'internal','web','static',name));
+  const version=createHash('sha256').update(bytes).digest('hex').slice(0,12);
+  indexHTML=indexHTML.replaceAll(`/static/${name}"`,`/static/${name}?v=${version}"`);
+}
+await fs.writeFile(path.join(output,'index.html'),indexHTML);
+await fs.writeFile(path.join(output,'static','index.html'),indexHTML);
 await fs.copyFile(path.join(root,'cloudflare','worker.mjs'),path.join(output,'_worker.js'));
 await fs.writeFile(path.join(output,'_routes.json'),JSON.stringify({version:1,include:['/api/*','/download'],exclude:[]},null,2)+'\n');
 await fs.writeFile(path.join(output,'404.html'),'<!doctype html><meta charset="utf-8"><title>404</title><p>页面不存在。<a href="/">返回统计界面</a></p>\n');
 await fs.writeFile(path.join(output,'_headers'),`/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'\n/static/*\n  Cache-Control: public, max-age=3600\n/data/site.json\n  Cache-Control: no-cache\n`);
 let count=0,total=0,max=0;async function walk(directory){for(const entry of await fs.readdir(directory,{withFileTypes:true})){const name=path.join(directory,entry.name);if(entry.isDirectory())await walk(name);else{const {size}=await fs.stat(name);count++;total+=size;max=Math.max(max,size);}}}await walk(output);
 if(count>20000||max>25*1024*1024)throw new Error('Cloudflare free static-asset limits exceeded');
-console.log(JSON.stringify({output:'dist',files:count,bytes:total,max_file_bytes:max,default_country_version:manifest.default_country_version||'original',datasets:manifest.corpora.map(c=>({corpus:c.corpus,country_version:c.country_version||'original',run_id:c.run_id}))},null,2));
+console.log(JSON.stringify({output:'dist',files:count,bytes:total,max_file_bytes:max,default_country_version:manifest.default_country_version||'original',default_complexity_profile:manifest.default_complexity_profile||'baseline-v1',complexity_profiles:manifest.complexity_profiles?.length||1,datasets:manifest.corpora.map(c=>({corpus:c.corpus,country_version:c.country_version||'original',run_id:c.run_id}))},null,2));

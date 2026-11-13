@@ -1,0 +1,162 @@
+{
+  "status": "explicit_safe_publication_allowlist",
+  "direction_policy": "baseline-pooled-common-year-sign-v1",
+  "files": [
+    {
+      "path": "docs/longtail-filter-engine.md",
+      "bytes": 12033,
+      "sha256": "230a7f0385998db67d66efe4fa15d7b9d4984a390723a303698dfbdd5c3adc1b",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "internal/complexityfilter/filter.go",
+      "bytes": 11486,
+      "sha256": "3ee5ac7e7669223fef03461429126e9e455b4fef8a0e066103147600b8d5d121",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "internal/complexityfilter/filter_test.go",
+      "bytes": 7416,
+      "sha256": "bbb3d9ab68e365417cec2498f5ae6c29e43d3c6aa8dc98dfb0783d802482d3c8",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "internal/complexityfilter/presets.go",
+      "bytes": 843,
+      "sha256": "5f579083c446ae4467b9a502a09dd7ec24fae3ad5b0289e403f0d34dc8088864",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "research/country-enriched-release-v1/audit/audit-files.json",
+      "bytes": 449,
+      "sha256": "3bafee36cc31faa47187b913b0fe620d01baf765f8e66e187270a60a70b0f1f8",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/country-enriched-release-v1/audit/audit_release.py",
+      "bytes": 7430,
+      "sha256": "4b9c46aa572f3a7cc9860267253a8c16ae8873c7cb249e26c423a56dcc98eb45",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/country-enriched-release-v1/audit/prepare_local_release.py",
+      "bytes": 4378,
+      "sha256": "45e4ffea1cb6af99a5b358260db1ae4a90e549b9575ed2a9c6fb8a74946e2043",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/audit_and_package.py",
+      "bytes": 10480,
+      "sha256": "2395c30b4e4fdb3a55bfa6bb0b7ec07cdc83365b71cec3516b593073db44fe49",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/compute-audit-v2.json",
+      "bytes": 46494,
+      "sha256": "46c58cdedf4e9f61ae0f6605c10af4f2bc8cc06441610dd65f06ad522fe5a515",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/compute-audit.json",
+      "bytes": 45834,
+      "sha256": "12e7afe6403f9df2d1b25705b1785ac8263a2b20585c1b7512adbae0adda1e7d",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/direction-summary-v2.json",
+      "bytes": 20438,
+      "sha256": "6cdc20e433666d80216761bb597256c8e881e16fa653d7af6df5131f0b1042f6",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/execution-provenance-v2.json",
+      "bytes": 3459,
+      "sha256": "2162447177eb68501cf4c85677b3de5aa769f6a9ed3694378c92ff8bd0657f44",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/local-mirror-verification-v2.json",
+      "bytes": 770,
+      "sha256": "6eb7ebb2b8d95c2edffe11ade3da25802abcbb605f3a80f67e9ff7184585fa39",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/local-mirror-verification.json",
+      "bytes": 770,
+      "sha256": "a251f5b5e111103b627233b18c33f117e4d149627f0da5725b4267a8bab7a70b",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/model-status-summary.json",
+      "bytes": 47430,
+      "sha256": "6d0492ea88fbcfb94ab22e580ccaec8bdbe53159a471464637d68c94fb75e3b6",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/README.md",
+      "bytes": 2751,
+      "sha256": "41c45c4c22622796666897bbd00db70a7b62ef66f08ebc2d44eb9d6b1c0615bf",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/smoke-profiles.json",
+      "bytes": 343,
+      "sha256": "4e5f37328e04a71f4b7aea815ae4e9f4bd10aaf174fc89e5a8177ec7f5114340",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "research/longtail-patch-v1/compute/unpack_mirrors.py",
+      "bytes": 2891,
+      "sha256": "c4568e25e373c0b835ef3ed4365eefa427728da2ea690714c914c5158de466b7",
+      "kind": "source_or_safe_aggregate_evidence"
+    },
+    {
+      "path": "scripts/complexity-profiles/direction.go",
+      "bytes": 5443,
+      "sha256": "70e219bfab02e00e92d9852ddd177d64b2e326f294a0d78519f0862a14eee48b",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "scripts/complexity-profiles/direction_test.go",
+      "bytes": 4220,
+      "sha256": "93019912e2ea1e88e3b2654f64f6f14a83217172a898569eb1ecac1a4d973671",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "scripts/complexity-profiles/exports.go",
+      "bytes": 6875,
+      "sha256": "9e4274cf7c5fbb10d8c2b4437d43431cb0eab198ceb179427150d140c8e39a3f",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "scripts/complexity-profiles/main.go",
+      "bytes": 18727,
+      "sha256": "f7c422031ed70b6d70c03e203303e7dabeed08e8acecae9932979855ac960a9f",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "scripts/complexity-profiles/main_test.go",
+      "bytes": 8111,
+      "sha256": "f7ec03a5197e2f522e4c3fdae713988f40b30e5abdd87cbd59d991ec35be30b8",
+      "kind": "implementation_or_test"
+    },
+    {
+      "path": "scripts/complexity-profiles/source.go",
+      "bytes": 12341,
+      "sha256": "de364985f384000bbf2e0df6b1ed1d78f3866311f9fabb81b707fe52106daedb",
+      "kind": "implementation_or_test"
+    }
+  ],
+  "file_count": 24,
+  "add_allowlist_itself": true,
+  "excluded": [
+    "research/country-enriched-release-v1/audit/release-upload.json (machine-local upload paths)",
+    "all bin mirrors, executables and transport archives",
+    "all immutable original result/release evidence edits",
+    "all raw works, author/affiliation/XML/PDF/Gold material"
+  ],
+  "notes": [
+    "Only source, mathematical tests, explicit config and safe country-level aggregate/checksum evidence.",
+    "Source/test9 hashes also match execution-provenance-v2. V1 andV2 separate scientific evidence is preserved."
+  ]
+}

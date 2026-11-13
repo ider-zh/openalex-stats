@@ -1,0 +1,85 @@
+{
+  "status": "completed_v2_bundles_and_mirrors_audited",
+  "engine_algorithm": "country-scale-cell-zero-monotone-diversity-v1",
+  "direction_policy": "baseline-pooled-common-year-sign-v1",
+  "bundle_version": "complexity-filter-bundle-v1",
+  "default_profile_id": "p1000-c1000-x5-d3-v1",
+  "profile_count_each": 19,
+  "data_versions": [
+    "original-core",
+    "original-all",
+    "enriched-core",
+    "enriched-all"
+  ],
+  "annual_models_each_method_each_profile": 216,
+  "total_network_jobs": 16416,
+  "total_method_models": 32832,
+  "workers_per_process": 12,
+  "GOMAXPROCS_per_process": 12,
+  "concurrent_processes": 4,
+  "v1_binary_sha256": "93292281face19f66a07acfa82c963b8b24a7749cfe6836b3956c4b6e100011a",
+  "v2_binary_sha256": "efa38fba287b7b3bdc73f4421899337bf535cd4daf80d9612513244314164599",
+  "source_files": [
+    {
+      "path": "internal/complexityfilter/filter.go",
+      "bytes": 11486,
+      "sha256": "3ee5ac7e7669223fef03461429126e9e455b4fef8a0e066103147600b8d5d121"
+    },
+    {
+      "path": "internal/complexityfilter/filter_test.go",
+      "bytes": 7416,
+      "sha256": "bbb3d9ab68e365417cec2498f5ae6c29e43d3c6aa8dc98dfb0783d802482d3c8"
+    },
+    {
+      "path": "internal/complexityfilter/presets.go",
+      "bytes": 843,
+      "sha256": "5f579083c446ae4467b9a502a09dd7ec24fae3ad5b0289e403f0d34dc8088864"
+    },
+    {
+      "path": "scripts/complexity-profiles/direction.go",
+      "bytes": 5443,
+      "sha256": "70e219bfab02e00e92d9852ddd177d64b2e326f294a0d78519f0862a14eee48b"
+    },
+    {
+      "path": "scripts/complexity-profiles/direction_test.go",
+      "bytes": 4220,
+      "sha256": "93019912e2ea1e88e3b2654f64f6f14a83217172a898569eb1ecac1a4d973671"
+    },
+    {
+      "path": "scripts/complexity-profiles/exports.go",
+      "bytes": 6875,
+      "sha256": "9e4274cf7c5fbb10d8c2b4437d43431cb0eab198ceb179427150d140c8e39a3f"
+    },
+    {
+      "path": "scripts/complexity-profiles/main.go",
+      "bytes": 18727,
+      "sha256": "f7c422031ed70b6d70c03e203303e7dabeed08e8acecae9932979855ac960a9f"
+    },
+    {
+      "path": "scripts/complexity-profiles/main_test.go",
+      "bytes": 8111,
+      "sha256": "f7ec03a5197e2f522e4c3fdae713988f40b30e5abdd87cbd59d991ec35be30b8"
+    },
+    {
+      "path": "scripts/complexity-profiles/source.go",
+      "bytes": 12341,
+      "sha256": "de364985f384000bbf2e0df6b1ed1d78f3866311f9fabb81b707fe52106daedb"
+    }
+  ],
+  "v1_retained": true,
+  "v2_mirror": "bin/longtail-profiles-v2",
+  "v2_server_root": "/mnt/nvme0/public/openalex-stats/complexity-profiles-v2-20261113",
+  "original_result_files_modified": false,
+  "source_inputs_rechecked_before_and_after_each_cli": 9,
+  "filter_diagnostics_identical_to_v1_each_profile": true,
+  "baseline_models_identical_to_v1_and_published_source": true,
+  "artifact_audit": "compute-audit-v2.json",
+  "mirror_audit": "local-mirror-verification-v2.json",
+  "mathematical_independent_audit": "Performed separately by root using NumPy and immutable source matrix extraction; see independent-v2 report when published.",
+  "source_scope_limits": [
+    "Only ECI/PCI use these profiles; quantity/share/displayed-RCA scientific tables unchanged.",
+    "Whole publication support is annual observed country-wide output including UNKNOWN subject, not selected-subject samples.",
+    "Citation events do not guarantee independent target-paper sample sizes.",
+    "Country metadata correctness and structural-axis meaning remain separate issues."
+  ]
+}
